@@ -44,24 +44,24 @@
       }));
       let path='';
       series.forEach((r,i)=>{
-        if(r.median_error_deg===null)return;
+        if(r.worst_error_deg===null)return;
         const previous=series[i-1];
-        path+=`${!previous || previous.median_error_deg===null?'M':'L'}${x(r.distance_m)} ${y(r.median_error_deg)} `;
+        path+=`${!previous || previous.worst_error_deg===null?'M':'L'}${x(r.distance_m)} ${y(r.worst_error_deg)} `;
       });
       const patterns=['','8 4','3 3','10 3 2 3','2 5','12 5'];
       const dash=b===0?'12 4 2 4':patterns[conditions.indexOf(conditionKey(series[0]))%patterns.length];
-      out+=`<path d="${path}" fill="none" stroke="${colors[b]}" stroke-width="2" stroke-dasharray="${dash}"><title>${esc(conditionLabel(series[0]))}; median valid-output error</title></path>`;
+      out+=`<path d="${path}" fill="none" stroke="${colors[b]}" stroke-width="2" stroke-dasharray="${dash}"><title>${esc(conditionLabel(series[0]))}; worst-case valid-output error</title></path>`;
       series.forEach(r=>{
-        const tip=`${conditionLabel(r)}; ${r.distance_m} m; ${r.passed}/${r.trials} within 5°; median ${r.median_error_deg===null?'no output':r.median_error_deg.toFixed(2)+'°'}; worst ${r.worst_error_deg===null?'no output':r.worst_error_deg.toFixed(2)+'°'}; ${r.zero_maps} no-output trials`;
+        const tip=`${conditionLabel(r)}; ${r.distance_m} m; ${r.passed}/${r.trials} within 5°; worst ${r.worst_error_deg===null?'no output':r.worst_error_deg.toFixed(2)+'°'}; ${r.zero_maps} no-output trials`;
         if(r.zero_maps){
           const px=x(r.distance_m),py=20+bits.indexOf(b)*4;
           out+=`<path d="M${px-3} ${py-3}l6 6m0 -6l-6 6" stroke="${colors[b]}" stroke-width="2"><title>${esc(tip)}</title></path>`;
         }
-        if(r.median_error_deg!==null)out+=`<circle cx="${x(r.distance_m)}" cy="${y(r.median_error_deg)}" r="3.5" fill="${colors[b]}" stroke="white" stroke-width=".6"><title>${esc(tip)}</title></circle>`;
+        if(r.worst_error_deg!==null)out+=`<circle cx="${x(r.distance_m)}" cy="${y(r.worst_error_deg)}" r="3.5" fill="${colors[b]}" stroke="white" stroke-width=".6"><title>${esc(tip)}</title></circle>`;
       });
     });
     out+=txt(L,13,'Angular error (°)')+txt((L+W-R)/2,H-6,'Source distance (m)','text-anchor="middle"');
-    return svg(W,H,out,'Individual trial errors and median localization error versus distance');
+    return svg(W,H,out,'Individual trial errors and worst-case localization error versus distance');
   }
   function render() {
     const bits=chosen('bits'),snrs=chosen('snr'),levels=chosen('level');
@@ -74,7 +74,7 @@
     const yMax=Math.max(10,Math.ceil(Math.max(0,...finite.map(r=>r.worst_error_deg))/10)*10);
     const limit=Math.ceil(Math.max(...groups.flatMap(a=>a.geometry).flatMap(p=>[Math.abs(p[0]),Math.abs(p[1])]))*100)/100;
     el('layout-conditions').innerHTML='512 samples (10.7 ms) · 48 ksample/s · 1–4 kHz · 27 trials per distance and condition.<br>SNR and digital level are fixed along each curve; distance tests geometry, not maximum detection range.';
-    el('layout-legend').innerHTML=bits.map(b=>`<span><i style="background:${colors[b]}"></i>${label(b)}</span>`).join('')+'<span>Dots = individual trials · lines = median valid-output error · × = no output. Hover for conditions and worst error.</span>';
+    el('layout-legend').innerHTML=bits.map(b=>`<span><i style="background:${colors[b]}"></i>${label(b)}</span>`).join('')+'<span>Dots = individual trials · lines = worst-case valid-output error · × = no output. Hover for conditions.</span>';
     if(!bits.length||!snrs.length||(!levels.length&&bits.some(b=>b!==0))){el('layout-gallery').innerHTML='<p class="array-empty">Choose at least one option in each applicable dropdown.</p>';return;}
     el('layout-gallery').innerHTML=groups.map(a=>{
       const pts=a.geometry;
