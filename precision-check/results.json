@@ -1,0 +1,563 @@
+{
+  "summary": [
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -18,
+      "bits": 12,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 0.0002831627935935277
+    },
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -18,
+      "bits": 16,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 1.2450265292729412e-05
+    },
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -18,
+      "bits": 20,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 1.0085066709519808e-06
+    },
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -18,
+      "bits": 24,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 4.712798507000571e-08
+    },
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -48,
+      "bits": 12,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 0.008155042334307194
+    },
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -48,
+      "bits": 16,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 0.00046436376606928675
+    },
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -48,
+      "bits": 20,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 3.245605440538313e-05
+    },
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -48,
+      "bits": 24,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 2.4581934447986953e-06
+    },
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -72,
+      "bits": 12,
+      "trials": 54,
+      "passed": 53,
+      "float_passed": 54,
+      "identical_peaks": 42,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 6.38746168433843,
+      "max_map_difference": 0.21722843493374383
+    },
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -72,
+      "bits": 16,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 0.008789106564502935
+    },
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -72,
+      "bits": 20,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 0.0004642292835086992
+    },
+    {
+      "mode": "pcm_only",
+      "total_rms_dbfs": -72,
+      "bits": 24,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 3.300361389868556e-05
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -18,
+      "bits": 12,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 48,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 0.015599088591889299
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -18,
+      "bits": 16,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 0.001019189038261037
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -18,
+      "bits": 20,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 6.503977943000949e-05
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -18,
+      "bits": 24,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 4.274283158522962e-06
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -48,
+      "bits": 12,
+      "trials": 54,
+      "passed": 11,
+      "float_passed": 54,
+      "identical_peaks": 7,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 91.77214806901061,
+      "max_map_difference": 0.792340271764192
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -48,
+      "bits": 16,
+      "trials": 54,
+      "passed": 53,
+      "float_passed": 54,
+      "identical_peaks": 49,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 5.067422813621241,
+      "max_map_difference": 0.04094903025275143
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -48,
+      "bits": 20,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 0.0019716723898889343
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -48,
+      "bits": 24,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 0.00016450458891370534
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -72,
+      "bits": 12,
+      "trials": 54,
+      "passed": 0,
+      "float_passed": 54,
+      "identical_peaks": 0,
+      "zero_maps": 54,
+      "clipped_values": 0,
+      "max_error_deg": null,
+      "max_map_difference": 1.0
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -72,
+      "bits": 16,
+      "trials": 54,
+      "passed": 8,
+      "float_passed": 54,
+      "identical_peaks": 4,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 99.24402630443176,
+      "max_map_difference": 0.8042379091525113
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -72,
+      "bits": 20,
+      "trials": 54,
+      "passed": 53,
+      "float_passed": 54,
+      "identical_peaks": 47,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 5.067422813621241,
+      "max_map_difference": 0.02861674058557262
+    },
+    {
+      "mode": "fixed_pipeline",
+      "total_rms_dbfs": -72,
+      "bits": 24,
+      "trials": 54,
+      "passed": 54,
+      "float_passed": 54,
+      "identical_peaks": 54,
+      "zero_maps": 0,
+      "clipped_values": 0,
+      "max_error_deg": 4.998536879937023,
+      "max_map_difference": 0.0022911864465796627
+    }
+  ],
+  "config": {
+    "layouts": [
+      "square",
+      "circle",
+      "spiral"
+    ],
+    "mic_counts": [
+      9,
+      16,
+      25,
+      30
+    ],
+    "apertures_m": [
+      0.425
+    ],
+    "sample_rate": 48000,
+    "frame_length": 512,
+    "frames": 1,
+    "pcm_bits": 16,
+    "spectrum_component_bits": 16,
+    "bands_hz": [
+      [
+        1000,
+        4000
+      ]
+    ],
+    "directions_deg": [
+      [
+        0,
+        0
+      ],
+      [
+        11,
+        7
+      ],
+      [
+        -11,
+        -7
+      ],
+      [
+        31,
+        0
+      ],
+      [
+        -31,
+        0
+      ],
+      [
+        0,
+        19
+      ],
+      [
+        0,
+        -19
+      ],
+      [
+        31,
+        17
+      ],
+      [
+        -31,
+        -17
+      ]
+    ],
+    "snr_db": [
+      20,
+      0,
+      -10,
+      -20
+    ],
+    "trials": 3,
+    "two_source_separations_deg": [
+      20,
+      40
+    ],
+    "grid_limit_deg": 60,
+    "grid_step_deg": 3,
+    "success_tolerance_deg": 5,
+    "exclusion_radius_deg": 15,
+    "pair_min_dip_db": 1,
+    "seed": 20261023,
+    "source_distance_m": 1.0
+  },
+  "geometry": [
+    [
+      0.15,
+      2.3592239273284574e-18,
+      0.0
+    ],
+    [
+      0.14672214011007087,
+      0.0311867536226639,
+      0.0
+    ],
+    [
+      0.13703181864639014,
+      0.06101049646137002,
+      0.0
+    ],
+    [
+      0.12135254915624213,
+      0.08816778784387097,
+      0.0
+    ],
+    [
+      0.10036959095382875,
+      0.11147172382160912,
+      0.0
+    ],
+    [
+      0.07500000000000002,
+      0.12990381056766578,
+      0.0
+    ],
+    [
+      0.04635254915624213,
+      0.142658477444273,
+      0.0
+    ],
+    [
+      0.015679269490148032,
+      0.149178284305241,
+      0.0
+    ],
+    [
+      -0.015679269490147984,
+      0.149178284305241,
+      0.0
+    ],
+    [
+      -0.04635254915624208,
+      0.14265847744427304,
+      0.0
+    ],
+    [
+      -0.07499999999999994,
+      0.1299038105676658,
+      0.0
+    ],
+    [
+      -0.10036959095382866,
+      0.11147172382160916,
+      0.0
+    ],
+    [
+      -0.12135254915624208,
+      0.08816778784387098,
+      0.0
+    ],
+    [
+      -0.13703181864639014,
+      0.06101049646137,
+      0.0
+    ],
+    [
+      -0.14672214011007084,
+      0.0311867536226639,
+      0.0
+    ],
+    [
+      -0.14999999999999997,
+      8.734230739204815e-17,
+      0.0
+    ],
+    [
+      -0.14672214011007084,
+      -0.031186753622663856,
+      0.0
+    ],
+    [
+      -0.1370318186463901,
+      -0.06101049646137003,
+      0.0
+    ],
+    [
+      -0.12135254915624209,
+      -0.08816778784387096,
+      0.0
+    ],
+    [
+      -0.10036959095382875,
+      -0.1114717238216091,
+      0.0
+    ],
+    [
+      -0.07500000000000005,
+      -0.12990381056766576,
+      0.0
+    ],
+    [
+      -0.046352549156242116,
+      -0.142658477444273,
+      0.0
+    ],
+    [
+      -0.01567926949014812,
+      -0.149178284305241,
+      0.0
+    ],
+    [
+      0.015679269490147963,
+      -0.149178284305241,
+      0.0
+    ],
+    [
+      0.0463525491562421,
+      -0.14265847744427304,
+      0.0
+    ],
+    [
+      0.07500000000000002,
+      -0.12990381056766578,
+      0.0
+    ],
+    [
+      0.10036959095382879,
+      -0.1114717238216091,
+      0.0
+    ],
+    [
+      0.1213525491562421,
+      -0.088167787843871,
+      0.0
+    ],
+    [
+      0.13703181864639016,
+      -0.06101049646137002,
+      0.0
+    ],
+    [
+      0.14672214011007087,
+      -0.03118675362266384,
+      0.0
+    ]
+  ],
+  "elapsed_seconds": 49.83,
+  "fft24_max_complex_error": 1.5728408020007624e-07,
+  "script_sha256": "eb4ecca9ff729b2fa9ceca7427b958f43ffd6144e26901d260959e80d50f5f0b",
+  "notes": [
+    "54 identical scenes: 9 directions x 3 seeds x 2 distances; -10 dB in-band independent noise.",
+    "512-point Hann FFT, one frame/map, 30-mic 30-cm circle, 1-4 kHz, 3-degree grid.",
+    "Input RMS levels are digital total signal+noise levels; not SPL or calibrated microphone sensitivity.",
+    "PCM-only quantizes input then uses floating point. Fixed pipeline also quantizes window, twiddles, every FFT stage and steering rotations.",
+    "Fixed FFT divides by two per radix-2 stage (overall 1/512). No automatic gain or block-floating scaling.",
+    "Mic sums, power and bin sums retain growth; this does not simulate a B-bit power accumulator.",
+    "No PDM/decimator, reflections, mismatch, two-source trials, or cycle-accurate RTL."
+  ]
+}
