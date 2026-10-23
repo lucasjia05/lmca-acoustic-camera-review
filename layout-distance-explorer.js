@@ -1,10 +1,13 @@
 (() => {
   const el = id => document.getElementById(id);
-  const snr = el('layout-snr'), level = el('layout-level');
-  const checks = [...document.querySelectorAll('input[name="layout-bits"]')];
+  const filters = Object.fromEntries(['bits','snr','level'].map(key=>[key,[...document.querySelectorAll(`input[name="layout-${key}"]`)]]));
+  const chosen = key => filters[key].filter(c=>c.checked).map(c=>Number(c.value));
+  const menus = [...document.querySelectorAll('.layout-filter')];
   const names = {'grid16-30cm-span':'16-mic square grid · 30 cm span','circle30-30cm':'30-mic circle · 30 cm','spiral30-30cm':'30-mic spiral · 30 cm','parsa-30cm':'Parsa layout · 30 cm','parsa-35cm':'Parsa layout · 35 cm','parsa-native':'Parsa original · 8.6 cm','circle16-30cm':'16-mic circle · 30 cm','spiral16-30cm':'16-mic spiral · 30 cm'};
   const colors = {0:'#566575',12:'#bd424f',16:'#147d87',20:'#ad7215',24:'#8057b2'};
   const label = b => b === 0 ? 'Float reference' : `${b}-bit`;
+  const conditionKey = r => `${r.snr_db}/${r.input_rms_dbfs}`;
+  const conditionLabel = r => `${label(r.bits)}; SNR ${r.snr_db} dB${r.bits===0?'':`; input ${r.input_rms_dbfs} dBFS`}`;
   const esc = s => String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
   const line = (x1,y1,x2,y2,extra='') => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" ${extra}/>`;
   const txt = (x,y,s,extra='') => `<text x="${x}" y="${y}" style="text-anchor:${extra.match(/text-anchor="([^"]+)"/)?.[1]||'start'}" ${extra}>${esc(s)}</text>`;
@@ -28,39 +31,51 @@
     out+=line(L,T,L,H-B,'stroke="#a1afb3"')+line(L,H-B,W-R,H-B,'stroke="#a1afb3"');
     for(const v of [.25,1,2,3,4,5])out+=txt(x(v),H-B+20,v,'text-anchor="middle"');
     out+=line(L,y(5),W-R,y(5),'stroke="#c33b45" stroke-dasharray="5 4"')+txt(W-R,y(5)-5,'5° target','text-anchor="end" fill="#b43540"');
-    bits.forEach((b,index)=>{
-      const series=rows.filter(r=>r.bits===b).sort((a,b)=>a.distance_m-b.distance_m);
+    const conditions=[...new Set(rows.map(conditionKey))];
+    const seriesGroups=[...new Set(rows.map(r=>`${r.bits}/${conditionKey(r)}`))].map(key=>rows.filter(r=>`${r.bits}/${conditionKey(r)}`===key).sort((a,b)=>a.distance_m-b.distance_m));
+    seriesGroups.forEach((series,index)=>{
+      const b=series[0].bits;
+      // Small horizontal offsets reveal overlapping trials; distance itself is unchanged.
+      series.forEach(r=>r.trial_errors_deg.forEach((error,i)=>{
+        if(error===null)return;
+        const px=x(r.distance_m)+(((i*7+index*3)%17)-8)*.65;
+        const tip=`${conditionLabel(r)}; ${r.distance_m} m; trial ${i+1}; error ${error.toFixed(2)}°`;
+        out+=`<circle cx="${px}" cy="${y(error)}" r="2.1" fill="${colors[b]}" fill-opacity=".25"><title>${esc(tip)}</title></circle>`;
+      }));
       let path='';
       series.forEach((r,i)=>{
-        if(r.worst_error_deg===null || r.zero_maps)return;
+        if(r.median_error_deg===null)return;
         const previous=series[i-1];
-        path+=`${!previous || previous.worst_error_deg===null || previous.zero_maps?'M':'L'}${x(r.distance_m)} ${y(r.worst_error_deg)} `;
+        path+=`${!previous || previous.median_error_deg===null?'M':'L'}${x(r.distance_m)} ${y(r.median_error_deg)} `;
       });
-      const dash={0:'12 4 2 4',12:'2 3',16:'',20:'8 4',24:'3 3'}[b];
-      out+=`<path d="${path}" fill="none" stroke="${colors[b]}" stroke-width="2" stroke-dasharray="${dash}"/>`;
+      const patterns=['','8 4','3 3','10 3 2 3','2 5','12 5'];
+      const dash=b===0?'12 4 2 4':patterns[conditions.indexOf(conditionKey(series[0]))%patterns.length];
+      out+=`<path d="${path}" fill="none" stroke="${colors[b]}" stroke-width="2" stroke-dasharray="${dash}"><title>${esc(conditionLabel(series[0]))}; median valid-output error</title></path>`;
       series.forEach(r=>{
-        const tip=`${label(b)}; ${r.distance_m} m; ${r.passed}/${r.trials} within 5°; worst ${r.worst_error_deg===null?'no output':r.worst_error_deg.toFixed(2)+'°'}; ${r.zero_maps} no-output trials`;
+        const tip=`${conditionLabel(r)}; ${r.distance_m} m; ${r.passed}/${r.trials} within 5°; median ${r.median_error_deg===null?'no output':r.median_error_deg.toFixed(2)+'°'}; worst ${r.worst_error_deg===null?'no output':r.worst_error_deg.toFixed(2)+'°'}; ${r.zero_maps} no-output trials`;
         if(r.zero_maps){
-          const px=x(r.distance_m),py=20+index*4;
+          const px=x(r.distance_m),py=20+bits.indexOf(b)*4;
           out+=`<path d="M${px-3} ${py-3}l6 6m0 -6l-6 6" stroke="${colors[b]}" stroke-width="2"><title>${esc(tip)}</title></path>`;
-        }else if(r.worst_error_deg!==null){
-          out+=`<circle cx="${x(r.distance_m)}" cy="${y(r.worst_error_deg)}" r="4" fill="${colors[b]}" stroke="white" stroke-width=".6"><title>${esc(tip)}</title></circle>`;
         }
+        if(r.median_error_deg!==null)out+=`<circle cx="${x(r.distance_m)}" cy="${y(r.median_error_deg)}" r="3.5" fill="${colors[b]}" stroke="white" stroke-width=".6"><title>${esc(tip)}</title></circle>`;
       });
     });
-    out+=txt(L,13,'Worst angular error (°)')+txt((L+W-R)/2,H-6,'Source distance (m)','text-anchor="middle"');
-    return svg(W,H,out,'Worst localization error versus distance, overlaid bit widths');
+    out+=txt(L,13,'Angular error (°)')+txt((L+W-R)/2,H-6,'Source distance (m)','text-anchor="middle"');
+    return svg(W,H,out,'Individual trial errors and median localization error versus distance');
   }
   function render() {
-    const bits=checks.filter(c=>c.checked).map(c=>Number(c.value));
-    level.disabled=bits.every(b=>b===0);
-    const groups=layoutDistanceData.arrays.map(a=>({...a,rows:a.summary.filter(r=>bits.includes(r.bits)&&r.snr_db===Number(snr.value)&&(r.bits===0||r.input_rms_dbfs===Number(level.value)))}));
-    const finite=groups.flatMap(a=>a.rows).filter(r=>r.worst_error_deg!==null&&!r.zero_maps);
+    const bits=chosen('bits'),snrs=chosen('snr'),levels=chosen('level');
+    el('layout-bits-summary').textContent=bits.length?bits.map(label).join(', '):'Choose widths';
+    el('layout-snr-summary').textContent=snrs.length?snrs.map(n=>`${n} dB`).join(', '):'Choose SNRs';
+    el('layout-level-summary').textContent=levels.length?levels.map(n=>`${n} dBFS`).join(', '):'Choose levels';
+    filters.level.forEach(c=>c.disabled=bits.length>0&&bits.every(b=>b===0));
+    const groups=layoutDistanceData.arrays.map(a=>({...a,rows:a.summary.filter(r=>bits.includes(r.bits)&&snrs.includes(r.snr_db)&&(r.bits===0||levels.includes(r.input_rms_dbfs)))}));
+    const finite=groups.flatMap(a=>a.rows).filter(r=>r.worst_error_deg!==null);
     const yMax=Math.max(10,Math.ceil(Math.max(0,...finite.map(r=>r.worst_error_deg))/10)*10);
     const limit=Math.ceil(Math.max(...groups.flatMap(a=>a.geometry).flatMap(p=>[Math.abs(p[0]),Math.abs(p[1])]))*100)/100;
-    el('layout-conditions').innerHTML='512 samples (10.7 ms) · 48 ksample/s · 1–4 kHz · 27 trials per distance (9 directions × 3 seeds).<br>Distance: 0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 5 m. SNR and digital input level are held fixed; this tests geometry and precision, not maximum detection range.';
-    el('layout-legend').innerHTML=bits.map(b=>`<span><i style="background:${colors[b]}"></i>${label(b)}</span>`).join('')+'<span>Worst error at each distance · × = no output in one or more trials · hover for counts.</span>';
-    if(!bits.length){el('layout-gallery').innerHTML='<p class="array-empty">Select at least one bit width.</p>';return;}
+    el('layout-conditions').innerHTML='512 samples (10.7 ms) · 48 ksample/s · 1–4 kHz · 27 trials per distance and condition.<br>SNR and digital level are fixed along each curve; distance tests geometry, not maximum detection range.';
+    el('layout-legend').innerHTML=bits.map(b=>`<span><i style="background:${colors[b]}"></i>${label(b)}</span>`).join('')+'<span>Dots = individual trials · lines = median valid-output error · × = no output. Hover for conditions and worst error.</span>';
+    if(!bits.length||!snrs.length||(!levels.length&&bits.some(b=>b!==0))){el('layout-gallery').innerHTML='<p class="array-empty">Choose at least one option in each applicable dropdown.</p>';return;}
     el('layout-gallery').innerHTML=groups.map(a=>{
       const pts=a.geometry;
       const span=Math.max(...pts.flatMap(p=>pts.map(q=>Math.hypot(...p.map((v,k)=>v-q[k])))))*100;
@@ -71,6 +86,9 @@
       return `<article class="array-card"><div><h3>${esc(names[a.id]||a.id)}</h3><div class="array-meta">${pts.length} microphones · ${span.toFixed(1)} cm maximum span</div><div class="array-geometry">${geometry(pts,limit)}</div></div><div class="array-results"><div class="array-chart">${chart(a.rows,bits,yMax)}</div><div class="array-metrics">${metrics}</div></div></article>`;
     }).join('');
   }
-  [...checks,snr,level].forEach(n=>n.addEventListener('change',render));
+  Object.values(filters).flat().forEach(n=>n.addEventListener('change',render));
+  menus.forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open)menus.filter(m=>m!==menu).forEach(m=>m.open=false);}));
+  document.addEventListener('click',event=>menus.forEach(menu=>{if(!menu.contains(event.target))menu.open=false;}));
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')menus.filter(m=>m.open).forEach(m=>{m.open=false; m.querySelector('summary').focus();});});
   render();
 })();

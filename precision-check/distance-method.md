@@ -1,6 +1,6 @@
 # Layout, distance and precision comparison
 
-Checkboxes overlay 12-, 16-, 20-, 24-bit processing and a floating-point reference. Each curve shows the worst angular error across 27 single-source trials at each distance; a cross replaces a point if any trial produced no output. The trial count includes those failures. Lines only connect sampled distances.
+Checkbox dropdowns select bit widths, SNRs and digital input levels. Dots show individual trial errors; each line shows the median valid-output error for one selected combination. Crosses identify no-output trials, which remain failures in the displayed success counts. Lines only connect sampled distances. Colors identify bit widths; dash patterns separate SNR/input-level combinations. Hover a line or dot for its conditions. Success counts pool all selected conditions; floating-point results are counted once per SNR because digital level does not affect them.
 
 - Eight layouts; distances 0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4 and 5 m.
 - 512-sample Hann window (10.67 ms), 48 ksample/s, 1–4 kHz, one window per map.
