@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1200" id="diagram" viewBox="0 0 1400 1200" role="img" aria-labelledby="title description">
+<title id="title">Acoustic camera macroarchitecture</title>
+<desc id="description">The main processing flow is vertical within an ASIC boundary. The external microphone array connects horizontally to the microphone interface. CIC decimation, frame buffer and window, FFT or Goertzel, and bin selection and spectrum buffer feed a horizontal beamformer: phase alignment, microphone sum, power calculation, and bin power sum. Steering coefficients feed phase alignment. The output returns to the vertical map-buffer and UART flow. The microphone array, camera, and host are outside the ASIC. Blocks describe logical functions; hardware sharing and bit widths remain provisional.</desc>
+<style>
+.block { fill: #25354a; stroke: #8dbaff; stroke-width: 1.5; rx: 8; }
+.boundary { fill: #1b2230; stroke: #75869f; stroke-width: 1.5; stroke-dasharray: 8 5; rx: 14; }
+.group { fill: #202b3b; stroke: #7694be; stroke-width: 1.5; rx: 12; }
+text { fill: #e8edf5; font-family: Arial, sans-serif; text-anchor: middle; }
+.label { font-size: 18px; }
+.signal { font-size: 15px; fill: #bfccdf; }
+.heading { font-size: 18px; font-weight: bold; }
+.wire { fill: none; stroke: #b5c7df; stroke-width: 2; marker-end: url(#arrow); }
+.clock { stroke: #e5bb78; marker-end: url(#clock-arrow); }
+</style>
+<rect width="1400" height="1200" fill="#171b23"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#b5c7df"/></marker><marker id="clock-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#e5bb78"/></marker></defs>
+<rect class="boundary" x="260" y="25" width="1110" height="1140"/>
+<text class="heading" x="1340" y="55" style="text-anchor:end">ASIC</text>
+<rect class="group" x="455" y="715" width="880" height="145"/>
+<text class="heading" x="1315" y="745" style="text-anchor:end">Beamformer</text>
+<rect class="block" x="30" y="75" width="160" height="64"/>
+<text class="label" x="110.0" y="102">Mic array</text>
+<text class="label" x="110.0" y="123" style="font-size:14px">30 mics / Ø30 cm</text>
+<rect class="block" x="470" y="75" width="180" height="64"/>
+<text class="label" x="560.0" y="102">Mic</text>
+<text class="label" x="560.0" y="123">interface</text>
+<path class="wire" d="M190 95 H470"/>
+<text class="signal" x="340" y="58">15 data pins</text>
+<text class="signal" x="340" y="79">PDM</text>
+<path class="wire clock" d="M470 120 H190"/>
+<text class="signal" x="340" y="146">Sync</text>
+<text class="signal" x="340" y="167">3.072 MHz</text>
+<rect class="block" x="470" y="195" width="180" height="64"/>
+<text class="label" x="560.0" y="222">CIC</text>
+<text class="label" x="560.0" y="243">÷64 → 48 kHz</text>
+<path class="wire" d="M560 139 V195"/>
+<text class="signal" x="680" y="160.0">30x</text>
+<text class="signal" x="680" y="181.0">PDM</text>
+<rect class="block" x="470" y="315" width="180" height="64"/>
+<text class="label" x="560.0" y="342">Frame buffer</text>
+<text class="label" x="560.0" y="363">+ window</text>
+<path class="wire" d="M560 259 V315"/>
+<text class="signal" x="680" y="280.0">30x</text>
+<text class="signal" x="680" y="301.0">16b PCM*</text>
+<rect class="block" x="470" y="435" width="180" height="64"/>
+<text class="label" x="560.0" y="462">FFT</text>
+<text class="label" x="560.0" y="483">512 points</text>
+<path class="wire" d="M560 379 V435"/>
+<text class="signal" x="680" y="400.0">30x windowed</text>
+<text class="signal" x="680" y="421.0">samples</text>
+<rect class="block" x="470" y="555" width="180" height="64"/>
+<text class="label" x="560.0" y="582">Bin selection</text>
+<text class="label" x="560.0" y="603">+ spectrum buffer</text>
+<path class="wire" d="M560 499 V555"/>
+<text class="signal" x="680" y="520.0">30x complex</text>
+<text class="signal" x="680" y="541.0">per bin</text>
+<rect class="block" x="480" y="765" width="160" height="64"/>
+<text class="label" x="560.0" y="792">Phase</text>
+<text class="label" x="560.0" y="813">alignment</text>
+<path class="wire" d="M560 619 V765"/>
+<text class="signal" x="680" y="685.0">32 bins</text>
+<text class="signal" x="680" y="706.0">11–42 inclusive</text>
+<rect class="block" x="285" y="765" width="140" height="64"/>
+<text class="label" x="355.0" y="792">Steering</text>
+<text class="label" x="355.0" y="813">coefficients</text>
+<path class="wire" d="M425 797 H480"/>
+<text class="signal" x="355" y="682">Mic positions</text>
+<text class="signal" x="355" y="703">Direction / freq</text>
+<path class="wire" d="M355 720 V765"/>
+<rect class="block" x="700" y="765" width="160" height="64"/>
+<text class="label" x="780.0" y="792">Mic</text>
+<text class="label" x="780.0" y="813">sum</text>
+<path class="wire" d="M640 797 H700"/>
+<rect class="block" x="920" y="765" width="160" height="64"/>
+<text class="label" x="1000.0" y="792">Power</text>
+<text class="label" x="1000.0" y="813">calculation</text>
+<path class="wire" d="M860 797 H920"/>
+<rect class="block" x="1140" y="765" width="160" height="64"/>
+<text class="label" x="1220.0" y="792">Bin power</text>
+<text class="label" x="1220.0" y="813">sum</text>
+<path class="wire" d="M1080 797 H1140"/>
+<rect class="block" x="470" y="930" width="180" height="64"/>
+<text class="label" x="560.0" y="957">Map buffer</text>
+<text class="label" x="560.0" y="978">(double-buffered)</text>
+<path class="wire" d="M1220 829 V900 H560 V930"/>
+<text class="signal" x="895" y="925">Power</text>
+<text class="signal" x="895" y="946">per pixel</text>
+<rect class="block" x="470" y="1060" width="180" height="64"/>
+<text class="label" x="560.0" y="1087">UART</text>
+<text class="label" x="560.0" y="1108">(rate TBD)</text>
+<path class="wire" d="M560 994 V1060"/>
+<text class="signal" x="680" y="1020.0">Map</text>
+<text class="signal" x="680" y="1041.0">data</text>
+<rect class="block" x="30" y="930" width="160" height="64"/>
+<text class="label" x="110.0" y="968">Camera</text>
+<rect class="block" x="30" y="1060" width="160" height="64"/>
+<text class="label" x="110.0" y="1087">Host</text>
+<text class="label" x="110.0" y="1108">computer</text>
+<path class="wire" d="M110 994 V1060"/>
+<text class="signal" x="185" y="1018">Video</text>
+<text class="signal" x="185" y="1039">frames</text>
+<path class="wire" d="M470 1092 H190"/>
+<text class="signal" x="340" y="1050">Serial</text>
+<text class="signal" x="340" y="1071">data</text>
+</svg>
