@@ -1,28 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 880" role="img" aria-labelledby="title desc">
-<title id="title">Frequency-domain DAS software block diagram</title>
-<desc id="desc">Microphone samples flow through framing and windowing, FFT, frequency selection, phase alignment, microphone summation, power calculation, and averaging into a directional power map. Steering coefficients feed phase alignment. Peak finding and image display use the output map.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1780" role="img" aria-labelledby="title desc">
+<title id="title">Frequency-domain delay-and-sum: samples, FFT, direction sweep</title>
+<desc id="desc">Three sections follow the software concept: microphone PCM samples; FFT producing amplitude and phase at selected frequencies; and delay-and-sum beamforming. For each candidate direction and selected frequency bin in each frame, predict each microphone's phase relative to a common reference, subtract that phase by rotating the measured complex value, sum complex values across microphones, and calculate power. Sum powers over bins and average frames to form the directional power map. Configuration inputs connect where first used. Peak finding, evaluation and display share a separate output block outside the algorithm.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#66818b"/></marker></defs>
-<style>text{font:600 20px 'Segoe UI',Arial,sans-serif;fill:#162b35}.block{fill:#edf8f6;stroke:#007e81;stroke-width:1.6}.side{fill:#f5f7f9;stroke:#83949e;stroke-width:1.5}.arrow{fill:none;stroke:#66818b;stroke-width:2;marker-end:url(#arrow)}</style>
-<rect width="780" height="880" fill="white"/>
-<rect x="270" y="20" width="360" height="56" rx="8" class="block"/><text x="450" y="55" text-anchor="middle">Microphone samples (PCM)</text>
-<path d="M450 76V102" class="arrow"/>
-<rect x="270" y="104" width="360" height="56" rx="8" class="block"/><text x="450" y="139" text-anchor="middle">Frame &amp; window</text>
-<path d="M450 160V186" class="arrow"/>
-<rect x="270" y="188" width="360" height="56" rx="8" class="block"/><text x="450" y="223" text-anchor="middle">FFT per microphone</text>
-<path d="M450 244V270" class="arrow"/>
-<rect x="270" y="272" width="360" height="56" rx="8" class="block"/><text x="450" y="307" text-anchor="middle">Select frequency bins</text>
-<path d="M450 328V354" class="arrow"/>
-<rect x="270" y="356" width="360" height="56" rx="8" class="block"/><text x="450" y="391" text-anchor="middle">Phase alignment</text>
-<path d="M450 412V438" class="arrow"/>
-<rect x="270" y="440" width="360" height="56" rx="8" class="block"/><text x="450" y="475" text-anchor="middle">Sum microphones</text>
-<path d="M450 496V522" class="arrow"/>
-<rect x="270" y="524" width="360" height="56" rx="8" class="block"/><text x="450" y="559" text-anchor="middle">Calculate power</text>
-<path d="M450 580V606" class="arrow"/>
-<rect x="270" y="608" width="360" height="56" rx="8" class="block"/><text x="450" y="643" text-anchor="middle">Sum bins &amp; average frames</text>
-<path d="M450 664V690" class="arrow"/>
-<rect x="270" y="692" width="360" height="56" rx="8" class="block"/><text x="450" y="727" text-anchor="middle">Directional power map</text>
-<rect x="10" y="356" width="230" height="56" rx="8" class="side"/><text x="125" y="391" text-anchor="middle" style="font-size:19px">Steering coefficients</text><path d="M240 384H268" class="arrow"/>
-<path d="M450 748V776H325V798" class="arrow"/><path d="M450 776H625V798" class="arrow"/>
-<rect x="200" y="800" width="250" height="56" rx="8" class="side"/><text x="325" y="835" text-anchor="middle">Find peak directions</text>
-<rect x="500" y="800" width="250" height="56" rx="8" class="side"/><text x="625" y="835" text-anchor="middle">Display heatmap</text>
+<style>text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}.label{font-size:22px;font-weight:600}.small{font-size:17px;fill:#536873}.inputtext{font-size:19px}.heading{font-size:23px;font-weight:700;fill:#006e72}.looplabel{font-size:19px;font-weight:600;fill:#36535a}.section{fill:#fbfdfc;stroke:#d7e0e3;stroke-width:1.5}.loop{fill:#f1f8f6;stroke:#8ab7b3;stroke-width:1.5}.micloop{fill:#e6f2ef;stroke:#8ab7b3;stroke-width:1.5}.block{fill:white;stroke:#007e81;stroke-width:1.7}.input{fill:#f5f7f9;stroke:#98a7af;stroke-width:1.4}.output{fill:#fff7e9;stroke:#ad854b;stroke-width:1.7;stroke-dasharray:7 5}.arrow{fill:none;stroke:#66818b;stroke-width:2;marker-end:url(#arrow)}</style>
+<rect width="1100" height="1780" fill="white"/>
+<text x="180" y="33" text-anchor="middle" class="small">Configuration inputs · first use</text>
+<rect x="380" y="50" width="650" height="160" rx="12" class="section"/>
+<text x="405" y="82" class="heading">1 · Microphone samples</text>
+<rect x="380" y="240" width="650" height="340" rx="12" class="section"/>
+<text x="405" y="273" class="heading">2 · FFT</text>
+<rect x="380" y="650" width="650" height="940" rx="12" class="section"/>
+<text x="405" y="684" class="heading">3 · Delay and sum: sweep through directions</text>
+<rect x="400" y="710" width="610" height="735" rx="10" class="loop"/>
+<text x="705" y="746" text-anchor="middle" class="looplabel">For each candidate direction (left/right, up/down)</text>
+<rect x="420" y="775" width="570" height="520" rx="10" class="loop"/>
+<text x="705" y="805" text-anchor="middle" class="looplabel">For each selected frequency bin, in each FFT frame</text>
+<rect x="440" y="825" width="530" height="245" rx="10" class="micloop"/>
+<text x="705" y="852" text-anchor="middle" class="looplabel">For each microphone</text>
+<rect x="430" y="105" width="550" height="80" rx="8" class="block"/>
+<text x="705.0" y="142.0" text-anchor="middle" class="label">PCM samples for each microphone</text>
+<text x="705.0" y="167.0" text-anchor="middle" class="small">Mic array → PDM → PCM; Python tests generate PCM</text>
+<rect x="20" y="110" width="320" height="70" rx="8" class="input"/>
+<text x="180" y="152.0" text-anchor="middle" class="inputtext">PCM sampling rate</text>
+<path d="M340 145H427" class="arrow"/>
+<path d="M705 185V296" class="arrow"/>
+<rect x="430" y="300" width="550" height="60" rx="8" class="block"/>
+<text x="705.0" y="337.0" text-anchor="middle" class="label">Consecutive samples → frame &amp; window</text>
+<rect x="20" y="285" width="320" height="90" rx="8" class="input"/>
+<text x="180" y="324.0" text-anchor="middle" class="inputtext">Observation length</text>
+<text x="180" y="350.0" text-anchor="middle" class="inputtext">FFT size N · frame hop · window</text>
+<path d="M340 330H427" class="arrow"/>
+<path d="M705 360V396" class="arrow"/>
+<rect x="430" y="400" width="550" height="75" rx="8" class="block"/>
+<text x="705.0" y="434.5" text-anchor="middle" class="label">FFT → amplitude + phase at each bin</text>
+<text x="705.0" y="459.5" text-anchor="middle" class="small">Bin frequency: fₖ = k × sampling rate ÷ FFT size</text>
+<path d="M705 475V506" class="arrow"/>
+<rect x="430" y="510" width="550" height="55" rx="8" class="block"/>
+<text x="705.0" y="544.5" text-anchor="middle" class="label">Select frequency bins</text>
+<rect x="20" y="500" width="320" height="75" rx="8" class="input"/>
+<text x="180" y="531.5" text-anchor="middle" class="inputtext">Frequency band</text>
+<text x="180" y="557.5" text-anchor="middle" class="inputtext">Bin selection</text>
+<path d="M340 537H427" class="arrow"/>
+<path d="M705 565V642" class="arrow"/>
+<text x="720" y="613" class="small">M microphones × K selected bins / frame</text>
+<rect x="20" y="710" width="320" height="65" rx="8" class="input"/>
+<text x="180" y="749.5" text-anchor="middle" class="inputtext">Scan FOV + scan-grid step</text>
+<path d="M340 742H397" class="arrow"/>
+<rect x="460" y="875" width="490" height="75" rx="8" class="block"/>
+<text x="705.0" y="909.5" text-anchor="middle" class="label">Predict phase at this microphone</text>
+<text x="705.0" y="934.5" text-anchor="middle" class="small">Relative to a common reference, for this direction</text>
+<rect x="20" y="875" width="320" height="75" rx="8" class="input"/>
+<text x="180" y="906.5" text-anchor="middle" class="inputtext">Mic positions + sound speed</text>
+<text x="180" y="932.5" text-anchor="middle" class="inputtext">Focus distance (if used)</text>
+<path d="M340 912H457" class="arrow"/>
+<path d="M705 950V978" class="arrow"/>
+<rect x="460" y="980" width="490" height="70" rx="8" class="block"/>
+<text x="705.0" y="1012.0" text-anchor="middle" class="label">Subtract the predicted phase</text>
+<text x="705.0" y="1037.0" text-anchor="middle" class="small">Rotate the recorded complex value</text>
+<path d="M705 1050V1107" class="arrow"/>
+<rect x="460" y="1110" width="490" height="60" rx="8" class="block"/>
+<text x="705.0" y="1147.0" text-anchor="middle" class="label">Add complex values across microphones</text>
+<path d="M705 1170V1207" class="arrow"/>
+<rect x="460" y="1210" width="490" height="65" rx="8" class="block"/>
+<text x="705.0" y="1239.5" text-anchor="middle" class="label">Power of the sum</text>
+<text x="705.0" y="1264.5" text-anchor="middle" class="small">Real² + imaginary²</text>
+<path d="M705 1275V1332" class="arrow"/>
+<rect x="430" y="1335" width="550" height="80" rx="8" class="block"/>
+<text x="705.0" y="1372.0" text-anchor="middle" class="label">Sum bin powers; average FFT frames</text>
+<text x="705.0" y="1397.0" text-anchor="middle" class="small">One power score for this candidate direction</text>
+<path d="M705 1415V1492" class="arrow"/>
+<rect x="430" y="1495" width="550" height="65" rx="8" class="block"/>
+<text x="705.0" y="1534.5" text-anchor="middle" class="label">Directional power map</text>
+<path d="M405 1620H1005" fill="none" stroke="#ccd4d8" stroke-dasharray="5 5"/>
+<path d="M705 1560V1657" class="arrow"/>
+<rect x="430" y="1660" width="550" height="90" rx="8" class="output"/>
+<text x="705.0" y="1702.0" text-anchor="middle" class="label">Find peaks · evaluate · display</text>
+<text x="705.0" y="1727.0" text-anchor="middle" class="small">Analysis &amp; visualization — outside the algorithm</text>
+<rect x="20" y="1660" width="320" height="90" rx="8" class="input"/>
+<text x="180" y="1699.0" text-anchor="middle" class="inputtext">Ground truth (tests)</text>
+<text x="180" y="1725.0" text-anchor="middle" class="inputtext">Scoring rules · display range</text>
+<path d="M340 1705H427" class="arrow"/>
 </svg>
