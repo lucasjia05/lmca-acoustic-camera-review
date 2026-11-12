@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 1620" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1620" role="img" aria-labelledby="title desc">
 <title id="title">Frequency-domain delay-and-sum: samples, FFT, direction sweep</title>
-<desc id="desc">Microphone PCM samples flow through framing, FFT and frequency-bin selection, then phase prediction, phase alignment, complex summation and power calculation to produce a directional power map. A side bracket identifies configured_power_map() from frame preparation through the map, with helper function names aligned to their steps. Configuration inputs connect where first used. Peak finding, evaluation and display share a separate output block.</desc>
+<desc id="desc">Microphone PCM samples flow through framing, FFT and frequency-bin selection, then phase prediction, phase alignment, complex summation and power calculation to produce a directional power map. A side bracket identifies configured_power_map() from frame preparation through the map, with separate short brackets connecting helper functions to their corresponding blocks. Configuration inputs connect where first used. Peak finding, evaluation and display share a separate output block.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#66818b"/></marker></defs>
 <style>text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}.label{font-size:22px;font-weight:600}.small{font-size:17px;fill:#536873}.code{font-family:Consolas,monospace;font-size:17px;fill:#536873}.inputtext{font-size:19px}.heading{font-size:23px;font-weight:700;fill:#006e72}.section{fill:#fbfdfc;stroke:#d7e0e3;stroke-width:1.5}.block{fill:white;stroke:#007e81;stroke-width:1.7}.input{fill:#f5f7f9;stroke:#98a7af;stroke-width:1.4}.output{fill:#fff7e9;stroke:#ad854b;stroke-width:1.7;stroke-dasharray:7 5}.arrow{fill:none;stroke:#66818b;stroke-width:2;marker-end:url(#arrow)}</style>
-<rect width="1360" height="1620" fill="white"/>
+<rect width="1400" height="1620" fill="white"/>
 <text x="180" y="33" text-anchor="middle" class="small">Configuration inputs · first use</text>
 <rect x="380" y="50" width="650" height="160" rx="12" class="section"/>
 <text x="405" y="82" class="heading">1 · Microphone samples</text>
@@ -64,10 +64,18 @@
 <rect x="430" y="1500" width="550" height="90" rx="8" class="output"/>
 <text x="705.0" y="1542" text-anchor="middle" class="label">Find peaks · evaluate · display</text>
 <text x="705" y="1567" text-anchor="middle" class="small">Outside the algorithm</text>
-<path d="M1035 300H1048V1400H1035" fill="none" stroke="#98a7af" stroke-width="1.5"/>
-<text x="1070" y="325" class="code">configured_power_map()</text>
-<text x="1070" y="445" class="code">Precision.fft()</text>
-<text x="1070" y="760" class="code">arrival_delays()</text>
-<text x="1070" y="987" class="code">Precision.sum_channels()</text>
-<text x="1070" y="1222" class="code">Precision.sum_power()</text>
+<g fill="none" stroke="#98a7af" stroke-width="1.5">
+<path d="M1325 300H1340V1400H1325"/>
+<path d="M990 400H1010V475H990 M1010 437.5H1050"/>
+<path d="M960 715H1010V790H960 M1010 752.5H1050"/>
+<path d="M960 950H1010V1010H960 M1010 980H1050"/>
+<path d="M990 1175H1010V1255H990 M1010 1215H1050"/>
+</g>
+<text x="1370" y="850" text-anchor="middle" transform="rotate(90 1370 850)" class="code">configured_power_map()</text>
+<text x="1065" y="444" class="code">Precision.fft()</text>
+<text x="1065" y="745" class="code">arrival_delays()</text>
+<text x="1065" y="769" class="code">+ np.exp()</text>
+<text x="1065" y="987" class="code">Precision.sum_channels()</text>
+<text x="1065" y="1208" class="code">Precision.sum_power()</text>
+<text x="1065" y="1232" class="code">+ np.mean()</text>
 </svg>
