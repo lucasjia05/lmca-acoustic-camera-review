@@ -3,3 +3,8 @@
 #software .software-figure img{display:block;width:100%;height:auto}
 @media(max-width:700px){#software .software-figure{padding:8px;margin:0 -8px}}
 @media print{#software .software-figure{break-inside:avoid;padding:8px}#software .software-figure img{max-height:850px}}
+
+#architecture .architecture-figure{margin:0;background:white;border:1px solid var(--line);border-radius:10px;padding:24px}
+#architecture .architecture-figure svg{display:block;width:100%;height:auto}
+@media(max-width:700px){#architecture .architecture-figure{padding:8px;margin:0 -8px}}
+@media print{#architecture .architecture-figure{break-inside:avoid;padding:8px}#architecture .architecture-figure svg{max-height:850px}}

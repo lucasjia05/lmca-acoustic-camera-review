@@ -1,117 +1,142 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="rtl-arch" id="diagram" width="1400" height="1530" viewBox="0 0 1400 1530" role="img" aria-labelledby="rtl-title rtl-desc">
-<title id="rtl-title">Implemented PDM-to-map RTL hierarchy</title>
-<desc id="rtl-desc">The configured camera instantiates lmca_pdm_camera. Thirty synchronized PDM bits pass through the CIC/FIR decimator and PCM serializer into lmca_pcm_pipeline. Its controller schedules the observation buffer, window, shared radix-2 FFT, spectrum buffer and bin selector, and serial DAS engine. The DAS engine contains steering ROMs, complex microphone accumulation, power calculation and map accumulation. It emits a valid/ready map stream to an external host. Physical microphone capture, clock generation, camera and overlay are outside this RTL.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1700" height="1130" viewBox="0 0 1700 1130" role="img" aria-labelledby="rtl-module-title rtl-module-desc">
+<title id="rtl-module-title">PDM-to-map architecture organized by SystemVerilog source files</title>
+<desc id="rtl-module-desc">The generated lmca_configured_camera.sv wraps lmca_pdm_camera.sv. That top instantiates u_pdm and u_serializer, both defined in lmca_pdm_decimator.sv, and u_pcm from lmca_pcm_pipeline.sv. Inside the PCM pipeline are u_frames from lmca_frame_buffer.sv, u_window from lmca_window.sv, u_fft from lmca_fft.sv, u_bins from lmca_bin_selector.sv and u_das from lmca_das.sv. Solid arrows show sample and spectrum data. Dashed arrows show selected control and read-address connections. Controller logic is inside lmca_pcm_pipeline.sv, not a separate module. Physical PDM capture and the host are external.</desc>
 <defs>
-<marker id="rtl-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#b5c7df"/></marker>
-<marker id="rtl-control-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#c0a9e8"/></marker>
+<marker id="rtl-module-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#527d80"/></marker>
+<marker id="rtl-module-control-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9276ac"/></marker>
 </defs>
 <style>
-.rtl-arch text{font-family:'Segoe UI',Arial,sans-serif;fill:#e8edf5;text-anchor:middle}
-.rtl-arch .label{font-size:23px;font-weight:600}.rtl-arch .small{font-size:18px;fill:#bfccdf}
-.rtl-arch .code{font:18px Consolas,monospace;fill:#afc8ea}.rtl-arch .heading{font-size:23px;font-weight:700;text-anchor:start}
-.rtl-arch .boundary{fill:#1b2230;stroke:#75869f;stroke-width:1.7;stroke-dasharray:9 6}
-.rtl-arch .pipeline{fill:#202b3b;stroke:#7694be;stroke-width:1.5}
-.rtl-arch .box{fill:#25354a;stroke:#8dbaff;stroke-width:1.6}
-.rtl-arch .memory{fill:#34312a;stroke:#e5bb78;stroke-width:1.5}
-.rtl-arch .external{fill:#252b34;stroke:#98a7af;stroke-width:1.5;stroke-dasharray:6 4}
-.rtl-arch .control{fill:#302b42;stroke:#b39ad9;stroke-width:1.5}
-.rtl-arch .wire{fill:none;stroke:#b5c7df;stroke-width:2.2;marker-end:url(#rtl-arrow)}
-.rtl-arch .control-wire{fill:none;stroke:#c0a9e8;stroke-width:1.6;stroke-dasharray:5 4;marker-end:url(#rtl-control-arrow)}
+.rtl-modules text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}
+.rtl-modules .filename{font-size:24px;font-weight:700;fill:#006e72}
+.rtl-modules .name{font-size:22px;font-weight:650}
+.rtl-modules .small{font-size:18px;fill:#536873}
+.rtl-modules .tiny{font-size:16px;fill:#536873}
+.rtl-modules .instance{font:17px Consolas,monospace;fill:#536873}
+.rtl-modules .file{fill:#fbfdfc;stroke:#d7e0e3;stroke-width:1.5}
+.rtl-modules .rootfile{fill:white;stroke:#a8b9bc;stroke-width:1.5;stroke-dasharray:8 5}
+.rtl-modules .box{fill:white;stroke:#7da3a4;stroke-width:1.6}
+.rtl-modules .logic{fill:#faf8fc;stroke:#b29bc5;stroke-width:1.4;stroke-dasharray:5 4}
+.rtl-modules .external{fill:#f5f7f9;stroke:#98a7af;stroke-width:1.4}
+.rtl-modules .host{fill:#fff7e9;stroke:#ad854b;stroke-width:1.5;stroke-dasharray:7 5}
+.rtl-modules .data{fill:none;stroke:#527d80;stroke-width:2;marker-end:url(#rtl-module-arrow)}
+.rtl-modules .control{fill:none;stroke:#9276ac;stroke-width:1.6;stroke-dasharray:5 4;marker-end:url(#rtl-module-control-arrow)}
+.rtl-modules .rail{fill:none;stroke:#a7b2b7;stroke-width:1.4}
 </style>
-<rect width="1400" height="1530" fill="#171b23"/>
-<rect x="260" y="115" width="1105" height="1260" rx="16" class="boundary"/>
-<rect x="295" y="460" width="1040" height="870" rx="13" class="pipeline"/>
-<rect x="315" y="1060" width="1000" height="230" rx="11" class="pipeline"/>
-<text x="285" y="151" class="heading">lmca_pdm_camera</text>
-<text x="1335" y="151" class="small" style="text-anchor:end">Single core clk · synchronous reset</text>
-<text x="285" y="180" class="small" style="text-anchor:start">Active configuration · 30 mics</text>
-<text x="1335" y="180" class="small" style="text-anchor:end">Status: clipped · input_overrun</text>
-<text x="320" y="495" class="heading">lmca_pcm_pipeline</text>
+<rect width="1700" height="1130" fill="white"/>
+<text x="225" y="35" class="small">Generated top: lmca_configured_camera.sv · active baseline</text>
 
-<rect x="25" y="20" width="215" height="65" rx="8" class="external"/>
-<text x="132.5" y="45" class="small">Physical mic capture</text>
-<text x="132.5" y="70" class="small">Clock / L-R edges / CDC</text>
-<rect x="330" y="20" width="670" height="65" rx="8" class="external"/>
-<text x="665" y="47" class="label">Synchronized PDM input · 30 bits / word</text>
-<text x="665" y="73" class="small">pdm_bits[29:0] · pdm_valid / pdm_ready</text>
-<path d="M240 52.5H327" class="wire"/>
-<path d="M665 85V202" class="wire"/>
+<rect x="205" y="80" width="1460" height="875" rx="12" class="rootfile"/>
+<text x="230" y="117" class="filename">lmca_pdm_camera.sv</text>
+<text x="230" y="147" class="small">Instantiates u_pdm, u_serializer and u_pcm</text>
+<text x="1640" y="117" class="small" text-anchor="end">busy · done · clipped · input_overrun</text>
+<text x="230" y="185" class="tiny">clk / rst shared by clocked logic</text>
+<path d="M230 203H1635 M420 203V257 M1145 203V257" class="rail"/>
 
-<rect x="330" y="205" width="670" height="95" rx="9" class="box"/>
-<text x="665" y="235" class="label">CIC decimation + gain normalization + FIR</text>
-<text x="665" y="261" class="code">lmca_pdm_decimator</text>
-<text x="665" y="286" class="small">Order 3 · ÷16 · 3.072 MHz → 192 ksample/s · identity FIR</text>
-<path d="M665 300V337" class="wire"/>
-<text x="1020" y="325" class="small" style="text-anchor:start">30 × 16-bit PCM</text>
-<rect x="330" y="340" width="670" height="75" rx="9" class="box"/>
-<text x="665" y="371" class="label">Parallel PCM → microphone-ordered stream</text>
-<text x="665" y="398" class="code">lmca_pcm_serializer</text>
-<path d="M665 415V532" class="wire"/>
-<text x="685" y="447" class="small" style="text-anchor:start">16-bit PCM · microphones 0…29 per sample tick</text>
+<rect x="240" y="260" width="360" height="490" rx="10" class="file"/>
+<text x="260" y="293" class="filename">lmca_pdm_decimator.sv</text>
+<rect x="270" y="335" width="300" height="125" rx="7" class="box"/>
+<text x="288" y="366" class="name">lmca_pdm_decimator</text>
+<text x="288" y="392" class="instance">u_pdm</text>
+<text x="288" y="420" class="small">CIC order 3 · ÷16 · normalize</text>
+<text x="288" y="446" class="small">FIR: identity, 1 tap</text>
+<rect x="270" y="590" width="300" height="105" rx="7" class="box"/>
+<text x="288" y="622" class="name">lmca_pcm_serializer</text>
+<text x="288" y="649" class="instance">u_serializer</text>
+<text x="288" y="677" class="small">Parallel PCM → time-major stream</text>
+<path d="M420 460V587" class="data"/>
+<text x="437" y="519" class="small">30 × 16-bit</text>
+<text x="437" y="544" class="small">PCM vector</text>
 
-<rect x="330" y="535" width="670" height="90" rx="9" class="memory"/>
-<text x="665" y="563" class="label">Circular observation buffer</text>
-<text x="665" y="590" class="code">lmca_frame_buffer</text>
-<text x="665" y="614" class="small">4096 samples/mic · retain overlap · 2048 new samples/map</text>
-<path d="M665 625V667" class="wire"/>
-<rect x="330" y="670" width="670" height="75" rx="9" class="box"/>
-<text x="665" y="699" class="label">Window ROM + multiply</text>
-<text x="665" y="726" class="code">lmca_window · sqrt-Hann · 16-bit PCM → 24-bit data</text>
-<path d="M665 745V787" class="wire"/>
-<rect x="330" y="790" width="670" height="90" rx="9" class="box"/>
-<text x="665" y="819" class="label">Shared 512-point radix-2 FFT</text>
-<text x="665" y="845" class="code">lmca_fft · complex storage + twiddle ROM</text>
-<text x="665" y="869" class="small">FFT/N scaling · 24-bit real + 24-bit imaginary output</text>
-<path d="M665 880V922" class="wire"/>
-<rect x="330" y="925" width="670" height="90" rx="9" class="memory"/>
-<text x="665" y="953" class="label">Spectrum buffer + bin selection</text>
-<text x="665" y="979" class="code">lmca_bin_selector</text>
-<text x="665" y="1003" class="small">257 bins/mic stored · 67 selected · 25–50 kHz band</text>
-<path d="M665 1015V1107" class="wire"/>
+<rect x="20" y="335" width="165" height="125" rx="7" class="external"/>
+<text x="37" y="365" class="small">Physical capture</text>
+<text x="37" y="393" class="name">30 PDM bits</text>
+<text x="37" y="421" class="tiny">Sampled / synchronized</text>
+<text x="37" y="445" class="tiny">3.072 MHz nominal</text>
+<path d="M185 397H267" class="data"/>
+<text x="216" y="379" class="tiny" text-anchor="middle">PDM</text>
 
-<rect x="1040" y="550" width="265" height="330" rx="9" class="control"/>
-<text x="1172.5" y="583" class="label">Schedule / control</text>
-<text x="1172.5" y="616" class="small">start · busy · done</text>
-<text x="1172.5" y="658" class="small">Capture → FFT → bins</text>
-<text x="1172.5" y="686" class="small">→ DAS → next frame</text>
-<text x="1172.5" y="731" class="small">Shared FFT across mics</text>
-<text x="1172.5" y="759" class="small">256-sample FFT hop</text>
-<text x="1172.5" y="787" class="small">15 FFT frames / map</text>
-<text x="1172.5" y="833" class="small">State machine inside</text>
-<text x="1172.5" y="858" class="code">lmca_pcm_pipeline</text>
-<path d="M1040 635H1018V1080H1002" class="control-wire"/>
-<path d="M1018 635V580H1003" class="control-wire"/>
-<path d="M1018 707H1003" class="control-wire"/>
-<path d="M1018 835H1003" class="control-wire"/>
-<path d="M1018 970H1003" class="control-wire"/>
+<rect x="650" y="260" width="985" height="650" rx="10" class="file"/>
+<text x="675" y="293" class="filename">lmca_pcm_pipeline.sv</text>
+<text x="1610" y="293" class="instance" text-anchor="end">u_pcm</text>
+<path d="M570 642H625V397H697" class="data"/>
+<text x="600" y="795" class="tiny" text-anchor="end">16-bit PCM · 192 ksample/s / mic</text>
 
-<text x="335" y="1090" class="heading">lmca_das · serial sweep</text>
-<text x="1290" y="1090" class="small" style="text-anchor:end">Direction → bin → mic</text>
-<rect x="340" y="1110" width="540" height="65" rx="8" class="box"/>
-<text x="610" y="1137" class="label">Complex MAC: phase alignment + mic sum</text>
-<text x="610" y="1162" class="small">24-bit products → 32-bit real / imaginary accumulators</text>
-<rect x="1050" y="1110" width="240" height="80" rx="8" class="memory"/>
-<text x="1170" y="1140" class="label">Steering ROMs</text>
-<text x="1170" y="1167" class="small">18-bit real + imaginary</text>
-<path d="M1050 1142.5H883" class="wire"/>
-<path d="M610 1175V1192H455V1207" class="wire"/>
-<rect x="340" y="1210" width="230" height="55" rx="8" class="box"/>
-<text x="455" y="1234" class="label">Power · |sum|²</text>
-<text x="455" y="1256" class="small">48-bit power terms</text>
-<path d="M570 1237.5H622" class="wire"/>
-<rect x="625" y="1210" width="350" height="55" rx="8" class="memory"/>
-<text x="800" y="1234" class="small">Bin / frame sum + map memory</text>
-<text x="800" y="1256" class="small">Average / normalize · 64-bit output</text>
-<path d="M800 1265V1427" class="wire"/>
-<text x="825" y="1320" class="small" style="text-anchor:start">441 directions · ±30° az/el · 3° grid</text>
-<text x="825" y="1350" class="small" style="text-anchor:start">map_valid / map_ready · map_last</text>
-<text x="285" y="1402" class="small" style="text-anchor:start">Physical capture / host / overlay are external</text>
+<rect x="700" y="340" width="255" height="115" rx="7" class="box"/>
+<text x="717" y="371" class="name">lmca_frame_buffer.sv</text>
+<text x="717" y="397" class="instance">u_frames</text>
+<text x="717" y="423" class="small">Circular observation buffer</text>
+<text x="717" y="446" class="tiny">4096 / mic · map hop 2048</text>
+<path d="M955 397H1017" class="data"/>
+<text x="985" y="379" class="tiny" text-anchor="middle">PCM</text>
 
-<rect x="25" y="1430" width="310" height="75" rx="8" class="external"/>
-<text x="180" y="1461" class="label">Camera</text>
-<text x="180" y="1488" class="small">Video frames</text>
-<path d="M335 1467.5H492" class="wire"/>
-<rect x="495" y="1430" width="610" height="75" rx="8" class="external"/>
-<text x="800" y="1461" class="label">Host: map receiver + video overlay</text>
-<text x="800" y="1488" class="small">Map output is a valid/ready stream; no UART in this RTL</text>
+<rect x="1020" y="340" width="220" height="115" rx="7" class="box"/>
+<text x="1037" y="371" class="name">lmca_window.sv</text>
+<text x="1037" y="397" class="instance">u_window</text>
+<text x="1037" y="423" class="small">ROM + multiply</text>
+<text x="1037" y="446" class="tiny">sqrt-Hann · 24-bit output</text>
+<path d="M1240 397H1297" class="data"/>
+<text x="1270" y="379" class="tiny" text-anchor="middle">24-bit</text>
+
+<rect x="1300" y="340" width="280" height="115" rx="7" class="box"/>
+<text x="1317" y="371" class="name">lmca_fft.sv</text>
+<text x="1317" y="397" class="instance">u_fft</text>
+<text x="1317" y="423" class="small">Shared radix-2 FFT + twiddles</text>
+<text x="1317" y="446" class="tiny">512 points · 24-bit real / imag</text>
+<path d="M1440 455V647" class="data"/>
+<text x="1456" y="499" class="tiny">257 bins / mic</text>
+
+<rect x="1300" y="650" width="280" height="155" rx="7" class="box"/>
+<text x="1317" y="681" class="name">lmca_bin_selector.sv</text>
+<text x="1317" y="707" class="instance">u_bins</text>
+<text x="1317" y="737" class="small">Spectrum RAM + bin selection</text>
+<text x="1317" y="765" class="small">67 selected · 25–50 kHz</text>
+<text x="1317" y="790" class="tiny">24-bit real / imaginary</text>
+
+<rect x="1020" y="650" width="230" height="155" rx="7" class="box"/>
+<text x="1037" y="681" class="name">lmca_das.sv</text>
+<text x="1037" y="707" class="instance">u_das</text>
+<text x="1037" y="737" class="small">Complex MAC + power</text>
+<text x="1037" y="765" class="small">Map sum / normalization</text>
+<text x="1037" y="790" class="tiny">Steering ROM + map RAM</text>
+<path d="M1300 705H1253" class="data"/>
+<path d="M1250 755H1297" class="control"/>
+<text x="1275" y="834" class="tiny" text-anchor="middle">mic / bin read address →</text>
+
+<rect x="700" y="650" width="255" height="155" rx="7" class="logic"/>
+<text x="717" y="681" class="name">Controller</text>
+<text x="717" y="707" class="small">Logic inside this file</text>
+<text x="717" y="737" class="small">Mic / frame sequencing</text>
+<text x="717" y="765" class="small">FFT → bins → DAS</text>
+<text x="717" y="790" class="tiny">FFT hop 256 · 15 frames/map</text>
+<path d="M827 650V458" class="control"/>
+<text x="844" y="549" class="tiny">read offset</text>
+<path d="M900 650V560H1610V680H1583" class="control"/>
+<path d="M1130 560V458" class="control"/>
+<path d="M1520 560V458" class="control"/>
+<text x="1040" y="545" class="tiny">index / start / handshakes</text>
+<path d="M955 690H1017" class="control"/>
+<text x="986" y="678" class="tiny" text-anchor="middle">start</text>
+<path d="M1020 755H958" class="control"/>
+<text x="986" y="783" class="tiny" text-anchor="middle">done</text>
+
+<path d="M1135 805V1027" class="data"/>
+<text x="1153" y="867" class="small">441 direction values</text>
+<text x="1153" y="893" class="tiny">64-bit power · 32-bit direction index</text>
+<text x="1153" y="978" class="tiny">map_valid / map_ready · map_last</text>
+<text x="240" y="846" class="tiny">Both front-end modules are defined</text>
+<text x="240" y="871" class="tiny">in lmca_pdm_decimator.sv.</text>
+
+<rect x="590" y="1030" width="285" height="75" rx="7" class="external"/>
+<text x="610" y="1061" class="name">Camera</text>
+<text x="610" y="1088" class="small">Video frames</text>
+<path d="M875 1067H997" class="data"/>
+<rect x="1000" y="1030" width="470" height="75" rx="7" class="host"/>
+<text x="1020" y="1061" class="name">External host</text>
+<text x="1020" y="1088" class="small">Map receiver + video overlay</text>
+
+<path d="M25 1010H85" class="data"/>
+<text x="100" y="1016" class="tiny">Data</text>
+<path d="M25 1047H85" class="control"/>
+<text x="100" y="1053" class="tiny">Selected control / address signals</text>
+<text x="25" y="1095" class="tiny">Routine ready/valid and clock/reset fanout omitted.</text>
 </svg>
