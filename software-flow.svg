@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1460" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340 1460" role="img" aria-labelledby="title desc">
 <title id="title">Frequency-domain delay-and-sum: samples to directional power map</title>
-<desc id="desc">A straight data path runs from microphone PCM samples through framing, window and FFT, frequency-bin selection, phase alignment, complex microphone summation and power calculation, then bin-power summation and frame averaging to a directional power map. Configuration inputs sit to the left. Phase prediction is a separate side branch feeding phase alignment. Helper names sit inside their blocks. Peak finding, evaluation and display follow outside the algorithm.</desc>
+<desc id="desc">A straight data path runs from microphone PCM samples through framing, window and FFT, frequency-bin selection, phase alignment, complex microphone summation and power calculation, then bin-power summation and frame averaging to a directional power map. Configuration inputs sit to the left. Phase prediction is a separate side branch feeding phase alignment. Outside brackets identify the Python helpers and the processing steps they cover. Peak finding, evaluation and display follow outside the algorithm.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#66818b"/></marker></defs>
 <style>
 text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}
@@ -14,40 +14,39 @@ text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}
 .output{fill:#fff7e9;stroke:#ad854b;stroke-width:1.7;stroke-dasharray:7 5}
 .arrow{fill:none;stroke:#66818b;stroke-width:2;marker-end:url(#arrow)}
 </style>
-<rect width="1200" height="1460" fill="white"/>
-<rect x="380" y="50" width="780" height="160" rx="12" class="section"/>
-<rect x="380" y="240" width="780" height="340" rx="12" class="section"/>
-<rect x="380" y="635" width="780" height="640" rx="12" class="section"/>
+<rect width="1340" height="1460" fill="white"/>
+<rect x="380" y="50" width="650" height="160" rx="12" class="section"/>
+<rect x="380" y="240" width="650" height="340" rx="12" class="section"/>
+<rect x="380" y="635" width="650" height="640" rx="12" class="section"/>
 <text x="177.5" y="33" text-anchor="middle" class="small">Configuration inputs</text>
 
 <text x="405" y="82" class="heading">1 · Microphone samples</text>
-<rect x="420" y="105" width="700" height="75" rx="8" class="block"/>
-<text x="770" y="151" text-anchor="middle" class="label">PCM samples for each microphone</text>
+<rect x="420" y="105" width="550" height="75" rx="8" class="block"/>
+<text x="695" y="151" text-anchor="middle" class="label">PCM samples for each microphone</text>
 <rect x="20" y="107" width="315" height="70" rx="8" class="input"/>
 <text x="177.5" y="150" text-anchor="middle" class="inputtext">PCM sampling rate</text>
 <path d="M335 142H417" class="arrow"/>
-<path d="M770 180V292" class="arrow"/>
+<path d="M695 180V292" class="arrow"/>
 
 <text x="405" y="273" class="heading">2 · FFT</text>
-<rect x="420" y="295" width="700" height="60" rx="8" class="block"/>
-<text x="770" y="333" text-anchor="middle" class="label">Consecutive samples → FFT frame</text>
+<rect x="420" y="295" width="550" height="60" rx="8" class="block"/>
+<text x="695" y="333" text-anchor="middle" class="label">Consecutive samples → FFT frame</text>
 <rect x="20" y="280" width="315" height="90" rx="8" class="input"/>
 <text x="177.5" y="319" text-anchor="middle" class="inputtext">Observation length</text>
 <text x="177.5" y="346" text-anchor="middle" class="inputtext">FFT size N · frame hop · window</text>
 <path d="M335 325H417" class="arrow"/>
-<path d="M770 355V387" class="arrow"/>
-<rect x="420" y="390" width="700" height="80" rx="8" class="block"/>
-<text x="770" y="422" text-anchor="middle" class="label">Window + FFT → amplitude and phase</text>
-<text x="770" y="451" text-anchor="middle" class="code">Precision.fft()</text>
-<path d="M770 470V507" class="arrow"/>
-<rect x="420" y="510" width="700" height="50" rx="8" class="block"/>
-<text x="770" y="542" text-anchor="middle" class="label">Select frequency bins</text>
+<path d="M695 355V387" class="arrow"/>
+<rect x="420" y="390" width="550" height="80" rx="8" class="block"/>
+<text x="695" y="438" text-anchor="middle" class="label">Window + FFT → amplitude and phase</text>
+<path d="M695 470V507" class="arrow"/>
+<rect x="420" y="510" width="550" height="50" rx="8" class="block"/>
+<text x="695" y="542" text-anchor="middle" class="label">Select frequency bins</text>
 <rect x="20" y="495" width="315" height="80" rx="8" class="input"/>
 <text x="177.5" y="528" text-anchor="middle" class="inputtext">Frequency band</text>
 <text x="177.5" y="554" text-anchor="middle" class="inputtext">Bin selection</text>
 <path d="M335 535H417" class="arrow"/>
-<path d="M770 560V732" class="arrow"/>
-<text x="790" y="615" class="small">M microphones × K bins / frame</text>
+<path d="M695 560V732" class="arrow"/>
+<text x="715" y="615" class="small">M microphones × K bins / frame</text>
 
 <text x="405" y="671" class="heading">3 · Delay and sum</text>
 <text x="405" y="703" class="small">For each scan direction, bin and FFT frame:</text>
@@ -57,30 +56,40 @@ text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}
 <text x="177.5" y="677" text-anchor="middle" class="inputtext">Focus distance (if used)</text>
 <path d="M177.5 700V732" class="arrow"/>
 <rect x="20" y="735" width="315" height="80" rx="8" class="steering"/>
-<text x="177.5" y="765" text-anchor="middle" class="label">Predict phase offsets</text>
-<text x="177.5" y="794" text-anchor="middle" class="code">arrival_delays() + np.exp()</text>
+<text x="177.5" y="783" text-anchor="middle" class="label">Predict phase offsets</text>
 <path d="M335 775H447" class="arrow"/>
-<rect x="450" y="735" width="640" height="80" rx="8" class="block"/>
-<text x="770" y="767" text-anchor="middle" class="label">Align microphone phases</text>
-<text x="770" y="795" text-anchor="middle" class="small">Subtract each microphone’s predicted phase</text>
-<path d="M770 815V847" class="arrow"/>
-<rect x="450" y="850" width="640" height="75" rx="8" class="block"/>
-<text x="770" y="880" text-anchor="middle" class="label">Add complex values across microphones</text>
-<text x="770" y="908" text-anchor="middle" class="code">Precision.sum_channels()</text>
-<path d="M770 925V957" class="arrow"/>
-<rect x="450" y="960" width="640" height="65" rx="8" class="block"/>
-<text x="770" y="1000" text-anchor="middle" class="label">Power of the sum · |sum|²</text>
-<path d="M770 1025V1057" class="arrow"/>
-<rect x="420" y="1060" width="700" height="80" rx="8" class="block"/>
-<text x="770" y="1091" text-anchor="middle" class="label">Sum bin powers; average FFT frames</text>
-<text x="770" y="1120" text-anchor="middle" class="code">Precision.sum_power() + np.mean()</text>
-<path d="M770 1140V1177" class="arrow"/>
-<rect x="420" y="1180" width="700" height="65" rx="8" class="block"/>
-<text x="770" y="1220" text-anchor="middle" class="label">Directional power map</text>
+<rect x="450" y="735" width="490" height="80" rx="8" class="block"/>
+<text x="695" y="767" text-anchor="middle" class="label">Align microphone phases</text>
+<text x="695" y="795" text-anchor="middle" class="small">Subtract each microphone’s predicted phase</text>
+<path d="M695 815V847" class="arrow"/>
+<rect x="450" y="850" width="490" height="75" rx="8" class="block"/>
+<text x="695" y="895" text-anchor="middle" class="label">Add complex values across microphones</text>
+<path d="M695 925V957" class="arrow"/>
+<rect x="450" y="960" width="490" height="65" rx="8" class="block"/>
+<text x="695" y="1000" text-anchor="middle" class="label">Power of the sum · |sum|²</text>
+<path d="M695 1025V1057" class="arrow"/>
+<rect x="420" y="1060" width="550" height="80" rx="8" class="block"/>
+<text x="695" y="1108" text-anchor="middle" class="label">Sum bin powers; average FFT frames</text>
+<path d="M695 1140V1177" class="arrow"/>
+<rect x="420" y="1180" width="550" height="65" rx="8" class="block"/>
+<text x="695" y="1220" text-anchor="middle" class="label">Directional power map</text>
 
-<path d="M405 1310H1135" fill="none" stroke="#ccd4d8" stroke-dasharray="5 5"/>
-<path d="M770 1245V1347" class="arrow"/>
-<rect x="420" y="1350" width="700" height="85" rx="8" class="output"/>
-<text x="770" y="1387" text-anchor="middle" class="label">Find peaks · evaluate · display</text>
-<text x="770" y="1415" text-anchor="middle" class="small">Outside the algorithm</text>
+<path d="M405 1310H1005" fill="none" stroke="#ccd4d8" stroke-dasharray="5 5"/>
+<path d="M695 1245V1347" class="arrow"/>
+<rect x="420" y="1350" width="550" height="85" rx="8" class="output"/>
+<text x="695" y="1387" text-anchor="middle" class="label">Find peaks · evaluate · display</text>
+<text x="695" y="1415" text-anchor="middle" class="small">Outside the algorithm</text>
+
+<g id="python-helper-brackets" fill="none" stroke="#98a7af" stroke-width="1.5">
+<path d="M980 390H1010V470H980 M1010 430H1050"/>
+<path d="M950 850H1010V925H950 M1010 887.5H1050"/>
+<path d="M980 1060H1010V1140H980 M1010 1100H1050"/>
+<path d="M20 825V840H335V825 M177.5 840V860"/>
+</g>
+<text x="1065" y="437" class="code">Precision.fft()</text>
+<text x="1065" y="895" class="code">Precision.sum_channels()</text>
+<text x="1065" y="1094" class="code">Precision.sum_power()</text>
+<text x="1065" y="1118" class="code">+ np.mean()</text>
+<text x="177.5" y="883" text-anchor="middle" class="code">arrival_delays()</text>
+<text x="177.5" y="907" text-anchor="middle" class="code">+ np.exp()</text>
 </svg>
