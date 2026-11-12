@@ -2,7 +2,19 @@
 
 
 
+
+
+
+
 :root{color-scheme:light;--ink:#162b35;--muted:#536873;--line:#d7e0e3;--accent:#006e72}*{box-sizing:border-box}body{margin:0;background:#f3f5f4;color:var(--ink);font-family:Segoe UI,Arial,sans-serif}header{padding:26px 5vw 0;background:white;border-bottom:1px solid var(--line)}.top{display:flex;justify-content:space-between;align-items:center;gap:20px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:700;color:var(--accent)}h1{font-size:28px;letter-spacing:-.7px;margin:8px 0 20px}header small{color:var(--muted)}nav{display:flex;gap:6px;overflow-x:auto}button{font:inherit;cursor:pointer}nav button{border:0;background:transparent;padding:16px 24px;color:var(--muted);border-bottom:3px solid transparent}nav button[aria-selected=true]{color:var(--accent);border-color:var(--accent);font-weight:700}button:focus-visible,a:focus-visible{outline:3px solid #e39a34;outline-offset:3px}.utility{border:1px solid var(--line);border-radius:6px;background:white;padding:9px 12px}main{max-width:1240px;margin:auto;padding:36px 5vw 48px}.panel[hidden]{display:none}.section-head{display:flex;align-items:baseline;gap:18px;margin-bottom:24px}.number{font-size:14px;color:var(--accent);font-weight:700}h2{font-size:36px;letter-spacing:-1px;margin:0}p{line-height:1.6}.intro{color:var(--muted);max-width:850px;margin:0 0 24px}table{width:100%;border-collapse:collapse;background:white;font-size:17px}th{text-align:left;background:#e8eeed;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em}th,td{padding:17px 22px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}td:first-child{width:25%;font-weight:600}strong{font-weight:650}.note{padding:15px 18px;border-left:3px solid var(--accent);background:#e8efed;font-size:14px;color:#36535a;line-height:1.6;margin-top:22px}.diagram{background:#171b23;border-radius:10px;padding:12px}.diagram svg{display:block;width:100%;height:auto}.diagram-actions{text-align:right;margin:0 0 12px}.sources{font-size:12px;color:var(--muted);margin-top:26px;line-height:1.7}a{color:var(--accent)}footer{display:flex;justify-content:space-between;margin-top:30px;color:var(--muted);font-size:12px}@media(max-width:700px){header{padding:20px 20px 0}main{padding:28px 20px}nav button{padding:14px 10px;font-size:14px}h1{font-size:23px}h2{font-size:30px}th,td{padding:12px;font-size:14px}.top small{display:none}}@media print{header{padding:0}nav,.utility,.diagram-actions,footer{display:none!important}main{padding:0;max-width:none}.panel[hidden]{display:block}.panel{break-before:page;padding-top:20px}#spec-esd{break-before:auto}body{background:white}h2{font-size:26px}table{font-size:13px}th,td{padding:10px}.diagram{max-width:780px;margin:auto;print-color-adjust:exact}.note{font-size:12px}@page{size:A4;margin:15mm}}
+
+
+
+
+
+
+
+
 
 
 
@@ -18,7 +30,19 @@
 
 
 
+
+
+
+
+
+
+
+
 .spec-list{background:white;border:1px solid var(--line);border-radius:8px;overflow:hidden}.spec-list>.spec-defense{border-bottom:1px solid var(--line)}.spec-list>.spec-defense:last-child{border-bottom:0}.spec-list .spec-defense summary{display:grid;grid-template-columns:24% 1fr 20px;gap:20px;padding:19px 22px;align-items:center;margin:0}.spec-list .spec-defense summary:hover{background:#eef4f2}.spec-name{font-weight:600}.row-arrow{font-size:27px;color:var(--accent);line-height:1;transition:transform .15s;text-align:center}.spec-defense[open] .row-arrow{transform:rotate(90deg)}.spec-list .defense-body{margin:0;padding:4px 22px 16px calc(24% + 30px);border-top:0;background:#f7faf9;font-size:15px}.spec-list .spec-defense[open] summary{background:#eef4f2;padding-bottom:19px}.spec-list .defense-body p{margin:10px 0}.spec-list .defense-body .sources{margin-top:12px}@media(max-width:700px){.spec-list .spec-defense summary{grid-template-columns:1fr 24px;gap:8px;padding:16px}.spec-name{grid-column:1}.spec-value{grid-column:1;font-size:14px}.row-arrow{grid-column:2;grid-row:1 / 3}.spec-list .defense-body{padding:4px 16px 14px;font-size:14px}}@media print{.row-arrow{display:none}.spec-list .defense-body{padding:4px 16px 12px;font-size:12px}}
+
+
+
+
 
 
 
@@ -26,7 +50,15 @@
 
 
 
+
+
+
+
 .spec-list .layout-defense{padding:22px;background:#f7faf9}.layout-controls{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px}.layout-controls label{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted);flex:1;min-width:145px}.layout-controls select{width:100%;font:inherit;font-size:14px;color:var(--ink);background:white;border:1px solid var(--line);border-radius:5px;padding:9px}.layout-conditions{font-size:13px;line-height:1.65;color:var(--muted);padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.layout-legend{font-size:12px;line-height:1.8}.layout-legend span{display:inline-block;margin-right:14px}.layout-legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.array-card{display:grid;grid-template-columns:minmax(180px, .8fr) minmax(300px,1.7fr);gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}.array-card h3{margin:0 0 3px;font-size:17px}.array-meta{font-size:12px;color:var(--muted);margin-bottom:8px}.array-geometry{max-width:230px;margin:auto}.array-geometry svg,.array-chart svg{display:block;width:100%;height:auto}.array-results{min-width:0}.array-metrics{display:flex;flex-wrap:wrap;gap:7px 18px;font-size:12px;line-height:1.7;margin:6px 0 0 52px}.array-metrics strong{font-size:14px}.layout-footnote{font-size:12px;color:var(--muted);line-height:1.6}.chart-title{font-size:13px;color:var(--muted);margin-bottom:5px}.array-empty{padding:35px;color:var(--muted)}@media(max-width:760px){.array-card{grid-template-columns:1fr}.spec-list .layout-defense{padding:16px}.array-geometry{max-width:240px}.array-metrics{margin-left:0}.layout-controls label{min-width:130px}.array-card h3{text-align:center}.array-meta{text-align:center}}@media print{.layout-controls{display:none}.array-card{break-inside:avoid;grid-template-columns:180px 1fr}.layout-conditions{font-size:10px}.layout-defense{padding:10px!important}}
+
+
+
+
 
 
 
@@ -34,7 +66,19 @@
 
 
 
+
+
+
+
 .changelog{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}.changelog summary{cursor:pointer;font-weight:600;color:var(--ink)}.changelog ul{padding-left:20px;margin:12px 0 0;line-height:1.7}.changelog time{font-variant-numeric:tabular-nums}
+
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +142,67 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #limitations .limitations-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:white}
+
+
+
+
 
 
 
@@ -106,7 +210,15 @@
 
 
 
+
+
+
+
 #limitations .limitations-table th,#limitations .limitations-table td{padding:16px 18px;line-height:1.6;overflow-wrap:anywhere}
+
+
+
+
 
 
 
@@ -114,7 +226,15 @@
 
 
 
+
+
+
+
 #limitations .limitations-table tbody th{background:white;color:var(--ink);font-size:14px;text-transform:none;letter-spacing:normal;font-weight:600}
+
+
+
+
 
 
 
@@ -122,7 +242,15 @@
 
 
 
+
+
+
+
 #limitations .limitations-references{margin-top:24px;border:1px solid var(--line);border-radius:8px;background:white;font-size:14px;line-height:1.6}
+
+
+
+
 
 
 
@@ -130,7 +258,15 @@
 
 
 
+
+
+
+
 #limitations .limitations-references summary:focus-visible{outline:3px solid #e39a34;outline-offset:-3px}
+
+
+
+
 
 
 
@@ -138,7 +274,15 @@
 
 
 
+
+
+
+
 #limitations .limitations-references li{margin:10px 0}
+
+
+
+
 
 
 
@@ -150,7 +294,19 @@
 
 
 
+
+
+
+
+
+
+
+
 .spec-subheading{margin:34px 0 12px;font-size:22px}
+
+
+
+
 
 
 
@@ -158,7 +314,15 @@
 
 
 
+
+
+
+
 .spec-questions .questions-table{table-layout:fixed;min-width:520px;font-size:14px}
+
+
+
+
 
 
 
@@ -166,11 +330,23 @@
 
 
 
+
+
+
+
 .spec-questions .questions-table thead th{font-size:11px}
 
 
 
+
+
+
+
 .spec-questions .questions-table tbody th{background:white;color:var(--ink);font-size:14px;text-transform:none;letter-spacing:normal;font-weight:600}
+
+
+
+
 
 
 
@@ -182,7 +358,19 @@
 
 
 
+
+
+
+
+
+
+
+
 #pd-questions .uncertainty-answer{margin:0 0 8px;line-height:1.6}
+
+
+
+
 
 
 
@@ -190,7 +378,15 @@
 
 
 
+
+
+
+
 #pd-questions .uncertainty-detail summary{cursor:pointer;color:var(--accent);font-size:12px;font-weight:600;padding:4px 0}
+
+
+
+
 
 
 
@@ -198,7 +394,15 @@
 
 
 
+
+
+
+
 #pd-questions .uncertainty-body{margin-top:10px;border-top:1px solid var(--line);padding-top:8px;font-size:13px}
+
+
+
+
 
 
 
@@ -206,7 +410,15 @@
 
 
 
+
+
+
+
 #pd-questions .uncertainty-bibliography{padding-left:18px;font-size:12px}
+
+
+
+
 
 
 
@@ -218,7 +430,19 @@
 
 
 
+
+
+
+
+
+
+
+
 #pd-questions .uncertainty-head{display:grid;grid-template-columns:24% 1fr 20px;gap:20px;padding:12px 22px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+
+
+
+
 
 
 
@@ -230,7 +454,19 @@
 
 
 
+
+
+
+
+
+
+
+
 #pd-use .tower-case{margin:18px 0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+
+
+
 
 
 
@@ -238,7 +474,15 @@
 
 
 
+
+
+
+
 #pd-use .tower-case-images{display:grid;grid-template-columns:1fr 1.35fr;gap:18px;margin-top:16px}
+
+
+
+
 
 
 
@@ -246,7 +490,15 @@
 
 
 
+
+
+
+
 #pd-use .tower-case img{display:block;width:100%;height:280px;object-fit:contain;background:#e8eeed;border-radius:6px}
+
+
+
+
 
 
 
@@ -254,7 +506,15 @@
 
 
 
+
+
+
+
 @media(max-width:700px){#pd-use .tower-case-images{grid-template-columns:1fr}#pd-use .tower-case img{height:auto;max-height:340px}}
+
+
+
+
 
 
 
@@ -262,7 +522,15 @@
 
 
 
+
+
+
+
 <div class="tower-case">
+
+
+
+
 
 
 
@@ -270,7 +538,15 @@
 
 
 
+
+
+
+
 <p><strong>Reference scale:</strong> 400 kV · about 50 m tall · about 350 m between towers. <a href="https://www.nationalgrid.com/document/153691/download#page=20" target="_blank" rel="noopener">National Grid, §4.4.3</a></p>
+
+
+
+
 
 
 
@@ -278,7 +554,15 @@
 
 
 
+
+
+
+
 <div class="tower-case-images">
+
+
+
+
 
 
 
@@ -286,15 +570,31 @@
 
 
 
+
+
+
+
 <figure><img src="assets/transmission-insulator-pd.png" alt="Elevated insulators at a 230 kV substation entrance, with the corona-discharge location circled in red by the researchers" width="1440" height="1141" loading="lazy"><figcaption><strong>Documented PD:</strong> ultrasound identified corona and surface discharge on 230 kV insulator strings at a substation entrance. Circled: corona location. <a href="https://doi.org/10.3390/en16166033" target="_blank" rel="noopener">Maresch et al. (2023), §6, Fig. 21</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</figcaption></figure>
 
 
 
+
+
+
+
 </div>
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -302,7 +602,15 @@
 
 
 
+
+
+
+
 <tr><td><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a></td><td>Drone-mounted</td><td>128 microphones · 2–48 kHz · 0.5–35 m test distance · 62° optical FOV</td></tr>
+
+
+
+
 
 
 
@@ -310,7 +618,15 @@
 
 
 
+
+
+
+
 <tr><td><a href="https://www.fluke.com/en-us/product/industrial-imaging/fluke-ii915" target="_blank" rel="noopener">Fluke ii915</a></td><td>Handheld</td><td>2–100 kHz · 25 fps nominal · PDQ discharge-type classification</td></tr>
+
+
+
+
 
 
 
@@ -318,7 +634,15 @@
 
 
 
+
+
+
+
 <div id="layout-conditions" class="layout-conditions"></div><p id="layout-legend" class="layout-legend"></p><div id="layout-gallery" aria-live="polite"></div><p class="layout-footnote"><strong>Evidence scope:</strong> <a href="https://arxiv.org/html/1909.01008v2" target="_blank" rel="noopener">LOCATA</a> documents missed and false estimates in realistic scenes; <a href="https://arxiv.org/html/2401.02386v1" target="_blank" rel="noopener">Tourbabin &amp; Rafaely</a> assumes negligible within-frame motion. These papers do not extend the static, single-source results shown here to moving or reverberant scenes. <a href="https://ntrs.nasa.gov/citations/20080015889" target="_blank" rel="noopener">DAMAS</a> does not remove physical aperture limits.</p><p class="layout-footnote">Bits apply to input, FFT state and coefficients; sums retain extra precision. Fixed scaling; single source; no reflections, microphone mismatch or PDM conversion. <a href="precision-check/distance-method.md">Method and results</a>.</p></div></details><details class="spec-defense" id="parameter-2"><summary><span class="spec-name">Sampling rate</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Choose the PCM sampling rate together with the microphone/PDM clock and decimation ratio. Filter structure and retained state are grouped under <a href="#parameters" data-parameter-link="parameter-6">Input filter</a>.</p><p><strong>Status: TBD.</strong> The values and results below are earlier exploratory examples, not final design requirements.</p><p>3,072,000 PDM samples/s ÷ 64 = <strong>48,000 PCM samples/s</strong>. The 24 kHz Nyquist limit accommodates both the 4 kHz baseline and 12 kHz stretch.</p><p>This earlier example used the TDK microphone. The current Infineon IM66D130M choice is documented in the Microphones tab; clock, PCM rate and decimation remain TBD for the ultrasonic band.</p></div></details><details class="spec-defense" id="parameter-3"><summary><span class="spec-name">FFT size</span><span class="spec-value"><strong>TBD</strong> (512 samples)</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><h3>Framing and FFT</h3><p><strong>Averaging and overlap:</strong> choose the windows averaged per map, window hop/overlap, total observation length and map hop. These settings affect processing work, concurrent Fourier state and buffering.</p><p><strong>Working candidate: 512 samples per transform window.</strong> In the current implementation, the window length equals the FFT size; the compact RTL computes selected DFT coefficients directly over the same 512 samples. In general, a shorter window can be zero-padded to a longer FFT, so the two lengths need not be equal.</p><p>At the experimental 192 ksample/s rate, 512 samples span 2.67 ms and the Fourier-bin spacing is 375 Hz. Sampling rate, window function, FFT hop/overlap, total observation length per map, and map hop remain separate choices.</p><p>One map may average several transform windows: the longer Python reference uses 15 windows of 512 samples with a 256-sample hop, spanning 4096 samples (21.33 ms at 192 ksample/s). The compact candidate uses one window. Map hop and processing time also affect output cadence; a 512-sample window does not set the 5 maps/s target.</p><p><a href="#experiments" data-study-link>See the constrained-algorithm plots in Experiments →</a></p><h3>Earlier audible-band memory example</h3><p>The calculations below use 48 ksample/s and 1–4 kHz. They are earlier exploratory examples, not a storage estimate for the compact selected-bin DFT.</p><p>512-point FFT, 30 mics, 32 selected bins (1–4 kHz). 10.67 ms/frame; 93.75 Hz/bin.</p>
+
+
+
+
 
 
 
@@ -326,7 +650,15 @@
 
 
 
+
+
+
+
 <p><strong>Spectra:</strong> 30 mics × 32 bins × (16 + 16) bits ÷ 8 ÷ 1024 = 3.75 KiB.</p>
+
+
+
+
 
 
 
@@ -334,7 +666,15 @@
 
 
 
+
+
+
+
 <p><strong>Storage-cell area:</strong> 276,480 bits × (0.495–0.570 µm²/bit) ÷ 1,000,000 = 0.137–0.158 mm².</p>
+
+
+
+
 
 
 
@@ -342,7 +682,15 @@
 
 
 
+
+
+
+
 <tr><td>2048</td><td>120 KiB</td><td>15 KiB<br>128 bins</td><td>135 KiB</td><td>0.547–0.630 mm²</td></tr>
+
+
+
+
 
 
 
@@ -350,7 +698,15 @@
 
 
 
+
+
+
+
 <tr><td>512 · chosen</td><td>30 KiB</td><td>3.75 KiB<br>32 bins</td><td>33.75 KiB</td><td>0.137–0.158 mm²</td></tr></tbody></table><p>Reference 65 nm bit cells; excludes memory peripherals, output maps and logic.</p><p><strong>Core budget:</strong> 0.436 mm². 2048 exceeds it; 512 leaves room, but fit still needs verification.</p><p class="sources"><a href="https://ieeexplore.ieee.org/document/4585946/" target="_blank" rel="noopener">IEEE VLSI 2008: 0.495 µm² cell ↗</a> · <a href="https://ewh.ieee.org/r5/denver/sscs/Presentations/2011_10_Riedlinger.pdf#page=17" target="_blank" rel="noopener">Intel / ISSCC 2011, slide 17: 0.570 µm² cell ↗</a></p><p id="fft-result-summary"><strong>30-mic, 30 cm circle:</strong> worst error at −10 dB, across 1 m and 1.5 m: <strong>5.00° / 3.02° / 2.22°</strong> for one 512 / 1024 / 2048 frame; <strong>3.02° / 2.23° / 2.22°</strong> at equal 42.7 ms observation. All five configurations passed 54/54 single-source trials within 5°. Simulation only; 9 directions × 3 seeds × 2 distances.</p><p>Accuracy comparisons: <strong>Mic count / layout → Observation</strong>.</p></div></details><details class="spec-defense" id="parameter-4"><summary><span class="spec-name">Selected bins</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Selection rule — TBD:</strong> choose all in-band bins, a fixed subset, or adaptive selection; specify the retained bin indices/count or stride as applicable.</p><p><strong>Status: TBD.</strong> The values and results below are earlier exploratory examples, not final design requirements.</p><p>Bin frequency: f<sub>k</sub> = k × 48,000 ÷ 512 = <strong>k × 93.75 Hz</strong>.</p><p>1–4 kHz selects k = 11…42: <strong>32 bins</strong> (1031.25–3937.5 Hz). The 1–12 kHz stretch selects k = 11…128: <strong>118 bins</strong>, or <strong>3.69×</strong> the beamforming contributions and selected-spectrum storage (13.83 KiB).</p></div></details><details class="spec-defense" id="parameter-5"><summary><span class="spec-name">Bit widths</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Numerical formats — TBD:</strong> choose total widths and fractional bits separately across input filtering and its internal states, windowed samples, Fourier storage, coefficients/products, beamforming sums, power and output words. Set scaling, rounding and overflow behavior alongside those formats.</p><p>Removing integer headroom and removing fractional resolution have different effects. The ultrasonic accumulator study changes Fourier storage independently; the older audible-band FFT-stage results below use a different setup.</p><p><strong>Status: TBD.</strong> The values and results below are earlier exploratory examples, not final design requirements.</p><p><strong>Input:</strong> 16-bit PCM preserved every floating-point location across all 162 tested scene/level combinations.</p><p><strong>Capture limit:</strong> bit width and clipping are separate issues. <a href="https://arxiv.org/html/2007.07663v2" target="_blank" rel="noopener">Záviška et al.</a> shows that declipping depends on signal assumptions; the unclipped tests here do not establish performance with microphone overload.</p><p><strong>Internal processing:</strong> fixed 16-bit FFT/beamforming lost accuracy on quiet inputs; 24-bit preserved every location in these tests.</p><table class="evidence-table"><thead><tr><th>Input RMS</th><th>12-bit</th><th>16-bit</th><th>20-bit</th><th>24-bit</th></tr></thead><tbody><tr><td>-18 dBFS</td><td>54/54</td><td>54/54</td><td>54/54</td><td>54/54</td></tr><tr><td>-48 dBFS</td><td>11/54</td><td>53/54</td><td>54/54</td><td>54/54</td></tr><tr><td>-72 dBFS</td><td>0/54</td><td>8/54</td><td>53/54</td><td>54/54</td></tr></tbody></table><p>Counts within 5° out of 54 scenes per level; −10 dB SNR. Levels are digital signal + noise RMS, not SPL.</p><details><summary>Test conditions</summary><p>30-mic, 30-cm circle; 512-point FFT; 1–4 kHz; one frame; 9 directions × 3 seeds × 2 distances (1 and 1.5 m). FFT scales by 1/2 per stage; coefficients and stage outputs are rounded to the listed width. Accumulators retain extra bits. No clipping occurred.</p><p>Different gain/scaling may allow narrower processing. This is a numerical model, not PDM or RTL simulation. The area comparison above still assumes 16 + 16-bit spectra.</p></details><p class="sources"><a href="precision-check/README.md">Method</a> · <a href="precision-check/results.json">Results</a> · <a href="precision-check/scenes.csv">Per-scene data</a></p></div></details><details class="spec-defense" id="parameter-6"><summary><span class="spec-name">Input filter</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Structure and decimation — TBD:</strong> choose filter structure, order, FIR taps/coefficients and decimation ratio. Specify the internal state required per microphone and its widths, together with the <a href="#parameters" data-parameter-link="parameter-5">Bit widths</a> choices.</p><p>The compact prototype uses a shared CIC/FIR path. Its experimental CIC3, decimation-16 and one-tap identity FIR settings are test settings, not a qualified microphone filter.</p><p><a href="#experiments" data-study-link data-study-target="gate-budget" data-study-anchor="gate-considerations">Gate-count considerations →</a></p></div></details><details class="spec-defense" id="parameter-7"><summary><span class="spec-name">Hardware</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Sharing and storage — TBD:</strong> choose shared versus parallel arithmetic, the number of processing lanes, registers versus SRAM, and the buffers needed for capture, overlap, processing and output.</p><p><strong>Fixed versus programmable:</strong> specify which parameters are build-time constants and which can change at runtime; include any configuration storage and control. Continuous capture and backpressure must be accounted for with the buffering choice.</p><p><a href="#experiments" data-study-link data-study-target="gate-budget" data-study-anchor="gate-considerations">Gate-count considerations →</a></p></div></details><details class="spec-defense" id="parameter-8"><summary><span class="spec-name">Output interface</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Implementation — TBD:</strong> choose the transfer interface, word/packet format, transfer rate, flow control and required buffering. Output word width and fractional resolution belong with <a href="#parameters" data-parameter-link="parameter-5">Bit widths</a>.</p><p>The prototype has a streamed power-map interface and a UART transmitter/packetizer. Its existence does not fix the final interface or output cadence.</p><p><a href="#experiments" data-study-link data-study-target="gate-budget" data-study-anchor="gate-considerations">Gate-count considerations →</a></p></div></details></div></section><section id="software" class="panel" role="tabpanel" aria-labelledby="tab-software" hidden>
+
+
+
+
 
 
 
@@ -358,35 +714,71 @@
 
 
 
+
+
+
+
 <figure class="software-figure"><a href="software-flow.svg?v=flow-10" target="_blank" rel="noopener" aria-label="Open full-size software block diagram"><img src="software-flow.svg?v=flow-10" width="1340" height="1460" alt="Samples flow through FFT and delay-and-sum to a directional power map. Python helpers sit outside the processing boxes, with brackets showing the steps they cover. Phase prediction remains a side input to alignment."></a></figure>
 
 
 
+
+
+
+
 </section><section id="experiments" class="panel" role="tabpanel" aria-labelledby="tab-experiments" hidden><div class="section-head"><span class="number">04</span><h2>Experiments</h2></div>
+
 <p class="intro experiment-overview">First find potential configurations that fit the gate budget. Then compare their visual maps and numerical performance to decide which work best.</p>
+
 <div class="experiment-switcher" role="group" aria-label="Experiment studies">
+
 <button type="button" data-experiment="gate-budget" aria-controls="experiment-gate-budget" aria-pressed="true">Gate count</button>
+
 <button type="button" data-experiment="map-quality" aria-controls="experiment-map-quality" aria-pressed="false">Map quality &amp; performance</button></div>
+
 <div id="experiment-gate-budget" class="experiment-panel"><div class="algorithm-study"><h3>1. Find configurations that fit</h3>
 
+
+
 <p class="study-intro">Use the parameters below to screen potential configurations against 300,000 gates, then compare the promising ones in Map quality &amp; performance.</p><div id="gate-considerations"><h4>Gate-count considerations</h4><ul class="gate-considerations">
+
 <li><a href="#parameters" data-parameter-link="parameter-1">Mic count / layout</a><ul><li>Number of microphones / channels.</li></ul></li>
+
 <li><a href="#parameters" data-parameter-link="parameter-3">FFT size</a> / <a href="#parameters" data-parameter-link="parameter-4">Selected bins</a><ul><li>FFT/window size and number of selected bins.</li><li>Averaging and overlap.</li></ul></li>
+
 <li><a href="#parameters" data-parameter-link="parameter-0">Algorithm</a> — scan grid<ul><li>Number of directions, derived from FOV and angular spacing.</li></ul></li>
+
 <li><a href="#parameters" data-parameter-link="parameter-5">Bit widths</a><ul><li>Widths and fractional bits across filtering, Fourier storage, beamforming and output.</li></ul></li>
+
 <li><a href="#parameters" data-parameter-link="parameter-6">Input filter</a><ul><li>Filter structure, order and taps.</li><li>Decimation ratio and internal state requirements.</li></ul></li>
+
 <li><a href="#parameters" data-parameter-link="parameter-7">Hardware</a><ul><li>Shared versus parallel arithmetic.</li><li>Registers versus SRAM, and buffering.</li><li>Fixed versus programmable parameters.</li></ul></li>
+
 <li><a href="#parameters" data-parameter-link="parameter-8">Output interface</a><ul><li>Output-interface implementation.</li></ul></li>
+
 </ul></div><h4>Mic count and selected bins</h4>
+
+
 
 <div class="study-settings"><span>20–40 kHz</span><span>512 samples</span><span>441 directions</span><span>1 window / map</span><span>UART included</span></div>
 
+
+
 <figure class="study-figure evidence-figure"><a href="assets/gate-count-study-v1/01-gates-vs-bins.png" target="_blank" rel="noopener" aria-label="Open full-size: Gate count versus microphone and bin counts"><img src="assets/gate-count-study-v1/01-gates-vs-bins.png" width="1350" height="750" loading="lazy" alt="Estimated gate count rises with selected-bin and microphone counts, with a 300k gate budget and one measured baseline point."></a><figcaption><strong>Model estimates:</strong> colored lines and engineering screening bands. <strong>Measured point:</strong> the original 16-mic/eight-bin circuit, 206,730 NAND2 equivalents including all storage and UART. The later accumulator-precision measurements are shown separately; this model has not been refitted to those savings. <a href="assets/gate-count-study-v1/01-gates-vs-bins.png" target="_blank" rel="noopener">Enlarge ↗</a></figcaption></figure>
+
+
 
 <p class="study-insight">The chart can screen mic/bin combinations against 300,000 gates. The new precision savings apply to their measured fixed configuration; they are not a constant discount to every curve.</p>
 
+
+
 <details class="study-method"><summary>Scope and model data</summary><div><p>Shading is an engineering allowance, not a confidence interval. Area uses the educational gscl45nm library and is pre-layout; these plots do not establish target-process fit, timing closure or continuous capture.</p><p>The older 25–50 kHz curve is not used here. The current-band plot and original fitted model are preserved without changing their numerical values.</p><p><a href="assets/gate-count-study-v1/original-gate-model.json" target="_blank" rel="noopener">Original gate model JSON ↗</a></p></div></details><h4>Measured gate savings from Fourier storage</h4><div class="study-settings"><span>16 mics / spiral</span><span>8 bins · 20–40 kHz</span><span>512 samples · 1 window</span><span>20 cm aperture</span><span>441 directions · 3° grid</span></div><figure class="study-figure evidence-figure"><a href="assets/gate-count-study-v1/02-precision-gates.svg" target="_blank" rel="noopener" aria-label="Open full-size: Measured savings from Fourier precision"><img src="assets/gate-count-study-v1/02-precision-gates.svg" width="756" height="418" loading="lazy" alt="Four measured gate-count bars: original 46-bit 206.7k; 42-bit 197.5k; 34-bit 177.7k; 26-bit 157.2k."></a><figcaption>All four totals include registers, constant logic and UART. <strong>42 bits / 32 fractional</strong> removes redundant integer headroom under the proved fixed-table bound. <strong>34 / 24 and 26 / 16</strong> also round products before accumulation. Bit counts describe Fourier storage, not global chip precision. <a href="assets/gate-count-study-v1/02-precision-gates.svg" target="_blank" rel="noopener">Enlarge ↗</a></figcaption></figure><p class="study-context">These precision points hold 16 microphones and eight bins fixed. The current candidate remains 30 / spiral; the original mic/bin curves have not been refitted to the new precision measurements.</p></div></div>
+
 <div id="experiment-map-quality" class="experiment-panel" hidden><div class="algorithm-study" id="algorithm-tradeoffs" aria-labelledby="tradeoffs-title">
+
+
+
+
 
 
 
@@ -394,7 +786,15 @@
 
 
 
+
+
+
+
 <p class="study-intro">Compare source location, separation and clutter on the same simulated sound field. The compact columns change microphone count, selected-bin count and, for the narrow version, several arithmetic widths.</p>
+
+
+
+
 
 
 
@@ -402,7 +802,15 @@
 
 
 
+
+
+
+
 <div class="study-toolbar"><label for="study-scene">Scene</label><select id="study-scene"><option value="unequal6">Two unequal broadband sources</option><option value="independent10">Independent microphone noise</option><option value="tone22500">22.5 kHz tone</option><option value="tone30000">30 kHz tone</option><option value="pulses">Intermittent broadband burst</option><option value="tone45000">45 kHz tone — outside the processing band</option></select><a href="assets/algorithm-tradeoffs-v1/all-scenes.png" target="_blank" rel="noopener">Open combined map sheet ↗</a></div>
+
+
+
+
 
 
 
@@ -410,7 +818,15 @@
 
 
 
+
+
+
+
 <p class="study-insight" id="study-insight" aria-live="polite">The compact wide versions preserve recognizable source peaks here, while using fewer bins and less averaging. The 16- and 30-microphone arrays have different spatial sampling, so this comparison changes more than arithmetic alone.</p>
+
+
+
+
 
 
 
@@ -418,7 +834,15 @@
 
 
 
+
+
+
+
 <details class="study-method"><summary>Earlier bundled-precision pilot</summary><div><p>This earlier chart changes window, spectrum, coefficient and power formats together. The Accumulator precision study changes Fourier storage separately and reports new synthesis points.</p>
+
+
+
+
 
 
 
@@ -426,25 +850,51 @@
 
 
 
+
+
+
+
 </div></details><p class="study-links"><a href="assets/algorithm-tradeoffs-v1/report.md" target="_blank" rel="noopener">Full experiment notes ↗</a><a href="assets/algorithm-tradeoffs-v1/measurements.csv" download>Measurements CSV ↓</a><a href="assets/algorithm-tradeoffs-v1/results.json" target="_blank" rel="noopener">Settings and results JSON ↗</a></p>
+
+
+
+
 
 
 
 </div><div class="algorithm-study precision-performance"><h3>Fourier storage: numerical performance</h3><p class="study-intro">Compare the numerical cost of the storage reductions shown under Gate count. Only Fourier storage changes in these candidates; the setup stays fixed.</p><div class="study-settings"><span>16 mics / spiral</span><span>8 bins · 20–40 kHz</span><span>512 samples · 1 window</span><span>20 cm aperture</span><span>441 directions · 3° grid</span></div><p class="study-context">This study uses 16 microphones and eight bins. It is a separate precision comparison from the mic/bin study above.</p><div class="study-table-wrap"><table class="precision-table"><thead><tr><th scope="col">Stored bits</th><th scope="col">Fractional bits</th><th scope="col">Total gates</th><th scope="col">Saved</th><th scope="col">Worst map error</th></tr></thead><tbody><tr><th scope="row">46 · reference</th><td>32</td><td>206.7k</td><td>0.0%</td><td>0.00%</td></tr><tr><th scope="row">42</th><td>32</td><td>197.5k</td><td>4.5%</td><td>0.00%</td></tr><tr><th scope="row">34</th><td>24</td><td>177.7k</td><td>14.0%</td><td>1.61%</td></tr><tr><th scope="row">26</th><td>16</td><td>157.2k</td><td>24.0%</td><td>33.33%</td></tr></tbody></table></div><p class="study-table-note">Worst error = maximum absolute pixel difference divided by the wide reference map’s peak, across nonzero-reference cases in the 77-case suite. Zero-reference cases are excluded from that percentage. Diagnostic peak/source-match counts did not change for these three accumulator candidates.</p><h4>Weak-input numerical error and zero outputs</h4>
 
+
+
 <figure class="study-figure evidence-figure"><a href="assets/gate-count-study-v1/03-precision-quality.svg" target="_blank" rel="noopener" aria-label="Open full-size: Quality versus digital signal level"><img src="assets/gate-count-study-v1/03-precision-quality.svg" width="864" height="418" loading="lazy" alt="Two plots show accumulator pixel error and counts of all-zero maps as input signals become weaker."></a><figcaption><strong>Left:</strong> worst relative pixel error among nonzero reference maps (18, 18, 15 and 9 at the four levels). <strong>Right:</strong> zero outputs across all 18 scene recordings at each level. The wide reference already produces nine zero maps at −66 dBFS. Fewer zeros can also mean quantization artifacts; zero count alone is not an accuracy score. <a href="assets/gate-count-study-v1/03-precision-quality.svg" target="_blank" rel="noopener">Enlarge ↗</a></figcaption></figure>
+
+
 
 <p class="study-insight">34-bit storage saved 14.0% of total gates with a worst map error of 1.61% in this pilot. The 26-bit version saved 24.0%, with up to 33.33% relative error. These are isolated candidates; the production defaults and the original gate estimator have not changed.</p>
 
+
+
 <h4>Shared-scale maps and numerical differences</h4>
+
+
 
 <figure class="study-figure evidence-figure"><a href="assets/gate-count-study-v1/04-precision-map-example.svg" target="_blank" rel="noopener" aria-label="Open full-size: Inspect the maps and their differences"><img src="assets/gate-count-study-v1/04-precision-map-example.svg" width="828" height="605" loading="lazy" alt="Reference, 34-bit and 26-bit acoustic maps with true-source circles above signed-error maps, all using shared scales."></a><figcaption>Independent microphone noise, seed 7, input peak −46 dBFS: the selected worst relative-error case for the 34-bit candidate. <strong>Top:</strong> all maps use the same reference intensity scale. <strong>Bottom:</strong> signed differences use the same error scale. The 26-bit map has 1.61% maximum error in this example; its 33.33% worst case occurs elsewhere. <a href="assets/gate-count-study-v1/04-precision-map-example.svg" target="_blank" rel="noopener">Enlarge ↗</a></figcaption></figure>
 
+
+
 <details class="study-method"><summary>Setup, verification and interpretation</summary><div><p>All candidates use the same 16-mic, 20 cm spiral; eight fixed bins over 20–40 kHz; 192 ksample/s PCM; a 512-sample square-root-Hann window; ±30° FOV per axis; a 3° grid; one window per map; and the same UART.</p><p>The complete numerical sweep contains 19 variants × 77 cases = 1,463 maps. The quality curves show 18 synthetic recordings at each of four input peak levels (−6, −26, −46 and −66 dBFS); five additional controls are included in the full suite. Digital levels are not calibrated acoustic SPL.</p><p>The three accumulator candidates passed PDM-to-map and PDM-to-UART simulations on baseline, noisy and random fixtures. The headroom proof applies to PCM16 input with these fixed tables and must be recomputed for other window or precision settings. No physical timing signoff is claimed.</p><p>Peak matching is a map diagnostic, not a PD detection probability. Matching an all-zero reference does not establish sensitivity. The older audible-band FFT-stage precision study and the earlier bundled-width pilot use different setups; their percentages are not combined here.</p></div></details>
+
+
 
 <p class="study-links"><a href="assets/gate-count-study-v1/parameter-investigation.md" target="_blank" rel="noopener">Investigation and pending parameters ↗</a><a href="assets/gate-count-study-v1/precision-gates.csv" download>Area CSV ↓</a><a href="assets/gate-count-study-v1/precision-summary.json" target="_blank" rel="noopener">Level summaries JSON ↗</a></p>
 
+
+
 <details class="study-method"><summary>Full numerical data and RTL evidence</summary><div><p><a href="assets/gate-count-study-v1/precision-measurements.json" target="_blank" rel="noopener">All 1,463 map measurements ↗</a> · <a href="assets/gate-count-study-v1/precision-verification.json" target="_blank" rel="noopener">RTL checks and audited area ↗</a> · <a href="assets/gate-count-study-v1/source-manifest.json" target="_blank" rel="noopener">Source asset hashes ↗</a></p></div></details></div></div></section><section id="architecture" class="panel" role="tabpanel" aria-labelledby="tab-architecture" hidden><div class="section-head"><span class="number">05</span><h2>Architecture</h2></div><p class="intro"><strong>Current RTL, organized by source file.</strong> Groups follow <code>lmca_pdm_camera.sv</code> and <code>lmca_pcm_pipeline.sv</code>; boxes show the instantiated modules and active baseline values. The controller is logic inside the pipeline file.</p><div class="diagram-actions"><a href="architecture.svg?v=modules-1" target="_blank" rel="noopener">Open full-size diagram ↗</a></div><figure class="architecture-figure"><svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1700" height="1130" viewBox="0 0 1700 1130" role="img" aria-labelledby="rtl-module-title rtl-module-desc">
+
+
+
+
 
 
 
@@ -452,7 +902,15 @@
 
 
 
+
+
+
+
 <desc id="rtl-module-desc">The generated lmca_configured_camera.sv wraps lmca_pdm_camera.sv. That top instantiates u_pdm and u_serializer, both defined in lmca_pdm_decimator.sv, and u_pcm from lmca_pcm_pipeline.sv. Inside the PCM pipeline are u_frames from lmca_frame_buffer.sv, u_window from lmca_window.sv, u_fft from lmca_fft.sv, u_bins from lmca_bin_selector.sv and u_das from lmca_das.sv. Solid arrows show sample and spectrum data. Dashed arrows show selected control and read-address connections. Controller logic is inside lmca_pcm_pipeline.sv, not a separate module. Physical PDM capture and the host are external.</desc>
+
+
+
+
 
 
 
@@ -460,7 +918,15 @@
 
 
 
+
+
+
+
 <marker id="rtl-module-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#527d80"/></marker>
+
+
+
+
 
 
 
@@ -468,7 +934,15 @@
 
 
 
+
+
+
+
 </defs>
+
+
+
+
 
 
 
@@ -476,7 +950,15 @@
 
 
 
+
+
+
+
 .rtl-modules text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}
+
+
+
+
 
 
 
@@ -484,7 +966,15 @@
 
 
 
+
+
+
+
 .rtl-modules .name{font-size:22px;font-weight:650}
+
+
+
+
 
 
 
@@ -492,7 +982,15 @@
 
 
 
+
+
+
+
 .rtl-modules .tiny{font-size:16px;fill:#536873}
+
+
+
+
 
 
 
@@ -500,7 +998,15 @@
 
 
 
+
+
+
+
 .rtl-modules .file{fill:#fbfdfc;stroke:#d7e0e3;stroke-width:1.5}
+
+
+
+
 
 
 
@@ -508,7 +1014,15 @@
 
 
 
+
+
+
+
 .rtl-modules .box{fill:white;stroke:#7da3a4;stroke-width:1.6}
+
+
+
+
 
 
 
@@ -516,7 +1030,15 @@
 
 
 
+
+
+
+
 .rtl-modules .external{fill:#f5f7f9;stroke:#98a7af;stroke-width:1.4}
+
+
+
+
 
 
 
@@ -524,7 +1046,15 @@
 
 
 
+
+
+
+
 .rtl-modules .data{fill:none;stroke:#527d80;stroke-width:2;marker-end:url(#rtl-module-arrow)}
+
+
+
+
 
 
 
@@ -532,7 +1062,15 @@
 
 
 
+
+
+
+
 .rtl-modules .rail{fill:none;stroke:#a7b2b7;stroke-width:1.4}
+
+
+
+
 
 
 
@@ -540,7 +1078,15 @@
 
 
 
+
+
+
+
 <rect width="1700" height="1130" fill="white"/>
+
+
+
+
 
 
 
@@ -552,7 +1098,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <rect x="205" y="80" width="1460" height="875" rx="12" class="rootfile"/>
+
+
+
+
 
 
 
@@ -560,7 +1118,15 @@
 
 
 
+
+
+
+
 <text x="230" y="147" class="small">Instantiates u_pdm, u_serializer and u_pcm</text>
+
+
+
+
 
 
 
@@ -568,7 +1134,15 @@
 
 
 
+
+
+
+
 <text x="230" y="185" class="tiny">clk / rst shared by clocked logic</text>
+
+
+
+
 
 
 
@@ -580,7 +1154,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <rect x="240" y="260" width="360" height="490" rx="10" class="file"/>
+
+
+
+
 
 
 
@@ -588,7 +1174,15 @@
 
 
 
+
+
+
+
 <rect x="270" y="335" width="300" height="125" rx="7" class="box"/>
+
+
+
+
 
 
 
@@ -596,7 +1190,15 @@
 
 
 
+
+
+
+
 <text x="288" y="392" class="instance">u_pdm</text>
+
+
+
+
 
 
 
@@ -604,7 +1206,15 @@
 
 
 
+
+
+
+
 <text x="288" y="446" class="small">FIR: identity, 1 tap</text>
+
+
+
+
 
 
 
@@ -612,7 +1222,15 @@
 
 
 
+
+
+
+
 <text x="288" y="622" class="name">lmca_pcm_serializer</text>
+
+
+
+
 
 
 
@@ -620,7 +1238,15 @@
 
 
 
+
+
+
+
 <text x="288" y="677" class="small">Parallel PCM → time-major stream</text>
+
+
+
+
 
 
 
@@ -628,7 +1254,15 @@
 
 
 
+
+
+
+
 <text x="437" y="519" class="small">30 × 16-bit</text>
+
+
+
+
 
 
 
@@ -640,7 +1274,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <rect x="20" y="335" width="165" height="125" rx="7" class="external"/>
+
+
+
+
 
 
 
@@ -648,7 +1294,15 @@
 
 
 
+
+
+
+
 <text x="37" y="393" class="name">30 PDM bits</text>
+
+
+
+
 
 
 
@@ -656,11 +1310,23 @@
 
 
 
+
+
+
+
 <text x="37" y="445" class="tiny">3.072 MHz nominal</text>
 
 
 
+
+
+
+
 <path d="M185 397H267" class="data"/>
+
+
+
+
 
 
 
@@ -672,7 +1338,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <rect x="650" y="260" width="985" height="650" rx="10" class="file"/>
+
+
+
+
 
 
 
@@ -680,11 +1358,23 @@
 
 
 
+
+
+
+
 <text x="1610" y="293" class="instance" text-anchor="end">u_pcm</text>
 
 
 
+
+
+
+
 <path d="M570 642H625V397H697" class="data"/>
+
+
+
+
 
 
 
@@ -696,7 +1386,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <rect x="700" y="340" width="255" height="115" rx="7" class="box"/>
+
+
+
+
 
 
 
@@ -704,7 +1406,15 @@
 
 
 
+
+
+
+
 <text x="717" y="397" class="instance">u_frames</text>
+
+
+
+
 
 
 
@@ -712,11 +1422,23 @@
 
 
 
+
+
+
+
 <text x="717" y="446" class="tiny">4096 / mic · map hop 2048</text>
 
 
 
+
+
+
+
 <path d="M955 397H1017" class="data"/>
+
+
+
+
 
 
 
@@ -728,7 +1450,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <rect x="1020" y="340" width="220" height="115" rx="7" class="box"/>
+
+
+
+
 
 
 
@@ -736,7 +1470,15 @@
 
 
 
+
+
+
+
 <text x="1037" y="397" class="instance">u_window</text>
+
+
+
+
 
 
 
@@ -744,11 +1486,23 @@
 
 
 
+
+
+
+
 <text x="1037" y="446" class="tiny">sqrt-Hann · 24-bit output</text>
 
 
 
+
+
+
+
 <path d="M1240 397H1297" class="data"/>
+
+
+
+
 
 
 
@@ -760,7 +1514,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <rect x="1300" y="340" width="280" height="115" rx="7" class="box"/>
+
+
+
+
 
 
 
@@ -768,7 +1534,15 @@
 
 
 
+
+
+
+
 <text x="1317" y="397" class="instance">u_fft</text>
+
+
+
+
 
 
 
@@ -776,11 +1550,23 @@
 
 
 
+
+
+
+
 <text x="1317" y="446" class="tiny">512 points · 24-bit real / imag</text>
 
 
 
+
+
+
+
 <path d="M1440 455V647" class="data"/>
+
+
+
+
 
 
 
@@ -792,7 +1578,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <rect x="1300" y="650" width="280" height="155" rx="7" class="box"/>
+
+
+
+
 
 
 
@@ -800,7 +1598,15 @@
 
 
 
+
+
+
+
 <text x="1317" y="707" class="instance">u_bins</text>
+
+
+
+
 
 
 
@@ -808,7 +1614,15 @@
 
 
 
+
+
+
+
 <text x="1317" y="765" class="small">67 selected · 25–50 kHz</text>
+
+
+
+
 
 
 
@@ -820,7 +1634,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <rect x="1020" y="650" width="230" height="155" rx="7" class="box"/>
+
+
+
+
 
 
 
@@ -828,7 +1654,15 @@
 
 
 
+
+
+
+
 <text x="1037" y="707" class="instance">u_das</text>
+
+
+
+
 
 
 
@@ -836,7 +1670,15 @@
 
 
 
+
+
+
+
 <text x="1037" y="765" class="small">Map sum / normalization</text>
+
+
+
+
 
 
 
@@ -844,11 +1686,23 @@
 
 
 
+
+
+
+
 <path d="M1300 705H1253" class="data"/>
 
 
 
+
+
+
+
 <path d="M1250 755H1297" class="control"/>
+
+
+
+
 
 
 
@@ -860,7 +1714,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <rect x="700" y="650" width="255" height="155" rx="7" class="logic"/>
+
+
+
+
 
 
 
@@ -868,7 +1734,15 @@
 
 
 
+
+
+
+
 <text x="717" y="707" class="small">Logic inside this file</text>
+
+
+
+
 
 
 
@@ -876,7 +1750,15 @@
 
 
 
+
+
+
+
 <text x="717" y="765" class="small">FFT → bins → DAS</text>
+
+
+
+
 
 
 
@@ -884,7 +1766,15 @@
 
 
 
+
+
+
+
 <path d="M827 650V458" class="control"/>
+
+
+
+
 
 
 
@@ -892,7 +1782,15 @@
 
 
 
+
+
+
+
 <path d="M900 650V560H1610V680H1583" class="control"/>
+
+
+
+
 
 
 
@@ -900,7 +1798,15 @@
 
 
 
+
+
+
+
 <path d="M1520 560V458" class="control"/>
+
+
+
+
 
 
 
@@ -908,7 +1814,15 @@
 
 
 
+
+
+
+
 <path d="M955 690H1017" class="control"/>
+
+
+
+
 
 
 
@@ -916,7 +1830,15 @@
 
 
 
+
+
+
+
 <path d="M1020 755H958" class="control"/>
+
+
+
+
 
 
 
@@ -928,7 +1850,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <path d="M1135 805V1027" class="data"/>
+
+
+
+
 
 
 
@@ -936,7 +1870,15 @@
 
 
 
+
+
+
+
 <text x="1153" y="893" class="tiny">64-bit power · 32-bit direction index</text>
+
+
+
+
 
 
 
@@ -944,7 +1886,15 @@
 
 
 
+
+
+
+
 <text x="240" y="846" class="tiny">Both front-end modules are defined</text>
+
+
+
+
 
 
 
@@ -956,7 +1906,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <rect x="590" y="1030" width="285" height="75" rx="7" class="external"/>
+
+
+
+
 
 
 
@@ -964,7 +1926,15 @@
 
 
 
+
+
+
+
 <text x="610" y="1088" class="small">Video frames</text>
+
+
+
+
 
 
 
@@ -972,11 +1942,23 @@
 
 
 
+
+
+
+
 <rect x="1000" y="1030" width="470" height="75" rx="7" class="host"/>
 
 
 
+
+
+
+
 <text x="1020" y="1061" class="name">External host</text>
+
+
+
+
 
 
 
@@ -988,7 +1970,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <path d="M25 1010H85" class="data"/>
+
+
+
+
 
 
 
@@ -996,7 +1990,15 @@
 
 
 
+
+
+
+
 <path d="M25 1047H85" class="control"/>
+
+
+
+
 
 
 
@@ -1004,7 +2006,15 @@
 
 
 
+
+
+
+
 <text x="25" y="1095" class="tiny">Routine ready/valid and clock/reset fanout omitted.</text>
+
+
+
+
 
 
 
@@ -1012,55 +2022,15 @@
 
 
 
-</figure><div class="note"><strong>Batch acquisition:</strong> the current RTL backpressures PDM input while computing. Physical microphone clock/pad handling and continuous capture buffering still need integration. The FIR is currently identity, so CIC passband droop is not compensated. Functional RTL does not establish real-time throughput, timing closure or fit in the target core.</div></section><section id="microphones" class="panel" role="tabpanel" aria-labelledby="tab-microphones" hidden><div class="section-head"><span class="number">06</span><h2>Microphones</h2></div>
 
 
 
-<p class="intro"><strong>Infineon IM66D130MV01XTMA1</strong> (IM66D130M) · current microphone choice for ultrasonic exploration.</p>
+
+</figure><div class="note"><strong>Batch acquisition:</strong> the current RTL backpressures PDM input while computing. Physical microphone clock/pad handling and continuous capture buffering still need integration. The FIR is currently identity, so CIC passband droop is not compensated. Functional RTL does not establish real-time throughput, timing closure or fit in the target core.</div></section><section id="microphones" class="panel" role="tabpanel" aria-labelledby="tab-microphones" hidden><div class="section-head"><span class="number">06</span><h2>Microphones</h2></div><p class="intro">Current microphone choice and key values. Expand a row for test conditions and supporting details.</p><div class="spec-list" aria-label="Microphone specifications"><details class="spec-defense" id="mic-choice"><summary><span class="spec-name">Microphone</span><span class="spec-value"><strong>Infineon IM66D130M</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Current choice:</strong> Infineon IM66D130MV01XTMA1 (IM66D130M), for ultrasonic exploration.</p></div></details><details class="spec-defense" id="mic-type"><summary><span class="spec-name">Type / output</span><span class="spec-value"><strong>Digital PDM</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Bottom-port MEMS microphone with digital PDM output. Two microphones can share a data line using opposite L/R settings.</p><p><strong>Package:</strong> 3.0 × 2.0 × 0.98 mm.</p></div></details><details class="spec-defense" id="mic-response"><summary><span class="spec-name">Frequency response</span><span class="spec-value"><strong>Typical curve to 80 kHz</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>The typical ultrasonic response curve extends to 80 kHz. The microphone has a 35 Hz low-frequency roll-off and a 33 kHz resonance.</p><p>The distributor’s 0–80 kHz listing is not a guaranteed flat passband. Validate response, channel matching and noise over the working 20–40 kHz band.</p></div></details><details class="spec-defense" id="mic-sensitivity"><summary><span class="spec-name">Sensitivity</span><span class="spec-value"><strong>−37 dBFS ±1 dB</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Specified at 1 kHz and 94 dB SPL.</p></div></details><details class="spec-defense" id="mic-snr"><summary><span class="spec-name">SNR</span><span class="spec-value"><strong>66 dB(A) typical</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Typical at a 3.072 MHz clock, A-weighted over a 20 Hz–20 kHz bandwidth.</p><p>This audio-band SNR does not establish ultrasonic SNR.</p></div></details><details class="spec-defense" id="mic-overload"><summary><span class="spec-name">Acoustic overload</span><span class="spec-value"><strong>130 dB SPL</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Specified at 10% THD and 1 kHz.</p></div></details><details class="spec-defense" id="mic-clock"><summary><span class="spec-name">PDM clock / PCM rate</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>The clock and PCM rate remain TBD. A 3.072 MHz PDM clock is within the specified 2.84–3.44 MHz clock window; PCM rate depends on decimation.</p></div></details><details class="spec-defense" id="mic-supply"><summary><span class="spec-name">Supply / current</span><span class="spec-value"><strong>1.6–3.465 V · 540 µA typical</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Supply:</strong> 1.6–3.465 V.</p><p><strong>Current:</strong> 540 µA typical / 640 µA maximum at 1.8 V, a 3.072 MHz clock and &lt;5 pF data load.</p></div></details></div><p class="sources"><a href="https://www.infineon.com/assets/row/public/documents/30/49/infineon-im66d130m-datasheet-en.pdf" target="_blank" rel="noopener">Infineon datasheet, rev. 1.1 · pp. 4, 6, 9, 11, 13</a> · <a href="https://www.digikey.com/en/products/detail/infineon-technologies/IM66D130MV01XTMA1/28005078" target="_blank" rel="noopener">DigiKey · IM66D130MV01XTMA1</a></p></section>
 
 
 
-<table><tr><th>Item</th><th>Specification</th></tr>
 
-
-
-<tr><td>Type / output</td><td>Bottom-port MEMS; digital PDM; two microphones can share a data line using opposite L/R settings.</td></tr>
-
-
-
-<tr><td>Frequency response</td><td>Typical ultrasonic curve extends to <strong>80 kHz</strong>; <strong>35 Hz</strong> low-frequency roll-off and <strong>33 kHz</strong> resonance.</td></tr>
-
-
-
-<tr><td>Sensitivity</td><td><strong>−37 dBFS ±1 dB</strong> at 1 kHz, 94 dB SPL.</td></tr>
-
-
-
-<tr><td>SNR</td><td><strong>66 dB(A)</strong> typical at 3.072 MHz clock; A-weighted, 20 Hz–20 kHz bandwidth.</td></tr>
-
-
-
-<tr><td>Acoustic overload</td><td><strong>130 dB SPL</strong> at 10% THD, 1 kHz.</td></tr>
-
-
-
-<tr><td>PDM clock / PCM rate</td><td><strong>TBD</strong>; 3.072 MHz is within the specified 2.84–3.44 MHz clock window. PCM rate depends on decimation.</td></tr>
-
-
-
-<tr><td>Supply / current</td><td><strong>1.6–3.465 V</strong>; <strong>540 µA typical / 640 µA maximum</strong> at 1.8 V, 3.072 MHz, &lt;5 pF data load.</td></tr>
-
-
-
-<tr><td>Package</td><td><strong>3.0 × 2.0 × 0.98 mm</strong>.</td></tr></table>
-
-
-
-<div class="note">The 0–80 kHz distributor listing is not a guaranteed flat passband. Validate response, channel matching and noise over 25–50 kHz; the audio-band SNR does not establish ultrasonic SNR.</div>
-
-
-
-<p class="sources"><a href="https://www.infineon.com/assets/row/public/documents/30/49/infineon-im66d130m-datasheet-en.pdf" target="_blank" rel="noopener">Infineon datasheet, rev. 1.1 · pp. 4, 6, 9, 11, 13</a> · <a href="https://www.digikey.com/en/products/detail/infineon-technologies/IM66D130MV01XTMA1/28005078" target="_blank" rel="noopener">DigiKey · IM66D130MV01XTMA1</a></p></section>
 
 
 
@@ -1068,7 +2038,15 @@
 
 
 
+
+
+
+
 const tabs=[...document.querySelectorAll('[role=tab]')];function selectTab(index,focus=false){tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',i===index);tab.tabIndex=i===index?0:-1;document.getElementById(tab.getAttribute('aria-controls')).hidden=i!==index});document.getElementById('page-number').textContent=`0${index+1} / 0${tabs.length}`;history.replaceState(null,'','#'+tabs[index].getAttribute('aria-controls'));if(focus)tabs[index].focus()}
+
+
+
+
 
 
 
@@ -1080,7 +2058,19 @@ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectTab(i));tab.addEve
 
 
 
+
+
+
+
+
+
+
+
 </script><script src="layout-distance-data.js"></script><script src="layout-distance-explorer.js"></script><script src="algorithm-study.js?v=3"></script></body></html>
+
+
+
+
 
 
 
