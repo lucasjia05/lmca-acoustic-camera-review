@@ -45,6 +45,8 @@
 <text x="180" y="764" text-anchor="middle" class="inputtext">Mic positions + sound speed</text>
 <text x="180" y="791" text-anchor="middle" class="inputtext">Focus distance (if used)</text>
 <path d="M340 752H457" class="arrow"/>
+<text x="180" y="846" text-anchor="middle" class="small">Each direction &#215; bin &#215; FFT frame:</text>
+<text x="180" y="871" text-anchor="middle" class="small">align M microphones, then sum.</text>
 <path d="M705 790V818" class="arrow"/>
 <rect x="460" y="820" width="490" height="70" rx="8" class="block"/>
 <text x="705.0" y="852" text-anchor="middle" class="label">Subtract the predicted phase</text>
