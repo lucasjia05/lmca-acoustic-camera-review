@@ -1,0 +1,691 @@
+{
+  "version": 1,
+  "architecture": "compact_selected_dft",
+  "units": "gscl45nm NAND2 equivalents",
+  "blocks": {
+    "core": {
+      "features": [
+        "constant",
+        "raw_spectrum_bits",
+        "microphones",
+        "directions",
+        "fft_size",
+        "arithmetic_width_product"
+      ],
+      "coefficients": [
+        30928.509795223206,
+        9.82560616023637,
+        17.4556748085343,
+        5.865581733011515,
+        0.32359639101546006,
+        9.86008566741277
+      ]
+    },
+    "pdm": {
+      "features": [
+        "constant",
+        "microphones"
+      ],
+      "coefficients": [
+        0.0,
+        2218.0195979906925
+      ]
+    },
+    "serializer": {
+      "features": [
+        "constant",
+        "microphones"
+      ],
+      "coefficients": [
+        200.78764478775724,
+        189.22007722006123
+      ]
+    },
+    "interface": {
+      "features": [
+        "constant",
+        "microphones"
+      ],
+      "coefficients": [
+        21.05019305019267,
+        8.918436293436299
+      ]
+    }
+  },
+  "tested_bands": [
+    [
+      20000.0,
+      40000.0
+    ],
+    [
+      25000.0,
+      50000.0
+    ]
+  ],
+  "parameter_ranges": {
+    "microphones": [
+      16,
+      48
+    ],
+    "fft_size": [
+      256,
+      512
+    ],
+    "bins": [
+      4,
+      12
+    ],
+    "directions": [
+      121,
+      441
+    ],
+    "window_width": [
+      16,
+      18
+    ],
+    "coefficient_width": [
+      16,
+      18
+    ],
+    "spectrum_width": [
+      16,
+      24
+    ]
+  },
+  "fixed_parameters": {
+    "decimation": 16,
+    "cic_order": 3,
+    "pdm_lanes": 1,
+    "pcm_width": 16,
+    "phase_bits": 10,
+    "map_width": 48
+  },
+  "screening_fraction": 0.22816075229113697,
+  "assumptions": [
+    "Complete register-only processing top; no storage excluded.",
+    "30-mic reference uses 20 cm spiral geometry; calibration keeps spiral layout, 25\u201350 kHz and 192 ksample/s.",
+    "Spatial coefficient values and timing constraints can change synthesis beyond this structural approximation.",
+    "Single-lane CIC3 /16, identity FIR, far-field steering, square-root-Hann window, build-time constants.",
+    "Core fit includes storage access, constant tables and arithmetic; it is not just flip-flop area.",
+    "No physical layout, clock tree, pad ring, scan insertion, power or achieved clock prediction.",
+    "Averaging/overlap additions are unimplemented analytical budgets; shared FFT has storage budget only."
+  ],
+  "production_source_sha256": {
+    "lmca_compact_trig.sv": "77f921e0126362f25632c25295a4f7603f9c4cc3dad2a1d43f2231dba1d67396",
+    "lmca_compact_core.sv": "972a0e64ad991fea5c4ec6fa0ce808507cbe55353c0837e1e65f5bbcb52578ff",
+    "lmca_pdm_decimator.sv": "5d6fc5c925cf139ca8980e94fac44aef620cc37717be969c8b4cc5aa0202cc22",
+    "lmca_compact_camera.sv": "b108572cacbb4918fd0a76daf8027158058b0a5e76e2c08409a8a0c05e6c4a3b",
+    "lmca_compact_math.svh": "a456d53a5b18a6cbb8d1866f75dccee4999d6c82846aaae7daad39456296bb3c"
+  },
+  "validation": {
+    "training_points": 8,
+    "held_out_points": 3,
+    "held_out_max_relative_error": 0.11408037614556849,
+    "training_max_relative_error": 0.040167829035345,
+    "points": [
+      {
+        "name": "baseline",
+        "held_out": false,
+        "actual_ge": 234590.0,
+        "predicted_ge": 237393.56733757572,
+        "relative_error": 0.011950924325741583,
+        "settings": {
+          "name": "register-only-30mic-four-bin-candidate",
+          "sample_rate_hz": 192000,
+          "microphones": 30,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "scan_step_deg": 3.0,
+          "speed_of_sound_m_s": 343.0,
+          "window_samples": 512,
+          "selected_bins": [
+            67,
+            89,
+            111,
+            133
+          ],
+          "window": "sqrt_hann",
+          "phase_bits": 10,
+          "windowed_width": 18,
+          "windowed_fraction": 16,
+          "spectrum_width": 24,
+          "spectrum_fraction": 22,
+          "coefficient_width": 18,
+          "coefficient_fraction": 16,
+          "power_fraction": 32,
+          "map_width": 48,
+          "pdm": {
+            "lanes": 1,
+            "decimation": 16,
+            "cic_order": 3,
+            "fir_coefficients": [
+              1.0
+            ]
+          }
+        }
+      },
+      {
+        "name": "band2040_m16k8",
+        "held_out": true,
+        "actual_ge": 205442.99999999997,
+        "predicted_ge": 209391.13035437683,
+        "relative_error": 0.019217643601275584,
+        "settings": {
+          "name": "register-only-30mic-four-bin-candidate",
+          "sample_rate_hz": 192000,
+          "microphones": 16,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "scan_step_deg": 3.0,
+          "speed_of_sound_m_s": 343.0,
+          "window_samples": 512,
+          "selected_bins": [
+            54,
+            61,
+            69,
+            76,
+            84,
+            91,
+            99,
+            106
+          ],
+          "window": "sqrt_hann",
+          "phase_bits": 10,
+          "windowed_width": 18,
+          "windowed_fraction": 16,
+          "spectrum_width": 24,
+          "spectrum_fraction": 22,
+          "coefficient_width": 18,
+          "coefficient_fraction": 16,
+          "power_fraction": 32,
+          "map_width": 48,
+          "pdm": {
+            "lanes": 1,
+            "decimation": 16,
+            "cic_order": 3,
+            "fir_coefficients": [
+              1.0
+            ]
+          },
+          "band_hz": [
+            20000.0,
+            40000.0
+          ]
+        }
+      },
+      {
+        "name": "fft256",
+        "held_out": false,
+        "actual_ge": 231188.74999999997,
+        "predicted_ge": 234952.58118301907,
+        "relative_error": 0.016280338827123268,
+        "settings": {
+          "name": "register-only-30mic-four-bin-candidate",
+          "sample_rate_hz": 192000,
+          "microphones": 30,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "scan_step_deg": 3.0,
+          "speed_of_sound_m_s": 343.0,
+          "window_samples": 256,
+          "selected_bins": [
+            34,
+            45,
+            55,
+            66
+          ],
+          "window": "sqrt_hann",
+          "phase_bits": 10,
+          "windowed_width": 18,
+          "windowed_fraction": 16,
+          "spectrum_width": 24,
+          "spectrum_fraction": 22,
+          "coefficient_width": 18,
+          "coefficient_fraction": 16,
+          "power_fraction": 32,
+          "map_width": 48,
+          "pdm": {
+            "lanes": 1,
+            "decimation": 16,
+            "cic_order": 3,
+            "fir_coefficients": [
+              1.0
+            ]
+          }
+        }
+      },
+      {
+        "name": "grid6",
+        "held_out": false,
+        "actual_ge": 231752.75,
+        "predicted_ge": 235516.58118301205,
+        "relative_error": 0.016240718537372485,
+        "settings": {
+          "name": "register-only-30mic-four-bin-candidate",
+          "sample_rate_hz": 192000,
+          "microphones": 30,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "scan_step_deg": 6.0,
+          "speed_of_sound_m_s": 343.0,
+          "window_samples": 512,
+          "selected_bins": [
+            67,
+            89,
+            111,
+            133
+          ],
+          "window": "sqrt_hann",
+          "phase_bits": 10,
+          "windowed_width": 18,
+          "windowed_fraction": 16,
+          "spectrum_width": 24,
+          "spectrum_fraction": 22,
+          "coefficient_width": 18,
+          "coefficient_fraction": 16,
+          "power_fraction": 32,
+          "map_width": 48,
+          "pdm": {
+            "lanes": 1,
+            "decimation": 16,
+            "cic_order": 3,
+            "fir_coefficients": [
+              1.0
+            ]
+          }
+        }
+      },
+      {
+        "name": "holdout_a",
+        "held_out": true,
+        "actual_ge": 247281.0,
+        "predicted_ge": 239978.76953987413,
+        "relative_error": -0.02953009111143139,
+        "settings": {
+          "name": "register-only-30mic-four-bin-candidate",
+          "sample_rate_hz": 192000,
+          "microphones": 24,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "scan_step_deg": 5.0,
+          "speed_of_sound_m_s": 343.0,
+          "window_samples": 256,
+          "selected_bins": [
+            34,
+            40,
+            47,
+            53,
+            60,
+            66
+          ],
+          "window": "sqrt_hann",
+          "phase_bits": 10,
+          "windowed_width": 18,
+          "windowed_fraction": 16,
+          "spectrum_width": 24,
+          "spectrum_fraction": 22,
+          "coefficient_width": 18,
+          "coefficient_fraction": 16,
+          "power_fraction": 32,
+          "map_width": 48,
+          "pdm": {
+            "lanes": 1,
+            "decimation": 16,
+            "cic_order": 3,
+            "fir_coefficients": [
+              1.0
+            ]
+          }
+        }
+      },
+      {
+        "name": "holdout_b",
+        "held_out": true,
+        "actual_ge": 339833.74999999994,
+        "predicted_ge": 301065.38797304087,
+        "relative_error": -0.11408037614556849,
+        "settings": {
+          "name": "register-only-30mic-four-bin-candidate",
+          "sample_rate_hz": 192000,
+          "microphones": 36,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "scan_step_deg": 4.0,
+          "speed_of_sound_m_s": 343.0,
+          "window_samples": 512,
+          "selected_bins": [
+            67,
+            84,
+            100,
+            116,
+            133
+          ],
+          "window": "sqrt_hann",
+          "phase_bits": 10,
+          "windowed_width": 18,
+          "windowed_fraction": 16,
+          "spectrum_width": 20,
+          "spectrum_fraction": 18,
+          "coefficient_width": 18,
+          "coefficient_fraction": 16,
+          "power_fraction": 32,
+          "map_width": 48,
+          "pdm": {
+            "lanes": 1,
+            "decimation": 16,
+            "cic_order": 3,
+            "fir_coefficients": [
+              1.0
+            ]
+          }
+        }
+      },
+      {
+        "name": "k12",
+        "held_out": false,
+        "actual_ge": 450368.75,
+        "predicted_ge": 454342.95135559473,
+        "relative_error": 0.008824327521824582,
+        "settings": {
+          "name": "register-only-30mic-four-bin-candidate",
+          "sample_rate_hz": 192000,
+          "microphones": 30,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "scan_step_deg": 3.0,
+          "speed_of_sound_m_s": 343.0,
+          "window_samples": 512,
+          "selected_bins": [
+            67,
+            73,
+            79,
+            85,
+            91,
+            97,
+            103,
+            109,
+            115,
+            121,
+            127,
+            133
+          ],
+          "window": "sqrt_hann",
+          "phase_bits": 10,
+          "windowed_width": 18,
+          "windowed_fraction": 16,
+          "spectrum_width": 24,
+          "spectrum_fraction": 22,
+          "coefficient_width": 18,
+          "coefficient_fraction": 16,
+          "power_fraction": 32,
+          "map_width": 48,
+          "pdm": {
+            "lanes": 1,
+            "decimation": 16,
+            "cic_order": 3,
+            "fir_coefficients": [
+              1.0
+            ]
+          }
+        }
+      },
+      {
+        "name": "k8",
+        "held_out": false,
+        "actual_ge": 342526.5,
+        "predicted_ge": 345868.2593465852,
+        "relative_error": 0.00975620673607793,
+        "settings": {
+          "name": "register-only-30mic-four-bin-candidate",
+          "sample_rate_hz": 192000,
+          "microphones": 30,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "scan_step_deg": 3.0,
+          "speed_of_sound_m_s": 343.0,
+          "window_samples": 512,
+          "selected_bins": [
+            67,
+            76,
+            86,
+            95,
+            105,
+            114,
+            124,
+            133
+          ],
+          "window": "sqrt_hann",
+          "phase_bits": 10,
+          "windowed_width": 18,
+          "windowed_fraction": 16,
+          "spectrum_width": 24,
+          "spectrum_fraction": 22,
+          "coefficient_width": 18,
+          "coefficient_fraction": 16,
+          "power_fraction": 32,
+          "map_width": 48,
+          "pdm": {
+            "lanes": 1,
+            "decimation": 16,
+            "cic_order": 3,
+            "fir_coefficients": [
+              1.0
+            ]
+          }
+        }
+      },
+      {
+        "name": "m16",
+        "held_out": false,
+        "actual_ge": 148029.25,
+        "predicted_ge": 151537.96128290507,
+        "relative_error": 0.023702824157422097,
+        "settings": {
+          "name": "register-only-30mic-four-bin-candidate",
+          "sample_rate_hz": 192000,
+          "microphones": 16,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "scan_step_deg": 3.0,
+          "speed_of_sound_m_s": 343.0,
+          "window_samples": 512,
+          "selected_bins": [
+            67,
+            89,
+            111,
+            133
+          ],
+          "window": "sqrt_hann",
+          "phase_bits": 10,
+          "windowed_width": 18,
+          "windowed_fraction": 16,
+          "spectrum_width": 24,
+          "spectrum_fraction": 22,
+          "coefficient_width": 18,
+          "coefficient_fraction": 16,
+          "power_fraction": 32,
+          "map_width": 48,
+          "pdm": {
+            "lanes": 1,
+            "decimation": 16,
+            "cic_order": 3,
+            "fir_coefficients": [
+              1.0
+            ]
+          }
+        }
+      },
+      {
+        "name": "m48",
+        "held_out": false,
+        "actual_ge": 362028.25,
+        "predicted_ge": 347486.36114803486,
+        "relative_error": -0.040167829035345,
+        "settings": {
+          "name": "register-only-30mic-four-bin-candidate",
+          "sample_rate_hz": 192000,
+          "microphones": 48,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "scan_step_deg": 3.0,
+          "speed_of_sound_m_s": 343.0,
+          "window_samples": 512,
+          "selected_bins": [
+            67,
+            89,
+            111,
+            133
+          ],
+          "window": "sqrt_hann",
+          "phase_bits": 10,
+          "windowed_width": 18,
+          "windowed_fraction": 16,
+          "spectrum_width": 24,
+          "spectrum_fraction": 22,
+          "coefficient_width": 18,
+          "coefficient_fraction": 16,
+          "power_fraction": 32,
+          "map_width": 48,
+          "pdm": {
+            "lanes": 1,
+            "decimation": 16,
+            "cic_order": 3,
+            "fir_coefficients": [
+              1.0
+            ]
+          }
+        }
+      },
+      {
+        "name": "width16",
+        "held_out": false,
+        "actual_ge": 214273.5,
+        "predicted_ge": 218022.01907099673,
+        "relative_error": 0.017494086160895903,
+        "settings": {
+          "name": "register-only-30mic-four-bin-candidate",
+          "sample_rate_hz": 192000,
+          "microphones": 30,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "scan_step_deg": 3.0,
+          "speed_of_sound_m_s": 343.0,
+          "window_samples": 512,
+          "selected_bins": [
+            67,
+            89,
+            111,
+            133
+          ],
+          "window": "sqrt_hann",
+          "phase_bits": 10,
+          "windowed_width": 16,
+          "windowed_fraction": 14,
+          "spectrum_width": 16,
+          "spectrum_fraction": 14,
+          "coefficient_width": 16,
+          "coefficient_fraction": 14,
+          "power_fraction": 28,
+          "map_width": 48,
+          "pdm": {
+            "lanes": 1,
+            "decimation": 16,
+            "cic_order": 3,
+            "fir_coefficients": [
+              1.0
+            ]
+          }
+        }
+      }
+    ],
+    "note": "The two original mixed configurations and later 20\u201340 kHz check were not used in coefficient fitting; this remains a limited validation set."
+  }
+}

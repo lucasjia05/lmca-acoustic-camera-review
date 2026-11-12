@@ -1,0 +1,61 @@
+{
+  "points": [
+    {
+      "variant": "acc42_q32",
+      "gates": 197461.5,
+      "flip_flops": 14663,
+      "saved_ge": 9268.5,
+      "worst_map_error": 0,
+      "peak_changes": 0,
+      "source_match_changes": 0,
+      "logs": {
+        "baseline/simulation.log": "PASS compact: mics=16 bins=8 directions=441 maps=2 PDM=16384 PCM=16384 cycles=399617 clipped=0\n- tb_compact.sv:80: Verilog $finish",
+        "baseline/uart_simulation.log": "PASS PDM-to-UART: mics=16 bins=8 maps=2 points=882 bytes=5310 cycles=2934970\n- tb_uart_camera.sv:64: Verilog $finish",
+        "noisy/simulation.log": "PASS compact: mics=16 bins=8 directions=441 maps=2 PDM=16384 PCM=16384 cycles=399617 clipped=0\n- tb_compact.sv:80: Verilog $finish",
+        "noisy/uart_simulation.log": "PASS PDM-to-UART: mics=16 bins=8 maps=2 points=882 bytes=5310 cycles=2934970\n- tb_uart_camera.sv:64: Verilog $finish",
+        "random/simulation.log": "PASS compact: mics=16 bins=8 directions=441 maps=2 PDM=16384 PCM=16384 cycles=399617 clipped=0\n- tb_compact.sv:80: Verilog $finish",
+        "random/uart_simulation.log": "PASS PDM-to-UART: mics=16 bins=8 maps=2 points=882 bytes=5310 cycles=2934970\n- tb_uart_camera.sv:64: Verilog $finish"
+      }
+    },
+    {
+      "variant": "acc34_q24",
+      "gates": 177717.49999999997,
+      "flip_flops": 12615,
+      "saved_ge": 29012.50000000003,
+      "worst_map_error": 0.016129032258064516,
+      "peak_changes": 0,
+      "source_match_changes": 0,
+      "logs": {
+        "baseline/simulation.log": "PASS compact: mics=16 bins=8 directions=441 maps=2 PDM=16384 PCM=16384 cycles=399617 clipped=0\n- tb_compact.sv:80: Verilog $finish",
+        "baseline/uart_simulation.log": "PASS PDM-to-UART: mics=16 bins=8 maps=2 points=882 bytes=5310 cycles=2934970\n- tb_uart_camera.sv:64: Verilog $finish",
+        "noisy/simulation.log": "PASS compact: mics=16 bins=8 directions=441 maps=2 PDM=16384 PCM=16384 cycles=399617 clipped=0\n- tb_compact.sv:80: Verilog $finish",
+        "noisy/uart_simulation.log": "PASS PDM-to-UART: mics=16 bins=8 maps=2 points=882 bytes=5310 cycles=2934970\n- tb_uart_camera.sv:64: Verilog $finish",
+        "random/simulation.log": "PASS compact: mics=16 bins=8 directions=441 maps=2 PDM=16384 PCM=16384 cycles=399617 clipped=0\n- tb_compact.sv:80: Verilog $finish",
+        "random/uart_simulation.log": "PASS PDM-to-UART: mics=16 bins=8 maps=2 points=882 bytes=5310 cycles=2934970\n- tb_uart_camera.sv:64: Verilog $finish"
+      }
+    },
+    {
+      "variant": "acc26_q16",
+      "gates": 157177.5,
+      "flip_flops": 10567,
+      "saved_ge": 49552.5,
+      "worst_map_error": 0.3333333333333333,
+      "peak_changes": 0,
+      "source_match_changes": 0,
+      "logs": {
+        "baseline/simulation.log": "PASS compact: mics=16 bins=8 directions=441 maps=2 PDM=16384 PCM=16384 cycles=399617 clipped=0\n- tb_compact.sv:80: Verilog $finish",
+        "baseline/uart_simulation.log": "PASS PDM-to-UART: mics=16 bins=8 maps=2 points=882 bytes=5310 cycles=2934970\n- tb_uart_camera.sv:64: Verilog $finish",
+        "noisy/simulation.log": "PASS compact: mics=16 bins=8 directions=441 maps=2 PDM=16384 PCM=16384 cycles=399617 clipped=0\n- tb_compact.sv:80: Verilog $finish",
+        "noisy/uart_simulation.log": "PASS PDM-to-UART: mics=16 bins=8 maps=2 points=882 bytes=5310 cycles=2934970\n- tb_uart_camera.sv:64: Verilog $finish",
+        "random/simulation.log": "PASS compact: mics=16 bins=8 directions=441 maps=2 PDM=16384 PCM=16384 cycles=399617 clipped=0\n- tb_compact.sv:80: Verilog $finish",
+        "random/uart_simulation.log": "PASS PDM-to-UART: mics=16 bins=8 maps=2 points=882 bytes=5310 cycles=2934970\n- tb_uart_camera.sv:64: Verilog $finish"
+      }
+    }
+  ],
+  "source_and_table_hashes_checked": true,
+  "limitations": [
+    "RTL simulation, not mapped-netlist simulation or timing closure.",
+    "Same fixed 16-mic, 8-bin, N=512, 441-direction configuration; not a universal precision calibration.",
+    "Synthesis evidence includes UART and all storage; continuous physical PDM capture still unqualified."
+  ]
+}

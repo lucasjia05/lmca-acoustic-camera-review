@@ -1,0 +1,26 @@
+[
+  {
+    "stem": "01-gates-vs-bins",
+    "title": "Gate count versus microphone and bin counts",
+    "caption": "Existing 20\u201340 kHz estimate: lines and shading are the original fitted model and engineering allowance. The black marker is the measured original 16-mic/eight-bin circuit, including UART.",
+    "alt": "Estimated gate count rises with selected-bin and microphone counts, with a 300k gate budget and one measured baseline point."
+  },
+  {
+    "stem": "02-precision-gates",
+    "title": "Measured savings from Fourier precision",
+    "caption": "Holding 16 mics, eight bins, 512 samples and 441 directions fixed, total synthesis estimates fall from 206.7k to 197.5k, 177.7k and 157.2k NAND2 equivalents. All storage and UART are included.",
+    "alt": "Four measured gate-count bars: original 46-bit 206.7k; 42-bit 197.5k; 34-bit 177.7k; 26-bit 157.2k."
+  },
+  {
+    "stem": "03-precision-quality",
+    "title": "Quality versus digital signal level",
+    "caption": "Accumulator rounding and power-output rounding are different tradeoffs. Weak-output failures must be counted alongside relative errors; the wide reference itself produces nine zero maps at the weakest level.",
+    "alt": "Two plots show accumulator pixel error and counts of all-zero maps as input signals become weaker."
+  },
+  {
+    "stem": "04-precision-map-example",
+    "title": "Inspect the maps and their differences",
+    "caption": "Worst relative-error case for the 34-bit accumulator: independent-noise seed 7, \u221246 dBFS peak input. Top maps share the reference intensity scale; bottom maps show signed numerical differences. This is one selected example, not an average.",
+    "alt": "Reference, 34-bit and 26-bit acoustic maps with true-source circles above signed-error maps, all using shared scales."
+  }
+]

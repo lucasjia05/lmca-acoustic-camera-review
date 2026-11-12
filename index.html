@@ -1,314 +1,651 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LMCA · Drone-mounted acoustic camera</title><style>
+
 :root{color-scheme:light;--ink:#162b35;--muted:#536873;--line:#d7e0e3;--accent:#006e72}*{box-sizing:border-box}body{margin:0;background:#f3f5f4;color:var(--ink);font-family:Segoe UI,Arial,sans-serif}header{padding:26px 5vw 0;background:white;border-bottom:1px solid var(--line)}.top{display:flex;justify-content:space-between;align-items:center;gap:20px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:700;color:var(--accent)}h1{font-size:28px;letter-spacing:-.7px;margin:8px 0 20px}header small{color:var(--muted)}nav{display:flex;gap:6px;overflow-x:auto}button{font:inherit;cursor:pointer}nav button{border:0;background:transparent;padding:16px 24px;color:var(--muted);border-bottom:3px solid transparent}nav button[aria-selected=true]{color:var(--accent);border-color:var(--accent);font-weight:700}button:focus-visible,a:focus-visible{outline:3px solid #e39a34;outline-offset:3px}.utility{border:1px solid var(--line);border-radius:6px;background:white;padding:9px 12px}main{max-width:1240px;margin:auto;padding:36px 5vw 48px}.panel[hidden]{display:none}.section-head{display:flex;align-items:baseline;gap:18px;margin-bottom:24px}.number{font-size:14px;color:var(--accent);font-weight:700}h2{font-size:36px;letter-spacing:-1px;margin:0}p{line-height:1.6}.intro{color:var(--muted);max-width:850px;margin:0 0 24px}table{width:100%;border-collapse:collapse;background:white;font-size:17px}th{text-align:left;background:#e8eeed;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em}th,td{padding:17px 22px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}td:first-child{width:25%;font-weight:600}strong{font-weight:650}.note{padding:15px 18px;border-left:3px solid var(--accent);background:#e8efed;font-size:14px;color:#36535a;line-height:1.6;margin-top:22px}.diagram{background:#171b23;border-radius:10px;padding:12px}.diagram svg{display:block;width:100%;height:auto}.diagram-actions{text-align:right;margin:0 0 12px}.sources{font-size:12px;color:var(--muted);margin-top:26px;line-height:1.7}a{color:var(--accent)}footer{display:flex;justify-content:space-between;margin-top:30px;color:var(--muted);font-size:12px}@media(max-width:700px){header{padding:20px 20px 0}main{padding:28px 20px}nav button{padding:14px 10px;font-size:14px}h1{font-size:23px}h2{font-size:30px}th,td{padding:12px;font-size:14px}.top small{display:none}}@media print{header{padding:0}nav,.utility,.diagram-actions,footer{display:none!important}main{padding:0;max-width:none}.panel[hidden]{display:block}.panel{break-before:page;padding-top:20px}#spec-esd{break-before:auto}body{background:white}h2{font-size:26px}table{font-size:13px}th,td{padding:10px}.diagram{max-width:780px;margin:auto;print-color-adjust:exact}.note{font-size:12px}@page{size:A4;margin:15mm}}
+
+
 
 .defense-controls{display:flex;gap:8px;margin:0 0 16px}.spec-row>td{vertical-align:top}.spec-defense summary{cursor:pointer;display:flex;align-items:flex-start;gap:16px;list-style:none}.spec-defense summary::-webkit-details-marker{display:none}.spec-value{flex:1}.defense-toggle{font-size:12px;white-space:nowrap;color:var(--accent);font-weight:600;padding:4px 0}.defense-toggle:before{content:'+ ';font-size:17px}.spec-defense[open] .defense-toggle:before{content:'− '}.spec-defense summary:focus-visible{outline:3px solid #e39a34;outline-offset:5px}.defense-body{font-weight:400;border-top:1px solid var(--line);margin-top:18px;padding-top:8px;font-size:15px;line-height:1.65}.defense-body h3{font-size:15px;margin:22px 0 6px;color:var(--ink)}.defense-body .defense-title{font-size:22px;margin:12px 0}.defense-lead{font-size:17px;color:var(--accent);line-height:1.6}.defense-body p{margin:8px 0 14px}.defense-body .sources{font-size:12px}.decision{border-left:3px solid #c18b36;background:#fbf5e9;padding:13px 16px;margin:20px 0 6px}.evidence-table th,.evidence-table td{font-size:13px;padding:12px 10px}.evidence-table td:first-child{width:22%}.evidence-table th{font-size:11px}.spec-defense[open] summary{padding-bottom:4px}@media(max-width:700px){.spec-defense summary{display:block}.defense-toggle{display:block;margin-top:8px}.spec-row>td:first-child{width:22%}.defense-body{font-size:14px}.evidence-table{display:block;overflow-x:auto}.evidence-table td{min-width:150px}.defense-controls .utility{font-size:13px}}@media print{.defense-controls,.defense-toggle{display:none}.defense-body{font-size:11px}.spec-row{break-inside:auto}.defense-body h3{break-after:avoid}.evidence-table tr{break-inside:avoid}}
 
+
+
 .spec-list{background:white;border:1px solid var(--line);border-radius:8px;overflow:hidden}.spec-list>.spec-defense{border-bottom:1px solid var(--line)}.spec-list>.spec-defense:last-child{border-bottom:0}.spec-list .spec-defense summary{display:grid;grid-template-columns:24% 1fr 20px;gap:20px;padding:19px 22px;align-items:center;margin:0}.spec-list .spec-defense summary:hover{background:#eef4f2}.spec-name{font-weight:600}.row-arrow{font-size:27px;color:var(--accent);line-height:1;transition:transform .15s;text-align:center}.spec-defense[open] .row-arrow{transform:rotate(90deg)}.spec-list .defense-body{margin:0;padding:4px 22px 16px calc(24% + 30px);border-top:0;background:#f7faf9;font-size:15px}.spec-list .spec-defense[open] summary{background:#eef4f2;padding-bottom:19px}.spec-list .defense-body p{margin:10px 0}.spec-list .defense-body .sources{margin-top:12px}@media(max-width:700px){.spec-list .spec-defense summary{grid-template-columns:1fr 24px;gap:8px;padding:16px}.spec-name{grid-column:1}.spec-value{grid-column:1;font-size:14px}.row-arrow{grid-column:2;grid-row:1 / 3}.spec-list .defense-body{padding:4px 16px 14px;font-size:14px}}@media print{.row-arrow{display:none}.spec-list .defense-body{padding:4px 16px 12px;font-size:12px}}
+
 .defense-body ul{padding-left:22px;margin:10px 0}.defense-body li{margin:7px 0}.range-equation{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0;font-size:19px}.fraction{display:inline-flex;flex-direction:column;text-align:center;line-height:1.6}.fraction>span:first-child{border-bottom:1px solid currentColor;padding:0 8px 3px}.fraction>span:last-child{padding:3px 8px 0}
+
 .spec-list .layout-defense{padding:22px;background:#f7faf9}.layout-controls{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px}.layout-controls label{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted);flex:1;min-width:145px}.layout-controls select{width:100%;font:inherit;font-size:14px;color:var(--ink);background:white;border:1px solid var(--line);border-radius:5px;padding:9px}.layout-conditions{font-size:13px;line-height:1.65;color:var(--muted);padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.layout-legend{font-size:12px;line-height:1.8}.layout-legend span{display:inline-block;margin-right:14px}.layout-legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.array-card{display:grid;grid-template-columns:minmax(180px, .8fr) minmax(300px,1.7fr);gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}.array-card h3{margin:0 0 3px;font-size:17px}.array-meta{font-size:12px;color:var(--muted);margin-bottom:8px}.array-geometry{max-width:230px;margin:auto}.array-geometry svg,.array-chart svg{display:block;width:100%;height:auto}.array-results{min-width:0}.array-metrics{display:flex;flex-wrap:wrap;gap:7px 18px;font-size:12px;line-height:1.7;margin:6px 0 0 52px}.array-metrics strong{font-size:14px}.layout-footnote{font-size:12px;color:var(--muted);line-height:1.6}.chart-title{font-size:13px;color:var(--muted);margin-bottom:5px}.array-empty{padding:35px;color:var(--muted)}@media(max-width:760px){.array-card{grid-template-columns:1fr}.spec-list .layout-defense{padding:16px}.array-geometry{max-width:240px}.array-metrics{margin-left:0}.layout-controls label{min-width:130px}.array-card h3{text-align:center}.array-meta{text-align:center}}@media print{.layout-controls{display:none}.array-card{break-inside:avoid;grid-template-columns:180px 1fr}.layout-conditions{font-size:10px}.layout-defense{padding:10px!important}}
+
 .array-geometry svg text,.array-chart svg text{fill:#566575;font:11px system-ui}.array-chart svg text[fill="#b43540"]{fill:#b43540}.fft-metrics{font-size:12px;margin-top:12px}.fft-metrics td,.fft-metrics th{padding:7px}.fft-metrics td:first-child{width:auto}.fft-cost{font-size:12px;margin:12px 0}.layout-controls .bit-options{flex-basis:100%;border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px 18px}.bit-options legend{font-size:12px;color:var(--muted);margin-bottom:8px}.layout-controls .bit-options label{display:inline-flex;flex-direction:row;align-items:center;gap:6px;min-width:0;flex:none;font-size:14px;color:var(--ink)}.bit-options input{accent-color:var(--accent)}.layout-controls .layout-filter{position:relative;flex:1;min-width:180px}#parameter-1 .layout-controls .layout-filter>summary{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;margin:0;border:1px solid var(--line);border-radius:5px;background:white;gap:12px;list-style:none}#parameter-1 .layout-controls .layout-filter[open]>summary{padding:10px 12px;background:white}.filter-name{display:block;font-size:12px;color:var(--muted);margin-bottom:5px}.filter-value{display:block;font-size:14px;color:var(--ink)}.filter-options{position:absolute;top:calc(100% + 4px);left:0;right:0;background:white;border:1px solid var(--line);border-radius:6px;box-shadow:0 6px 18px #162b351a;padding:8px;z-index:20}.layout-controls .filter-options label{display:flex;flex-direction:row;align-items:center;gap:8px;min-width:0;padding:8px;font-size:14px;color:var(--ink);cursor:pointer}.filter-options label:hover{background:#eef4f2}.filter-options input{accent-color:var(--accent)}@media print{.filter-options{display:none}}
+
 .changelog{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}.changelog summary{cursor:pointer;font-weight:600;color:var(--ink)}.changelog ul{padding-left:20px;margin:12px 0 0;line-height:1.7}.changelog time{font-variant-numeric:tabular-nums}
 
+
+
 /* Consistent application comparison and supporting details. */
+
 #applications .application-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:white}
+
 #applications .applications-table{table-layout:fixed;min-width:640px;font-size:14px}
+
 #applications .applications-table th,#applications .applications-table td{padding:16px 18px;line-height:1.6;overflow-wrap:anywhere}
+
 #applications .applications-table th{font-size:11px}
+
 #applications .applications-table td:first-child{width:auto;font-weight:600}
+
 #applications .applications-table tbody tr:last-child td{border-bottom:0}
+
 #applications .application-details-heading{margin:30px 0 12px;font-size:17px}
+
 #applications .application-details{border:1px solid var(--line);border-radius:8px;background:white;overflow:hidden}
+
 #applications .application-detail+ .application-detail{border-top:1px solid var(--line)}
+
 #applications .application-detail summary{padding:16px 18px;cursor:pointer;font-size:14px;font-weight:600}
+
 #applications .application-detail summary:focus-visible{outline:3px solid #e39a34;outline-offset:-3px}
+
 #applications .application-detail .defense-body{margin:0;padding:8px 18px 16px;font-size:14px;overflow-x:auto;background:#f7faf9}
 
+
+
 #limitations .limitations-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:white}
+
 #limitations .limitations-table{table-layout:fixed;min-width:800px;font-size:14px}
+
 #limitations .limitations-table th,#limitations .limitations-table td{padding:16px 18px;line-height:1.6;overflow-wrap:anywhere}
+
 #limitations .limitations-table thead th{font-size:11px}
+
 #limitations .limitations-table tbody th{background:white;color:var(--ink);font-size:14px;text-transform:none;letter-spacing:normal;font-weight:600}
+
 #limitations .limitations-table tbody tr:last-child>*{border-bottom:0}
+
 #limitations .limitations-references{margin-top:24px;border:1px solid var(--line);border-radius:8px;background:white;font-size:14px;line-height:1.6}
+
 #limitations .limitations-references summary{padding:16px 18px;cursor:pointer;font-weight:600}
+
 #limitations .limitations-references summary:focus-visible{outline:3px solid #e39a34;outline-offset:-3px}
+
 #limitations .limitations-references ul{margin:0 18px 16px;padding-left:22px}
+
 #limitations .limitations-references li{margin:10px 0}
+
 #limitations .limitations-references p{padding:0 18px 16px;margin:0}
 
+
+
 .spec-subheading{margin:34px 0 12px;font-size:22px}
+
 .spec-questions .questions-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:white}
+
 .spec-questions .questions-table{table-layout:fixed;min-width:520px;font-size:14px}
+
 .spec-questions .questions-table th,.spec-questions .questions-table td{padding:16px 18px;line-height:1.6;overflow-wrap:anywhere}
+
 .spec-questions .questions-table thead th{font-size:11px}
+
 .spec-questions .questions-table tbody th{background:white;color:var(--ink);font-size:14px;text-transform:none;letter-spacing:normal;font-weight:600}
+
 .spec-questions .questions-table tbody tr:last-child>*{border-bottom:0}
 
+
+
 #pd-questions .uncertainty-answer{margin:0 0 8px;line-height:1.6}
+
 #pd-questions .uncertainty-citation{margin:0 0 10px;font-size:12px;line-height:1.5}
+
 #pd-questions .uncertainty-detail summary{cursor:pointer;color:var(--accent);font-size:12px;font-weight:600;padding:4px 0}
+
 #pd-questions .uncertainty-detail summary:focus-visible{outline:3px solid #e39a34;outline-offset:3px}
+
 #pd-questions .uncertainty-body{margin-top:10px;border-top:1px solid var(--line);padding-top:8px;font-size:13px}
+
 #pd-questions .uncertainty-body p{margin:8px 0 12px}
+
 #pd-questions .uncertainty-bibliography{padding-left:18px;font-size:12px}
+
 #pd-questions .uncertainty-bibliography li{margin:7px 0}
 
+
+
 #pd-questions .uncertainty-head{display:grid;grid-template-columns:24% 1fr 20px;gap:20px;padding:12px 22px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+
 @media(max-width:700px){#pd-questions .uncertainty-head{display:none}}
 
+
+
 #pd-use .tower-case{margin:18px 0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
 #pd-use .tower-case h3{margin:0 0 10px}
+
 #pd-use .tower-case-images{display:grid;grid-template-columns:1fr 1.35fr;gap:18px;margin-top:16px}
+
 #pd-use .tower-case figure{margin:0;min-width:0}
+
 #pd-use .tower-case img{display:block;width:100%;height:280px;object-fit:contain;background:#e8eeed;border-radius:6px}
+
 #pd-use .tower-case figcaption{font-size:12px;line-height:1.6;color:var(--muted);margin-top:8px}
+
 @media(max-width:700px){#pd-use .tower-case-images{grid-template-columns:1fr}#pd-use .tower-case img{height:auto;max-height:340px}}
-</style><link rel="stylesheet" href="software.css?v=modules-1"><link rel="stylesheet" href="algorithm-study.css?v=1"></head><body><header><div class="top"><div><div class="eyebrow">LMCA</div><h1>Drone-mounted acoustic camera</h1></div><div><small>Working proposal · 11 November 2026 &nbsp;</small><button class="utility" onclick="window.print()">Print / PDF</button></div></div><nav role="tablist" aria-label="Review sections"><button id="tab-spec-esd" role="tab" aria-controls="spec-esd" aria-selected="true" tabindex="0">Spec (ESD)</button><button id="tab-parameters" role="tab" aria-controls="parameters" aria-selected="false" tabindex="-1">Parameters</button><button id="tab-software" role="tab" aria-controls="software" aria-selected="false" tabindex="-1">Software</button><button id="tab-experiments" role="tab" aria-controls="experiments" aria-selected="false" tabindex="-1">Experiments</button><button id="tab-architecture" role="tab" aria-controls="architecture" aria-selected="false" tabindex="-1">Architecture</button><button id="tab-microphones" role="tab" aria-controls="microphones" aria-selected="false" tabindex="-1">Microphones</button><button id="tab-applications" role="tab" aria-controls="applications" aria-selected="false" tabindex="-1">Applications</button></nav></header><main><section id="spec-esd" class="panel" role="tabpanel" aria-labelledby="tab-spec-esd"><div class="section-head"><span class="number">01</span><h2>Spec (ESD)</h2></div><p class="intro">Current direction: partial-discharge acoustic imaging for electrical inspection. <strong>Set:</strong> use case, drone platform and chip constraints. Everything marked <strong>TBD</strong> is still open; candidate values and supporting details are kept below.</p><div class="spec-list" aria-label="Partial-discharge specifications"><details class="spec-defense" id="pd-use"><summary><span class="spec-name">Use case</span><span class="spec-value"><strong>Partial-discharge inspection</strong> · set.</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><div class="commercial-comparison"><h3>Commercial references</h3><ul><li><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a>: PD and pressurized-gas leak inspection.</li><li><a href="https://www.flir.com/products/si2-pd/" target="_blank" rel="noopener">FLIR Si2-PD</a>: PD detection, classification and severity assessment.</li><li><a href="https://www.fluke.com/en/product/industrial-imaging/fluke-ii915" target="_blank" rel="noopener">Fluke ii915</a>: PDQ mode for PD classification; also leak and mechanical inspection.</li></ul><p>These products establish an airborne-acoustic PD inspection use case; their detection claims are product-specific.</p></div><p>Locate airborne acoustic emissions from electrical partial discharge and overlay hotspots on a live camera feed.</p>
+
+</style><link rel="stylesheet" href="software.css?v=modules-1"><link rel="stylesheet" href="algorithm-study.css?v=2"></head><body><header><div class="top"><div><div class="eyebrow">LMCA</div><h1>Drone-mounted acoustic camera</h1></div><div><small>Working proposal · 11 November 2026 &nbsp;</small><button class="utility" onclick="window.print()">Print / PDF</button></div></div><nav role="tablist" aria-label="Review sections"><button id="tab-spec-esd" role="tab" aria-controls="spec-esd" aria-selected="true" tabindex="0">Spec (ESD)</button><button id="tab-parameters" role="tab" aria-controls="parameters" aria-selected="false" tabindex="-1">Parameters</button><button id="tab-software" role="tab" aria-controls="software" aria-selected="false" tabindex="-1">Software</button><button id="tab-experiments" role="tab" aria-controls="experiments" aria-selected="false" tabindex="-1">Experiments</button><button id="tab-architecture" role="tab" aria-controls="architecture" aria-selected="false" tabindex="-1">Architecture</button><button id="tab-microphones" role="tab" aria-controls="microphones" aria-selected="false" tabindex="-1">Microphones</button><button id="tab-applications" role="tab" aria-controls="applications" aria-selected="false" tabindex="-1">Applications</button></nav></header><main><section id="spec-esd" class="panel" role="tabpanel" aria-labelledby="tab-spec-esd"><div class="section-head"><span class="number">01</span><h2>Spec (ESD)</h2></div><p class="intro">Current direction: partial-discharge acoustic imaging for electrical inspection. <strong>Set:</strong> use case, drone platform and chip constraints. Everything marked <strong>TBD</strong> is still open; candidate values and supporting details are kept below.</p><div class="spec-list" aria-label="Partial-discharge specifications"><details class="spec-defense" id="pd-use"><summary><span class="spec-name">Use case</span><span class="spec-value"><strong>Partial-discharge inspection</strong> · set.</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><div class="commercial-comparison"><h3>Commercial references</h3><ul><li><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a>: PD and pressurized-gas leak inspection.</li><li><a href="https://www.flir.com/products/si2-pd/" target="_blank" rel="noopener">FLIR Si2-PD</a>: PD detection, classification and severity assessment.</li><li><a href="https://www.fluke.com/en/product/industrial-imaging/fluke-ii915" target="_blank" rel="noopener">Fluke ii915</a>: PDQ mode for PD classification; also leak and mechanical inspection.</li></ul><p>These products establish an airborne-acoustic PD inspection use case; their detection claims are product-specific.</p></div><p>Locate airborne acoustic emissions from electrical partial discharge and overlay hotspots on a live camera feed.</p>
+
 <div class="tower-case">
+
 <h3>Elevated transmission-line inspection</h3>
+
 <p><strong>Reference scale:</strong> 400 kV · about 50 m tall · about 350 m between towers. <a href="https://www.nationalgrid.com/document/153691/download#page=20" target="_blank" rel="noopener">National Grid, §4.4.3</a></p>
+
 <p><strong>Proposed approach:</strong> hover beside elevated insulators and fittings, targeting 10 m source-to-camera distance; 30 m stretch. Aim: reduce inspection climbs and reach equipment difficult to inspect from the ground.</p>
+
 <div class="tower-case-images">
+
 <figure><img src="assets/transmission-tower-400kv.jpg" alt="Full-height steel lattice transmission tower supporting two 400 kV circuits in France" width="1544" height="2080" loading="lazy"><figcaption>Illustrative 400 kV tower in France. <a href="https://commons.wikimedia.org/wiki/File:Pylone400kv.jpg" target="_blank" rel="noopener">Momo027 · public domain</a>. Dimensions above are a separate UK reference.</figcaption></figure>
+
 <figure><img src="assets/transmission-insulator-pd.png" alt="Elevated insulators at a 230 kV substation entrance, with the corona-discharge location circled in red by the researchers" width="1440" height="1141" loading="lazy"><figcaption><strong>Documented PD:</strong> ultrasound identified corona and surface discharge on 230 kV insulator strings at a substation entrance. Circled: corona location. <a href="https://doi.org/10.3390/en16166033" target="_blank" rel="noopener">Maresch et al. (2023), §6, Fig. 21</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</figcaption></figure>
+
 </div>
+
 </div>
+
 <p><strong>Terminology:</strong> this tab uses the team’s “ESD” shorthand; the intended application is partial discharge (PD), not electrostatic-discharge testing.</p><p>Acoustic localization alone does not establish discharge type, apparent charge or severity.</p></div></details><details class="spec-defense" id="pd-platform"><summary><span class="spec-name">Mounting platform</span><span class="spec-value"><strong>Drone</strong> · set.</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><div class="commercial-comparison"><h3>Commercial references</h3><ul><li><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a>: Drone payload for <strong>DJI M300 RTK / M350 RTK</strong>; <strong>2-axis</strong> gimbal and Skyport V2.</li><li><a href="https://flir.netx.net/file/asset/60996/original/attachment" target="_blank" rel="noopener">FLIR Si2-PD</a>: Handheld; drone integration not specified.</li><li><a href="https://www.fluke.com/en/product/industrial-imaging/fluke-ii915" target="_blank" rel="noopener">Fluke ii915</a>: Handheld with tripod mounting; drone integration not specified.</li></ul><p>CRY2626G is the direct mounting reference; the handheld models provide acoustic-performance comparisons.</p></div><p>Drone-mounted inspection of elevated electrical assets. <a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a> provides a commercial mounting reference.</p></div></details><details class="spec-defense" id="pd-band"><summary><span class="spec-name">Frequency band</span><span class="spec-value"><strong>TBD</strong> (20–40 kHz)</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><div class="commercial-comparison"><h3>Commercial references</h3><ul><li><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a>: <strong>2–48 kHz</strong>.</li><li><a href="https://flir.netx.net/file/asset/60996/original/attachment" target="_blank" rel="noopener">FLIR Si2-PD</a>: <strong>2–130 kHz</strong>.</li><li><a href="https://media.fluke.com/3957eef3-d025-4383-845b-b2e300411fd4_original%20file.pdf" target="_blank" rel="noopener">Fluke ii915</a>: <strong>2–100 kHz</strong>.</li></ul><p>Our candidate 20–40 kHz band is within the published frequency ranges of these references.</p></div><p><strong>Justification:</strong> Kang et al. found 88.5% of valid corona detections within 25–45 kHz and recommended 30–40 kHz for short-distance measurements; they also cite prior findings concentrated at 30–50 kHz. Our candidate 20–40 kHz band includes the recommended 30–40 kHz region.</p><p class="sources"><a href="https://doi.org/10.3390/en16145529" target="_blank" rel="noopener">Kang et al. (2023), §2.2 — Study on the Measurement Technique and Judgment Procedure of Ultrasonic Corona Imaging Equipment</a></p><p><strong>Front end:</strong> select microphones with verified response over 20–40 kHz and a PCM sample rate above 80 ksample/s, allowing an anti-aliasing transition band. The earlier 48 ksample/s PCM baseline cannot cover this band. The Microphones page now lists the Infineon IM66D130M; validation over 20–40 kHz is still pending.</p></div></details><details class="spec-defense" id="pd-fov"><summary><span class="spec-name">Field of view</span><span class="spec-value"><strong>TBD</strong> (60°)</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><div class="commercial-comparison"><h3>Commercial references</h3><ul><li><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a>: <strong>62° camera FOV</strong>; separate acoustic coverage not specified.</li><li><a href="https://flir.netx.net/file/asset/60996/original/attachment" target="_blank" rel="noopener">FLIR Si2-PD</a>: <strong>75° diagonal camera FOV</strong>; separate acoustic coverage not specified.</li><li><a href="https://media.fluke.com/3957eef3-d025-4383-845b-b2e300411fd4_original%20file.pdf" target="_blank" rel="noopener">Fluke ii915</a>: <strong>63° ±5°</strong> under acoustic sensing and imaging, also listed for the visible camera.</li></ul><p>Camera FOV is a framing reference; acoustic coverage and angular resolution require separate validation.</p></div><p><strong>Working candidate:</strong> 60° sector; acoustic coverage and camera alignment need validation. <a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a> lists a 62° camera FOV; that is not a measured acoustic-resolution specification.</p></div></details><details class="spec-defense" id="pd-angular-resolution"><summary><span class="spec-name">Angular resolution</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><div class="commercial-comparison"><h3>Commercial references</h3><ul><li><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a>: <strong>Not published</strong> for acoustic angular resolution; the listed <strong>1°</strong> is gimbal accuracy.</li><li><a href="https://flir.netx.net/file/asset/60996/original/attachment" target="_blank" rel="noopener">FLIR Si2-PD</a>: <strong>1°–0.125° directional resolution</strong> (manufacturer’s terminology).</li><li><a href="https://media.fluke.com/3957eef3-d025-4383-845b-b2e300411fd4_original%20file.pdf" target="_blank" rel="noopener">Fluke ii915</a>: <strong>Not published</strong> in the sources checked.</li></ul><p>FLIR’s datasheet does not define a two-source separation test or its conditions; retain our resolution target as TBD.</p></div><p><strong>Status: TBD.</strong> Minimum angular separation at which two sound sources can be distinguished. The target and measurement conditions remain to be defined.</p></div></details><details class="spec-defense" id="pd-range"><summary><span class="spec-name">Target range</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><div class="commercial-comparison"><h3>Commercial references</h3><ul><li><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a>: <strong>0.5–35 m</strong> test distance.</li><li><a href="https://flir.netx.net/file/asset/60996/original/attachment" target="_blank" rel="noopener">FLIR Si2-PD</a>: <strong>0.3–200 m</strong> operating distance.</li><li><a href="https://media.fluke.com/3957eef3-d025-4383-845b-b2e300411fd4_original%20file.pdf" target="_blank" rel="noopener">Fluke ii915</a>: <strong>0.5–120 m</strong> operating distance in the May 2024 product specifications; ambient conditions apply.</li></ul><p>Published ranges depend on source strength, noise and propagation; they do not establish our array’s detection distance.</p></div><p><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a> lists a 0.5–35 m test distance; this is a commercial reference, not a demonstrated range for our array.</p><p>Performance depends on discharge emission strength, band, noise and the acoustic path. Existing project simulations cover 1–1.5 m only.</p></div></details><details class="spec-defense" id="pd-rate"><summary><span class="spec-name">Update rate</span><span class="spec-value"><strong>TBD</strong> (5 maps/s)</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><div class="commercial-comparison"><h3>Commercial references</h3><ul><li><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a>: <strong>Not published</strong> numerically; live imaging is described.</li><li><a href="https://flir.netx.net/file/asset/60996/original/attachment" target="_blank" rel="noopener">FLIR Si2-PD</a>: <strong>30 acoustic images/s</strong>; camera video is <strong>60 fps</strong>.</li><li><a href="https://media.fluke.com/3957eef3-d025-4383-845b-b2e300411fd4_original%20file.pdf" target="_blank" rel="noopener">Fluke ii915</a>: <strong>25 fps nominal</strong>; a separate acoustic computation rate is not specified.</li></ul><p>FLIR supplies an explicit acoustic-map rate; Fluke’s nominal frame rate should retain its published label.</p></div><p><strong>Working candidate:</strong> 5 acoustic maps/s; ≤0.5 s captured-audio-to-overlay latency.</p><p>Live maps support scanning as the camera moves. <a href="https://www.flir.com/products/si2-pd/" target="_blank" rel="noopener">FLIR Si2-PD</a> specifies 30 acoustic fps, establishing a commercial example rather than a minimum PD requirement. Acoustic-map rate and camera frame rate are separate.</p></div></details><details class="spec-defense" id="pd-chip"><summary><span class="spec-name">Chip</span><span class="spec-value"><strong>65 nm</strong>, 1 mm² die (~300,000 gates)</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Working gate budget:</strong> ~300,000 gates.</p><p><strong>Shared tapeout constraint:</strong> 0.4356 mm² usable core. The ASIC computes acoustic maps; a host handles video overlay and display.</p><p>Existing FFT, memory and precision results belong to the audible-band baseline. They do not establish area or timing for the ultrasonic version.</p><p><strong>ASIC justification:</strong> compare processing energy, latency and system size against MCU, embedded CPU and laptop implementations at matched map quality.</p></div></details><details class="spec-defense" id="pd-references"><summary><span class="spec-name">Commercial reference</span><span class="spec-value"><strong>CRYSOUND · FLIR · Fluke</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><div class="commercial-comparison"><h3>Comparison scope</h3><p>The comparison blocks use these same three models. <strong>Not published</strong> means no value was found in the manufacturer sources checked; it does not mean the product lacks that feature.</p><p class="sources">Checked 11 November 2026: <a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND product specifications</a> · <a href="https://flir.netx.net/file/asset/60996/original/attachment" target="_blank" rel="noopener">FLIR datasheet (3 Oct 2025)</a> · <a href="https://flir.netx.net/file/asset/62096/original/attachment" target="_blank" rel="noopener">FLIR user manual</a> · <a href="https://media.fluke.com/3957eef3-d025-4383-845b-b2e300411fd4_original%20file.pdf" target="_blank" rel="noopener">Fluke product specifications (May 2024)</a> · <a href="https://www.fluke.com/en/product/industrial-imaging/fluke-ii915" target="_blank" rel="noopener">Fluke product page</a></p></div><div style="overflow-x:auto"><table class="evidence-table"><thead><tr><th>Camera</th><th>Platform</th><th>Published reference</th></tr></thead><tbody>
+
 <tr><td><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a></td><td>Drone-mounted</td><td>128 microphones · 2–48 kHz · 0.5–35 m test distance · 62° optical FOV</td></tr>
+
 <tr><td><a href="https://www.flir.com/products/si2-pd/" target="_blank" rel="noopener">FLIR Si2-PD</a></td><td>Handheld, dedicated PD</td><td>124 microphones · 2–130 kHz · 30 acoustic fps · 75° diagonal optical FOV · onboard PD assessment</td></tr>
+
 <tr><td><a href="https://www.fluke.com/en-us/product/industrial-imaging/fluke-ii915" target="_blank" rel="noopener">Fluke ii915</a></td><td>Handheld</td><td>2–100 kHz · 25 fps nominal · PDQ discharge-type classification</td></tr>
+
 </tbody></table></div><p class="sources">Manufacturer specifications; handheld performance does not establish drone performance. These products provide references, not justification for our exact targets or a custom ASIC.</p></div></details></div><div id="pd-questions" class="spec-questions"><h3 class="spec-subheading">Uncertainties &amp; justifications</h3><p class="intro">Current focus: drone motion, drone noise / wind, and ASIC justification.</p><div class="uncertainty-head" aria-hidden="true"><span>Uncertainty</span><span>Justification</span><span></span></div><div class="spec-list" aria-label="Partial-discharge uncertainties and justifications"><details class="spec-defense" id="pd-uncertainty-1"><summary><span class="spec-name">1. Why not a UV camera?</span><span class="spec-value">UV can't detect inside cable box (<a href="https://eatechnology.com/media/qrolqnk2/article-so-you-have-found-pd-what-next.pdf" target="_blank" rel="noopener">EA Technology</a>, <a href="https://support.flir.com/Si2/" target="_blank" rel="noopener">FLIR</a>)</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>EA Technology’s New Zealand case: ultrasound and transient earth voltage (TEV) indicated a defect inside the cable box. Inspection revealed incorrectly installed cable terminations.</p><figure style="margin:18px 0 0;max-width:420px"><a href="https://eatechnology.com/media/qrolqnk2/article-so-you-have-found-pd-what-next.pdf#page=1" target="_blank" rel="noopener"><img src="assets/ea-cable-box-case.jpg" width="217" height="287" loading="lazy" alt="Closed metal cable box from EA Technology's New Zealand partial-discharge case study" style="display:block;max-width:100%;height:auto;border-radius:6px"></a><figcaption style="margin-top:8px;font-size:12px;color:var(--muted)">Actual cable box, New Zealand case study. Photo: EA Technology / HV Diagnostic Services, Figure 1, <a href="https://eatechnology.com/media/qrolqnk2/article-so-you-have-found-pd-what-next.pdf#page=1" target="_blank" rel="noopener">So, You Have Found PD – What Next?</a> (2021).</figcaption></figure></div></details><details class="spec-defense" id="pd-uncertainty-2"><summary><span class="spec-name">2. Why not HFCT?</span><span class="spec-value">Requires clamp installation—multiple clamps or repositioning for wider coverage.</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Monitoring separate circuits simultaneously needs multiple clamps; surveying them sequentially means moving a clamp. One clamp can cover a connected cable section, so it is not necessarily one per tower or joint. Permanent clamps avoid repeated installation.</p><p class="sources"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4431200/" target="_blank" rel="noopener">Álvarez et al., 2015</a> · <a href="https://eatechnology.com/americas/products/high-voltage-solutions/partial-discharge-detection/permanently-mounted-hfct/" target="_blank" rel="noopener">EA Technology: permanent HFCT installation</a></p></div></details><details class="spec-defense" id="pd-uncertainty-3"><summary><span class="spec-name">3. Why not RF?</span><span class="spec-value">RF arrival-time localization needs faster, more complex electronics than acoustic localization.</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>For arrival-time localization, sound’s slower propagation makes delays easier to measure: across 30 cm, up to about 875 µs for sound versus 1 ns for RF. This advantage concerns timing hardware; RF phase, direction-finding and signal-strength methods have different tradeoffs.</p><p class="sources"><a href="https://www.mdpi.com/1424-8220/17/8/1909" target="_blank" rel="noopener">Li et al., 2017</a></p></div></details><details class="spec-defense" id="pd-uncertainty-4"><summary><span class="spec-name">4. Why use an ASIC instead of an MCU / CPU?</span><span class="spec-value">Faster. Comparison to be done.</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>M3-AC puts filtering, time-domain delay-and-sum and response power in FPGA logic; the CPU handles display and communication. That is the partition we can target. BeamformX confirms CPU imaging is feasible. Lower energy per map is a hypothesis to measure, not an established advantage of our chip.</p><p class="sources"><a href="https://www.mdpi.com/2079-9292/10/3/317" target="_blank" rel="noopener" title="M3-AC: A Multi-Mode Multithread SoC FPGA Based Acoustic Camera">Vandendriessche et al., 2021</a> · <a href="https://www.optinav.info/BeamformX_Manual_4003.pdf" target="_blank" rel="noopener" title="BeamformX Reference Manual, version 4.003">OptiNav BeamformX manual</a></p></div></details><details class="spec-defense" id="pd-uncertainty-5"><summary><span class="spec-name">5. How do we identify PD—is sound a reliable signifier?</span><span class="spec-value">Corona/surface PD produces detectable ultrasound (<a href="https://doi.org/10.3390/en16145529" target="_blank" rel="noopener">30–50 kHz</a>; <a href="https://eatechnology.com/media/dluldsly/fea_hignbthm-neta_summer17-reprint.pdf#page=3" target="_blank" rel="noopener">−10 to 60 dB SPL at close range</a>). Other sources can sound similar; <a href="https://doi.org/10.3390/en16145529" target="_blank" rel="noopener">PRPD helps distinguish PD</a>.</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Frequency:</strong> Kang et al. report 88.5% of valid corona detections at 25–45 kHz, recommend 30–40 kHz for short-distance measurement, and cite prior findings concentrated at 30–50 kHz. These are useful detection bands, not the entire emitted spectrum.</p><p><strong>Loudness:</strong> EA Technology reports −10 to 60 dB SPL for surface discharge at close range, measured around 40 kHz. The distance is unspecified; this does not establish the level at our 10–30 m target range.</p><p><strong>Identification:</strong> phase-resolved partial discharge (PRPD) examines acoustic pulse timing relative to the AC voltage cycle. Characteristic phase patterns help distinguish PD from other ultrasound; they do not eliminate every false positive.</p><p class="sources"><a href="https://doi.org/10.3390/en16145529" target="_blank" rel="noopener">Kang et al. (2023), §§2.2–3 — acoustic bands and PRPD</a> · <a href="https://eatechnology.com/media/dluldsly/fea_hignbthm-neta_summer17-reprint.pdf#page=3" target="_blank" rel="noopener">EA Technology / NETA World (2017), p. 65 — sound levels and phase patterns</a></p></div></details><details class="spec-defense" id="pd-uncertainty-6"><summary><span class="spec-name">6. How do we account for drone noise / wind?</span><span class="spec-value">Use airflow protection and rotor shielding plus noise-aware beamforming; reject clipped or noise-dominated captures.</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>CRYSOUND combines physical absorption with processing. Manamperi et al. demonstrate multichannel noise suppression on a hovering drone, but not ultrasonic PD. Test the protection’s ultrasonic transmission and compare rotor-off, rotor-on and wind recordings; speech-band filter results cannot simply be assumed to transfer.</p><p class="sources"><a href="https://doi.org/10.1016/j.apacoust.2023.109818" target="_blank" rel="noopener" title="Drone audition: Audio signal enhancement from drone embedded microphones using multichannel Wiener filtering and Gaussian-mixture based post-filtering">Manamperi et al., 2024</a> · <a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener" title="CRY2626G Drone-Mounted Acoustic Imaging Camera">CRYSOUND CRY2626G</a></p></div></details><details class="spec-defense" id="pd-uncertainty-7"><summary><span class="spec-name">7. How do we account for drone motion during measurements?</span><span class="spec-value">Hover for each capture; synchronize audio, video and pose, then align the acoustic map with the matching camera frame.</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Calibrate camera-to-array alignment and compensate pose changes when combining frames. Tourbabin &amp; Rafaely demonstrate moving-array compensation but assume negligible within-frame motion. Start with stationary captures; reject unstable windows until compensation is validated at our ultrasonic band.</p><p class="sources"><a href="https://arxiv.org/html/2401.02386v1" target="_blank" rel="noopener" title="Direction of Arrival Estimation Using Microphone Array Processing for Moving Humanoid Robots">Tourbabin &amp; Rafaely, 2015</a></p></div></details><details class="spec-defense" id="pd-uncertainty-8"><summary><span class="spec-name">8. How do we demo this?</span><span class="spec-value">Demo live imaging with a low-voltage ultrasonic emitter; validate actual PD separately in a supervised lab with an electrical reference.</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Yan et al. test an ultrasonic transducer before a real PD platform. Our first demo should show known source positions, the FPGA-generated overlay, localization error and latency. The later PD test adds simultaneous HFCT measurements and negative controls. The emitter demo proves the imaging pipeline, not PD identification.</p><p class="sources"><a href="https://www.mdpi.com/1424-8220/23/3/1077" target="_blank" rel="noopener" title="An Acoustic Localization Sensor Based on MEMS Microphone Array for Partial Discharge">Yan et al., 2023</a> · <a href="https://www.mdpi.com/1996-1073/16/14/5529" target="_blank" rel="noopener" title="Study on the Measurement Technique and Judgment Procedure of Ultrasonic Corona Imaging Equipment">Kang et al., 2023</a></p></div></details></div></div></section><section id="parameters" class="panel" role="tabpanel" aria-labelledby="tab-parameters" hidden><div class="section-head"><span class="number">02</span><h2>Parameters</h2></div><p class="intro"><strong>Design parameters are TBD.</strong> Microphone count, sampling rate, FFT size, selected bins and bit widths remain open. The expanded examples below describe earlier audible-band experiments, not committed specifications for ultrasonic PD.</p><div class="spec-list" aria-label="Design parameters"><details class="spec-defense" id="parameter-0"><summary><span class="spec-name">Algorithm</span><span class="spec-value">Frequency-domain delay-and-sum</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><h3>Scan and steering — TBD</h3><p>Choose the azimuth/elevation scan limits and grid spacing, the far-field or spherical steering model, any focus distance, and the assumed speed of sound.</p><p>Scan limits should follow the field-of-view spec. Grid spacing sets where we calculate power; angular resolution describes how close two sources can be while remaining distinguishable. The resolution target does not uniquely determine the grid or steering settings.</p><p>A standard, widely used approach to acoustic beamforming.</p><p><strong>Research context:</strong> <a href="https://jmvalin.ca/papers/valin_localization.pdf" target="_blank" rel="noopener">Valin et al.</a> demonstrates real-time software localization; <a href="https://www.mdpi.com/1424-8220/17/11/2535" target="_blank" rel="noopener">Hoshiba et al.</a> processes UAV audio on a ground-station PC. Neither establishes an ASIC requirement or an RTL implementation.</p><ul><li><strong>HBK:</strong> describes frequency-domain delay-and-sum / cross-spectral beamforming; the exact 9712 implementation is not confirmed. <a href="https://www.bksv.com/-/media/literature/Technical-Review/bv0056.ashx" target="_blank" rel="noopener">Technical review ↗</a></li><li><strong>Parsa:</strong> phase-steered delay-and-sum using a single-bin Goertzel transform, rather than a broadband FFT. <a href="https://github.com/mhbbParsa/acoustic_camera#how-it-works" target="_blank" rel="noopener">Project ↗</a></li></ul></div></details><details class="spec-defense" id="parameter-1"><summary><span class="spec-name">Mic count / layout</span><span class="spec-value"><strong>TBD</strong> (30 / spiral)</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body layout-defense"><p><strong>Working candidate:</strong> 30 microphones in a spiral layout. Physical aperture (maximum pairwise microphone separation) and exact coordinates remain TBD; the constrained-algorithm experiments use a 20 cm spiral.</p><div class="commercial-comparison"><h3>Commercial references</h3><ul><li><a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND CRY2626G</a>: <strong>128 MEMS microphones</strong>; exact coordinates and array aperture not published.</li><li><a href="https://flir.netx.net/file/asset/60996/original/attachment" target="_blank" rel="noopener">FLIR Si2-PD</a>: <strong>124 MEMS microphones</strong>; exact coordinates and array aperture not published.</li><li><a href="https://media.fluke.com/3957eef3-d025-4383-845b-b2e300411fd4_original%20file.pdf" target="_blank" rel="noopener">Fluke ii915</a>: <strong>64 digital MEMS microphones</strong>; exact coordinates and array aperture not published.</li></ul><p>Housing dimensions are not microphone-array aperture measurements; choose our count and geometry using quality and hardware-budget tests.</p></div><div class="layout-controls"><details class="layout-filter" data-filter="bits"><summary><span><span class="filter-name">Bit widths</span><span id="layout-bits-summary" class="filter-value"></span></span><span aria-hidden="true">▾</span></summary><div class="filter-options" role="group" aria-label="Bit widths"><label><input type="checkbox" name="layout-bits" value="12" aria-label="12-bit">12-bit</label><label><input type="checkbox" name="layout-bits" value="16" checked aria-label="16-bit">16-bit</label><label><input type="checkbox" name="layout-bits" value="20" aria-label="20-bit">20-bit</label><label><input type="checkbox" name="layout-bits" value="24" aria-label="24-bit">24-bit</label><label><input type="checkbox" name="layout-bits" value="0" aria-label="Float reference">Float reference</label></div></details><details class="layout-filter" data-filter="snr"><summary><span><span class="filter-name">SNR</span><span id="layout-snr-summary" class="filter-value"></span></span><span aria-hidden="true">▾</span></summary><div class="filter-options" role="group" aria-label="SNR"><label><input type="checkbox" name="layout-snr" value="20" aria-label="20 dB">20 dB</label><label><input type="checkbox" name="layout-snr" value="0" aria-label="0 dB">0 dB</label><label><input type="checkbox" name="layout-snr" value="-10" checked aria-label="−10 dB">−10 dB</label><label><input type="checkbox" name="layout-snr" value="-20" aria-label="−20 dB">−20 dB</label></div></details><details class="layout-filter" data-filter="level"><summary><span><span class="filter-name">Digital input RMS</span><span id="layout-level-summary" class="filter-value"></span></span><span aria-hidden="true">▾</span></summary><div class="filter-options" role="group" aria-label="Digital input RMS"><label><input type="checkbox" name="layout-level" value="-18" aria-label="−18 dBFS">−18 dBFS</label><label><input type="checkbox" name="layout-level" value="-48" checked aria-label="−48 dBFS">−48 dBFS</label><label><input type="checkbox" name="layout-level" value="-72" aria-label="−72 dBFS">−72 dBFS</label></div></details></div>
+
 <div id="layout-conditions" class="layout-conditions"></div><p id="layout-legend" class="layout-legend"></p><div id="layout-gallery" aria-live="polite"></div><p class="layout-footnote"><strong>Evidence scope:</strong> <a href="https://arxiv.org/html/1909.01008v2" target="_blank" rel="noopener">LOCATA</a> documents missed and false estimates in realistic scenes; <a href="https://arxiv.org/html/2401.02386v1" target="_blank" rel="noopener">Tourbabin &amp; Rafaely</a> assumes negligible within-frame motion. These papers do not extend the static, single-source results shown here to moving or reverberant scenes. <a href="https://ntrs.nasa.gov/citations/20080015889" target="_blank" rel="noopener">DAMAS</a> does not remove physical aperture limits.</p><p class="layout-footnote">Bits apply to input, FFT state and coefficients; sums retain extra precision. Fixed scaling; single source; no reflections, microphone mismatch or PDM conversion. <a href="precision-check/distance-method.md">Method and results</a>.</p></div></details><details class="spec-defense" id="parameter-2"><summary><span class="spec-name">Sampling rate</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Status: TBD.</strong> The values and results below are earlier exploratory examples, not final design requirements.</p><p><strong>Status: TBD.</strong> The values and results below are earlier exploratory examples, not final design requirements.</p><p>3,072,000 PDM samples/s ÷ 64 = <strong>48,000 PCM samples/s</strong>. The 24 kHz Nyquist limit accommodates both the 4 kHz baseline and 12 kHz stretch.</p><p>This earlier example used the TDK microphone. The current Infineon IM66D130M choice is documented in the Microphones tab; clock, PCM rate and decimation remain TBD for the ultrasonic band.</p></div></details><details class="spec-defense" id="parameter-3"><summary><span class="spec-name">FFT size</span><span class="spec-value"><strong>TBD</strong> (512 samples)</span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><h3>Framing and FFT</h3><p><strong>Working candidate: 512 samples per transform window.</strong> In the current implementation, the window length equals the FFT size; the compact RTL computes selected DFT coefficients directly over the same 512 samples. In general, a shorter window can be zero-padded to a longer FFT, so the two lengths need not be equal.</p><p>At the experimental 192 ksample/s rate, 512 samples span 2.67 ms and the Fourier-bin spacing is 375 Hz. Sampling rate, window function, FFT hop/overlap, total observation length per map, and map hop remain separate choices.</p><p>One map may average several transform windows: the longer Python reference uses 15 windows of 512 samples with a 256-sample hop, spanning 4096 samples (21.33 ms at 192 ksample/s). The compact candidate uses one window. Map hop and processing time also affect output cadence; a 512-sample window does not set the 5 maps/s target.</p><p><a href="#experiments" data-study-link>See the constrained-algorithm plots in Experiments →</a></p><h3>Earlier audible-band memory example</h3><p>The calculations below use 48 ksample/s and 1–4 kHz. They are earlier exploratory examples, not a storage estimate for the compact selected-bin DFT.</p><p>512-point FFT, 30 mics, 32 selected bins (1–4 kHz). 10.67 ms/frame; 93.75 Hz/bin.</p>
+
 <p><strong>PCM frame:</strong> 30 mics × 512 samples × 16 bits ÷ 8 ÷ 1024 = 30 KiB.</p>
+
 <p><strong>Spectra:</strong> 30 mics × 32 bins × (16 + 16) bits ÷ 8 ÷ 1024 = 3.75 KiB.</p>
+
 <p><strong>Total:</strong> 30 + 3.75 = 33.75 KiB = 276,480 bits.</p>
+
 <p><strong>Storage-cell area:</strong> 276,480 bits × (0.495–0.570 µm²/bit) ÷ 1,000,000 = 0.137–0.158 mm².</p>
+
 <table class="evidence-table"><thead><tr><th>FFT size</th><th>PCM frame</th><th>Spectra</th><th>Total</th><th>Storage-cell area</th></tr></thead><tbody>
+
 <tr><td>2048</td><td>120 KiB</td><td>15 KiB<br>128 bins</td><td>135 KiB</td><td>0.547–0.630 mm²</td></tr>
+
 <tr><td>1024</td><td>60 KiB</td><td>7.5 KiB<br>64 bins</td><td>67.5 KiB</td><td>0.274–0.315 mm²</td></tr>
+
 <tr><td>512 · chosen</td><td>30 KiB</td><td>3.75 KiB<br>32 bins</td><td>33.75 KiB</td><td>0.137–0.158 mm²</td></tr></tbody></table><p>Reference 65 nm bit cells; excludes memory peripherals, output maps and logic.</p><p><strong>Core budget:</strong> 0.436 mm². 2048 exceeds it; 512 leaves room, but fit still needs verification.</p><p class="sources"><a href="https://ieeexplore.ieee.org/document/4585946/" target="_blank" rel="noopener">IEEE VLSI 2008: 0.495 µm² cell ↗</a> · <a href="https://ewh.ieee.org/r5/denver/sscs/Presentations/2011_10_Riedlinger.pdf#page=17" target="_blank" rel="noopener">Intel / ISSCC 2011, slide 17: 0.570 µm² cell ↗</a></p><p id="fft-result-summary"><strong>30-mic, 30 cm circle:</strong> worst error at −10 dB, across 1 m and 1.5 m: <strong>5.00° / 3.02° / 2.22°</strong> for one 512 / 1024 / 2048 frame; <strong>3.02° / 2.23° / 2.22°</strong> at equal 42.7 ms observation. All five configurations passed 54/54 single-source trials within 5°. Simulation only; 9 directions × 3 seeds × 2 distances.</p><p>Accuracy comparisons: <strong>Mic count / layout → Observation</strong>.</p></div></details><details class="spec-defense" id="parameter-4"><summary><span class="spec-name">Selected bins</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Selection rule — TBD:</strong> choose all in-band bins, a fixed subset, or adaptive selection; specify the retained bin indices/count or stride as applicable.</p><p><strong>Status: TBD.</strong> The values and results below are earlier exploratory examples, not final design requirements.</p><p>Bin frequency: f<sub>k</sub> = k × 48,000 ÷ 512 = <strong>k × 93.75 Hz</strong>.</p><p>1–4 kHz selects k = 11…42: <strong>32 bins</strong> (1031.25–3937.5 Hz). The 1–12 kHz stretch selects k = 11…128: <strong>118 bins</strong>, or <strong>3.69×</strong> the beamforming contributions and selected-spectrum storage (13.83 KiB).</p></div></details><details class="spec-defense" id="parameter-5"><summary><span class="spec-name">Bit widths</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Numerical formats — TBD:</strong> set total widths and fractional bits separately for input PCM, FFT values, coefficients, products, microphone-sum accumulators, and power values/accumulators. Finalize FFT scaling, rounding and overflow behavior alongside those formats.</p><p><strong>Status: TBD.</strong> The values and results below are earlier exploratory examples, not final design requirements.</p><p><strong>Input:</strong> 16-bit PCM preserved every floating-point location across all 162 tested scene/level combinations.</p><p><strong>Capture limit:</strong> bit width and clipping are separate issues. <a href="https://arxiv.org/html/2007.07663v2" target="_blank" rel="noopener">Záviška et al.</a> shows that declipping depends on signal assumptions; the unclipped tests here do not establish performance with microphone overload.</p><p><strong>Internal processing:</strong> fixed 16-bit FFT/beamforming lost accuracy on quiet inputs; 24-bit preserved every location in these tests.</p><table class="evidence-table"><thead><tr><th>Input RMS</th><th>12-bit</th><th>16-bit</th><th>20-bit</th><th>24-bit</th></tr></thead><tbody><tr><td>-18 dBFS</td><td>54/54</td><td>54/54</td><td>54/54</td><td>54/54</td></tr><tr><td>-48 dBFS</td><td>11/54</td><td>53/54</td><td>54/54</td><td>54/54</td></tr><tr><td>-72 dBFS</td><td>0/54</td><td>8/54</td><td>53/54</td><td>54/54</td></tr></tbody></table><p>Counts within 5° out of 54 scenes per level; −10 dB SNR. Levels are digital signal + noise RMS, not SPL.</p><details><summary>Test conditions</summary><p>30-mic, 30-cm circle; 512-point FFT; 1–4 kHz; one frame; 9 directions × 3 seeds × 2 distances (1 and 1.5 m). FFT scales by 1/2 per stage; coefficients and stage outputs are rounded to the listed width. Accumulators retain extra bits. No clipping occurred.</p><p>Different gain/scaling may allow narrower processing. This is a numerical model, not PDM or RTL simulation. The area comparison above still assumes 16 + 16-bit spectra.</p></details><p class="sources"><a href="precision-check/README.md">Method</a> · <a href="precision-check/results.json">Results</a> · <a href="precision-check/scenes.csv">Per-scene data</a></p></div></details></div></section><section id="software" class="panel" role="tabpanel" aria-labelledby="tab-software" hidden>
+
 <div class="section-head"><span class="number">03</span><h2>Software</h2></div>
+
 <figure class="software-figure"><a href="software-flow.svg?v=flow-10" target="_blank" rel="noopener" aria-label="Open full-size software block diagram"><img src="software-flow.svg?v=flow-10" width="1340" height="1460" alt="Samples flow through FFT and delay-and-sum to a directional power map. Python helpers sit outside the processing boxes, with brackets showing the steps they cover. Phase prediction remains a side input to alignment."></a></figure>
+
 </section><section id="experiments" class="panel" role="tabpanel" aria-labelledby="tab-experiments" hidden><div class="section-head"><span class="number">04</span><h2>Experiments</h2></div>
-<div class="algorithm-study" id="algorithm-tradeoffs" aria-labelledby="tradeoffs-title">
-<h3 id="tradeoffs-title">Constrained algorithm comparisons</h3>
-<p class="study-intro">How much image quality do we give up to approach 300,000 gates? These Python comparisons use the same simulated recordings for dense and compact versions.</p>
+<p class="intro experiment-overview">Compare map quality, gate budget and precision in one place. Each study keeps its own setup and evidence alongside the plots.</p>
+<div class="experiment-switcher" role="group" aria-label="Experiment studies">
+<button type="button" data-experiment="map-quality" aria-controls="experiment-map-quality" aria-pressed="true">Map quality</button>
+<button type="button" data-experiment="gate-budget" aria-controls="experiment-gate-budget" aria-pressed="false">Gate budget</button>
+<button type="button" data-experiment="precision" aria-controls="experiment-precision" aria-pressed="false">Accumulator precision</button></div>
+<div id="experiment-map-quality" class="experiment-panel"><div class="algorithm-study" id="algorithm-tradeoffs" aria-labelledby="tradeoffs-title">
+
+<h3 id="tradeoffs-title">Mic count, bins and observation time</h3>
+
+<p class="study-intro">Compare source location, separation and clutter on the same simulated sound field. The compact columns change microphone count, selected-bin count and, for the narrow version, several arithmetic widths.</p>
+
 <div class="study-settings"><span>20–40 kHz</span><span>512 samples / window</span><span>60° span per scan axis</span><span>3° scan grid</span><span>20 cm aperture</span></div>
+
 <div class="study-toolbar"><label for="study-scene">Scene</label><select id="study-scene"><option value="unequal6">Two unequal broadband sources</option><option value="independent10">Independent microphone noise</option><option value="tone22500">22.5 kHz tone</option><option value="tone30000">30 kHz tone</option><option value="pulses">Intermittent broadband burst</option><option value="tone45000">45 kHz tone — outside the processing band</option></select><a href="assets/algorithm-tradeoffs-v1/all-scenes.png" target="_blank" rel="noopener">Open combined map sheet ↗</a></div>
-<figure class="study-figure"><a id="study-map-link" href="assets/algorithm-tradeoffs-v1/unequal6.png" target="_blank" rel="noopener"><img id="study-map" src="assets/algorithm-tradeoffs-v1/unequal6.png" width="2025" height="608" loading="lazy" alt="Two unequal broadband sources: dense floating-point map compared with three compact configurations."></a><figcaption><strong>Each map is normalized to its own maximum.</strong> The power annotation compares against the dense reference for the same microphone array; the displayed dense map uses 30 microphones. A clear hotspot can still hide a large loss of retained signal power. Click a plot to enlarge.</figcaption></figure>
+
+<figure class="study-figure"><a id="study-map-link" href="assets/algorithm-tradeoffs-v1/unequal6.png" target="_blank" rel="noopener"><img id="study-map" src="assets/algorithm-tradeoffs-v1/unequal6.png" width="2025" height="608" loading="lazy" alt="Two unequal broadband sources: dense floating-point map compared with three compact configurations."></a><figcaption><strong>Maps are normalized independently.</strong> Cyan circles mark true sources. Power annotations compare with the dense reference for the same array; the displayed dense map uses 30 microphones. Click a plot to enlarge.</figcaption></figure>
+
 <p class="study-insight" id="study-insight" aria-live="polite">The compact wide versions preserve recognizable source peaks here, while using fewer bins and less averaging. The 16- and 30-microphone arrays have different spatial sampling, so this comparison changes more than arithmetic alone.</p>
+
 <details class="study-method"><summary>Settings and how to read the comparison</summary><div><p><strong>Dense:</strong> all 53 bins in the 20–40 kHz band, averaged over 15 overlapping 512-sample windows (4096 samples total). <strong>Compact:</strong> four bins with 30 microphones or eight bins with 16 microphones, using only the first 512 samples. Both spiral arrays sample the same simulated sound field.</p><p><strong>Wide:</strong> 24-bit spectra, 18-bit window/coefficient arithmetic and 48-bit Q32 map power. <strong>Narrow:</strong> 16-bit spectra/window/coefficient arithmetic and 48-bit Q28 map power. Both use 16-bit PCM and 1024 steering-phase positions.</p><p>The displayed compact columns change microphone count and selected-bin count together, so they do not establish which matters more.</p><p>The study compares 360 maps from 18 synthetic recordings: six scenes and three seeds. The pictures show seed 7. The integer kernel reproduced all 882 values from two saved RTL simulation maps exactly; this experiment starts at PCM and does not include the PDM decimator or continuous capture scheduling.</p><p>Raw map-power differences are not direct sensitivity, range or SNR losses: fewer bins also change the power scale. Location, off-target peaks and zero maps are recorded separately.</p></div></details>
-<h4>Precision floor and area estimate</h4>
+
+<details class="study-method"><summary>Earlier bundled-precision pilot</summary><div><p>This earlier chart changes window, spectrum, coefficient and power formats together. The Accumulator precision study changes Fourier storage separately and reports new synthesis points.</p>
+
 <figure class="study-figure"><a href="assets/algorithm-tradeoffs-v1/precision-and-area.png" target="_blank" rel="noopener"><img src="assets/algorithm-tradeoffs-v1/precision-and-area.png" width="1800" height="690" loading="lazy" alt="Entirely zero maps versus input attenuation for four configurations, alongside estimated gate counts and the 300,000-gate budget."></a><figcaption><strong>Left:</strong> attenuation scales both source and noise, keeping acoustic SNR constant; no gain adjustment was added. Fifteen in-band examples are counted at each level. <strong>Right:</strong> synthesis-calibrated estimates including UART; error bars are engineering screening allowances. The saved 16-mic/eight-bin wide circuit including UART measured 206,730 NAND2 equivalents in the educational 45 nm library. These results do not establish target-process fit or continuous 5 maps/s operation.</figcaption></figure>
-<p class="study-links"><a href="assets/algorithm-tradeoffs-v1/report.md" target="_blank" rel="noopener">Full experiment notes ↗</a><a href="assets/algorithm-tradeoffs-v1/measurements.csv" download>Measurements CSV ↓</a><a href="assets/algorithm-tradeoffs-v1/results.json" target="_blank" rel="noopener">Settings and results JSON ↗</a></p>
-</div>
-</section><section id="architecture" class="panel" role="tabpanel" aria-labelledby="tab-architecture" hidden><div class="section-head"><span class="number">05</span><h2>Architecture</h2></div><p class="intro"><strong>Current RTL, organized by source file.</strong> Groups follow <code>lmca_pdm_camera.sv</code> and <code>lmca_pcm_pipeline.sv</code>; boxes show the instantiated modules and active baseline values. The controller is logic inside the pipeline file.</p><div class="diagram-actions"><a href="architecture.svg?v=modules-1" target="_blank" rel="noopener">Open full-size diagram ↗</a></div><figure class="architecture-figure"><svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1700" height="1130" viewBox="0 0 1700 1130" role="img" aria-labelledby="rtl-module-title rtl-module-desc">
+
+</div></details><p class="study-links"><a href="assets/algorithm-tradeoffs-v1/report.md" target="_blank" rel="noopener">Full experiment notes ↗</a><a href="assets/algorithm-tradeoffs-v1/measurements.csv" download>Measurements CSV ↓</a><a href="assets/algorithm-tradeoffs-v1/results.json" target="_blank" rel="noopener">Settings and results JSON ↗</a></p>
+
+</div></div>
+<div id="experiment-gate-budget" class="experiment-panel" hidden><div class="algorithm-study"><h3>Gate budget versus microphones and bins</h3>
+<p class="study-intro">Estimate the cost of keeping more microphones or frequencies. Curves use the original compact-DFT model; the black marker is its original 16-mic/eight-bin measured circuit.</p>
+<div class="study-settings"><span>20–40 kHz</span><span>512 samples</span><span>441 directions</span><span>1 window / map</span><span>UART included</span></div>
+<figure class="study-figure evidence-figure"><a href="assets/gate-count-study-v1/01-gates-vs-bins.png" target="_blank" rel="noopener" aria-label="Open full-size: Gate count versus microphone and bin counts"><img src="assets/gate-count-study-v1/01-gates-vs-bins.png" width="1350" height="750" loading="lazy" alt="Estimated gate count rises with selected-bin and microphone counts, with a 300k gate budget and one measured baseline point."></a><figcaption><strong>Model estimates:</strong> colored lines and engineering screening bands. <strong>Measured point:</strong> the original 16-mic/eight-bin circuit, 206,730 NAND2 equivalents including all storage and UART. The later accumulator-precision measurements are shown separately; this model has not been refitted to those savings. <a href="assets/gate-count-study-v1/01-gates-vs-bins.png" target="_blank" rel="noopener">Enlarge ↗</a></figcaption></figure>
+<p class="study-insight">The chart can screen mic/bin combinations against 300,000 gates. The new precision savings apply to their measured fixed configuration; they are not a constant discount to every curve.</p>
+<details class="study-method"><summary>Scope and model data</summary><div><p>Shading is an engineering allowance, not a confidence interval. Area uses the educational gscl45nm library and is pre-layout; these plots do not establish target-process fit, timing closure or continuous capture.</p><p>The older 25–50 kHz curve is not used here. The current-band plot and original fitted model are preserved without changing their numerical values.</p><p><a href="assets/gate-count-study-v1/original-gate-model.json" target="_blank" rel="noopener">Original gate model JSON ↗</a></p></div></details></div></div>
+<div id="experiment-precision" class="experiment-panel" hidden><div class="algorithm-study"><h3>How much Fourier storage precision can we remove?</h3>
+<p class="study-intro">Hold the array, selected frequencies and observation time fixed. Change the bits stored in each real and imaginary Fourier accumulator, then compare complete synthesized gate count with numerical map error.</p>
+<div class="study-settings"><span>16 mics / spiral</span><span>8 bins · 20–40 kHz</span><span>512 samples · 1 window</span><span>20 cm aperture</span><span>441 directions · 3° grid</span></div>
+<p class="study-context">This study uses 16 microphones. The current design candidate remains 30 / spiral; these precision savings have not been measured at 30 microphones.</p>
+<h4>1. Measured gate savings</h4>
+<figure class="study-figure evidence-figure"><a href="assets/gate-count-study-v1/02-precision-gates.svg" target="_blank" rel="noopener" aria-label="Open full-size: Measured savings from Fourier precision"><img src="assets/gate-count-study-v1/02-precision-gates.svg" width="756" height="418" loading="lazy" alt="Four measured gate-count bars: original 46-bit 206.7k; 42-bit 197.5k; 34-bit 177.7k; 26-bit 157.2k."></a><figcaption>All four totals include registers, constant logic and UART. <strong>42 bits / 32 fractional</strong> removes redundant integer headroom under the proved fixed-table bound. <strong>34 / 24 and 26 / 16</strong> also round products before accumulation. Bit counts describe Fourier storage, not global chip precision. <a href="assets/gate-count-study-v1/02-precision-gates.svg" target="_blank" rel="noopener">Enlarge ↗</a></figcaption></figure><div class="study-table-wrap"><table class="precision-table"><thead><tr><th scope="col">Stored bits</th><th scope="col">Fractional bits</th><th scope="col">Total gates</th><th scope="col">Saved</th><th scope="col">Worst map error</th></tr></thead><tbody><tr><th scope="row">46 · reference</th><td>32</td><td>206.7k</td><td>0.0%</td><td>0.00%</td></tr><tr><th scope="row">42</th><td>32</td><td>197.5k</td><td>4.5%</td><td>0.00%</td></tr><tr><th scope="row">34</th><td>24</td><td>177.7k</td><td>14.0%</td><td>1.61%</td></tr><tr><th scope="row">26</th><td>16</td><td>157.2k</td><td>24.0%</td><td>33.33%</td></tr></tbody></table></div>
+<p class="study-table-note">Worst error = maximum absolute pixel difference divided by the wide reference map’s peak, across nonzero-reference cases in the 77-case suite. Zero-reference cases are excluded from that percentage. Diagnostic peak/source-match counts did not change for these three accumulator candidates.</p>
+<h4>2. What happens as the input gets weaker?</h4>
+<figure class="study-figure evidence-figure"><a href="assets/gate-count-study-v1/03-precision-quality.svg" target="_blank" rel="noopener" aria-label="Open full-size: Quality versus digital signal level"><img src="assets/gate-count-study-v1/03-precision-quality.svg" width="864" height="418" loading="lazy" alt="Two plots show accumulator pixel error and counts of all-zero maps as input signals become weaker."></a><figcaption><strong>Left:</strong> worst relative pixel error among nonzero reference maps (18, 18, 15 and 9 at the four levels). <strong>Right:</strong> zero outputs across all 18 scene recordings at each level. The wide reference already produces nine zero maps at −66 dBFS. Fewer zeros can also mean quantization artifacts; zero count alone is not an accuracy score. <a href="assets/gate-count-study-v1/03-precision-quality.svg" target="_blank" rel="noopener">Enlarge ↗</a></figcaption></figure>
+<p class="study-insight">34-bit storage saved 14.0% of total gates with a worst map error of 1.61% in this pilot. The 26-bit version saved 24.0%, with up to 33.33% relative error. These are isolated candidates; the production defaults and the original gate estimator have not changed.</p>
+<h4>3. Inspect one map on a shared scale</h4>
+<figure class="study-figure evidence-figure"><a href="assets/gate-count-study-v1/04-precision-map-example.svg" target="_blank" rel="noopener" aria-label="Open full-size: Inspect the maps and their differences"><img src="assets/gate-count-study-v1/04-precision-map-example.svg" width="828" height="605" loading="lazy" alt="Reference, 34-bit and 26-bit acoustic maps with true-source circles above signed-error maps, all using shared scales."></a><figcaption>Independent microphone noise, seed 7, input peak −46 dBFS: the selected worst relative-error case for the 34-bit candidate. <strong>Top:</strong> all maps use the same reference intensity scale. <strong>Bottom:</strong> signed differences use the same error scale. The 26-bit map has 1.61% maximum error in this example; its 33.33% worst case occurs elsewhere. <a href="assets/gate-count-study-v1/04-precision-map-example.svg" target="_blank" rel="noopener">Enlarge ↗</a></figcaption></figure>
+<details class="study-method"><summary>Setup, verification and interpretation</summary><div><p>All candidates use the same 16-mic, 20 cm spiral; eight fixed bins over 20–40 kHz; 192 ksample/s PCM; a 512-sample square-root-Hann window; ±30° FOV per axis; a 3° grid; one window per map; and the same UART.</p><p>The complete numerical sweep contains 19 variants × 77 cases = 1,463 maps. The quality curves show 18 synthetic recordings at each of four input peak levels (−6, −26, −46 and −66 dBFS); five additional controls are included in the full suite. Digital levels are not calibrated acoustic SPL.</p><p>The three accumulator candidates passed PDM-to-map and PDM-to-UART simulations on baseline, noisy and random fixtures. The headroom proof applies to PCM16 input with these fixed tables and must be recomputed for other window or precision settings. No physical timing signoff is claimed.</p><p>Peak matching is a map diagnostic, not a PD detection probability. Matching an all-zero reference does not establish sensitivity. The older audible-band FFT-stage precision study and the earlier bundled-width pilot use different setups; their percentages are not combined here.</p></div></details>
+<p class="study-links"><a href="assets/gate-count-study-v1/parameter-investigation.md" target="_blank" rel="noopener">Investigation and pending parameters ↗</a><a href="assets/gate-count-study-v1/precision-gates.csv" download>Area CSV ↓</a><a href="assets/gate-count-study-v1/precision-summary.json" target="_blank" rel="noopener">Level summaries JSON ↗</a></p>
+<details class="study-method"><summary>Full numerical data and RTL evidence</summary><div><p><a href="assets/gate-count-study-v1/precision-measurements.json" target="_blank" rel="noopener">All 1,463 map measurements ↗</a> · <a href="assets/gate-count-study-v1/precision-verification.json" target="_blank" rel="noopener">RTL checks and audited area ↗</a> · <a href="assets/gate-count-study-v1/source-manifest.json" target="_blank" rel="noopener">Source asset hashes ↗</a></p></div></details></div></div></section><section id="architecture" class="panel" role="tabpanel" aria-labelledby="tab-architecture" hidden><div class="section-head"><span class="number">05</span><h2>Architecture</h2></div><p class="intro"><strong>Current RTL, organized by source file.</strong> Groups follow <code>lmca_pdm_camera.sv</code> and <code>lmca_pcm_pipeline.sv</code>; boxes show the instantiated modules and active baseline values. The controller is logic inside the pipeline file.</p><div class="diagram-actions"><a href="architecture.svg?v=modules-1" target="_blank" rel="noopener">Open full-size diagram ↗</a></div><figure class="architecture-figure"><svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1700" height="1130" viewBox="0 0 1700 1130" role="img" aria-labelledby="rtl-module-title rtl-module-desc">
+
 <title id="rtl-module-title">PDM-to-map architecture organized by SystemVerilog source files</title>
+
 <desc id="rtl-module-desc">The generated lmca_configured_camera.sv wraps lmca_pdm_camera.sv. That top instantiates u_pdm and u_serializer, both defined in lmca_pdm_decimator.sv, and u_pcm from lmca_pcm_pipeline.sv. Inside the PCM pipeline are u_frames from lmca_frame_buffer.sv, u_window from lmca_window.sv, u_fft from lmca_fft.sv, u_bins from lmca_bin_selector.sv and u_das from lmca_das.sv. Solid arrows show sample and spectrum data. Dashed arrows show selected control and read-address connections. Controller logic is inside lmca_pcm_pipeline.sv, not a separate module. Physical PDM capture and the host are external.</desc>
+
 <defs>
+
 <marker id="rtl-module-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#527d80"/></marker>
+
 <marker id="rtl-module-control-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9276ac"/></marker>
+
 </defs>
+
 <style>
+
 .rtl-modules text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}
+
 .rtl-modules .filename{font-size:24px;font-weight:700;fill:#006e72}
+
 .rtl-modules .name{font-size:22px;font-weight:650}
+
 .rtl-modules .small{font-size:18px;fill:#536873}
+
 .rtl-modules .tiny{font-size:16px;fill:#536873}
+
 .rtl-modules .instance{font:17px Consolas,monospace;fill:#536873}
+
 .rtl-modules .file{fill:#fbfdfc;stroke:#d7e0e3;stroke-width:1.5}
+
 .rtl-modules .rootfile{fill:white;stroke:#a8b9bc;stroke-width:1.5;stroke-dasharray:8 5}
+
 .rtl-modules .box{fill:white;stroke:#7da3a4;stroke-width:1.6}
+
 .rtl-modules .logic{fill:#faf8fc;stroke:#b29bc5;stroke-width:1.4;stroke-dasharray:5 4}
+
 .rtl-modules .external{fill:#f5f7f9;stroke:#98a7af;stroke-width:1.4}
+
 .rtl-modules .host{fill:#fff7e9;stroke:#ad854b;stroke-width:1.5;stroke-dasharray:7 5}
+
 .rtl-modules .data{fill:none;stroke:#527d80;stroke-width:2;marker-end:url(#rtl-module-arrow)}
+
 .rtl-modules .control{fill:none;stroke:#9276ac;stroke-width:1.6;stroke-dasharray:5 4;marker-end:url(#rtl-module-control-arrow)}
+
 .rtl-modules .rail{fill:none;stroke:#a7b2b7;stroke-width:1.4}
+
 </style>
+
 <rect width="1700" height="1130" fill="white"/>
+
 <text x="225" y="35" class="small">Generated top: lmca_configured_camera.sv · active baseline</text>
 
+
+
 <rect x="205" y="80" width="1460" height="875" rx="12" class="rootfile"/>
+
 <text x="230" y="117" class="filename">lmca_pdm_camera.sv</text>
+
 <text x="230" y="147" class="small">Instantiates u_pdm, u_serializer and u_pcm</text>
+
 <text x="1640" y="117" class="small" text-anchor="end">busy · done · clipped · input_overrun</text>
+
 <text x="230" y="185" class="tiny">clk / rst shared by clocked logic</text>
+
 <path d="M230 203H1635 M420 203V257 M1145 203V257" class="rail"/>
 
+
+
 <rect x="240" y="260" width="360" height="490" rx="10" class="file"/>
+
 <text x="260" y="293" class="filename">lmca_pdm_decimator.sv</text>
+
 <rect x="270" y="335" width="300" height="125" rx="7" class="box"/>
+
 <text x="288" y="366" class="name">lmca_pdm_decimator</text>
+
 <text x="288" y="392" class="instance">u_pdm</text>
+
 <text x="288" y="420" class="small">CIC order 3 · ÷16 · normalize</text>
+
 <text x="288" y="446" class="small">FIR: identity, 1 tap</text>
+
 <rect x="270" y="590" width="300" height="105" rx="7" class="box"/>
+
 <text x="288" y="622" class="name">lmca_pcm_serializer</text>
+
 <text x="288" y="649" class="instance">u_serializer</text>
+
 <text x="288" y="677" class="small">Parallel PCM → time-major stream</text>
+
 <path d="M420 460V587" class="data"/>
+
 <text x="437" y="519" class="small">30 × 16-bit</text>
+
 <text x="437" y="544" class="small">PCM vector</text>
 
+
+
 <rect x="20" y="335" width="165" height="125" rx="7" class="external"/>
+
 <text x="37" y="365" class="small">Physical capture</text>
+
 <text x="37" y="393" class="name">30 PDM bits</text>
+
 <text x="37" y="421" class="tiny">Sampled / synchronized</text>
+
 <text x="37" y="445" class="tiny">3.072 MHz nominal</text>
+
 <path d="M185 397H267" class="data"/>
+
 <text x="216" y="379" class="tiny" text-anchor="middle">PDM</text>
 
+
+
 <rect x="650" y="260" width="985" height="650" rx="10" class="file"/>
+
 <text x="675" y="293" class="filename">lmca_pcm_pipeline.sv</text>
+
 <text x="1610" y="293" class="instance" text-anchor="end">u_pcm</text>
+
 <path d="M570 642H625V397H697" class="data"/>
+
 <text x="600" y="795" class="tiny" text-anchor="end">16-bit PCM · 192 ksample/s / mic</text>
 
+
+
 <rect x="700" y="340" width="255" height="115" rx="7" class="box"/>
+
 <text x="717" y="371" class="name">lmca_frame_buffer.sv</text>
+
 <text x="717" y="397" class="instance">u_frames</text>
+
 <text x="717" y="423" class="small">Circular observation buffer</text>
+
 <text x="717" y="446" class="tiny">4096 / mic · map hop 2048</text>
+
 <path d="M955 397H1017" class="data"/>
+
 <text x="985" y="379" class="tiny" text-anchor="middle">PCM</text>
 
+
+
 <rect x="1020" y="340" width="220" height="115" rx="7" class="box"/>
+
 <text x="1037" y="371" class="name">lmca_window.sv</text>
+
 <text x="1037" y="397" class="instance">u_window</text>
+
 <text x="1037" y="423" class="small">ROM + multiply</text>
+
 <text x="1037" y="446" class="tiny">sqrt-Hann · 24-bit output</text>
+
 <path d="M1240 397H1297" class="data"/>
+
 <text x="1270" y="379" class="tiny" text-anchor="middle">24-bit</text>
 
+
+
 <rect x="1300" y="340" width="280" height="115" rx="7" class="box"/>
+
 <text x="1317" y="371" class="name">lmca_fft.sv</text>
+
 <text x="1317" y="397" class="instance">u_fft</text>
+
 <text x="1317" y="423" class="small">Shared radix-2 FFT + twiddles</text>
+
 <text x="1317" y="446" class="tiny">512 points · 24-bit real / imag</text>
+
 <path d="M1440 455V647" class="data"/>
+
 <text x="1456" y="499" class="tiny">257 bins / mic</text>
 
+
+
 <rect x="1300" y="650" width="280" height="155" rx="7" class="box"/>
+
 <text x="1317" y="681" class="name">lmca_bin_selector.sv</text>
+
 <text x="1317" y="707" class="instance">u_bins</text>
+
 <text x="1317" y="737" class="small">Spectrum RAM + bin selection</text>
+
 <text x="1317" y="765" class="small">67 selected · 25–50 kHz</text>
+
 <text x="1317" y="790" class="tiny">24-bit real / imaginary</text>
 
+
+
 <rect x="1020" y="650" width="230" height="155" rx="7" class="box"/>
+
 <text x="1037" y="681" class="name">lmca_das.sv</text>
+
 <text x="1037" y="707" class="instance">u_das</text>
+
 <text x="1037" y="737" class="small">Complex MAC + power</text>
+
 <text x="1037" y="765" class="small">Map sum / normalization</text>
+
 <text x="1037" y="790" class="tiny">Steering ROM + map RAM</text>
+
 <path d="M1300 705H1253" class="data"/>
+
 <path d="M1250 755H1297" class="control"/>
+
 <text x="1275" y="834" class="tiny" text-anchor="middle">mic / bin read address →</text>
 
+
+
 <rect x="700" y="650" width="255" height="155" rx="7" class="logic"/>
+
 <text x="717" y="681" class="name">Controller</text>
+
 <text x="717" y="707" class="small">Logic inside this file</text>
+
 <text x="717" y="737" class="small">Mic / frame sequencing</text>
+
 <text x="717" y="765" class="small">FFT → bins → DAS</text>
+
 <text x="717" y="790" class="tiny">FFT hop 256 · 15 frames/map</text>
+
 <path d="M827 650V458" class="control"/>
+
 <text x="844" y="549" class="tiny">read offset</text>
+
 <path d="M900 650V560H1610V680H1583" class="control"/>
+
 <path d="M1130 560V458" class="control"/>
+
 <path d="M1520 560V458" class="control"/>
+
 <text x="1040" y="545" class="tiny">index / start / handshakes</text>
+
 <path d="M955 690H1017" class="control"/>
+
 <text x="986" y="678" class="tiny" text-anchor="middle">start</text>
+
 <path d="M1020 755H958" class="control"/>
+
 <text x="986" y="783" class="tiny" text-anchor="middle">done</text>
 
+
+
 <path d="M1135 805V1027" class="data"/>
+
 <text x="1153" y="867" class="small">441 direction values</text>
+
 <text x="1153" y="893" class="tiny">64-bit power · 32-bit direction index</text>
+
 <text x="1153" y="978" class="tiny">map_valid / map_ready · map_last</text>
+
 <text x="240" y="846" class="tiny">Both front-end modules are defined</text>
+
 <text x="240" y="871" class="tiny">in lmca_pdm_decimator.sv.</text>
 
+
+
 <rect x="590" y="1030" width="285" height="75" rx="7" class="external"/>
+
 <text x="610" y="1061" class="name">Camera</text>
+
 <text x="610" y="1088" class="small">Video frames</text>
+
 <path d="M875 1067H997" class="data"/>
+
 <rect x="1000" y="1030" width="470" height="75" rx="7" class="host"/>
+
 <text x="1020" y="1061" class="name">External host</text>
+
 <text x="1020" y="1088" class="small">Map receiver + video overlay</text>
 
+
+
 <path d="M25 1010H85" class="data"/>
+
 <text x="100" y="1016" class="tiny">Data</text>
+
 <path d="M25 1047H85" class="control"/>
+
 <text x="100" y="1053" class="tiny">Selected control / address signals</text>
+
 <text x="25" y="1095" class="tiny">Routine ready/valid and clock/reset fanout omitted.</text>
+
 </svg>
+
 </figure><div class="note"><strong>Batch acquisition:</strong> the current RTL backpressures PDM input while computing. Physical microphone clock/pad handling and continuous capture buffering still need integration. The FIR is currently identity, so CIC passband droop is not compensated. Functional RTL does not establish real-time throughput, timing closure or fit in the target core.</div></section><section id="microphones" class="panel" role="tabpanel" aria-labelledby="tab-microphones" hidden><div class="section-head"><span class="number">06</span><h2>Microphones</h2></div>
+
 <p class="intro"><strong>Infineon IM66D130MV01XTMA1</strong> (IM66D130M) · current microphone choice for ultrasonic exploration.</p>
+
 <table><tr><th>Item</th><th>Specification</th></tr>
+
 <tr><td>Type / output</td><td>Bottom-port MEMS; digital PDM; two microphones can share a data line using opposite L/R settings.</td></tr>
+
 <tr><td>Frequency response</td><td>Typical ultrasonic curve extends to <strong>80 kHz</strong>; <strong>35 Hz</strong> low-frequency roll-off and <strong>33 kHz</strong> resonance.</td></tr>
+
 <tr><td>Sensitivity</td><td><strong>−37 dBFS ±1 dB</strong> at 1 kHz, 94 dB SPL.</td></tr>
+
 <tr><td>SNR</td><td><strong>66 dB(A)</strong> typical at 3.072 MHz clock; A-weighted, 20 Hz–20 kHz bandwidth.</td></tr>
+
 <tr><td>Acoustic overload</td><td><strong>130 dB SPL</strong> at 10% THD, 1 kHz.</td></tr>
+
 <tr><td>PDM clock / PCM rate</td><td><strong>TBD</strong>; 3.072 MHz is within the specified 2.84–3.44 MHz clock window. PCM rate depends on decimation.</td></tr>
+
 <tr><td>Supply / current</td><td><strong>1.6–3.465 V</strong>; <strong>540 µA typical / 640 µA maximum</strong> at 1.8 V, 3.072 MHz, &lt;5 pF data load.</td></tr>
+
 <tr><td>Package</td><td><strong>3.0 × 2.0 × 0.98 mm</strong>.</td></tr></table>
+
 <div class="note">The 0–80 kHz distributor listing is not a guaranteed flat passband. Validate response, channel matching and noise over 25–50 kHz; the audio-band SNR does not establish ultrasonic SNR.</div>
+
 <p class="sources"><a href="https://www.infineon.com/assets/row/public/documents/30/49/infineon-im66d130m-datasheet-en.pdf" target="_blank" rel="noopener">Infineon datasheet, rev. 1.1 · pp. 4, 6, 9, 11, 13</a> · <a href="https://www.digikey.com/en/products/detail/infineon-technologies/IM66D130MV01XTMA1/28005078" target="_blank" rel="noopener">DigiKey · IM66D130MV01XTMA1</a></p></section>
+
 <section id="applications" class="panel" role="tabpanel" aria-labelledby="tab-applications" hidden>
+
 <div class="section-head"><span class="number">07</span><h2>Applications</h2></div>
+
 <p class="intro">Alternative use cases, existing references and main objections.</p>
+
 <div class="application-table-wrap"><table class="applications-table"><colgroup><col style="width:25%"><col style="width:37.5%"><col style="width:37.5%"></colgroup><thead><tr><th scope="col">Application</th><th scope="col">Existing reference</th><th scope="col">Main objection(s)</th></tr></thead><tbody>
+
 <tr><td>Anti-poaching</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6806267/" target="_blank" rel="noopener">Airborne gunshot-localization study</a></td><td>Why not an MCU? One direction estimate per event may be sufficient.</td></tr>
+
 <tr><td>Power-line / partial-discharge inspection</td><td><a href="https://docs.flir.com/T810637/en-US/latest/s10.html" target="_blank" rel="noopener">FLIR acoustic partial-discharge inspection</a></td><td>Why not UV imaging for corona? Why not an MCU for occasional localization?</td></tr>
+
 <tr><td>Search and rescue</td><td><a href="https://www.fkie.fraunhofer.de/en/departments/sdf/lucy.html" target="_blank" rel="noopener">Fraunhofer LUCY</a> · drone-mounted acoustic research</td><td>Why not thermal imaging? Rotor noise can mask calls for help.</td></tr>
+
 <tr><td>Mechanical inspection</td><td><a href="https://www.flir.com/products/si2-pro/" target="_blank" rel="noopener">FLIR Si2-Pro</a> · 30 acoustic fps; <a href="https://www.optinav.info/BeamformX_Manual_4003.pdf" target="_blank" rel="noopener">OptiNav BeamformX</a> · PC beamforming</td><td>Why not plug into a laptop? An embedded CPU also offers standalone operation.</td></tr>
+
 <tr><td>Vehicle squeak / rattle</td><td><a href="https://acoustics.asn.au/conference_proceedings/INTERNOISE2014/papers/p686.pdf" target="_blank" rel="noopener">Reference ↗</a> · Candidate · 30-mic FPGA example; compact panel demo</td><td>Why not a laptop for a stationary test bench?</td></tr>
+
 <tr><td>Material failure monitoring</td><td><a href="https://digital.lib.washington.edu/bitstreams/63ffd77a-0947-4b22-a2f9-0b28f732993a/download" target="_blank" rel="noopener">Reference ↗</a> · Candidate · 30-mic FPGA example; sensitive to quiet events</td><td>Why not sparse event detection on an MCU?</td></tr>
+
 <tr><td>Compressed-air leaks</td><td><a href="https://onlinelibrary.wiley.com/doi/full/10.1155/2012/689379" target="_blank" rel="noopener">Reference ↗</a> · Paper: MATLAB beamforming · <a href="https://www.meilhaus.de/cosmoshop/default/articleMedia/fotric-td2e/de/Datasheet_FOTRIC_TD2e_en.pdf" target="_blank" rel="noopener">product</a>: 64-mic FPGA beamforming</td><td>Why not a simpler ultrasonic probe when a full map is unnecessary?</td></tr>
+
 <tr><td>Electrical discharge inspection</td><td><a href="https://global.fotric.com/products/fotric-td2e-acoustic-imager-camera" target="_blank" rel="noopener">Reference ↗</a> · 64-mic product · FPGA beamforming; algorithm unspecified</td><td>Why not UV imaging for corona, or occasional MCU processing?</td></tr>
+
 <tr><td>Vacuum / pneumatic leaks</td><td><a href="https://us.fotric.com/products/fotric-td2e-acoustic-imager-camera" target="_blank" rel="noopener">Reference ↗</a> · 64-mic product · FPGA beamforming; algorithm unspecified</td><td>Why not a handheld ultrasonic probe or PC processing?</td></tr>
+
 <tr><td>Loose machinery joints</td><td><a href="https://ais-con.co.za/wp-content/uploads/2026/04/FOTRIC-TDxeFotric-TD2eKit_catalog_V1.0_20260410.pdf" target="_blank" rel="noopener">Reference ↗</a> · 64-mic product · FPGA beamforming; algorithm unspecified</td><td>Why not a contact vibration sensor at the suspected joint?</td></tr>
+
 <tr><td>Aircraft flyover noise</td><td><a href="https://reports.nlr.nl/bitstreams/e88b1b86-837c-4d37-bbf8-766ce0b51415/download" target="_blank" rel="noopener">Reference ↗</a> · 243-mic example · MOSI software beamforming</td><td>Why not PC processing when portability is not the constraint?</td></tr>
+
 <tr><td>Wind turbine blade noise</td><td><a href="https://reports.nlr.nl/bitstreams/e88b1b86-837c-4d37-bbf8-766ce0b51415/download" target="_blank" rel="noopener">Reference ↗</a> · ROSI software beamforming · hardware implementation not shown</td><td>Why not PC processing for a fixed monitoring setup?</td></tr>
+
 <tr><td>Airborne noise mapping</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9865301/" target="_blank" rel="noopener">Reference ↗</a> · 64-mic FPGA delay-and-sum · ground tests; flight proposed</td><td>Why not an embedded CPU if it meets the same power and latency budget?</td></tr>
+
 </tbody></table></div>
+
 <h3 class="application-details-heading">Supporting details</h3>
+
 <div class="application-details" aria-label="Alternative application details">
+
 <details class="application-detail" id="application-antipoaching"><summary>Anti-poaching</summary><div class="defense-body">
+
 <p>Mobile gunshot localization across hard-to-patrol terrain. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6806267/" target="_blank" rel="noopener">Research ↗</a></p>
+
 <p><strong>Main objection:</strong> one direction estimate per event may suffice; an MCU may meet that workload without a custom ASIC.</p>
+
 <p><strong>Earlier illustrative targets:</strong> 0.5–10 kHz selectable bands; 360° azimuth; 100 m source-to-sensor range. Targets require validation with source loudness, wind and rotor state specified.</p>
+
 </div></details>
+
 <details class="application-detail" id="application-discharge"><summary>Power-line / partial-discharge inspection</summary><div class="defense-body">
+
 <p>Acoustic fault localization on hard-to-reach electrical equipment. <a href="https://docs.flir.com/T810637/en-US/latest/s10.html" target="_blank" rel="noopener">Inspection reference ↗</a></p>
+
 <p><strong>Main objection:</strong> why choose acoustic sensing over UV imaging for corona, and why require an ASIC if occasional localization on an MCU is sufficient?</p>
+
 <p><strong>Earlier illustrative targets:</strong> 20–65 kHz; 60–90° inspection view aligned with video; 10–30 m source-to-sensor range. Requires ultrasonic microphones and revised sampling and processing. <a href="https://docs.flir.com/T810671/en-US/latest/s07.html" target="_blank" rel="noopener">Ultrasonic bands ↗</a></p>
+
 </div></details>
+
 <details class="application-detail" id="application-rescue"><summary>Search and rescue</summary><div class="defense-body">
+
 <p>Aerial localization of calls for help when victims are difficult to see. <a href="https://www.fkie.fraunhofer.de/en/departments/sdf/lucy.html" target="_blank" rel="noopener">Research ↗</a></p>
+
 <p><strong>Main objection:</strong> the drone can mask calls for help; what useful capability does acoustic sensing add beyond a thermal camera?</p>
+
 <p><strong>Earlier illustrative targets:</strong> 0.5–10 kHz with bands selected around measured rotor noise; 90–120° downward-looking sector; 20–50 m source-to-sensor range. These remain proposed targets. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7036872/" target="_blank" rel="noopener">Rescue-band research ↗</a></p>
+
 </div></details>
+
 <details class="application-detail" id="mechanical-inspection"><summary>Mechanical inspection</summary><div class="defense-body">
+
 <p><strong>Why live maps:</strong> the camera moves while the source may stay still; updates keep the hotspot aligned with the component being inspected and help reveal intermittent noises.</p>
+
 <p><strong>Commercial reference:</strong> FLIR Si2-Pro specifies 30 acoustic fps, separately from its 60 fps optical camera and 70 fps screen. This supports a live-imaging workflow, not a universal minimum rate or a requirement for an ASIC.</p>
+
 <table class="evidence-table"><thead><tr><th>Product</th><th>Processing evidence</th><th>What it establishes</th></tr></thead><tbody>
+
 <tr><td><a href="https://www.flir.com/products/si2-pro/" target="_blank" rel="noopener">FLIR Si2-Pro</a></td><td>On-camera live imaging and severity assessment; cloud/desktop analysis and reporting</td><td>Standalone operation; CPU/FPGA/ASIC split not disclosed in reviewed documentation</td></tr>
+
 <tr><td><a href="https://0fa391c4-6eed-42c5-bde3-c23c5478bb4b.usrfiles.com/ugd/0fa391_ae336763ac2d459bb1b2ff723ef11e8b.pdf" target="_blank" rel="noopener">FOTRIC TD2e</a></td><td>Manufacturer diagram explicitly identifies FPGA beamforming, followed by an embedded interactive platform</td><td>Hardware beamforming precedent; no custom ASIC claim</td></tr>
+
 <tr><td><a href="https://www.cae-systems.de/fileadmin/CAEpage/Datenblaetter/Tech_Specs_SoundCam.pdf" target="_blank" rel="noopener">CAE SoundCam (64-mic model)</a></td><td>ARM A53, 4 × 1.2 GHz, Linux; up to 100 acoustic fps</td><td>Embedded CPU disclosed; full beamforming/accelerator split unspecified</td></tr>
+
 <tr><td><a href="https://www.optinav.info/BeamformX_Manual_4003.pdf" target="_blank" rel="noopener">OptiNav BeamformX + SIG array</a></td><td>USB acquisition into Windows software; manual states CPU speed limits live beamforming rate</td><td>Direct commercial precedent for laptop/PC processing</td></tr>
+
 </tbody></table>
+
 <p><strong>Why not a laptop?</strong> It is a valid baseline. Embedded processing can reduce the equipment carried and dependence on a raw-audio link; an embedded CPU can offer those benefits too.</p>
+
 <p><strong>ASIC hypothesis:</strong> lower processing energy and smaller compute hardware at the same map quality and update rate; quantify against MCU, embedded CPU and PC baselines, including acquisition, transfer and display costs.</p>
+
 <p><strong>Scope:</strong> begin with an audible machinery-noise demonstrator; ultrasonic fault modes require different microphones and sampling. Commercial imagers establish workflow examples, not equivalent capability for our current band.</p>
+
 </div></details>
+
 </div>
+
 <p class="sources">Product cases are manufacturer claims; fit assessments are provisional. FPGA examples do not establish ASIC feasibility.</p>
+
 </section><details class="changelog"><summary>Changelog</summary><ul><li><time datetime="2026-11-11">11 Nov 2026</time> · Software configuration inputs and separate analysis/display output</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Simplified Software to a block diagram</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Software flow, proposed RTL boundary and verification reference</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Gunshot spec removed; open specs marked TBD; ASIC answer updated</li><li><time datetime="2026-11-06">6 Nov 2026</time> · PD sound evidence and PRPD; demo row restored</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Drone platform; commercial PD references; priorities</li><li><time datetime="2026-11-06">6 Nov 2026</time> · 25–50 kHz PD band with research justification</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Transmission-tower use case and field evidence</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Direct PD answers; matching spec expansions</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Eight PD justifications with research evidence</li><li><time datetime="2026-11-06">6 Nov 2026</time> · ESD uncertainty / approach table</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Gunshot limitations grouped; PD questions added</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Separate gunshot and partial-discharge specs</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Limitations reordered; parameter evidence caveats</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Limitations and supporting papers</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Vehicle mounting added alongside drones</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Unified application rows; How it works removed</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Alternatives moved to Applications with main objections</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Mechanical inspection and processing alternatives</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Live-overlay targets for tapeout demonstrator</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Use-case limitations</li><li><time datetime="2026-11-04">4 Nov 2026</time> — Secondary specs moved to details</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Application-specific spec targets</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Use-case rationale condensed</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Applications and sensing limitations</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Drone-mounted acoustic camera focus</li></ul></details><footer><span id="page-number">01 / 07</span></footer></main><script>
+
 const tabs=[...document.querySelectorAll('[role=tab]')];function selectTab(index,focus=false){tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',i===index);tab.tabIndex=i===index?0:-1;document.getElementById(tab.getAttribute('aria-controls')).hidden=i!==index});document.getElementById('page-number').textContent=`0${index+1} / 0${tabs.length}`;history.replaceState(null,'','#'+tabs[index].getAttribute('aria-controls'));if(focus)tabs[index].focus()}
+
 tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectTab(i));tab.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%tabs.length;if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;if(e.key==='Home')n=0;if(e.key==='End')n=tabs.length-1;if(n!==undefined){e.preventDefault();selectTab(n,true)}})});const initial=tabs.findIndex(t=>'#'+t.getAttribute('aria-controls')===location.hash);selectTab(initial>=0?initial:0);
 
-</script><script src="layout-distance-data.js"></script><script src="layout-distance-explorer.js"></script><script src="algorithm-study.js?v=1"></script></body></html>
+
+
+</script><script src="layout-distance-data.js"></script><script src="layout-distance-explorer.js"></script><script src="algorithm-study.js?v=2"></script></body></html>
+
