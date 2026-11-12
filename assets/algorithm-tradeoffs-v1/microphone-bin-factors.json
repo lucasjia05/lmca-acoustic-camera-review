@@ -1,0 +1,1860 @@
+{
+  "settings": {
+    "band_hz": [
+      20000,
+      40000
+    ],
+    "sample_rate_hz": 192000,
+    "window_samples": 512,
+    "windows_per_map": 1,
+    "precision": "float",
+    "layout": "spiral",
+    "aperture_m": 0.2,
+    "scan_step_deg": 3,
+    "scan_limits_deg": [
+      -30,
+      30
+    ]
+  },
+  "measurements": [
+    {
+      "scene": "independent10",
+      "seed": 23,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 6.90359478272335e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              12.0,
+              -6.0
+            ],
+            "error_deg": 2.1177865918561087,
+            "relative_db": -6.024842120661974
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 53,
+        "off_target_candidate_count": 51,
+        "strongest_off_target_candidate_db": -2.5333052611068974,
+        "peak_to_median_db": 7.511185727419508,
+        "peak_power_pcm_squared": 6.90359478272335e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "independent10",
+      "seed": 23,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 1.4258581734023582e-05,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 57,
+        "off_target_candidate_count": 56,
+        "strongest_off_target_candidate_db": -3.0702698292532298,
+        "peak_to_median_db": 7.735652733638712,
+        "peak_power_pcm_squared": 1.4258581734023582e-05,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "independent10",
+      "seed": 23,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 6.793845801182379e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 48,
+        "off_target_candidate_count": 47,
+        "strongest_off_target_candidate_db": -5.252780190342177,
+        "peak_to_median_db": 9.13038006557281,
+        "peak_power_pcm_squared": 6.793845801182379e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "independent10",
+      "seed": 23,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 9.070086321635283e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              12.0,
+              -6.0
+            ],
+            "error_deg": 2.1177865918561087,
+            "relative_db": -5.6862425255433795
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 49,
+        "off_target_candidate_count": 47,
+        "strongest_off_target_candidate_db": -3.7925935410513425,
+        "peak_to_median_db": 8.038962340314914,
+        "peak_power_pcm_squared": 9.070086321635283e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "independent10",
+      "seed": 7,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 2.6440853408793303e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": -1.7974961465080397
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -9.0
+            ],
+            "error_deg": 2.116599441317647,
+            "relative_db": -0.912205349532679
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 52,
+        "off_target_candidate_count": 50,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 4.655655275134949,
+        "peak_power_pcm_squared": 2.6440853408793303e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "independent10",
+      "seed": 7,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 1.1263843557225134e-05,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -9.0
+            ],
+            "error_deg": 2.116599441317647,
+            "relative_db": -3.764324825131759
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 51,
+        "off_target_candidate_count": 49,
+        "strongest_off_target_candidate_db": -2.684667353624569,
+        "peak_to_median_db": 6.454783897522603,
+        "peak_power_pcm_squared": 1.1263843557225134e-05,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "independent10",
+      "seed": 7,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 1.7171383073483654e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -6.0
+            ],
+            "error_deg": 1.9731241410386664,
+            "relative_db": -1.4012114057681209
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 55,
+        "off_target_candidate_count": 53,
+        "strongest_off_target_candidate_db": -0.24356681637103542,
+        "peak_to_median_db": 5.183897753783188,
+        "peak_power_pcm_squared": 1.7171383073483654e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "independent10",
+      "seed": 7,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 1.0963057726944188e-05,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -6.0
+            ],
+            "error_deg": 1.9731241410386664,
+            "relative_db": -5.673460086868437
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 52,
+        "off_target_candidate_count": 50,
+        "strongest_off_target_candidate_db": -4.567500440279375,
+        "peak_to_median_db": 8.956499556941635,
+        "peak_power_pcm_squared": 1.0963057726944188e-05,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "independent10",
+      "seed": 91,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 2.898580733073808e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": -1.1304328712064131
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 49,
+        "off_target_candidate_count": 48,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 4.980857373384334,
+        "peak_power_pcm_squared": 2.898580733073808e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "independent10",
+      "seed": 91,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 1.0367004147750005e-05,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -6.0
+            ],
+            "error_deg": 1.9731241410386664,
+            "relative_db": -3.40707934820414
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 53,
+        "off_target_candidate_count": 51,
+        "strongest_off_target_candidate_db": -2.097882466782008,
+        "peak_to_median_db": 6.008319512985242,
+        "peak_power_pcm_squared": 1.0367004147750005e-05,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "independent10",
+      "seed": 91,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 3.4023742140121287e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 55,
+        "off_target_candidate_count": 54,
+        "strongest_off_target_candidate_db": -3.0879559407878565,
+        "peak_to_median_db": 7.536100628139123,
+        "peak_power_pcm_squared": 3.4023742140121287e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "independent10",
+      "seed": 91,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 8.727179801763442e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -9.0
+            ],
+            "error_deg": 2.116599441317647,
+            "relative_db": -4.621052235146545
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 52,
+        "off_target_candidate_count": 50,
+        "strongest_off_target_candidate_db": -3.486663963297862,
+        "peak_to_median_db": 8.118155494357413,
+        "peak_power_pcm_squared": 8.727179801763442e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 23,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 1.0389130472760016e-09,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 37,
+        "off_target_candidate_count": 36,
+        "strongest_off_target_candidate_db": -3.2364342990582564,
+        "peak_to_median_db": 13.987109326256666,
+        "peak_power_pcm_squared": 1.0389130472760016e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 23,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 1.038924652740534e-09,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 37,
+        "off_target_candidate_count": 36,
+        "strongest_off_target_candidate_db": -3.2364816507428067,
+        "peak_to_median_db": 13.987090134464442,
+        "peak_power_pcm_squared": 1.038924652740534e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 23,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 1.0504582087507242e-09,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 17,
+        "off_target_candidate_count": 16,
+        "strongest_off_target_candidate_db": -5.922339857823291,
+        "peak_to_median_db": 18.48523775534081,
+        "peak_power_pcm_squared": 1.0504582087507242e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 23,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 1.0504699733400532e-09,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 17,
+        "off_target_candidate_count": 16,
+        "strongest_off_target_candidate_db": -5.922379623305654,
+        "peak_to_median_db": 18.48508338433728,
+        "peak_power_pcm_squared": 1.0504699733400532e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 7,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 6.108455632541426e-10,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 37,
+        "off_target_candidate_count": 36,
+        "strongest_off_target_candidate_db": -3.2360240030305656,
+        "peak_to_median_db": 13.993866137628121,
+        "peak_power_pcm_squared": 6.108455632541426e-10,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 7,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 6.108509831656292e-10,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 37,
+        "off_target_candidate_count": 36,
+        "strongest_off_target_candidate_db": -3.2360615468547813,
+        "peak_to_median_db": 13.993848444761955,
+        "peak_power_pcm_squared": 6.108509831656292e-10,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 7,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 6.176967336169595e-10,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 17,
+        "off_target_candidate_count": 16,
+        "strongest_off_target_candidate_db": -5.919500010666674,
+        "peak_to_median_db": 18.464642809668565,
+        "peak_power_pcm_squared": 6.176967336169595e-10,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 7,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 6.177022705014796e-10,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 17,
+        "off_target_candidate_count": 16,
+        "strongest_off_target_candidate_db": -5.919531816718244,
+        "peak_to_median_db": 18.46451902946761,
+        "peak_power_pcm_squared": 6.177022705014796e-10,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 91,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 2.93518606191071e-09,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 36,
+        "off_target_candidate_count": 35,
+        "strongest_off_target_candidate_db": -3.2636726327794263,
+        "peak_to_median_db": 13.98002116655569,
+        "peak_power_pcm_squared": 2.93518606191071e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 91,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 2.935373861768796e-09,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 36,
+        "off_target_candidate_count": 35,
+        "strongest_off_target_candidate_db": -3.263943623916989,
+        "peak_to_median_db": 13.980165243992948,
+        "peak_power_pcm_squared": 2.935373861768796e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 91,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 2.9651218988510577e-09,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 18,
+        "off_target_candidate_count": 17,
+        "strongest_off_target_candidate_db": -5.991330406541034,
+        "peak_to_median_db": 18.548828147870246,
+        "peak_power_pcm_squared": 2.9651218988510577e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "pulses",
+      "seed": 91,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 2.9653114767945568e-09,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 18,
+        "off_target_candidate_count": 17,
+        "strongest_off_target_candidate_db": -5.991555400825845,
+        "peak_to_median_db": 18.548776976934032,
+        "peak_power_pcm_squared": 2.9653114767945568e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 23,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 2.552322063925514e-09,
+      "score": {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 46,
+        "off_target_candidate_count": 46,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 11.725671328093117,
+        "peak_power_pcm_squared": 2.552322063925514e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 23,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 8.391383762425619e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 43,
+        "off_target_candidate_count": 42,
+        "strongest_off_target_candidate_db": -3.6004974881523615,
+        "peak_to_median_db": 13.712704846033297,
+        "peak_power_pcm_squared": 8.391383762425619e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 23,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 2.658159818409889e-09,
+      "score": {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 23,
+        "off_target_candidate_count": 23,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 16.044436917218885,
+        "peak_power_pcm_squared": 2.658159818409889e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 23,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 8.496191426925617e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 21,
+        "off_target_candidate_count": 20,
+        "strongest_off_target_candidate_db": -6.001438492709877,
+        "peak_to_median_db": 17.97919931215976,
+        "peak_power_pcm_squared": 8.496191426925617e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 7,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 2.5503518448416175e-09,
+      "score": {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 46,
+        "off_target_candidate_count": 46,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 11.732204388734598,
+        "peak_power_pcm_squared": 2.5503518448416175e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 7,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 8.392175249651298e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 43,
+        "off_target_candidate_count": 42,
+        "strongest_off_target_candidate_db": -3.6004832921916305,
+        "peak_to_median_db": 13.712187052778075,
+        "peak_power_pcm_squared": 8.392175249651298e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 7,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 2.6582667995587186e-09,
+      "score": {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 23,
+        "off_target_candidate_count": 23,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 16.071607579129836,
+        "peak_power_pcm_squared": 2.6582667995587186e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 7,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 8.496944118635511e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 21,
+        "off_target_candidate_count": 20,
+        "strongest_off_target_candidate_db": -6.001352761669313,
+        "peak_to_median_db": 17.979149664194654,
+        "peak_power_pcm_squared": 8.496944118635511e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 91,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 2.5556232136677634e-09,
+      "score": {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 46,
+        "off_target_candidate_count": 46,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 11.734764916087919,
+        "peak_power_pcm_squared": 2.5556232136677634e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 91,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 8.391087018326436e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 43,
+        "off_target_candidate_count": 42,
+        "strongest_off_target_candidate_db": -3.600308166511476,
+        "peak_to_median_db": 13.712949429068377,
+        "peak_power_pcm_squared": 8.391087018326436e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 91,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 2.656863809730317e-09,
+      "score": {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 23,
+        "off_target_candidate_count": 23,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 16.058055459394538,
+        "peak_power_pcm_squared": 2.656863809730317e-09,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone22500",
+      "seed": 91,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 8.495687653113108e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 21,
+        "off_target_candidate_count": 20,
+        "strongest_off_target_candidate_db": -6.001664900289602,
+        "peak_to_median_db": 17.979117731585397,
+        "peak_power_pcm_squared": 8.495687653113108e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 23,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 7.636332740247904e-10,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 47,
+        "off_target_candidate_count": 46,
+        "strongest_off_target_candidate_db": -1.7973484913432016,
+        "peak_to_median_db": 10.05678239323325,
+        "peak_power_pcm_squared": 7.636332740247904e-10,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 23,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 3.0597345737201176e-08,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 47,
+        "off_target_candidate_count": 46,
+        "strongest_off_target_candidate_db": -3.0892186184162016,
+        "peak_to_median_db": 11.837298775262695,
+        "peak_power_pcm_squared": 3.0597345737201176e-08,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 23,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 8.205304562354876e-10,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 40,
+        "off_target_candidate_count": 39,
+        "strongest_off_target_candidate_db": -3.9597145776963885,
+        "peak_to_median_db": 13.266824569307538,
+        "peak_power_pcm_squared": 8.205304562354876e-10,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 23,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 3.197582525571468e-08,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 29,
+        "off_target_candidate_count": 28,
+        "strongest_off_target_candidate_db": -4.988940780480971,
+        "peak_to_median_db": 15.343009304159096,
+        "peak_power_pcm_squared": 3.197582525571468e-08,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 7,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 7.635195699999836e-10,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 47,
+        "off_target_candidate_count": 46,
+        "strongest_off_target_candidate_db": -1.791549994513943,
+        "peak_to_median_db": 10.049983839965282,
+        "peak_power_pcm_squared": 7.635195699999836e-10,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 7,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 3.059996578675398e-08,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 47,
+        "off_target_candidate_count": 46,
+        "strongest_off_target_candidate_db": -3.089257492768839,
+        "peak_to_median_db": 11.836594410220071,
+        "peak_power_pcm_squared": 3.059996578675398e-08,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 7,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 8.215254141740247e-10,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 40,
+        "off_target_candidate_count": 39,
+        "strongest_off_target_candidate_db": -3.9646900720463867,
+        "peak_to_median_db": 13.251488754978373,
+        "peak_power_pcm_squared": 8.215254141740247e-10,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 7,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 3.198683841697951e-08,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 29,
+        "off_target_candidate_count": 28,
+        "strongest_off_target_candidate_db": -4.987538187587115,
+        "peak_to_median_db": 15.34322210465649,
+        "peak_power_pcm_squared": 3.198683841697951e-08,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 91,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 7.646371173877995e-10,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 46,
+        "off_target_candidate_count": 45,
+        "strongest_off_target_candidate_db": -1.8045624852397115,
+        "peak_to_median_db": 10.061166610529504,
+        "peak_power_pcm_squared": 7.646371173877995e-10,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 91,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 3.06094658210557e-08,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 47,
+        "off_target_candidate_count": 46,
+        "strongest_off_target_candidate_db": -3.089425146757148,
+        "peak_to_median_db": 11.839430561008214,
+        "peak_power_pcm_squared": 3.06094658210557e-08,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 91,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 8.200562688537193e-10,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 40,
+        "off_target_candidate_count": 39,
+        "strongest_off_target_candidate_db": -3.9566908038287734,
+        "peak_to_median_db": 13.294846901230112,
+        "peak_power_pcm_squared": 8.200562688537193e-10,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "tone30000",
+      "seed": 91,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 3.197643680624182e-08,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 29,
+        "off_target_candidate_count": 28,
+        "strongest_off_target_candidate_db": -4.990856751788163,
+        "peak_to_median_db": 15.342602182080205,
+        "peak_power_pcm_squared": 3.197643680624182e-08,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 23,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 3.5976557601835117e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -9.0
+            ],
+            "error_deg": 2.116599441317647,
+            "relative_db": -7.131614894005183
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 46,
+        "off_target_candidate_count": 44,
+        "strongest_off_target_candidate_db": -4.09854655937668,
+        "peak_to_median_db": 10.753971755402887,
+        "peak_power_pcm_squared": 3.5976557601835117e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 23,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 8.661460273681628e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 44,
+        "off_target_candidate_count": 43,
+        "strongest_off_target_candidate_db": -5.745892355040137,
+        "peak_to_median_db": 11.241079628308007,
+        "peak_power_pcm_squared": 8.661460273681628e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 23,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 4.0257569880436365e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -9.0
+            ],
+            "error_deg": 2.116599441317647,
+            "relative_db": -7.467531143700289
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 39,
+        "off_target_candidate_count": 37,
+        "strongest_off_target_candidate_db": -7.85623958218856,
+        "peak_to_median_db": 13.855066350347261,
+        "peak_power_pcm_squared": 4.0257569880436365e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 23,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 9.026133825129768e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 22,
+        "off_target_candidate_count": 21,
+        "strongest_off_target_candidate_db": -8.66800340607481,
+        "peak_to_median_db": 14.235599410210417,
+        "peak_power_pcm_squared": 9.026133825129768e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 7,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 1.2100269144932354e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -9.0
+            ],
+            "error_deg": 2.116599441317647,
+            "relative_db": -2.6590504685312046
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 48,
+        "off_target_candidate_count": 46,
+        "strongest_off_target_candidate_db": -4.024878845939986,
+        "peak_to_median_db": 9.849631499118725,
+        "peak_power_pcm_squared": 1.2100269144932354e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 7,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 7.933374861703471e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -9.0
+            ],
+            "error_deg": 2.116599441317647,
+            "relative_db": -7.081623461806461
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 48,
+        "off_target_candidate_count": 46,
+        "strongest_off_target_candidate_db": -5.427286620217078,
+        "peak_to_median_db": 10.699371765210406,
+        "peak_power_pcm_squared": 7.933374861703471e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 7,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 1.176485546251798e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -6.0
+            ],
+            "error_deg": 1.9731241410386664,
+            "relative_db": -4.336051646986284
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 49,
+        "off_target_candidate_count": 47,
+        "strongest_off_target_candidate_db": -6.070835936112342,
+        "peak_to_median_db": 13.088979556498257,
+        "peak_power_pcm_squared": 1.176485546251798e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 7,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 8.096362046932627e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -9.0
+            ],
+            "error_deg": 2.116599441317647,
+            "relative_db": -8.05885488229803
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 33,
+        "off_target_candidate_count": 31,
+        "strongest_off_target_candidate_db": -8.263402575232062,
+        "peak_to_median_db": 13.859270019499947,
+        "peak_power_pcm_squared": 8.096362046932627e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 91,
+      "microphones": 16,
+      "bins": 4,
+      "peak": 2.187066801960419e-06,
+      "score": {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 48,
+        "off_target_candidate_count": 47,
+        "strongest_off_target_candidate_db": -4.26870129236494,
+        "peak_to_median_db": 10.435201996240151,
+        "peak_power_pcm_squared": 2.187066801960419e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 91,
+      "microphones": 16,
+      "bins": 8,
+      "peak": 8.009847267428247e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -9.0
+            ],
+            "error_deg": 2.116599441317647,
+            "relative_db": -6.356315613240614
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 48,
+        "off_target_candidate_count": 46,
+        "strongest_off_target_candidate_db": -5.00281335305923,
+        "peak_to_median_db": 10.388664970749685,
+        "peak_power_pcm_squared": 8.009847267428247e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 91,
+      "microphones": 30,
+      "bins": 4,
+      "peak": 2.4953168267067396e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -6.0
+            ],
+            "error_deg": 1.9731241410386664,
+            "relative_db": -7.412243257342357
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 42,
+        "off_target_candidate_count": 40,
+        "strongest_off_target_candidate_db": -7.471274005186893,
+        "peak_to_median_db": 13.460309049496985,
+        "peak_power_pcm_squared": 2.4953168267067396e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    },
+    {
+      "scene": "unequal6",
+      "seed": 91,
+      "microphones": 30,
+      "bins": 8,
+      "peak": 8.464764589431755e-06,
+      "score": {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              15.0,
+              -6.0
+            ],
+            "error_deg": 1.9731241410386664,
+            "relative_db": -7.425428857346711
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 29,
+        "off_target_candidate_count": 27,
+        "strongest_off_target_candidate_db": -8.45406655119092,
+        "peak_to_median_db": 13.441116298583982,
+        "peak_power_pcm_squared": 8.464764589431755e-06,
+        "matching_tolerance_deg": 2.2,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    }
+  ],
+  "notes": [
+    "Same saved recordings as the main pilot; native 16- and 30-mic spirals sample the same simulated sound field.",
+    "Only microphone count/geometry and fixed uniformly spaced bin count vary. All windows are the same first 512 samples.",
+    "Five scenes and three seeds are a diagnostic pilot, not a field detection-rate measurement.",
+    "Raw summed map power changes naturally with bin count. Peak matches above -12 dB are not an absolute detection rule."
+  ]
+}
