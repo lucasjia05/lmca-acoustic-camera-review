@@ -890,1143 +890,170 @@
 
 
 
-<details class="study-method"><summary>Full numerical data and RTL evidence</summary><div><p><a href="assets/gate-count-study-v1/precision-measurements.json" target="_blank" rel="noopener">All 1,463 map measurements ↗</a> · <a href="assets/gate-count-study-v1/precision-verification.json" target="_blank" rel="noopener">RTL checks and audited area ↗</a> · <a href="assets/gate-count-study-v1/source-manifest.json" target="_blank" rel="noopener">Source asset hashes ↗</a></p></div></details></div></div></section><section id="architecture" class="panel" role="tabpanel" aria-labelledby="tab-architecture" hidden><div class="section-head"><span class="number">05</span><h2>Architecture</h2></div><p class="intro"><strong>Current RTL, organized by source file.</strong> Groups follow <code>lmca_pdm_camera.sv</code> and <code>lmca_pcm_pipeline.sv</code>; boxes show the instantiated modules and active baseline values. The controller is logic inside the pipeline file.</p><div class="diagram-actions"><a href="architecture.svg?v=modules-1" target="_blank" rel="noopener">Open full-size diagram ↗</a></div><figure class="architecture-figure"><svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1700" height="1130" viewBox="0 0 1700 1130" role="img" aria-labelledby="rtl-module-title rtl-module-desc">
-
-
-
-
-
-
-
-<title id="rtl-module-title">PDM-to-map architecture organized by SystemVerilog source files</title>
-
-
-
-
-
-
-
-<desc id="rtl-module-desc">The generated lmca_configured_camera.sv wraps lmca_pdm_camera.sv. That top instantiates u_pdm and u_serializer, both defined in lmca_pdm_decimator.sv, and u_pcm from lmca_pcm_pipeline.sv. Inside the PCM pipeline are u_frames from lmca_frame_buffer.sv, u_window from lmca_window.sv, u_fft from lmca_fft.sv, u_bins from lmca_bin_selector.sv and u_das from lmca_das.sv. Solid arrows show sample and spectrum data. Dashed arrows show selected control and read-address connections. Controller logic is inside lmca_pcm_pipeline.sv, not a separate module. Physical PDM capture and the host are external.</desc>
-
-
-
-
-
-
-
+<details class="study-method"><summary>Full numerical data and RTL evidence</summary><div><p><a href="assets/gate-count-study-v1/precision-measurements.json" target="_blank" rel="noopener">All 1,463 map measurements ↗</a> · <a href="assets/gate-count-study-v1/precision-verification.json" target="_blank" rel="noopener">RTL checks and audited area ↗</a> · <a href="assets/gate-count-study-v1/source-manifest.json" target="_blank" rel="noopener">Source asset hashes ↗</a></p></div></details></div></div></section><section id="architecture" class="panel" role="tabpanel" aria-labelledby="tab-architecture" hidden><div class="section-head"><span class="number">05</span><h2>Architecture</h2></div>
+<p class="intro"><strong>Compact RTL with UART, organized by source file.</strong> The generated top instantiates the camera and UART packetizer. Boxes inside the core show its internal logic; <code>u_trig</code> and <code>u_tx</code> are instantiated modules. Microphone/bin counts and numerical widths are set by each generated build.</p>
+<div class="diagram-actions"><a href="architecture.svg?v=uart-1" target="_blank" rel="noopener">Open full-size diagram ↗</a></div><figure class="architecture-figure"><svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1800" height="1400" viewBox="0 0 1800 1400" role="img" aria-labelledby="rtl-uart-title rtl-uart-desc">
+<title id="rtl-uart-title">Compact acoustic camera with UART, organized by SystemVerilog source files</title>
+<desc id="rtl-uart-desc">The generated lmca_compact_configured.sv instantiates u_camera from lmca_compact_camera.sv and u_uart from lmca_uart_map_tx.sv. The camera contains the PDM decimator, PCM serializer and compact core. Both front-end modules are defined in lmca_pdm_decimator.sv. The core contains windowing, one shared complex arithmetic engine, selected Fourier accumulators, power calculation, phase generation and its controller; these are logic within lmca_compact_core.sv, not separate module files. The core instantiates u_trig from lmca_compact_trig.sv. The UART packetizer instantiates u_tx, the byte transmitter defined in the same UART source file. Ready backpressure returns from the packetizer to the map producer. Physical capture, the host and the video camera are external.</desc>
 <defs>
-
-
-
-
-
-
-
-<marker id="rtl-module-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#527d80"/></marker>
-
-
-
-
-
-
-
-<marker id="rtl-module-control-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9276ac"/></marker>
-
-
-
-
-
-
-
+<marker id="rtl-uart-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#527d80"/></marker>
+<marker id="rtl-uart-control" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9276ac"/></marker>
 </defs>
-
-
-
-
-
-
-
 <style>
-
-
-
-
-
-
-
 .rtl-modules text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}
-
-
-
-
-
-
-
 .rtl-modules .filename{font-size:24px;font-weight:700;fill:#006e72}
-
-
-
-
-
-
-
 .rtl-modules .name{font-size:22px;font-weight:650}
-
-
-
-
-
-
-
 .rtl-modules .small{font-size:18px;fill:#536873}
-
-
-
-
-
-
-
 .rtl-modules .tiny{font-size:16px;fill:#536873}
-
-
-
-
-
-
-
 .rtl-modules .instance{font:17px Consolas,monospace;fill:#536873}
-
-
-
-
-
-
-
 .rtl-modules .file{fill:#fbfdfc;stroke:#d7e0e3;stroke-width:1.5}
-
-
-
-
-
-
-
 .rtl-modules .rootfile{fill:white;stroke:#a8b9bc;stroke-width:1.5;stroke-dasharray:8 5}
-
-
-
-
-
-
-
 .rtl-modules .box{fill:white;stroke:#7da3a4;stroke-width:1.6}
-
-
-
-
-
-
-
 .rtl-modules .logic{fill:#faf8fc;stroke:#b29bc5;stroke-width:1.4;stroke-dasharray:5 4}
-
-
-
-
-
-
-
 .rtl-modules .external{fill:#f5f7f9;stroke:#98a7af;stroke-width:1.4}
-
-
-
-
-
-
-
 .rtl-modules .host{fill:#fff7e9;stroke:#ad854b;stroke-width:1.5;stroke-dasharray:7 5}
-
-
-
-
-
-
-
-.rtl-modules .data{fill:none;stroke:#527d80;stroke-width:2;marker-end:url(#rtl-module-arrow)}
-
-
-
-
-
-
-
-.rtl-modules .control{fill:none;stroke:#9276ac;stroke-width:1.6;stroke-dasharray:5 4;marker-end:url(#rtl-module-control-arrow)}
-
-
-
-
-
-
-
+.rtl-modules .data{fill:none;stroke:#527d80;stroke-width:2;marker-end:url(#rtl-uart-arrow)}
+.rtl-modules .control{fill:none;stroke:#9276ac;stroke-width:1.6;stroke-dasharray:5 4;marker-end:url(#rtl-uart-control)}
 .rtl-modules .rail{fill:none;stroke:#a7b2b7;stroke-width:1.4}
-
-
-
-
-
-
-
 </style>
-
-
-
-
-
-
-
-<rect width="1700" height="1130" fill="white"/>
-
-
-
-
-
-
-
-<text x="225" y="35" class="small">Generated top: lmca_configured_camera.sv · active baseline</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<rect x="205" y="80" width="1460" height="875" rx="12" class="rootfile"/>
-
-
-
-
-
-
-
-<text x="230" y="117" class="filename">lmca_pdm_camera.sv</text>
-
-
-
-
-
-
-
-<text x="230" y="147" class="small">Instantiates u_pdm, u_serializer and u_pcm</text>
-
-
-
-
-
-
-
-<text x="1640" y="117" class="small" text-anchor="end">busy · done · clipped · input_overrun</text>
-
-
-
-
-
-
-
-<text x="230" y="185" class="tiny">clk / rst shared by clocked logic</text>
-
-
-
-
-
-
-
-<path d="M230 203H1635 M420 203V257 M1145 203V257" class="rail"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<rect x="240" y="260" width="360" height="490" rx="10" class="file"/>
-
-
-
-
-
-
-
-<text x="260" y="293" class="filename">lmca_pdm_decimator.sv</text>
-
-
-
-
-
-
-
-<rect x="270" y="335" width="300" height="125" rx="7" class="box"/>
-
-
-
-
-
-
-
-<text x="288" y="366" class="name">lmca_pdm_decimator</text>
-
-
-
-
-
-
-
-<text x="288" y="392" class="instance">u_pdm</text>
-
-
-
-
-
-
-
-<text x="288" y="420" class="small">CIC order 3 · ÷16 · normalize</text>
-
-
-
-
-
-
-
-<text x="288" y="446" class="small">FIR: identity, 1 tap</text>
-
-
-
-
-
-
-
-<rect x="270" y="590" width="300" height="105" rx="7" class="box"/>
-
-
-
-
-
-
-
-<text x="288" y="622" class="name">lmca_pcm_serializer</text>
-
-
-
-
-
-
-
-<text x="288" y="649" class="instance">u_serializer</text>
-
-
-
-
-
-
-
-<text x="288" y="677" class="small">Parallel PCM → time-major stream</text>
-
-
-
-
-
-
-
-<path d="M420 460V587" class="data"/>
-
-
-
-
-
-
-
-<text x="437" y="519" class="small">30 × 16-bit</text>
-
-
-
-
-
-
-
-<text x="437" y="544" class="small">PCM vector</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<rect x="20" y="335" width="165" height="125" rx="7" class="external"/>
-
-
-
-
-
-
-
-<text x="37" y="365" class="small">Physical capture</text>
-
-
-
-
-
-
-
-<text x="37" y="393" class="name">30 PDM bits</text>
-
-
-
-
-
-
-
-<text x="37" y="421" class="tiny">Sampled / synchronized</text>
-
-
-
-
-
-
-
-<text x="37" y="445" class="tiny">3.072 MHz nominal</text>
-
-
-
-
-
-
-
-<path d="M185 397H267" class="data"/>
-
-
-
-
-
-
-
-<text x="216" y="379" class="tiny" text-anchor="middle">PDM</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<rect x="650" y="260" width="985" height="650" rx="10" class="file"/>
-
-
-
-
-
-
-
-<text x="675" y="293" class="filename">lmca_pcm_pipeline.sv</text>
-
-
-
-
-
-
-
-<text x="1610" y="293" class="instance" text-anchor="end">u_pcm</text>
-
-
-
-
-
-
-
-<path d="M570 642H625V397H697" class="data"/>
-
-
-
-
-
-
-
-<text x="600" y="795" class="tiny" text-anchor="end">16-bit PCM · 192 ksample/s / mic</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<rect x="700" y="340" width="255" height="115" rx="7" class="box"/>
-
-
-
-
-
-
-
-<text x="717" y="371" class="name">lmca_frame_buffer.sv</text>
-
-
-
-
-
-
-
-<text x="717" y="397" class="instance">u_frames</text>
-
-
-
-
-
-
-
-<text x="717" y="423" class="small">Circular observation buffer</text>
-
-
-
-
-
-
-
-<text x="717" y="446" class="tiny">4096 / mic · map hop 2048</text>
-
-
-
-
-
-
-
-<path d="M955 397H1017" class="data"/>
-
-
-
-
-
-
-
-<text x="985" y="379" class="tiny" text-anchor="middle">PCM</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<rect x="1020" y="340" width="220" height="115" rx="7" class="box"/>
-
-
-
-
-
-
-
-<text x="1037" y="371" class="name">lmca_window.sv</text>
-
-
-
-
-
-
-
-<text x="1037" y="397" class="instance">u_window</text>
-
-
-
-
-
-
-
-<text x="1037" y="423" class="small">ROM + multiply</text>
-
-
-
-
-
-
-
-<text x="1037" y="446" class="tiny">sqrt-Hann · 24-bit output</text>
-
-
-
-
-
-
-
-<path d="M1240 397H1297" class="data"/>
-
-
-
-
-
-
-
-<text x="1270" y="379" class="tiny" text-anchor="middle">24-bit</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<rect x="1300" y="340" width="280" height="115" rx="7" class="box"/>
-
-
-
-
-
-
-
-<text x="1317" y="371" class="name">lmca_fft.sv</text>
-
-
-
-
-
-
-
-<text x="1317" y="397" class="instance">u_fft</text>
-
-
-
-
-
-
-
-<text x="1317" y="423" class="small">Shared radix-2 FFT + twiddles</text>
-
-
-
-
-
-
-
-<text x="1317" y="446" class="tiny">512 points · 24-bit real / imag</text>
-
-
-
-
-
-
-
-<path d="M1440 455V647" class="data"/>
-
-
-
-
-
-
-
-<text x="1456" y="499" class="tiny">257 bins / mic</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<rect x="1300" y="650" width="280" height="155" rx="7" class="box"/>
-
-
-
-
-
-
-
-<text x="1317" y="681" class="name">lmca_bin_selector.sv</text>
-
-
-
-
-
-
-
-<text x="1317" y="707" class="instance">u_bins</text>
-
-
-
-
-
-
-
-<text x="1317" y="737" class="small">Spectrum RAM + bin selection</text>
-
-
-
-
-
-
-
-<text x="1317" y="765" class="small">67 selected · 25–50 kHz</text>
-
-
-
-
-
-
-
-<text x="1317" y="790" class="tiny">24-bit real / imaginary</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<rect x="1020" y="650" width="230" height="155" rx="7" class="box"/>
-
-
-
-
-
-
-
-<text x="1037" y="681" class="name">lmca_das.sv</text>
-
-
-
-
-
-
-
-<text x="1037" y="707" class="instance">u_das</text>
-
-
-
-
-
-
-
-<text x="1037" y="737" class="small">Complex MAC + power</text>
-
-
-
-
-
-
-
-<text x="1037" y="765" class="small">Map sum / normalization</text>
-
-
-
-
-
-
-
-<text x="1037" y="790" class="tiny">Steering ROM + map RAM</text>
-
-
-
-
-
-
-
-<path d="M1300 705H1253" class="data"/>
-
-
-
-
-
-
-
-<path d="M1250 755H1297" class="control"/>
-
-
-
-
-
-
-
-<text x="1275" y="834" class="tiny" text-anchor="middle">mic / bin read address →</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<rect x="700" y="650" width="255" height="155" rx="7" class="logic"/>
-
-
-
-
-
-
-
-<text x="717" y="681" class="name">Controller</text>
-
-
-
-
-
-
-
-<text x="717" y="707" class="small">Logic inside this file</text>
-
-
-
-
-
-
-
-<text x="717" y="737" class="small">Mic / frame sequencing</text>
-
-
-
-
-
-
-
-<text x="717" y="765" class="small">FFT → bins → DAS</text>
-
-
-
-
-
-
-
-<text x="717" y="790" class="tiny">FFT hop 256 · 15 frames/map</text>
-
-
-
-
-
-
-
-<path d="M827 650V458" class="control"/>
-
-
-
-
-
-
-
-<text x="844" y="549" class="tiny">read offset</text>
-
-
-
-
-
-
-
-<path d="M900 650V560H1610V680H1583" class="control"/>
-
-
-
-
-
-
-
-<path d="M1130 560V458" class="control"/>
-
-
-
-
-
-
-
-<path d="M1520 560V458" class="control"/>
-
-
-
-
-
-
-
-<text x="1040" y="545" class="tiny">index / start / handshakes</text>
-
-
-
-
-
-
-
-<path d="M955 690H1017" class="control"/>
-
-
-
-
-
-
-
-<text x="986" y="678" class="tiny" text-anchor="middle">start</text>
-
-
-
-
-
-
-
-<path d="M1020 755H958" class="control"/>
-
-
-
-
-
-
-
-<text x="986" y="783" class="tiny" text-anchor="middle">done</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<path d="M1135 805V1027" class="data"/>
-
-
-
-
-
-
-
-<text x="1153" y="867" class="small">441 direction values</text>
-
-
-
-
-
-
-
-<text x="1153" y="893" class="tiny">64-bit power · 32-bit direction index</text>
-
-
-
-
-
-
-
-<text x="1153" y="978" class="tiny">map_valid / map_ready · map_last</text>
-
-
-
-
-
-
-
-<text x="240" y="846" class="tiny">Both front-end modules are defined</text>
-
-
-
-
-
-
-
-<text x="240" y="871" class="tiny">in lmca_pdm_decimator.sv.</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<rect x="590" y="1030" width="285" height="75" rx="7" class="external"/>
-
-
-
-
-
-
-
-<text x="610" y="1061" class="name">Camera</text>
-
-
-
-
-
-
-
-<text x="610" y="1088" class="small">Video frames</text>
-
-
-
-
-
-
-
-<path d="M875 1067H997" class="data"/>
-
-
-
-
-
-
-
-<rect x="1000" y="1030" width="470" height="75" rx="7" class="host"/>
-
-
-
-
-
-
-
-<text x="1020" y="1061" class="name">External host</text>
-
-
-
-
-
-
-
-<text x="1020" y="1088" class="small">Map receiver + video overlay</text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<path d="M25 1010H85" class="data"/>
-
-
-
-
-
-
-
-<text x="100" y="1016" class="tiny">Data</text>
-
-
-
-
-
-
-
-<path d="M25 1047H85" class="control"/>
-
-
-
-
-
-
-
-<text x="100" y="1053" class="tiny">Selected control / address signals</text>
-
-
-
-
-
-
-
-<text x="25" y="1095" class="tiny">Routine ready/valid and clock/reset fanout omitted.</text>
-
-
-
-
-
-
-
+<rect width="1800" height="1400" fill="white"/>
+<rect x="205" y="75" width="1540" height="1165" rx="12" class="rootfile"/>
+<text x="230" y="112" class="filename">lmca_compact_configured.sv</text>
+<text x="230" y="143" class="small">Generated top: u_camera + u_uart · microphone/bin counts and widths are build parameters</text>
+<text x="1715" y="112" class="tiny" text-anchor="end">Processing busy / done · clipped · input_overrun</text>
+<text x="230" y="181" class="tiny">clk / rst shared by clocked modules; fanout omitted</text>
+<path d="M230 198H1715" class="rail"/>
+
+<rect x="235" y="230" width="1480" height="670" rx="10" class="file"/>
+<text x="260" y="264" class="filename">lmca_compact_camera.sv</text>
+<text x="1690" y="264" class="instance" text-anchor="end">u_camera</text>
+
+<rect x="250" y="290" width="350" height="430" rx="9" class="file"/>
+<text x="270" y="322" class="filename" style="font-size:22px">lmca_pdm_decimator.sv</text>
+<rect x="270" y="350" width="310" height="115" rx="7" class="box"/>
+<text x="288" y="381" class="name">lmca_pdm_decimator</text>
+<text x="288" y="409" class="instance">u_pdm</text>
+<text x="288" y="440" class="small">Shared CIC → FIR → PCM</text>
+<path d="M425 465V552" class="data"/>
+<text x="441" y="502" class="small">PCM vector</text>
+<text x="441" y="528" class="tiny">MICS channels</text>
+<rect x="270" y="555" width="310" height="110" rx="7" class="box"/>
+<text x="288" y="587" class="name">lmca_pcm_serializer</text>
+<text x="288" y="615" class="instance">u_serializer</text>
+<text x="288" y="645" class="small">PCM vector → sample stream</text>
+<text x="270" y="697" class="tiny">Both modules are defined in this file.</text>
+
+<rect x="20" y="350" width="165" height="115" rx="7" class="external"/>
+<text x="36" y="381" class="small">PDM microphone</text>
+<text x="36" y="409" class="name">bank</text>
+<text x="36" y="440" class="tiny">Physical capture</text>
+<path d="M185 407H267" class="data"/>
+<text x="225" y="389" class="tiny" text-anchor="middle">PDM</text>
+
+<rect x="655" y="290" width="1010" height="585" rx="9" class="file"/>
+<text x="680" y="322" class="filename">lmca_compact_core.sv</text>
+<text x="1640" y="322" class="instance" text-anchor="end">u_core</text>
+<path d="M580 610H625V405H687" class="data"/>
+<text x="610" y="775" class="tiny" text-anchor="end">PCM samples</text>
+
+<rect x="690" y="350" width="240" height="115" rx="7" class="logic"/>
+<text x="707" y="382" class="name" style="font-size:20px">Window + sample hold</text>
+<text x="707" y="412" class="small">Window table × PCM</text>
+<text x="707" y="441" class="tiny">One N-sample window / map</text>
+<path d="M930 407H997" class="data"/>
+
+<rect x="1000" y="350" width="295" height="130" rx="7" class="logic"/>
+<text x="1018" y="382" class="name">Shared complex arithmetic</text>
+<text x="1018" y="412" class="small">Selected-bin DFT accumulation</text>
+<text x="1018" y="441" class="small">Then frequency-domain DAS</text>
+<text x="1018" y="466" class="tiny">Reused across mics and directions</text>
+<path d="M1295 407H1357" class="data"/>
+
+<rect x="1360" y="350" width="260" height="130" rx="7" class="logic"/>
+<text x="1378" y="382" class="name">Power + normalization</text>
+<text x="1378" y="412" class="small">Sum selected-bin powers</text>
+<text x="1378" y="441" class="small">Emit one point / direction</text>
+<text x="1378" y="466" class="tiny">No full output-map buffer</text>
+
+<rect x="690" y="555" width="240" height="110" rx="7" class="box"/>
+<text x="707" y="586" class="filename" style="font-size:19px">lmca_compact_trig.sv</text>
+<text x="707" y="615" class="instance">u_trig</text>
+<text x="707" y="645" class="tiny">Quarter-wave sin/cos table</text>
+<path d="M930 610H960V510H1030V483" class="data"/>
+<text x="975" y="497" class="tiny">cos / sin</text>
+
+<rect x="1000" y="555" width="295" height="110" rx="7" class="logic"/>
+<text x="1018" y="587" class="name">Fourier registers</text>
+<text x="1018" y="616" class="instance">spectrum_r / spectrum_i</text>
+<text x="1018" y="645" class="small">MICS × BINS complex values</text>
+<path d="M1100 480V552" class="data"/>
+<path d="M1200 555V483" class="data"/>
+<text x="1220" y="522" class="tiny">read / update</text>
+
+<rect x="1360" y="555" width="260" height="110" rx="7" class="logic"/>
+<text x="1378" y="587" class="name">Phase generation</text>
+<text x="1378" y="616" class="small">Mic geometry + scan vectors</text>
+<text x="1378" y="645" class="small">DFT / steering phase</text>
+<path d="M1490 665V710H810V668" class="data"/>
+<text x="1320" y="700" class="tiny">phase</text>
+
+<rect x="690" y="745" width="240" height="105" rx="7" class="logic"/>
+<text x="707" y="776" class="name">Controller</text>
+<text x="707" y="805" class="tiny">IDLE · CAPTURE · DFT</text>
+<text x="707" y="832" class="tiny">DAS · POWER · EMIT</text>
+<path d="M690 798H675V425H687" class="control"/>
+<text x="1000" y="785" class="small">Dashed boxes: logic / storage inside the core</text>
+<text x="1000" y="815" class="tiny">Rounding + saturation: lmca_compact_math.svh</text>
+<text x="1000" y="842" class="tiny">One shared datapath; selected spectra retained in registers</text>
+
+<path d="M1620 407H1645V925H870V1110H937" class="data"/>
+<text x="1210" y="914" class="tiny">map_power[MAP_W] / valid / last</text>
+<path d="M1650 1015V950H1688V440H1623" class="control"/>
+<text x="1550" y="940" class="tiny">map_ready</text>
+<path d="M300 900V1140H937" class="control"/>
+<text x="320" y="1120" class="small">clipped / input_overrun flags</text>
+
+<rect x="900" y="965" width="800" height="235" rx="9" class="file"/>
+<text x="920" y="998" class="filename">lmca_uart_map_tx.sv</text>
+<rect x="920" y="1015" width="760" height="165" rx="7" class="box"/>
+<text x="940" y="1047" class="name">lmca_uart_map_tx</text>
+<text x="1200" y="1047" class="instance">u_uart</text>
+<rect x="940" y="1065" width="350" height="90" rx="6" class="logic"/>
+<text x="958" y="1096" class="small">Map packetizer + one-word buffer</text>
+<text x="958" y="1127" class="tiny">Header → power words → status byte</text>
+<path d="M1290 1110H1367" class="data"/>
+<text x="1330" y="1094" class="tiny" text-anchor="middle">bytes</text>
+<rect x="1370" y="1065" width="290" height="90" rx="6" class="box"/>
+<text x="1388" y="1096" class="name">lmca_uart_tx</text>
+<text x="1388" y="1127" class="instance">u_tx · 8-N-1</text>
+
+<path d="M1515 1155V1267" class="data"/>
+<text x="1533" y="1226" class="small">tx · UART serial output</text>
+<rect x="1320" y="1270" width="420" height="90" rx="7" class="host"/>
+<text x="1340" y="1303" class="name">External host</text>
+<text x="1340" y="1335" class="small">UART receiver + map / video overlay</text>
+<rect x="880" y="1270" width="300" height="90" rx="7" class="external"/>
+<text x="900" y="1303" class="name">Camera</text>
+<text x="900" y="1335" class="small">Video frames</text>
+<path d="M1180 1315H1317" class="data"/>
+
+<path d="M25 1210H85" class="data"/>
+<text x="100" y="1216" class="tiny">Data / coefficients</text>
+<path d="M25 1247H85" class="control"/>
+<text x="100" y="1253" class="tiny">Selected control / backpressure</text>
+<rect x="25" y="1282" width="30" height="24" rx="3" class="logic"/>
+<text x="70" y="1301" class="tiny">Internal logic / state, not a separate module</text>
+<text x="25" y="1350" class="tiny">Routine handshakes and clock/reset fanout omitted.</text>
 </svg>
-
-
-
-
-
-
-
-</figure><div class="note"><strong>Batch acquisition:</strong> the current RTL backpressures PDM input while computing. Physical microphone clock/pad handling and continuous capture buffering still need integration. The FIR is currently identity, so CIC passband droop is not compensated. Functional RTL does not establish real-time throughput, timing closure or fit in the target core.</div></section><section id="microphones" class="panel" role="tabpanel" aria-labelledby="tab-microphones" hidden><div class="section-head"><span class="number">06</span><h2>Microphones</h2></div><p class="intro">Current microphone choice and key values. Expand a row for test conditions and supporting details.</p><div class="spec-list" aria-label="Microphone specifications"><details class="spec-defense" id="mic-choice"><summary><span class="spec-name">Microphone</span><span class="spec-value"><strong>Infineon IM66D130M</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Current choice:</strong> Infineon IM66D130MV01XTMA1 (IM66D130M), for ultrasonic exploration.</p></div></details><details class="spec-defense" id="mic-type"><summary><span class="spec-name">Type / output</span><span class="spec-value"><strong>Digital PDM</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Bottom-port MEMS microphone with digital PDM output. Two microphones can share a data line using opposite L/R settings.</p><p><strong>Package:</strong> 3.0 × 2.0 × 0.98 mm.</p></div></details><details class="spec-defense" id="mic-response"><summary><span class="spec-name">Frequency response</span><span class="spec-value"><strong>Typical curve to 80 kHz</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>The typical ultrasonic response curve extends to 80 kHz. The microphone has a 35 Hz low-frequency roll-off and a 33 kHz resonance.</p><p>The distributor’s 0–80 kHz listing is not a guaranteed flat passband. Validate response, channel matching and noise over the working 20–40 kHz band.</p></div></details><details class="spec-defense" id="mic-sensitivity"><summary><span class="spec-name">Sensitivity</span><span class="spec-value"><strong>−37 dBFS ±1 dB</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Specified at 1 kHz and 94 dB SPL.</p></div></details><details class="spec-defense" id="mic-snr"><summary><span class="spec-name">SNR</span><span class="spec-value"><strong>66 dB(A) typical</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Typical at a 3.072 MHz clock, A-weighted over a 20 Hz–20 kHz bandwidth.</p><p>This audio-band SNR does not establish ultrasonic SNR.</p></div></details><details class="spec-defense" id="mic-overload"><summary><span class="spec-name">Acoustic overload</span><span class="spec-value"><strong>130 dB SPL</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Specified at 10% THD and 1 kHz.</p></div></details><details class="spec-defense" id="mic-clock"><summary><span class="spec-name">PDM clock / PCM rate</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>The clock and PCM rate remain TBD. A 3.072 MHz PDM clock is within the specified 2.84–3.44 MHz clock window; PCM rate depends on decimation.</p></div></details><details class="spec-defense" id="mic-supply"><summary><span class="spec-name">Supply / current</span><span class="spec-value"><strong>1.6–3.465 V · 540 µA typical</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Supply:</strong> 1.6–3.465 V.</p><p><strong>Current:</strong> 540 µA typical / 640 µA maximum at 1.8 V, a 3.072 MHz clock and &lt;5 pF data load.</p></div></details></div><p class="sources"><a href="https://www.infineon.com/assets/row/public/documents/30/49/infineon-im66d130m-datasheet-en.pdf" target="_blank" rel="noopener">Infineon datasheet, rev. 1.1 · pp. 4, 6, 9, 11, 13</a> · <a href="https://www.digikey.com/en/products/detail/infineon-technologies/IM66D130MV01XTMA1/28005078" target="_blank" rel="noopener">DigiKey · IM66D130MV01XTMA1</a></p></section>
+</figure>
+<div class="note"><strong>Batch interface:</strong> UART backpressure can pause the map producer and propagate upstream. Continuous physical PDM capture still needs microphone clock/pad handling and buffering integration.</div>
+<details class="study-method"><summary>UART transfer format and status</summary><div>
+<p><strong>Packet:</strong> an eight-byte header (<code>LMC</code>, version 1, a 16-bit sequence number and 16-bit point count), followed by power words in scan order and one status byte. Multi-byte fields and power words are little-endian. Direction indices are implicit in scan order; the internal <code>map_direction</code> signal is not sent as a separate field.</p>
+<p><strong>Power:</strong> current connected examples use 48-bit unsigned Q32 words; <code>MAP_W</code> sets the packet word width. <strong>Status:</strong> clipped, input overrun and an incorrect map-last tag. This is a TX-only interface without a CRC.</p>
+<p><strong>UART:</strong> 8-N-1, with baud = core clock ÷ <code>CLKS_PER_BIT</code> (50 in the generated examples). The packetizer retains one map word, not a full map. Processing <code>done</code> can occur before the last UART byte finishes transmitting.</p>
+</div></details>
+<p class="sources"><a href="https://github.com/EasonLi292/lmco-acoustic-camera-algorithm/tree/lucas/freq-ds/rtl/compact_pipeline/src" target="_blank" rel="noopener">Compact camera/core source ↗</a> · <a href="https://github.com/EasonLi292/lmco-acoustic-camera-algorithm/blob/lucas/freq-ds/rtl/output/lmca_uart_map_tx.sv" target="_blank" rel="noopener">UART modules ↗</a> · <a href="https://github.com/EasonLi292/lmco-acoustic-camera-algorithm/blob/lucas/freq-ds/rtl/output/prepare_candidate.py" target="_blank" rel="noopener">Connected top generator ↗</a> · <a href="architecture-full-fft.svg" target="_blank" rel="noopener">Earlier full-FFT diagram ↗</a></p>
+</section><section id="microphones" class="panel" role="tabpanel" aria-labelledby="tab-microphones" hidden><div class="section-head"><span class="number">06</span><h2>Microphones</h2></div><p class="intro">Current microphone choice and key values. Expand a row for test conditions and supporting details.</p><div class="spec-list" aria-label="Microphone specifications"><details class="spec-defense" id="mic-choice"><summary><span class="spec-name">Microphone</span><span class="spec-value"><strong>Infineon IM66D130M</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Current choice:</strong> Infineon IM66D130MV01XTMA1 (IM66D130M), for ultrasonic exploration.</p></div></details><details class="spec-defense" id="mic-type"><summary><span class="spec-name">Type / output</span><span class="spec-value"><strong>Digital PDM</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Bottom-port MEMS microphone with digital PDM output. Two microphones can share a data line using opposite L/R settings.</p><p><strong>Package:</strong> 3.0 × 2.0 × 0.98 mm.</p></div></details><details class="spec-defense" id="mic-response"><summary><span class="spec-name">Frequency response</span><span class="spec-value"><strong>Typical curve to 80 kHz</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>The typical ultrasonic response curve extends to 80 kHz. The microphone has a 35 Hz low-frequency roll-off and a 33 kHz resonance.</p><p>The distributor’s 0–80 kHz listing is not a guaranteed flat passband. Validate response, channel matching and noise over the working 20–40 kHz band.</p></div></details><details class="spec-defense" id="mic-sensitivity"><summary><span class="spec-name">Sensitivity</span><span class="spec-value"><strong>−37 dBFS ±1 dB</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Specified at 1 kHz and 94 dB SPL.</p></div></details><details class="spec-defense" id="mic-snr"><summary><span class="spec-name">SNR</span><span class="spec-value"><strong>66 dB(A) typical</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Typical at a 3.072 MHz clock, A-weighted over a 20 Hz–20 kHz bandwidth.</p><p>This audio-band SNR does not establish ultrasonic SNR.</p></div></details><details class="spec-defense" id="mic-overload"><summary><span class="spec-name">Acoustic overload</span><span class="spec-value"><strong>130 dB SPL</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>Specified at 10% THD and 1 kHz.</p></div></details><details class="spec-defense" id="mic-clock"><summary><span class="spec-name">PDM clock / PCM rate</span><span class="spec-value"><strong>TBD</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p>The clock and PCM rate remain TBD. A 3.072 MHz PDM clock is within the specified 2.84–3.44 MHz clock window; PCM rate depends on decimation.</p></div></details><details class="spec-defense" id="mic-supply"><summary><span class="spec-name">Supply / current</span><span class="spec-value"><strong>1.6–3.465 V · 540 µA typical</strong></span><span class="row-arrow" aria-hidden="true">›</span></summary><div class="defense-body"><p><strong>Supply:</strong> 1.6–3.465 V.</p><p><strong>Current:</strong> 540 µA typical / 640 µA maximum at 1.8 V, a 3.072 MHz clock and &lt;5 pF data load.</p></div></details></div><p class="sources"><a href="https://www.infineon.com/assets/row/public/documents/30/49/infineon-im66d130m-datasheet-en.pdf" target="_blank" rel="noopener">Infineon datasheet, rev. 1.1 · pp. 4, 6, 9, 11, 13</a> · <a href="https://www.digikey.com/en/products/detail/infineon-technologies/IM66D130MV01XTMA1/28005078" target="_blank" rel="noopener">DigiKey · IM66D130MV01XTMA1</a></p></section>
 
 
 
