@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1250" role="img" aria-labelledby="software-title software-desc">
+<title id="software-title">Frequency-domain delay-and-sum software flow</title>
+<desc id="software-desc">Microphone PCM is framed and windowed, Fourier transformed, and reduced to selected frequency bins. Array geometry and candidate directions determine phase-alignment coefficients. For each direction and frame, align the microphone spectra, sum microphones coherently, calculate squared magnitude, and sum bin powers and average frame powers. The resulting raw directional power map feeds peak finding and display scaling separately. The proposed first RTL scope covers phase alignment through power integration. Simulation ground truth is not an input to beamforming.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#66818b"/></marker></defs>
+<style>text{font-family:Segoe UI,Arial,sans-serif;fill:#162b35}.title{font-size:21px;font-weight:650}.body{font-size:17px;fill:#536873}.small{font-size:15px;fill:#536873}.label{font-size:14px;font-weight:650;letter-spacing:1px;fill:#62458a}.block{fill:#edf8f6;stroke:#007e81;stroke-width:1.7}.support{fill:#f5f7f9;stroke:#83949e;stroke-width:1.5}.rtlblock{fill:white;stroke:#7954ad;stroke-width:1.7}.arrow{fill:none;stroke:#66818b;stroke-width:2;marker-end:url(#arrow)}.badge{fill:#007e81;font-size:17px;font-weight:700}</style>
+<rect width="1000" height="1250" fill="white"/>
+<rect x="300" y="30" width="400" height="72" rx="9" class="block"/>
+<text x="284" y="60" class="badge">1</text><text x="500" y="61" text-anchor="middle" class="title">Microphone PCM samples</text><text x="500" y="86" text-anchor="middle" class="body">One synchronized waveform per microphone</text>
+<text x="744" y="61" class="small">Input to the software model</text><text x="744" y="83" class="small">PDM capture is outside this flow</text>
+<path d="M500 102V140" class="arrow"/>
+<rect x="300" y="142" width="400" height="82" rx="9" class="block"/>
+<text x="284" y="174" class="badge">2</text><text x="500" y="174" text-anchor="middle" class="title">Observation → frames → window</text><text x="500" y="199" text-anchor="middle" class="body">Split the observation into overlapping frames;</text><text x="500" y="218" text-anchor="middle" class="body">taper each frame before its FFT</text>
+<path d="M500 224V262" class="arrow"/>
+<rect x="300" y="264" width="400" height="72" rx="9" class="block"/>
+<text x="284" y="295" class="badge">3</text><text x="500" y="295" text-anchor="middle" class="title">FFT for each microphone</text><text x="500" y="320" text-anchor="middle" class="body">Time samples → complex frequency values</text>
+<text x="744" y="294" class="small">Complex = amplitude + phase</text><text x="744" y="316" class="small">Repeated for every frame</text>
+<path d="M500 336V374" class="arrow"/>
+<rect x="300" y="376" width="400" height="72" rx="9" class="block"/>
+<text x="284" y="407" class="badge">4</text><text x="500" y="407" text-anchor="middle" class="title">Select frequency bins</text><text x="500" y="432" text-anchor="middle" class="body">Keep the frequencies used for localization</text>
+<text x="744" y="405" class="small">M microphones × K bins</text><text x="744" y="427" class="small">per FFT frame</text>
+<path d="M500 448V543" class="arrow"/>
+<rect x="278" y="490" width="444" height="468" rx="13" fill="#f6f0ff" stroke="#7954ad" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M500 532V543" class="arrow"/>
+<text x="500" y="520" text-anchor="middle" class="label">PROPOSED FIRST RTL SCOPE</text>
+<rect x="300" y="545" width="400" height="72" rx="9" class="rtlblock"/>
+<text x="284" y="576" class="badge">5</text><text x="500" y="576" text-anchor="middle" class="title">Phase-align the microphones</text><text x="500" y="601" text-anchor="middle" class="body">Multiply spectra by steering coefficients</text>
+<rect x="15" y="526" width="235" height="119" rx="9" class="support"/>
+<text x="132" y="554" text-anchor="middle" class="title">Steering coefficients</text><text x="132" y="581" text-anchor="middle" class="small">Mic positions + scan directions</text><text x="132" y="604" text-anchor="middle" class="small">Sound speed + optional focus</text><text x="132" y="627" text-anchor="middle" class="small">Expected delay → phase rotation</text>
+<path d="M250 582H297" class="arrow"/>
+<text x="744" y="575" class="small">Try each candidate direction</text><text x="744" y="597" class="small">Correct direction → phases align</text>
+<path d="M500 617V650" class="arrow"/>
+<rect x="300" y="652" width="400" height="72" rx="9" class="rtlblock"/>
+<text x="284" y="683" class="badge">6</text><text x="500" y="683" text-anchor="middle" class="title">Sum across microphones</text><text x="500" y="708" text-anchor="middle" class="body">One complex beam value per bin and direction</text>
+<path d="M500 724V757" class="arrow"/>
+<rect x="300" y="759" width="400" height="72" rx="9" class="rtlblock"/>
+<text x="284" y="790" class="badge">7</text><text x="500" y="790" text-anchor="middle" class="title">Convert to power</text><text x="500" y="815" text-anchor="middle" class="body">Real² + imaginary², after the microphone sum</text>
+<text x="744" y="789" class="small">Summing power first would</text><text x="744" y="811" class="small">discard the alignment information</text>
+<path d="M500 831V864" class="arrow"/>
+<rect x="300" y="866" width="400" height="72" rx="9" class="rtlblock"/>
+<text x="284" y="897" class="badge">8</text><text x="500" y="897" text-anchor="middle" class="title">Combine bins and frames</text><text x="500" y="922" text-anchor="middle" class="body">Sum bin powers; average across FFT frames</text>
+<path d="M500 938V993" class="arrow"/>
+<rect x="300" y="995" width="400" height="72" rx="9" class="block"/>
+<text x="284" y="1026" class="badge">9</text><text x="500" y="1026" text-anchor="middle" class="title">Raw directional power map</text><text x="500" y="1051" text-anchor="middle" class="body">One power value per azimuth / elevation pair</text>
+<path d="M500 1067V1102H265V1133" class="arrow"/><path d="M500 1102H735V1133" class="arrow"/>
+<rect x="90" y="1135" width="350" height="79" rx="9" class="support"/>
+<text x="265" y="1167" text-anchor="middle" class="title">Find peaks / evaluate</text><text x="265" y="1193" text-anchor="middle" class="body">Estimate sound direction; score against truth</text>
+<rect x="560" y="1135" width="350" height="79" rx="9" class="support"/>
+<text x="735" y="1167" text-anchor="middle" class="title">Display the image</text><text x="735" y="1193" text-anchor="middle" class="body">Relative dB → color scale → heatmap</text>
+</svg>
