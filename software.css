@@ -1,5 +1,5 @@
 #software .software-figure{margin:0;background:white;border:1px solid var(--line);border-radius:10px;padding:24px}
-#software .software-figure a{display:block;max-width:1000px;margin:auto}
+#software .software-figure a{display:block;max-width:1240px;margin:auto}
 #software .software-figure img{display:block;width:100%;height:auto}
 @media(max-width:700px){#software .software-figure{padding:8px;margin:0 -8px}}
 @media print{#software .software-figure{break-inside:avoid;padding:8px}#software .software-figure img{max-height:850px}}
