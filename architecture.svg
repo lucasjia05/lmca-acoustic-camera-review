@@ -116,8 +116,8 @@
 <text x="1210" y="914" class="tiny">map_power[MAP_W] / valid / last</text>
 <path d="M1650 1015V950H1688V440H1623" class="control"/>
 <text x="1550" y="940" class="tiny">map_ready</text>
-<path d="M300 900V1140H937" class="control"/>
-<text x="320" y="1120" class="small">clipped / input_overrun flags</text>
+
+
 
 <rect x="900" y="965" width="800" height="235" rx="9" class="file"/>
 <text x="920" y="998" class="filename">lmca_uart_map_tx.sv</text>
