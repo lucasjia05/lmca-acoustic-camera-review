@@ -86,7 +86,7 @@ if(picker)picker.addEventListener('change',()=>{const scene=picker.value;if(!Obj
 
 
 
-const areaPicker=document.getElementById('area-chart-picker');areaPicker?.addEventListener('change',()=>{const key=areaPicker.value;const chart=areaCharts[key];if(!chart)return;const path='assets/gate-count-study-v2/'+key+'.svg';document.getElementById('area-chart').src=path;document.getElementById('area-chart').alt=chart.alt;document.getElementById('area-chart-link').href=path;document.getElementById('area-chart-title').textContent=chart.title;document.getElementById('area-chart-caption').textContent=chart.caption;document.getElementById('area-chart-method').textContent=areaMethods[key];});
+const areaPicker=document.getElementById('area-chart-picker');areaPicker?.addEventListener('change',()=>{const key=areaPicker.value;const chart=areaCharts[key];if(!chart)return;const path='assets/gate-count-study-v2/'+key+'.svg';document.getElementById('area-chart').src=path;document.getElementById('area-chart').alt=chart.alt;document.getElementById('area-chart-link').href=path;document.getElementById('area-chart-title').textContent=chart.title;});
 
 
 
