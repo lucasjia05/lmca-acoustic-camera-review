@@ -1,0 +1,424 @@
+{
+  "panels": [
+    {
+      "scene": "unequal6",
+      "original_sheet": "signals",
+      "variant": "reference",
+      "seed": 7,
+      "peak": 7.845927029848099e-05,
+      "map_sha256": "a3d428e618643a7d55fdd5c5986c9cf922c4734bba4b545c4d5c8c407cb0e61c",
+      "candidate_reused_exactly": false,
+      "reference_recomputed": true
+    },
+    {
+      "scene": "independent10",
+      "original_sheet": "stress",
+      "variant": "reference",
+      "seed": 7,
+      "peak": 8.040550164878368e-05,
+      "map_sha256": "5c6b7197f7ad958f0cacc3c77a6568223f5025ef64736e5935b695b91aea8cd3",
+      "candidate_reused_exactly": false,
+      "reference_recomputed": true
+    },
+    {
+      "scene": "focus_frequency_3",
+      "original_sheet": "frequency",
+      "variant": "reference",
+      "seed": 7,
+      "peak": 0.0025668672751635313,
+      "map_sha256": "ab6b1f82170832d49339f920113ed34ea2c9f2b4475633c3ca639f2be544b875",
+      "candidate_reused_exactly": false,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "focus_weak_2",
+      "original_sheet": "weak",
+      "variant": "reference",
+      "seed": 7,
+      "peak": 1.0943040251731873e-08,
+      "map_sha256": "55bbebbae4a8d8e3e0be8e222319c4a08a2d4d7cfcb0d706424e79cf7ff6831f",
+      "candidate_reused_exactly": false,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "unequal6",
+      "original_sheet": "signals",
+      "variant": "dft30_n256_k10_w24",
+      "seed": 7,
+      "peak": 3.4349970519542694e-05,
+      "map_sha256": "38726a93a4ec18373f8e0224698aa903628d0b684d94e25aa99c56a8872f09c9",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "independent10",
+      "original_sheet": "stress",
+      "variant": "dft30_n256_k10_w24",
+      "seed": 7,
+      "peak": 4.0356069803237915e-05,
+      "map_sha256": "5259bb60da48aa4b16847c0a1c9f5dd07424085ba259fa0ca728e985e3993198",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "focus_frequency_3",
+      "original_sheet": "frequency",
+      "variant": "dft30_n256_k10_w24",
+      "seed": 7,
+      "peak": 0.0004596796352416277,
+      "map_sha256": "ef763b87dfefa63e84731b55c01badd41b2b003aaf3d09ea47cf2c4e113e1432",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "focus_weak_2",
+      "original_sheet": "weak",
+      "variant": "dft30_n256_k10_w24",
+      "seed": 7,
+      "peak": 7.683411240577698e-09,
+      "map_sha256": "25be6a8482289462ca01217e7d93f89f15fe3b3c06fe8607175befd6ce919f3b",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "unequal6",
+      "original_sheet": "signals",
+      "variant": "dft30_10",
+      "seed": 7,
+      "peak": 1.2638978660106659e-05,
+      "map_sha256": "5ec422adb12afdfe825687372736519cf1605d80099bd062b50abc31cf59bcd1",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "independent10",
+      "original_sheet": "stress",
+      "variant": "dft30_10",
+      "seed": 7,
+      "peak": 1.208251342177391e-05,
+      "map_sha256": "28674e24948a2cfd98a27841eff99fe0034d81d9d2d77ec9eec179dfd9b7ea8b",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "focus_frequency_3",
+      "original_sheet": "frequency",
+      "variant": "dft30_10",
+      "seed": 7,
+      "peak": 7.573282346129417e-06,
+      "map_sha256": "94e3075677c67469f2deda5e8e91625ff8ce55459b934bb2eba1ee59f054c983",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "focus_weak_2",
+      "original_sheet": "weak",
+      "variant": "dft30_10",
+      "seed": 7,
+      "peak": 1.862645149230957e-09,
+      "map_sha256": "1c863850756c970405a47257e4eb75a55dbeec9e4554705b4995022401ac6872",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "unequal6",
+      "original_sheet": "signals",
+      "variant": "dft24_n512_k15_w24",
+      "seed": 7,
+      "peak": 2.12246086448431e-05,
+      "map_sha256": "a0cf36faaf9921879e108cd76b9685f392a177279cee20e10bd1ac3c0bffa0cb",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "independent10",
+      "original_sheet": "stress",
+      "variant": "dft24_n512_k15_w24",
+      "seed": 7,
+      "peak": 2.2244174033403397e-05,
+      "map_sha256": "da5caf17821bdc135a220675966755f15e72c4a3f8bcd3cbde7ee821c2737c70",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "focus_frequency_3",
+      "original_sheet": "frequency",
+      "variant": "dft24_n512_k15_w24",
+      "seed": 7,
+      "peak": 0.0020458968356251717,
+      "map_sha256": "1149e7547b447a9a1f66cff740c5e4eeeb0e46ab0d4c02a98c30bde0f11de329",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "focus_weak_2",
+      "original_sheet": "weak",
+      "variant": "dft24_n512_k15_w24",
+      "seed": 7,
+      "peak": 2.7939677238464355e-09,
+      "map_sha256": "edc3558cdd7afd2d1d0b5fb18a85455a9f6ac2003e0d78b311ff8107a2453bd6",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "unequal6",
+      "original_sheet": "signals",
+      "variant": "dft16_24",
+      "seed": 7,
+      "peak": 3.39713878929615e-05,
+      "map_sha256": "d35ed5eac8efc7f451dca4e6938f4ba8134a172179ba7483881e9c4a3bd46a9a",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "independent10",
+      "original_sheet": "stress",
+      "variant": "dft16_24",
+      "seed": 7,
+      "peak": 4.978058859705925e-05,
+      "map_sha256": "2ee4f461f0acfbe4ceb7c4000354118c45fa0796aa6f2034329dc80d80d8d2bd",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "focus_frequency_3",
+      "original_sheet": "frequency",
+      "variant": "dft16_24",
+      "seed": 7,
+      "peak": 0.0004974536132067442,
+      "map_sha256": "46fc633e283944c3cf8a14328c4cf8771f73c5bcee216280989c338acd470152",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    },
+    {
+      "scene": "focus_weak_2",
+      "original_sheet": "weak",
+      "variant": "dft16_24",
+      "seed": 7,
+      "peak": 4.889443516731262e-09,
+      "map_sha256": "f04147939ad194143967e05dc2611d156ae19957a3ad29ec53c525e60fbca58e",
+      "candidate_reused_exactly": true,
+      "reference_recomputed": false
+    }
+  ],
+  "rows": [
+    {
+      "scene": "unequal6",
+      "original_sheet": "signals",
+      "label": "Two unequal sources\n20\u201340 kHz\nSecond source \u22126 dB"
+    },
+    {
+      "scene": "independent10",
+      "original_sheet": "stress",
+      "label": "Microphone noise\nTwo 20\u201340 kHz sources\nIndependent noise: \u221230 dBFS"
+    },
+    {
+      "scene": "focus_frequency_3",
+      "original_sheet": "frequency",
+      "label": "30 kHz tone\nSource/noise: \u221226 dBFS RMS\n0 dB total input SNR"
+    },
+    {
+      "scene": "focus_weak_2",
+      "original_sheet": "weak",
+      "label": "Weak pulse \u00b7 \u221265 dBFS peak\n20.25\u201339.75 kHz\nGaussian envelope \u03c3 = 80 \u00b5s\nQuiet"
+    }
+  ],
+  "columns": [
+    "reference",
+    "dft30_n256_k10_w24",
+    "dft30_10",
+    "dft24_n512_k15_w24",
+    "dft16_24"
+  ],
+  "colormap": "jet_white_fade",
+  "display_range_db": [
+    -12,
+    0
+  ],
+  "normalization": "Each panel normalized to its own peak; raw peaks are not compared by color.",
+  "reference": "30 mics, N512, all 53 bins, 26-bit Q16, one window. Top two reference maps recomputed from the original seed-7 recordings; bottom two references reused exactly.",
+  "reference_config": {
+    "name": "ultrasonic-configurable-baseline",
+    "seed": 7,
+    "algorithms": [
+      "fd",
+      "td"
+    ],
+    "sample_rate_hz": 192000,
+    "array": {
+      "count": 30,
+      "layout": "spiral",
+      "aperture_m": 0.2,
+      "positions_m": []
+    },
+    "scan": {
+      "azimuth_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "elevation_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "step_deg": 3.0,
+      "focus_distance_m": 0.0
+    },
+    "processing": {
+      "band_hz": [
+        20000.0,
+        40000.0
+      ],
+      "observation_samples": 512,
+      "map_hop_samples": 512,
+      "fft_size": 512,
+      "fft_hop_samples": 512,
+      "window": "sqrt_hann",
+      "bin_mode": "explicit",
+      "bin_indices": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "bin_count": 16,
+      "bin_stride": 2,
+      "td_upsample": 4,
+      "td_fir_taps": 65
+    },
+    "precision": {
+      "mode": "float",
+      "input": [
+        16,
+        15
+      ],
+      "fft": [
+        24,
+        22
+      ],
+      "coefficient": [
+        18,
+        16
+      ],
+      "product": [
+        24,
+        22
+      ],
+      "accumulator": [
+        32,
+        22
+      ],
+      "power": [
+        48,
+        32
+      ]
+    },
+    "scene": {
+      "duration_s": 0.021333333333333333,
+      "speed_of_sound_m_s": 343.0,
+      "self_noise_dbfs": -70.0,
+      "absorption_db_per_m": 0.0,
+      "sources": [
+        {
+          "kind": "broadband",
+          "spatial": "point",
+          "distance_m": 10.0,
+          "azimuth_deg": 15.0,
+          "elevation_deg": 0.0,
+          "band_hz": [
+            25000.0,
+            50000.0
+          ],
+          "level_dbfs": -20.0,
+          "tone_hz": 37500.0,
+          "pulse_rate_hz": 100.0,
+          "pulse_width_s": 0.001
+        }
+      ],
+      "interferers": [
+        {
+          "kind": "broadband",
+          "spatial": "point",
+          "position_m": [
+            0.15,
+            0.0,
+            -0.3
+          ],
+          "band_hz": [
+            20000.0,
+            60000.0
+          ],
+          "level_dbfs": -45.0,
+          "tone_hz": 40000.0,
+          "pulse_rate_hz": 10.0,
+          "pulse_width_s": 0.002
+        }
+      ]
+    },
+    "microphone": {
+      "name": "IM66D130MV01",
+      "response_hz": [],
+      "response_db": [],
+      "gain_std_db": 0.0,
+      "delay_std_us": 0.0
+    }
+  },
+  "source_recording_sha256": {
+    "recording_unequal6_7.npz": "a7c704fa6b8f6b2a64860b23d430db7c45e53c2b4ea89068fc1e09e3e4ea8f1b",
+    "recording_independent10_7.npz": "411184ac5617feafd0f245845e3617983e9c5f2f1b86d9c0e54293f76dcd695f"
+  },
+  "candidate_maps_reused_exactly": 16,
+  "source_arrays_sha256": {
+    "scene-maps.npz": "4ea57c1f00320aed398040f26e404231f826c203e68c5b2a74e6109b9f095805",
+    "focus\\maps.npz": "7962abab65340c850691b411dc9f0f975d1fd1d4cf584a514cffd0bcca13a549"
+  },
+  "model_sha256": "9fa3770fd2367060287da90effe0fc23e714ed67bad7fd79e59b68ae298f9942"
+}
