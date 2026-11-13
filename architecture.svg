@@ -25,9 +25,9 @@
 <rect width="1800" height="1400" fill="white"/>
 <rect x="205" y="75" width="1540" height="1165" rx="12" class="rootfile"/>
 <text x="230" y="112" class="filename">lmca_compact_configured.sv</text>
-<text x="230" y="143" class="small">Generated top: u_camera + u_uart · microphone/bin counts and widths are build parameters</text>
-<text x="1715" y="112" class="tiny" text-anchor="end">Processing busy / done · clipped · input_overrun</text>
-<text x="230" y="181" class="tiny">clk / rst shared by clocked modules; fanout omitted</text>
+
+
+
 <path d="M230 198H1715" class="rail"/>
 
 <rect x="235" y="230" width="1480" height="670" rx="10" class="file"/>
@@ -47,7 +47,7 @@
 <text x="288" y="587" class="name">lmca_pcm_serializer</text>
 <text x="288" y="615" class="instance">u_serializer</text>
 <text x="288" y="645" class="small">PCM vector → sample stream</text>
-<text x="270" y="697" class="tiny">Both modules are defined in this file.</text>
+
 
 <rect x="20" y="350" width="165" height="115" rx="7" class="external"/>
 <text x="36" y="381" class="small">PDM microphone</text>
@@ -108,9 +108,9 @@
 <text x="707" y="805" class="tiny">IDLE · CAPTURE · DFT</text>
 <text x="707" y="832" class="tiny">DAS · POWER · EMIT</text>
 <path d="M690 798H675V425H687" class="control"/>
-<text x="1000" y="785" class="small">Dashed boxes: logic / storage inside the core</text>
-<text x="1000" y="815" class="tiny">Rounding + saturation: lmca_compact_math.svh</text>
-<text x="1000" y="842" class="tiny">One shared datapath; selected spectra retained in registers</text>
+
+
+
 
 <path d="M1620 407H1645V925H870V1110H937" class="data"/>
 <text x="1210" y="914" class="tiny">map_power[MAP_W] / valid / last</text>
@@ -147,7 +147,7 @@
 <text x="100" y="1216" class="tiny">Data / coefficients</text>
 <path d="M25 1247H85" class="control"/>
 <text x="100" y="1253" class="tiny">Selected control / backpressure</text>
-<rect x="25" y="1282" width="30" height="24" rx="3" class="logic"/>
-<text x="70" y="1301" class="tiny">Internal logic / state, not a separate module</text>
-<text x="25" y="1350" class="tiny">Routine handshakes and clock/reset fanout omitted.</text>
+
+
+
 </svg>
