@@ -58,7 +58,7 @@ const head=html('tr');['Test axis',...D.variants.map(v=>v.label)].forEach(t=>{co
 D.axes.forEach(a=>{const tr=html('tr'),th=html('th',a.label);th.scope='row';tr.append(th);D.variants.forEach(v=>tr.append(html('td',D.scores[v.id][a.id].toFixed(1))));$('benchmark-score-rows').append(tr);});
 $('benchmark-run-size').textContent=`${D.evaluation_count.toLocaleString()} scored integer-model maps plus ${D.null_evaluation_count} independent noise-only control maps. No full map sheets were added.`;
 $('benchmark-null-note').textContent=`Noise-only controls: ${D.null_nonzero} / ${D.null_evaluation_count} maps have nonzero output. A normalized map always supplies a brightest point; this benchmark does not add a detector threshold or label these as detected discharges.`;
-const finding=$('benchmark-findings');finding.replaceChildren();D.findings.forEach(t=>finding.append(html('li',t)));
+
 axis.addEventListener('change',updateFamily);family.addEventListener('change',updateSweep);metric.addEventListener('change',chart);
 let pending=false;new ResizeObserver(()=>{if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;if(root.getBoundingClientRect().width>0){radar();chart();}});}).observe(root);
 updateFamily();radar();
