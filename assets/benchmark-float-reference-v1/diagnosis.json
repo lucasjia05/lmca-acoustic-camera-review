@@ -1,0 +1,40 @@
+{
+  "case": "20\u201340 kHz target, 30 kHz coherent rear interferer, input target/interferer \u221210 dB, seed 7, target (\u221212\u00b0,6\u00b0)",
+  "outputs": {
+    "float64_fft": {
+      "target_only_peak": 0.00023128506507586266,
+      "interferer_only_peak": 0.0005328265457971029,
+      "output_target_to_interferer_peak_db": -3.6243826387094016,
+      "mixture_score": {
+        "pointing": false,
+        "clear": false,
+        "matched": 0,
+        "targets": 1,
+        "error_deg": 33.1143029347887,
+        "margin_db": -1.962975885356864,
+        "peak_power": 0.0005369267999405887,
+        "target_power": 0.00034167837516903634,
+        "wrong_power": 0.0005369267999405887,
+        "zero": false
+      }
+    },
+    "dft30_10": {
+      "target_only_peak": 5.2820658311247826e-05,
+      "interferer_only_peak": 6.307382136583328e-07,
+      "output_target_to_interferer_peak_db": 19.229546657916988,
+      "mixture_score": {
+        "pointing": true,
+        "clear": true,
+        "matched": 1,
+        "targets": 1,
+        "error_deg": 0.0,
+        "margin_db": 9.226480546821413,
+        "peak_power": 5.4026488214731216e-05,
+        "target_power": 5.4026488214731216e-05,
+        "wrong_power": 6.455928087234497e-06,
+        "zero": false
+      }
+    }
+  },
+  "planar_array_front_back_distances_identical": true
+}

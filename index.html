@@ -194699,6 +194699,7 @@
     <details class="study-method"><summary>Scores and pass criterion</summary><div>
       <p>A single-source map passes when its output is nonzero, its strongest pixel is within 3° of the source, and its target neighborhood stands at least 3 dB above the strongest pixel more than 9° from the source. Two-source tests require two distinct local peaks within 3°, both above −12 dB relative to the maximum, with the same 3 dB separation from distant hotspots.</p>
       <p>Scores use raw map values, not image colors or per-image normalization. Each sweep family has equal weight within its spoke. Overall is the arithmetic mean of all eight category scores, out of 100; every category has equal weight regardless of its number of test cases. Test ranges deliberately include failure conditions.</p>
+      <p>The frequency spoke measures correct pointing plus the 3 dB hotspot-separation rule; it does not measure spectral energy captured. Select “Correctly located maps” to inspect pointing alone.</p>
       <div class="study-table-wrap"><table class="precision-table"><caption>Clear-map pass rate by test axis (%)</caption><thead id="benchmark-score-head"></thead><tbody id="benchmark-score-rows"></tbody></table></div>
     </div></details>
     <h4>Inspect each sweep</h4>
@@ -194713,7 +194714,7 @@
     <details class="study-method"><summary>Exact values for this sweep</summary><div class="study-table-wrap"><table class="precision-table"><thead><tr><th scope="col">Sweep value</th><th scope="col">Candidate</th><th scope="col">Clear / tested</th><th scope="col">Located / tested</th><th scope="col">95% error</th><th scope="col">Median margin</th><th scope="col">Median raw peak (PCM²)</th><th scope="col">Zero maps</th><th scope="col">Clipped values</th></tr></thead><tbody id="benchmark-values"></tbody></table></div></details>
     <details class="study-method"><summary>Setup, limits and reproducible results</summary><div>
       <ul><li>Four promising DFT candidates and one all-bin software reference; native 20 cm spirals; 192 ksample/s PCM; 20–40 kHz selected-bin processing; ±30° per axis on a 3° scan grid.</li>
-      <li>The dashed reference uses 30 mics, N512, all 53 in-band bins and a 26-bit Q16 accumulator: one window per map, matching the reference in the combined map sheet. It is scored on the same cases and is not gate-budget-qualified.</li>
+      <li>The dashed reference uses 30 mics, N512, all 53 in-band bins and float64 FFT/complex128 arithmetic, including analytic window and steering coefficients. It processes the same synthetic waveforms without PCM16 rounding or fixed-point truncation. A matched PCM16-input diagnostic gives the same category scores. It uses conventional delay-and-sum without adaptive interference rejection and is not gate-budget-qualified.</li>
       <li>One factor changes within each sweep family. Source directions, source bands and three seeds provide a small set of fixed contexts. The same source and channel noise are shared by candidates with the same layout.</li>
       <li>Candidate configurations change several implementation parameters together. These comparisons select complete configurations; they do not isolate the causal effect of microphone count, bin count or precision.</li>
       <li>Nominal baseline levels: source −36 dBFS RMS; independent white microphone noise −46 dBFS (+10 dB input SNR). Exceptions are stated above each sweep. SNR covers the whole PCM bandwidth before bin selection, referenced to the common 30-mic recording; finite-window levels fluctuate.</li>
@@ -194724,7 +194725,7 @@
       <p id="benchmark-run-size"></p>
       <p id="benchmark-null-note"></p>
       <p>The 20–40 kHz range follows our current candidate band. Commercial PD cameras also use broader ultrasonic filters; <a href="https://docs.flir.com/T810637/en-US/latest/s08.html" target="_blank" rel="noopener">FLIR filter guidance</a> motivates testing both spectral coverage and noise. <a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND’s drone-camera description</a> explicitly identifies propeller noise as a design concern. The numerical sweep limits are engineering stress-test choices, not limits established by those products.</p>
-      <ul class="result-links"><li><a href="assets/candidate-benchmark-v1/benchmark.json">Aggregated scores and sweep definitions · JSON</a></li><li><a href="assets/candidate-benchmark-v1/measurements.csv">Every scored map · CSV</a></li><li><a href="assets/candidate-benchmark-v1/configurations.json">Exact candidate configurations · JSON</a></li><li><a href="assets/candidate-benchmark-v1/null-controls.json">Noise-only controls · JSON</a></li><li><a href="assets/candidate-benchmark-v1/run_benchmark.py">Reproducible benchmark script</a></li><li><a href="assets/benchmark-reference-v1/reference.json">Reference scores, settings and matched-input validation · JSON</a></li><li><a href="assets/candidate-benchmark-v1/validation.json">Validation and source hashes · JSON</a></li></ul>
+      <ul class="result-links"><li><a href="assets/candidate-benchmark-v1/benchmark.json">Aggregated scores and sweep definitions · JSON</a></li><li><a href="assets/candidate-benchmark-v1/measurements.csv">Every scored map · CSV</a></li><li><a href="assets/candidate-benchmark-v1/configurations.json">Exact candidate configurations · JSON</a></li><li><a href="assets/candidate-benchmark-v1/null-controls.json">Noise-only controls · JSON</a></li><li><a href="assets/candidate-benchmark-v1/run_benchmark.py">Reproducible benchmark script</a></li><li><a href="assets/benchmark-float-reference-v1/reference.json">Float64 FFT reference scores, settings and validation · JSON</a></li><li><a href="assets/candidate-benchmark-v1/validation.json">Validation and source hashes · JSON</a></li></ul>
     </div></details>
   </div>
 </div>
@@ -246696,7 +246697,7 @@ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectTab(i));tab.addEve
 
 
 
-</script><script src="layout-distance-data.js"></script><script src="layout-distance-explorer.js"></script><script src="algorithm-study.js?v=thin-markers-1"></script><script src="fft-study.js?v=thin-markers-1"></script><script src="candidate-benchmark.js?v=reference-1"></script></body></html>
+</script><script src="layout-distance-data.js"></script><script src="layout-distance-explorer.js"></script><script src="algorithm-study.js?v=thin-markers-1"></script><script src="fft-study.js?v=thin-markers-1"></script><script src="candidate-benchmark.js?v=float64-reference-1"></script></body></html>
 
 
 

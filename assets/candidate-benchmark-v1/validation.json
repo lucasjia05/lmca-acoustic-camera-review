@@ -63,10 +63,10 @@
     "run_benchmark.py": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
   },
   "files_sha256": {
-    "benchmark.json": "1bb8979695a0e4a871b81ce826b7df455f050b6ae52c5e4cd5a28f58c80aa99b",
-    "configurations.json": "6de11a51b39f1e34732c019c8c3c426afe2532a1b78b982c12b0581cf191f5e2",
-    "null-controls.json": "351642d0be4e1c61e452b2f39b7cd396926d6bfae9cfa88d01e521897a784357",
-    "measurements.csv": "5812126b8f09ce4c54e8d06f335a709f1025e74dc7a5f5d0ffa2f008b7f1943d"
+    "benchmark.json": "e080e143bd6457effb4cb63aafab415cd47517f16c6a2bfb7a8b4d7ad6657140",
+    "null-controls.json": "afb6807326cead7403690a2ede8fa937f09209ad7c8e1c1e1a88409a564c64dd",
+    "configurations.json": "72f0512e23868db4a155c282961216beedf7634f65b55fa2b7b7b8c953488227",
+    "measurements.csv": "2f775e0e44b93db24cd03be0c34c6d6d8eb022d0078822621568d24df0552e16"
   },
   "overall_score_validation": {
     "equal_weight_categories": 8,
@@ -76,7 +76,7 @@
       "dft30_10": 68.3066020288953,
       "dft24_n512_k15_w24": 60.28947935490988,
       "dft16_24": 52.017861089685475,
-      "reference_all_bins": 72.69761320938858
+      "reference_float64": 73.28494355215369
     },
     "existing_map_results_unchanged": true,
     "checked_reference_series": 1
@@ -93,22 +93,16 @@
   "reference_validation": {
     "input_digest_matches_original": true,
     "input_digest_sha256": "b9e8d5d293b18a708c0e78eaf61f9af76cb89835ec5bbadaaa33194637f6c3b5",
-    "scoring_and_source_code_hashes_match_original": true,
+    "float_fft_matches_explicit_dft": true,
+    "float_reference_matches_existing_fd_implementation": true,
     "clipped_values": 0,
-    "matched_cases_per_candidate": 2790,
-    "bit_exact_map_reference_anchors": [
-      {
-        "scene": "unequal6",
-        "bit_exact": true
-      },
-      {
-        "scene": "independent10",
-        "bit_exact": true
-      }
-    ],
-    "script_sha256": "4f514198c09c564d86013c3ddba979ae56491bd95ee7a668b431fb6822272c7b",
+    "matched_cases_per_series": 2790,
+    "reference_maps": 2790,
+    "pcm16_diagnostic_maps": 2790,
+    "script_sha256": "78964c90ac4f5beb97dbc343c7283a9cb46a3068574ea32c4d75c48faa4b49eb",
     "base_script_sha256": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
   },
   "reference_scored_maps": 2790,
-  "reference_null_maps": 60
+  "reference_null_maps": 60,
+  "reference_replacement": "The prior all-bin reference used a 26-bit integer DFT oracle. Replaced by verified float64 FFT/DAS; original candidate results are unchanged."
 }
