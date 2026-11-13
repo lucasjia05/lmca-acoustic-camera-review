@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1800" height="1400" viewBox="0 0 1800 1400" role="img" aria-labelledby="rtl-uart-title rtl-uart-desc">
 <title id="rtl-uart-title">Compact acoustic camera with UART, organized by SystemVerilog source files</title>
-<desc id="rtl-uart-desc">The generated lmca_compact_configured.sv instantiates u_camera from lmca_compact_camera.sv and u_uart from lmca_uart_map_tx.sv. The camera contains the PDM decimator, PCM serializer and compact core. Both front-end modules are defined in lmca_pdm_decimator.sv. The core contains windowing, one shared complex arithmetic engine, selected Fourier accumulators, power calculation, phase generation and its controller; these are logic within lmca_compact_core.sv, not separate module files. The core instantiates u_trig from lmca_compact_trig.sv. The UART packetizer instantiates u_tx, the byte transmitter defined in the same UART source file. Ready backpressure returns from the packetizer to the map producer. Physical capture, the host and the video camera are external.</desc>
+<desc id="rtl-uart-desc">The diagram groups PDM decimation, PCM serialization, the compact processing core and UART output under lmca_top.sv. Both front-end modules are defined in lmca_pdm_decimator.sv. The core contains windowing, one shared complex arithmetic engine, selected Fourier accumulators, power calculation, phase generation and its controller; these are logic within lmca_compact_core.sv, not separate module files. The core instantiates u_trig from lmca_compact_trig.sv. The UART packetizer instantiates u_tx, the byte transmitter defined in the same UART source file. Ready backpressure returns from the packetizer to the map producer. Physical capture, the host and the video camera are external.</desc>
 <defs>
 <marker id="rtl-uart-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#527d80"/></marker>
 <marker id="rtl-uart-control" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9276ac"/></marker>
@@ -13,7 +13,7 @@
 .rtl-modules .tiny{font-size:16px;fill:#536873}
 .rtl-modules .instance{font:17px Consolas,monospace;fill:#536873}
 .rtl-modules .file{fill:#fbfdfc;stroke:#d7e0e3;stroke-width:1.5}
-.rtl-modules .rootfile{fill:white;stroke:#a8b9bc;stroke-width:1.5;stroke-dasharray:8 5}
+.rtl-modules .rootfile{fill:white;stroke:#a8b9bc;stroke-width:1.5}
 .rtl-modules .box{fill:white;stroke:#7da3a4;stroke-width:1.6}
 .rtl-modules .logic{fill:#faf8fc;stroke:#b29bc5;stroke-width:1.4;stroke-dasharray:5 4}
 .rtl-modules .external{fill:#f5f7f9;stroke:#98a7af;stroke-width:1.4}
@@ -24,15 +24,15 @@
 </style>
 <rect width="1800" height="1400" fill="white"/>
 <rect x="205" y="75" width="1540" height="1165" rx="12" class="rootfile"/>
-<text x="230" y="112" class="filename">lmca_compact_configured.sv</text>
+<text x="230" y="112" class="filename">lmca_top.sv</text>
 
 
 
 <path d="M230 198H1715" class="rail"/>
 
-<rect x="235" y="230" width="1480" height="670" rx="10" class="file"/>
-<text x="260" y="264" class="filename">lmca_compact_camera.sv</text>
-<text x="1690" y="264" class="instance" text-anchor="end">u_camera</text>
+
+
+
 
 <rect x="250" y="290" width="350" height="430" rx="9" class="file"/>
 <text x="270" y="322" class="filename" style="font-size:22px">lmca_pdm_decimator.sv</text>
