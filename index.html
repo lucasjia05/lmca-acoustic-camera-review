@@ -194691,14 +194691,14 @@
   
   <div class="algorithm-study" id="candidate-benchmark">
     <h3>Candidate benchmark</h3>
-    <p>Which conditions break an otherwise good-looking map?</p>
+    
     
     <div id="benchmark-candidates" class="benchmark-candidates" role="group" aria-label="Candidates shown in charts"></div>
     <div id="benchmark-radar" class="benchmark-radar"></div>
-    <p class="study-table-note">Pass: source peaks within 3°, with at least a 3 dB lead over distant competing hotspots. Each spoke shows the pass rate for its synthetic test set; the filled area is not an overall score or field detection probability.</p>
+    <p class="study-table-note">Pass: source peaks within 3°, with at least a 3 dB lead over distant competing hotspots. Each spoke shows its synthetic-test pass rate. Overall is the equal-weight average of the eight spokes, not field detection probability.</p>
     <details class="study-method"><summary>Scores and pass criterion</summary><div>
       <p>A single-source map passes when its output is nonzero, its strongest pixel is within 3° of the source, and its target neighborhood stands at least 3 dB above the strongest pixel more than 9° from the source. Two-source tests require two distinct local peaks within 3°, both above −12 dB relative to the maximum, with the same 3 dB separation from distant hotspots.</p>
-      <p>Scores use raw map values, not image colors or per-image normalization. Each sweep family has equal weight within its spoke. Test ranges deliberately include failure conditions; no overall winner is computed.</p>
+      <p>Scores use raw map values, not image colors or per-image normalization. Each sweep family has equal weight within its spoke. Overall is the arithmetic mean of all eight category scores, out of 100; every category has equal weight regardless of its number of test cases. Test ranges deliberately include failure conditions.</p>
       <div class="study-table-wrap"><table class="precision-table"><caption>Clear-map pass rate by test axis (%)</caption><thead id="benchmark-score-head"></thead><tbody id="benchmark-score-rows"></tbody></table></div>
     </div></details>
     <h4>Inspect each sweep</h4>
@@ -246695,7 +246695,7 @@ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectTab(i));tab.addEve
 
 
 
-</script><script src="layout-distance-data.js"></script><script src="layout-distance-explorer.js"></script><script src="algorithm-study.js?v=plots-only-1"></script><script src="fft-study.js?v=additional-dft12-1"></script><script src="candidate-benchmark.js?v=no-findings-1"></script></body></html>
+</script><script src="layout-distance-data.js"></script><script src="layout-distance-explorer.js"></script><script src="algorithm-study.js?v=plots-only-1"></script><script src="fft-study.js?v=additional-dft12-1"></script><script src="candidate-benchmark.js?v=overall-1"></script></body></html>
 
 
 

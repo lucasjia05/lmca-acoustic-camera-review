@@ -13227,7 +13227,7 @@
     "run_benchmark.py": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
   },
   "clipped_values": 0,
-  "score_weighting": "Per-axis mean of family pass fractions. Equal family weights; no overall score or weighting by deployment probability.",
+  "score_weighting": "Per-axis mean of family pass fractions, with equal family weights. Overall is the arithmetic mean of the eight axis scores; no weighting by deployment probability.",
   "assumptions": {
     "sample_rate_hz": 192000,
     "aperture_m": 0.2,
@@ -13248,5 +13248,12 @@
     "Steady and burst observation duration differs by candidate; centering bursts isolates captured-event quality. Capture scheduling, overlap and multiwindow accumulation are not simulated.",
     "Noise-only controls have no detection pass/fail because the RTL power map has no operational absent-target decision.",
     "Sweeps are one-factor families with a small set of fixed contexts. They do not cover the full joint space of simultaneous stressors or all deployment conditions."
-  ]
+  ],
+  "overall_scores": {
+    "dft30_n256_k10_w24": 68.418681573786,
+    "dft30_10": 68.3066020288953,
+    "dft24_n512_k15_w24": 60.28947935490988,
+    "dft16_24": 52.017861089685475
+  },
+  "overall_score_definition": "Equal-weight arithmetic mean of all eight category scores, out of 100. Synthetic benchmark summary, not field detection probability."
 }
