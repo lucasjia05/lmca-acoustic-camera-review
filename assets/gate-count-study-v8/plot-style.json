@@ -1,0 +1,393 @@
+{
+  "colormap": "jet_white_fade",
+  "fade": "Linear color strength: white at -12 dB, full Jet color at 0 dB",
+  "normalization": "Each map is divided by its own maximum, unchanged from the original plots.",
+  "display_range_db": [
+    -12,
+    0
+  ],
+  "white": "Values below -12 dB or zero output; white does not imply zero acoustic energy.",
+  "source_npz_sha256": "95b63ff272da9501c777371f43b3bd621b30046eb4362d4bb874f30b713b83f4",
+  "seed": 7,
+  "panels": [
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "unequal6",
+      "variant": "reference",
+      "peak": 8.269120007753372e-05,
+      "white_pixels": 351,
+      "pixels": 441,
+      "map_sha256": "cd6ba79e7694d56626effbd9e2c51eddc0d5d960ecd16e00cc370262b04b0996"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "three",
+      "variant": "reference",
+      "peak": 8.524846634827554e-05,
+      "white_pixels": 248,
+      "pixels": 441,
+      "map_sha256": "b86f2a11161d016d79efa9f96867125e95e60c767f2aa02d6d57ed900ded1750"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "tone30000",
+      "variant": "reference",
+      "peak": 8.489686297252774e-05,
+      "white_pixels": 358,
+      "pixels": 441,
+      "map_sha256": "18157ffdec5ccd85d6e34556aa4c5d0efb2f90b92fd455448d03f0277d552510"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "pulses",
+      "variant": "reference",
+      "peak": 9.750656317919493e-06,
+      "white_pixels": 395,
+      "pixels": 441,
+      "map_sha256": "f58b06c66f75f92033df302b68708bd2c9c9da56676a5a74753c72777c016145"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "unequal6",
+      "variant": "m30_k8",
+      "peak": 1.2136995792388916e-05,
+      "white_pixels": 339,
+      "pixels": 441,
+      "map_sha256": "18f7c85e8cc5deafdc70dafbbec8a656c95da37804ca0430d3b22f5f569bb013"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "three",
+      "variant": "m30_k8",
+      "peak": 1.1598458513617516e-05,
+      "white_pixels": 216,
+      "pixels": 441,
+      "map_sha256": "b0ed6e5af573c828659ae97db5ef5b7555d0877a02b6984e23fa9ef45494da3d"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "tone30000",
+      "variant": "m30_k8",
+      "peak": 3.189779818058014e-08,
+      "white_pixels": 353,
+      "pixels": 441,
+      "map_sha256": "39e8da29a6caa9d9a8252eeb1d4df9c5e5e13efb07dd8e744a47743386d9aee9"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "pulses",
+      "variant": "m30_k8",
+      "peak": 9.313225746154785e-10,
+      "white_pixels": 435,
+      "pixels": 441,
+      "map_sha256": "d072a800df907c5737dd6d9a4ae7096c84689048c5beb8f2b6fc45e5b7be2346"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "unequal6",
+      "variant": "m30_k10_q16",
+      "peak": 1.2922799214720726e-05,
+      "white_pixels": 351,
+      "pixels": 441,
+      "map_sha256": "f259c41820438fb4c15077e88837f53001e00cdbbffe553218c9ab5cb0b74bad"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "three",
+      "variant": "m30_k10_q16",
+      "peak": 1.283455640077591e-05,
+      "white_pixels": 274,
+      "pixels": 441,
+      "map_sha256": "e3669db408473c1e9c1c2dc61db7df8a23fe20626142e3841048425573b16850"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "tone30000",
+      "variant": "m30_k10_q16",
+      "peak": 1.0780058801174164e-07,
+      "white_pixels": 355,
+      "pixels": 441,
+      "map_sha256": "ab00b44c0470662caf29cb78d2b8871655a448c7081bf0603a4a0a03105c0a90"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "pulses",
+      "variant": "m30_k10_q16",
+      "peak": 9.313225746154785e-10,
+      "white_pixels": 433,
+      "pixels": 441,
+      "map_sha256": "8b773ec8651d96e07ab0e200994cb8e9c49748c5ad9021cc985943857caa65bf"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "unequal6",
+      "variant": "m24_k10",
+      "peak": 1.2754462659358978e-05,
+      "white_pixels": 274,
+      "pixels": 441,
+      "map_sha256": "1abf089df47ebb3261b2dcb2bf4b7b71cc570d66e6713bb0574c21ca4e472d84"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "three",
+      "variant": "m24_k10",
+      "peak": 1.4127232134342194e-05,
+      "white_pixels": 202,
+      "pixels": 441,
+      "map_sha256": "3ce38bcf41d4b9fbd25053e0de538de90bb2ec63af7caf2e1f5ff9ea89a54b83"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "tone30000",
+      "variant": "m24_k10",
+      "peak": 1.0523945093154907e-07,
+      "white_pixels": 313,
+      "pixels": 441,
+      "map_sha256": "819183d8995fa5e701a22e94fbaac044e202d5a9453f2c2c056ac87fa9b7b6a8"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "pulses",
+      "variant": "m24_k10",
+      "peak": 9.313225746154785e-10,
+      "white_pixels": 433,
+      "pixels": 441,
+      "map_sha256": "31af38f69320459801074d281cb3585029e65df49c1dfeb9866e221799ed9128"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "unequal6",
+      "variant": "m16_k24",
+      "peak": 3.588409163057804e-05,
+      "white_pixels": 88,
+      "pixels": 441,
+      "map_sha256": "1ecb87716301776d27386819e81893bd2d70de8c42101b45e5046f1d301aab12"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "three",
+      "variant": "m16_k24",
+      "peak": 3.714137710630894e-05,
+      "white_pixels": 17,
+      "pixels": 441,
+      "map_sha256": "c8f652003a1709ba61920c64782a6a1558211706fd877e9c4007bff91a89bcb3"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "tone30000",
+      "variant": "m16_k24",
+      "peak": 1.4780787751078606e-05,
+      "white_pixels": 252,
+      "pixels": 441,
+      "map_sha256": "25138e538381cbf743c6e5af69294f71b5f94c1479530eb6008735166b11ae5c"
+    },
+    {
+      "sheet": "11-candidate-maps-signals",
+      "scene": "pulses",
+      "variant": "m16_k24",
+      "peak": 9.313225746154785e-10,
+      "white_pixels": 418,
+      "pixels": 441,
+      "map_sha256": "becbf47694c960ac2524b645fefd28465f58f227af1cdd480a52db5d150fb30c"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "independent10",
+      "variant": "reference",
+      "peak": 9.308598237112164e-05,
+      "white_pixels": 0,
+      "pixels": 441,
+      "map_sha256": "5fe31e03f21be48954629d9b7917cc39f7a976d4c4967971be52a72518ad05ff"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "mismatch_small",
+      "variant": "reference",
+      "peak": 8.929867180995643e-05,
+      "white_pixels": 356,
+      "pixels": 441,
+      "map_sha256": "bcfae2c99f35e8a38d93f99f62598bf3afff70860d2cad18f473ca060acca053"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "noise_only",
+      "variant": "reference",
+      "peak": 8.204369805753231e-07,
+      "white_pixels": 0,
+      "pixels": 441,
+      "map_sha256": "a083ce043346a4a8bda4a05d9e4d5926f4784a11900d9ff2d5a139ce54542315"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "outside",
+      "variant": "reference",
+      "peak": 7.628550520166755e-06,
+      "white_pixels": 6,
+      "pixels": 441,
+      "map_sha256": "24842231149598cf57105212385d30c6ad3d42a6492614e76d7f110a64a6279b"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "independent10",
+      "variant": "m30_k8",
+      "peak": 1.5315599739551544e-05,
+      "white_pixels": 41,
+      "pixels": 441,
+      "map_sha256": "ebabf171c56e4a8721d51ce2471b09defd755ea0978979cd34cfe9324c177ff3"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "mismatch_small",
+      "variant": "m30_k8",
+      "peak": 1.3153767213225365e-05,
+      "white_pixels": 344,
+      "pixels": 441,
+      "map_sha256": "abd6de4106a6c283cfcfde527986865bb12b1c5982f51971f97f294fb09ccb2f"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "noise_only",
+      "variant": "m30_k8",
+      "peak": 3.08966264128685e-07,
+      "white_pixels": 0,
+      "pixels": 441,
+      "map_sha256": "8242f0e0ef3f1aca895a7750813b24e82e35ed459ae584993dab6abf33222577"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "outside",
+      "variant": "m30_k8",
+      "peak": 1.6223639249801636e-06,
+      "white_pixels": 8,
+      "pixels": 441,
+      "map_sha256": "0ca562079ac6d85e71ec4e75b38018a0125934b767300af2946f5d155e00c5ba"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "independent10",
+      "variant": "m30_k10_q16",
+      "peak": 1.2754462659358978e-05,
+      "white_pixels": 4,
+      "pixels": 441,
+      "map_sha256": "68f81f9f6837c39a9746c5514be1e7264b6e7857b1c753a38a5f5e65f2f99b43"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "mismatch_small",
+      "variant": "m30_k10_q16",
+      "peak": 1.3923738151788712e-05,
+      "white_pixels": 349,
+      "pixels": 441,
+      "map_sha256": "9b3fb6021e52223fbd9c58a01f970780aa5497231de4a664556424fad9b22db2"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "noise_only",
+      "variant": "m30_k10_q16",
+      "peak": 2.628657966852188e-07,
+      "white_pixels": 0,
+      "pixels": 441,
+      "map_sha256": "7a96f538f2e56990a751a4c49974e5e60625621606524496b613426c8d404236"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "outside",
+      "variant": "m30_k10_q16",
+      "peak": 1.5480909496545792e-06,
+      "white_pixels": 8,
+      "pixels": 441,
+      "map_sha256": "8e1dd8b35d9f2f5c7d50db73d20ca12861a58092bf309019cb7391d7fb1dbca9"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "independent10",
+      "variant": "m24_k10",
+      "peak": 1.7383135855197906e-05,
+      "white_pixels": 4,
+      "pixels": 441,
+      "map_sha256": "9303fa8eb955e31836966ae6f5773c2b7457f3df0bd10752835ebe32de1e9f81"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "mismatch_small",
+      "variant": "m24_k10",
+      "peak": 1.2621749192476273e-05,
+      "white_pixels": 261,
+      "pixels": 441,
+      "map_sha256": "b166f256e1a985a48569c087710f5da3e15e886eb3a4f785ff3da689e3345b36"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "noise_only",
+      "variant": "m24_k10",
+      "peak": 3.543682396411896e-07,
+      "white_pixels": 0,
+      "pixels": 441,
+      "map_sha256": "f6cab99fe93621f8dba13d9974956d1e70e8d8eb8a7745cb6fb5390bb6a96c06"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "outside",
+      "variant": "m24_k10",
+      "peak": 2.1101441234350204e-06,
+      "white_pixels": 4,
+      "pixels": 441,
+      "map_sha256": "ccc364f7bcd2d2d5a27766095c5bad54326aed77102efb91fa117f3c0ae103f4"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "independent10",
+      "variant": "m16_k24",
+      "peak": 4.461267963051796e-05,
+      "white_pixels": 0,
+      "pixels": 441,
+      "map_sha256": "abd52c597d9f25268417a2ce8883f00641b718b52725b250ade93035c3c8059a"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "mismatch_small",
+      "variant": "m16_k24",
+      "peak": 3.635580651462078e-05,
+      "white_pixels": 95,
+      "pixels": 441,
+      "map_sha256": "6fcbc14b348da55488c61b80a249f27a18d5e47eaff027ee8defcde76430651f"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "noise_only",
+      "variant": "m16_k24",
+      "peak": 1.030508428812027e-06,
+      "white_pixels": 0,
+      "pixels": 441,
+      "map_sha256": "39bda20a14647c623ecaa44fe19f1131335e2e7fb95247c3b76e83919e164a22"
+    },
+    {
+      "sheet": "12-candidate-maps-stress",
+      "scene": "outside",
+      "variant": "m16_k24",
+      "peak": 6.695976480841637e-06,
+      "white_pixels": 0,
+      "pixels": 441,
+      "map_sha256": "7b657abaac65f90803bfd2067fa0d1ede774f7be151c1405ad92c6d5dc400b64"
+    }
+  ],
+  "presentation_changes": [
+    "Restored measured gate counts in each candidate column header; map arrays, colors, normalization, scene labels and sheet split unchanged."
+  ],
+  "row_labels": {
+    "unequal6": "Unequal sources\n20\u201340 kHz\nSecond source \u22126 dB",
+    "three": "Three sources\n20\u201340 kHz\nRelative levels: 0 / \u22126 / \u22123 dB",
+    "tone30000": "Single tone\n30.000 kHz",
+    "pulses": "Short bursts\n20\u201340 kHz\n1 ms pulses \u00b7 100 Hz",
+    "independent10": "Microphone noise\nTwo 20\u201340 kHz sources\nIndependent noise: \u221230 dBFS",
+    "mismatch_small": "Microphone mismatch\nTwo 20\u201340 kHz sources\nGain \u03c3: 1 dB \u00b7 delay \u03c3: 0.5 \u00b5s",
+    "noise_only": "Noise only\nIndependent noise: \u221240 dBFS\nNo sources",
+    "outside": "Source outside FOV\n20\u201340 kHz\nAzimuth +40\u00b0 \u00b7 elevation +7\u00b0"
+  },
+  "measured_gate_counts": {
+    "m30_k8": 288105.75,
+    "m30_k10_q16": 281097.75,
+    "m24_k10": 285554.75,
+    "m16_k24": 287823.25
+  }
+}
