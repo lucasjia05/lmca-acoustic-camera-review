@@ -1,0 +1,146 @@
+[
+  {
+    "variant": "dft30_8",
+    "azimuth_deg": -12.0,
+    "noisy": false,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "dft16_128_full",
+    "azimuth_deg": -12.0,
+    "noisy": false,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft16_64_w18",
+    "azimuth_deg": -12.0,
+    "noisy": false,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft8_128_w18",
+    "azimuth_deg": -12.0,
+    "noisy": false,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft16_64_w16",
+    "azimuth_deg": -12.0,
+    "noisy": false,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft12_64_w24",
+    "azimuth_deg": -12.0,
+    "noisy": false,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "dft30_8",
+    "azimuth_deg": -12.0,
+    "noisy": true,
+    "fraction_correct": 0.9053497942386832
+  },
+  {
+    "variant": "dft16_128_full",
+    "azimuth_deg": -12.0,
+    "noisy": true,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft16_64_w18",
+    "azimuth_deg": -12.0,
+    "noisy": true,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft8_128_w18",
+    "azimuth_deg": -12.0,
+    "noisy": true,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft16_64_w16",
+    "azimuth_deg": -12.0,
+    "noisy": true,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft12_64_w24",
+    "azimuth_deg": -12.0,
+    "noisy": true,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "dft30_8",
+    "azimuth_deg": 27.0,
+    "noisy": false,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "dft16_128_full",
+    "azimuth_deg": 27.0,
+    "noisy": false,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft16_64_w18",
+    "azimuth_deg": 27.0,
+    "noisy": false,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft8_128_w18",
+    "azimuth_deg": 27.0,
+    "noisy": false,
+    "fraction_correct": 0.9876543209876543
+  },
+  {
+    "variant": "fft16_64_w16",
+    "azimuth_deg": 27.0,
+    "noisy": false,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft12_64_w24",
+    "azimuth_deg": 27.0,
+    "noisy": false,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "dft30_8",
+    "azimuth_deg": 27.0,
+    "noisy": true,
+    "fraction_correct": 0.8353909465020575
+  },
+  {
+    "variant": "dft16_128_full",
+    "azimuth_deg": 27.0,
+    "noisy": true,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft16_64_w18",
+    "azimuth_deg": 27.0,
+    "noisy": true,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft8_128_w18",
+    "azimuth_deg": 27.0,
+    "noisy": true,
+    "fraction_correct": 0.9876543209876543
+  },
+  {
+    "variant": "fft16_64_w16",
+    "azimuth_deg": 27.0,
+    "noisy": true,
+    "fraction_correct": 1.0
+  },
+  {
+    "variant": "fft12_64_w24",
+    "azimuth_deg": 27.0,
+    "noisy": true,
+    "fraction_correct": 1.0
+  }
+]

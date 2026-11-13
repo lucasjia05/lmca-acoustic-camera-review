@@ -1,0 +1,99 @@
+{
+  "architecture": "paired-real in-place FFT, one scalar read/write port, all-register, shared arithmetic, UART",
+  "feature_names": [
+    "constant",
+    "frame_storage_bits",
+    "microphones",
+    "directions",
+    "N",
+    "selected_bins"
+  ],
+  "coefficients": [
+    52968.704270923015,
+    9.632714344870386,
+    3055.5986871764767,
+    8.774218749999818,
+    32.012981365559824,
+    54.40983606557377
+  ],
+  "method": "Direction/bin slopes from matched controlled sweeps; remaining terms fitted nonnegative after subtracting those effects. Held-out cases excluded from all fitting.",
+  "training_points": 12,
+  "heldout": [
+    {
+      "name": "m12_n128_w18",
+      "measured_ge": 371735.74999999994,
+      "predicted_ge": 364635.5946764112,
+      "relative_error": 0.019100006721410993
+    },
+    {
+      "name": "m12_n64_w24",
+      "measured_ge": 281124.0,
+      "predicted_ge": 273485.2094502964,
+      "relative_error": 0.027172317374907808
+    },
+    {
+      "name": "m16_n128_w16",
+      "measured_ge": 424828.75,
+      "predicted_ge": 426177.4868708535,
+      "relative_error": 0.003174777768344354
+    },
+    {
+      "name": "m16_n64_grid1_w18",
+      "measured_ge": 299179.0,
+      "predicted_ge": 314487.04169900174,
+      "relative_error": 0.05116683222753515
+    },
+    {
+      "name": "m8_n128_w16",
+      "measured_ge": 245759.0,
+      "predicted_ge": 243910.3055470853,
+      "relative_error": 0.0075223875948172815
+    }
+  ],
+  "screening_fraction": 0.25,
+  "ranges": {
+    "m": [
+      4,
+      24
+    ],
+    "n": [
+      64,
+      128
+    ],
+    "w": [
+      16,
+      24
+    ],
+    "k": [
+      4,
+      13
+    ],
+    "d": [
+      121,
+      3721
+    ]
+  },
+  "fixed": {
+    "fs": 192000,
+    "band_hz": [
+      20000,
+      40000
+    ],
+    "fov_each_axis": 60,
+    "fft_fraction": "width - 2",
+    "pcm": "16/Q15",
+    "window": "18/Q16",
+    "spectrum": "24/Q22",
+    "coefficient": "18/Q16",
+    "phase_bits": 10,
+    "pdm": "CIC3/16, identity FIR",
+    "map_width": 48,
+    "uart_clks_per_bit": 50
+  },
+  "limitations": [
+    "Selected measurements do not cover every combination.",
+    "No SRAM, no free off-chip storage. No continuous acquisition, timing, physical area or power qualification.",
+    "Other arithmetic widths, different filters, parallelism and averaging need new calibration.",
+    "Screening interval is an engineering allowance, not a confidence interval."
+  ]
+}

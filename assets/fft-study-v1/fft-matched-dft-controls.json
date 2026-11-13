@@ -1,0 +1,32 @@
+[
+  {
+    "name": "fft_match_m16_n128_k13",
+    "m": 16,
+    "n": 128,
+    "k": 13,
+    "d": 441,
+    "step": 3.0,
+    "gates": 220914.24999999997,
+    "flip_flops": 17220,
+    "cycles_per_map_fixture": 132960.5,
+    "uart_cycles_per_map_fixture": 1363239.5,
+    "evidence": "results\\hardware_cost\\fft_shared\\fft_match_m16_n128_k13",
+    "previous_dft_prediction_ge": 221086.2474711475,
+    "previous_dft_relative_error": 0.0007785711928838257
+  },
+  {
+    "name": "fft_match_m16_n128_k8",
+    "m": 16,
+    "n": 128,
+    "k": 8,
+    "d": 441,
+    "step": 3.0,
+    "gates": 170650.5,
+    "flip_flops": 12099,
+    "cycles_per_map_fixture": 95360.5,
+    "uart_cycles_per_map_fixture": 1363037.0,
+    "evidence": "results\\hardware_cost\\fft_shared\\fft_match_m16_n128_k8",
+    "previous_dft_prediction_ge": 170948.83839780337,
+    "previous_dft_relative_error": 0.0017482421545989002
+  }
+]

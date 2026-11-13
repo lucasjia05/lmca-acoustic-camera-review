@@ -1,0 +1,14 @@
+{
+  "microphones": 16,
+  "window_samples": 64,
+  "fft_width": 18,
+  "selected_bins": null,
+  "sample_rate_hz": 192000,
+  "band_hz": [
+    20000,
+    40000
+  ],
+  "fov_az_deg": 60,
+  "fov_el_deg": 60,
+  "scan_step_deg": 3
+}
