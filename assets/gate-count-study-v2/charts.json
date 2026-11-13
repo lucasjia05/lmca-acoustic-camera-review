@@ -1,0 +1,86 @@
+[
+  {
+    "stem": "01-gates-vs-bins",
+    "title": "Gate count versus microphone and bin counts",
+    "caption": "Existing 20\u201340 kHz estimate: lines and shading are the original fitted model and engineering allowance. The black marker is the measured original 16-mic/eight-bin circuit, including UART.",
+    "alt": "Estimated gate count rises with selected-bin and microphone counts, with a 300k gate budget and one measured baseline point."
+  },
+  {
+    "stem": "02-precision-gates",
+    "title": "Measured savings from Fourier precision",
+    "caption": "Holding 16 mics, eight bins, 512 samples and 441 directions fixed, total synthesis estimates fall from 206.7k to 197.5k, 177.7k and 157.2k NAND2 equivalents. All storage and UART are included.",
+    "alt": "Four measured gate-count bars: original 46-bit 206.7k; 42-bit 197.5k; 34-bit 177.7k; 26-bit 157.2k."
+  },
+  {
+    "stem": "03-precision-quality",
+    "title": "Quality versus digital signal level",
+    "caption": "Accumulator rounding and power-output rounding are different tradeoffs. Weak-output failures must be counted alongside relative errors; the wide reference itself produces nine zero maps at the weakest level.",
+    "alt": "Two plots show accumulator pixel error and counts of all-zero maps as input signals become weaker."
+  },
+  {
+    "stem": "04-precision-map-example",
+    "title": "Inspect the maps and their differences",
+    "caption": "Worst relative-error case for the 34-bit accumulator: independent-noise seed 7, \u221246 dBFS peak input. Top maps share the reference intensity scale; bottom maps show signed numerical differences. This is one selected example, not an average.",
+    "alt": "Reference, 34-bit and 26-bit acoustic maps with true-source circles above signed-error maps, all using shared scales."
+  },
+  {
+    "stem": "05-area-bins-precision",
+    "title": "Bins \u00d7 microphones \u00d7 accumulator precision",
+    "caption": "New fitted curves and measured points at 42/Q32, 34/Q24 and 26/Q16 storage. Same fixed architecture; the original curves above remain unchanged.",
+    "alt": "Bins \u00d7 microphones \u00d7 accumulator precision"
+  },
+  {
+    "stem": "06-area-accumulator-width",
+    "title": "Area versus stored Fourier width",
+    "caption": "Fits at four and eight bins. Fractional precision and integer headroom are specified explicitly; other stage widths stay fixed.",
+    "alt": "Area versus stored Fourier width"
+  },
+  {
+    "stem": "07-area-window-length",
+    "title": "Area versus window length",
+    "caption": "Selected-bin DFT implementation: changing N affects accumulator guard bits and constants, not a full M\u00d7N PCM frame buffer.",
+    "alt": "Area versus window length"
+  },
+  {
+    "stem": "08-area-scan-grid",
+    "title": "Area versus angular grid spacing",
+    "caption": "FOV is fixed at 60\u00b0 per axis. The hardware reuses the datapath across directions and streams its single-window map.",
+    "alt": "Area versus angular grid spacing"
+  },
+  {
+    "stem": "09-averaging-storage-budget",
+    "title": "Averaging and overlap storage budget",
+    "caption": "Unimplemented planning calculation: only additional flip-flops for the named arrays are counted. Access logic and scheduling are excluded; these are not fitted total-area curves.",
+    "alt": "Averaging and overlap storage budget"
+  },
+  {
+    "stem": "10-area-sampling-filter",
+    "title": "Sampling and decimation comparison",
+    "caption": "Three complete synthesis points; the first and third match physical observation duration and bin spacing. Antialias performance is not qualified.",
+    "alt": "Sampling and decimation comparison"
+  },
+  {
+    "stem": "11-candidate-maps-signals",
+    "title": "Near-budget candidates: sources and signals",
+    "caption": "Seed-7 maps with identical source waveforms. Each map has its own normalization; read the absolute peak-power change beside every map.",
+    "alt": "Near-budget candidates: sources and signals"
+  },
+  {
+    "stem": "12-candidate-maps-stress",
+    "title": "Near-budget candidates: stress cases",
+    "caption": "Noise, microphone mismatch and controls. Bright peaks in noise-only or out-of-view scenes are not detections.",
+    "alt": "Near-budget candidates: stress cases"
+  },
+  {
+    "stem": "13-candidate-power-retention",
+    "title": "Power retained by each candidate",
+    "caption": "Median ratios across three seeds relative to the broad-spectrum, longer-observation software reference. Not calibrated acoustic sensitivity.",
+    "alt": "Power retained by each candidate"
+  },
+  {
+    "stem": "14-parameter-area-quality",
+    "title": "Controlled area/quality comparisons",
+    "caption": "One setting/group varies relative to the 30-mic/eight-bin baseline. Hatched area bars include unimplemented analytical estimates.",
+    "alt": "Controlled area/quality comparisons"
+  }
+]

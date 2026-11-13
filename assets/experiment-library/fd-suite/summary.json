@@ -1,0 +1,2153 @@
+[
+  {
+    "group": "01_basics",
+    "id": "single",
+    "title": "Single off-grid source",
+    "description": "Off-grid localization sanity check.",
+    "scores": [
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 32,
+        "off_target_candidate_count": 31,
+        "strongest_off_target_candidate_db": -9.472767330859206,
+        "peak_to_median_db": 14.595059040509925,
+        "peak_power_pcm_squared": 8.799259333139538e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 29,
+        "off_target_candidate_count": 28,
+        "strongest_off_target_candidate_db": -9.414899944865256,
+        "peak_to_median_db": 14.605294636870656,
+        "peak_power_pcm_squared": 8.570393922349793e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 28,
+        "off_target_candidate_count": 27,
+        "strongest_off_target_candidate_db": -9.871295012092581,
+        "peak_to_median_db": 14.647227353839353,
+        "peak_power_pcm_squared": 9.105512014886754e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.947824599919841,
+      4.868372800061479,
+      4.885330899851397
+    ],
+    "representative_folder": "results\\fd-suite\\single\\seed-7"
+  },
+  {
+    "group": "01_basics",
+    "id": "edge",
+    "title": "Source near field-of-view edge",
+    "description": "Edge steering accuracy.",
+    "scores": [
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              28.0,
+              27.0
+            ],
+            "error_deg": 0.46621929829393904,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 18,
+        "off_target_candidate_count": 17,
+        "strongest_off_target_candidate_db": -10.250225534931927,
+        "peak_to_median_db": 14.522448254576137,
+        "peak_power_pcm_squared": 8.902094942935282e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              28.0,
+              27.0
+            ],
+            "error_deg": 0.46621929829393904,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 20,
+        "off_target_candidate_count": 19,
+        "strongest_off_target_candidate_db": -10.171075298236437,
+        "peak_to_median_db": 14.522054527863817,
+        "peak_power_pcm_squared": 8.66910547073951e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              28.0,
+              27.0
+            ],
+            "error_deg": 0.46621929829393904,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 14,
+        "off_target_candidate_count": 13,
+        "strongest_off_target_candidate_db": -10.465681016695726,
+        "peak_to_median_db": 14.528725449980298,
+        "peak_power_pcm_squared": 9.206099274367245e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.902758599957451,
+      4.7443623000290245,
+      5.449054500088096
+    ],
+    "representative_folder": "results\\fd-suite\\edge\\seed-7"
+  },
+  {
+    "group": "01_basics",
+    "id": "equal",
+    "title": "Two equal sources",
+    "description": "Separate independent broadband sources.",
+    "scores": [
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -0.09866260105020871
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 146,
+        "off_target_candidate_count": 144,
+        "strongest_off_target_candidate_db": -7.879613098763692,
+        "peak_to_median_db": 11.594651644043203,
+        "peak_power_pcm_squared": 9.04901407028854e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -0.0580675379656721
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 135,
+        "off_target_candidate_count": 133,
+        "strongest_off_target_candidate_db": -8.010037049242191,
+        "peak_to_median_db": 11.594913952153455,
+        "peak_power_pcm_squared": 8.854134389984822e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -0.15869625864755976
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 121,
+        "off_target_candidate_count": 119,
+        "strongest_off_target_candidate_db": -7.77037701281284,
+        "peak_to_median_db": 11.628994575480307,
+        "peak_power_pcm_squared": 9.290461611216079e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      5.099137600045651,
+      4.955261500086635,
+      4.977767100092024
+    ],
+    "representative_folder": "results\\fd-suite\\equal\\seed-7"
+  },
+  {
+    "group": "01_basics",
+    "id": "unequal6",
+    "title": "Second source 6 dB weaker",
+    "description": "Moderate source dynamic range.",
+    "scores": [
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.797036228395837
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 59,
+        "off_target_candidate_count": 57,
+        "strongest_off_target_candidate_db": -9.161420375619032,
+        "peak_to_median_db": 13.61038931371934,
+        "peak_power_pcm_squared": 8.869789878013428e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.7141521097605485
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 57,
+        "off_target_candidate_count": 55,
+        "strongest_off_target_candidate_db": -9.13455937204091,
+        "peak_to_median_db": 13.590921039375129,
+        "peak_power_pcm_squared": 8.660169462076367e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.870982920651596
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 56,
+        "off_target_candidate_count": 54,
+        "strongest_off_target_candidate_db": -9.465596921966577,
+        "peak_to_median_db": 13.628816722639082,
+        "peak_power_pcm_squared": 9.141111804103736e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      5.343881200067699,
+      5.239985800115392,
+      4.959403000073507
+    ],
+    "representative_folder": "results\\fd-suite\\unequal6\\seed-7"
+  },
+  {
+    "group": "01_basics",
+    "id": "three",
+    "title": "Three sources",
+    "description": "More than two simultaneous sources.",
+    "scores": [
+      {
+        "matched_sources": 3,
+        "source_count": 3,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.805329643886274
+          },
+          {
+            "source": 3,
+            "direction_deg": [
+              18.0,
+              20.0
+            ],
+            "error_deg": 0.4895637094495212,
+            "relative_db": -2.8210806850428005
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 125,
+        "off_target_candidate_count": 122,
+        "strongest_off_target_candidate_db": -8.514826084901685,
+        "peak_to_median_db": 12.275807244211308,
+        "peak_power_pcm_squared": 9.085976714091423e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 3,
+        "source_count": 3,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.60663740400356
+          },
+          {
+            "source": 3,
+            "direction_deg": [
+              18.0,
+              20.0
+            ],
+            "error_deg": 0.4895637094495212,
+            "relative_db": -2.581075690411243
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 124,
+        "off_target_candidate_count": 121,
+        "strongest_off_target_candidate_db": -8.486330642073746,
+        "peak_to_median_db": 12.19692196112462,
+        "peak_power_pcm_squared": 8.798525145825154e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 3,
+        "source_count": 3,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.861077440220999
+          },
+          {
+            "source": 3,
+            "direction_deg": [
+              18.0,
+              20.0
+            ],
+            "error_deg": 0.4895637094495212,
+            "relative_db": -2.6878961892407185
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 111,
+        "off_target_candidate_count": 108,
+        "strongest_off_target_candidate_db": -8.713055118742503,
+        "peak_to_median_db": 12.295708309959547,
+        "peak_power_pcm_squared": 9.386908002864088e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.706674699904397,
+      4.940759000135586,
+      4.906292899977416
+    ],
+    "representative_folder": "results\\fd-suite\\three\\seed-7"
+  },
+  {
+    "group": "01_basics",
+    "id": "tone",
+    "title": "Single 37.5 kHz tone",
+    "description": "Narrowband ambiguity versus broadband.",
+    "scores": [
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 98,
+        "off_target_candidate_count": 97,
+        "strongest_off_target_candidate_db": -5.555511829518619,
+        "peak_to_median_db": 16.484003264251864,
+        "peak_power_pcm_squared": 8.924612134210274e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 98,
+        "off_target_candidate_count": 97,
+        "strongest_off_target_candidate_db": -5.555510685614577,
+        "peak_to_median_db": 16.484018061898137,
+        "peak_power_pcm_squared": 8.923240085918417e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 98,
+        "off_target_candidate_count": 97,
+        "strongest_off_target_candidate_db": -5.555510672538528,
+        "peak_to_median_db": 16.483999384342923,
+        "peak_power_pcm_squared": 8.922567891860051e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.9083986999467015,
+      4.933878300013021,
+      4.8403042000718415
+    ],
+    "representative_folder": "results\\fd-suite\\tone\\seed-7"
+  },
+  {
+    "group": "02_resolution",
+    "id": "close3",
+    "title": "Two sources 3\u00b0 apart",
+    "description": "Resolution at small angular separation.",
+    "scores": [
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -1.0,
+              0.0
+            ],
+            "error_deg": 0.5656831273617458,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              2.0,
+              0.0
+            ],
+            "error_deg": 0.5656831273611014,
+            "relative_db": -0.06107564849261049
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 127,
+        "off_target_candidate_count": 125,
+        "strongest_off_target_candidate_db": -7.404353145205491,
+        "peak_to_median_db": 11.634433298987501,
+        "peak_power_pcm_squared": 9.208600922283991e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -1.0,
+              0.0
+            ],
+            "error_deg": 0.5656831273617458,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              2.0,
+              0.0
+            ],
+            "error_deg": 0.5656831273611014,
+            "relative_db": -0.04074343541166856
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 114,
+        "off_target_candidate_count": 112,
+        "strongest_off_target_candidate_db": -7.313769043005579,
+        "peak_to_median_db": 11.61077923021744,
+        "peak_power_pcm_squared": 8.76420984436989e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -1.0,
+              0.0
+            ],
+            "error_deg": 0.5656831273617458,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              2.0,
+              0.0
+            ],
+            "error_deg": 0.5656831273611014,
+            "relative_db": -0.11827374395938836
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 109,
+        "off_target_candidate_count": 107,
+        "strongest_off_target_candidate_db": -7.581476488420412,
+        "peak_to_median_db": 11.709084994049688,
+        "peak_power_pcm_squared": 9.427648299059925e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.643799299839884,
+      5.0257571002002805,
+      4.815051199868321
+    ],
+    "representative_folder": "results\\fd-suite\\close3\\seed-7"
+  },
+  {
+    "group": "02_resolution",
+    "id": "close1",
+    "title": "Two sources 1\u00b0 apart",
+    "description": "Deliberately unresolved stress case; one peak cannot count twice.",
+    "scores": [
+      {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              0.0,
+              0.0
+            ],
+            "error_deg": 0.5656831273617458,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 33,
+        "off_target_candidate_count": 32,
+        "strongest_off_target_candidate_db": -9.627677163275727,
+        "peak_to_median_db": 14.330926121758896,
+        "peak_power_pcm_squared": 0.0001659004506428448,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              0.0,
+              0.0
+            ],
+            "error_deg": 0.5656831273617458,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 35,
+        "off_target_candidate_count": 34,
+        "strongest_off_target_candidate_db": -9.443528046709734,
+        "peak_to_median_db": 14.344138733895115,
+        "peak_power_pcm_squared": 0.00016078853231866726,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              0.0,
+              0.0
+            ],
+            "error_deg": 0.5656831273617458,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 36,
+        "off_target_candidate_count": 35,
+        "strongest_off_target_candidate_db": -9.676603033168469,
+        "peak_to_median_db": 14.370674607940352,
+        "peak_power_pcm_squared": 0.00016584727413295944,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.584929900011048,
+      5.1711426000110805,
+      5.165553800063208
+    ],
+    "representative_folder": "results\\fd-suite\\close1\\seed-7"
+  },
+  {
+    "group": "02_resolution",
+    "id": "unequal12",
+    "title": "Second source 12 dB weaker",
+    "description": "Weak source near display cutoff and sidelobes.",
+    "scores": [
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -8.0
+            ],
+            "error_deg": 0.7191148073946835,
+            "relative_db": -10.718267259678072
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 36,
+        "off_target_candidate_count": 34,
+        "strongest_off_target_candidate_db": -9.388519552031536,
+        "peak_to_median_db": 14.323318241134583,
+        "peak_power_pcm_squared": 8.820882555147388e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -8.0
+            ],
+            "error_deg": 0.7191148073946835,
+            "relative_db": -10.651432550970316
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 33,
+        "off_target_candidate_count": 31,
+        "strongest_off_target_candidate_db": -9.35571669315353,
+        "peak_to_median_db": 14.32021277884844,
+        "peak_power_pcm_squared": 8.602218064258804e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -8.0
+            ],
+            "error_deg": 0.7191148073946835,
+            "relative_db": -10.883973817180618
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 37,
+        "off_target_candidate_count": 35,
+        "strongest_off_target_candidate_db": -9.766456952913728,
+        "peak_to_median_db": 14.374393280751116,
+        "peak_power_pcm_squared": 9.10901266284e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      5.248604000080377,
+      5.188869300065562,
+      5.174414400011301
+    ],
+    "representative_folder": "results\\fd-suite\\unequal12\\seed-7"
+  },
+  {
+    "group": "02_resolution",
+    "id": "pulses",
+    "title": "Short ultrasonic bursts",
+    "description": "Synthetic 1 ms bursts, not a measured discharge waveform.",
+    "scores": [
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 56,
+        "off_target_candidate_count": 55,
+        "strongest_off_target_candidate_db": -8.18875261118145,
+        "peak_to_median_db": 14.629509384806976,
+        "peak_power_pcm_squared": 7.4974083641594665e-06,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 34,
+        "off_target_candidate_count": 33,
+        "strongest_off_target_candidate_db": -9.13409163146819,
+        "peak_to_median_db": 14.656331250700669,
+        "peak_power_pcm_squared": 1.0231430208214563e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 35,
+        "off_target_candidate_count": 34,
+        "strongest_off_target_candidate_db": -9.46049040079625,
+        "peak_to_median_db": 14.570029828863646,
+        "peak_power_pcm_squared": 8.825253018232913e-06,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.981713899876922,
+      4.756960999919102,
+      4.661828099982813
+    ],
+    "representative_folder": "results\\fd-suite\\pulses\\seed-7"
+  },
+  {
+    "group": "02_resolution",
+    "id": "near_plane",
+    "title": "0.5 m source, far-field steering",
+    "description": "Wavefront curvature mismatch at close range.",
+    "scores": [
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": -5.956314800284313
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 140,
+        "off_target_candidate_count": 139,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 4.964952614725869,
+        "peak_power_pcm_squared": 0.00385742094057681,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": -6.15830565746678
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 129,
+        "off_target_candidate_count": 128,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 5.178944708049854,
+        "peak_power_pcm_squared": 0.0039189882509079255,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": -6.056136672057475
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 123,
+        "off_target_candidate_count": 122,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 5.0035683258936094,
+        "peak_power_pcm_squared": 0.0039889836076821275,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.0967313998844475,
+      4.181416400009766,
+      4.880605400074273
+    ],
+    "representative_folder": "results\\fd-suite\\near_plane\\seed-7"
+  },
+  {
+    "group": "02_resolution",
+    "id": "near_focus",
+    "title": "0.5 m source, matched focus",
+    "description": "Same near source with spherical steering focused at 0.5 m.",
+    "scores": [
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 27,
+        "off_target_candidate_count": 26,
+        "strongest_off_target_candidate_db": -9.523760495014425,
+        "peak_to_median_db": 14.674096077769093,
+        "peak_power_pcm_squared": 0.03499866922161046,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 29,
+        "off_target_candidate_count": 28,
+        "strongest_off_target_candidate_db": -9.508083244118643,
+        "peak_to_median_db": 14.65605538907511,
+        "peak_power_pcm_squared": 0.034087525539801405,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 1,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 27,
+        "off_target_candidate_count": 26,
+        "strongest_off_target_candidate_db": -9.771997295788129,
+        "peak_to_median_db": 14.708615643709955,
+        "peak_power_pcm_squared": 0.03619824642151486,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      5.72838390013203,
+      7.218227700097486,
+      6.088727000169456
+    ],
+    "representative_folder": "results\\fd-suite\\near_focus\\seed-7"
+  },
+  {
+    "group": "03_interference",
+    "id": "independent0",
+    "title": "Independent mic noise: -40 dBFS",
+    "description": "Broadband channel noise; stronger source is about -40 dBFS at 10 m. Levels are uncalibrated.",
+    "scores": [
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.670244131570785
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 108,
+        "off_target_candidate_count": 106,
+        "strongest_off_target_candidate_db": -8.889758734643689,
+        "peak_to_median_db": 12.768258818523178,
+        "peak_power_pcm_squared": 8.96260509406111e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.606163546693123
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 98,
+        "off_target_candidate_count": 96,
+        "strongest_off_target_candidate_db": -8.81938407808036,
+        "peak_to_median_db": 12.758275780530237,
+        "peak_power_pcm_squared": 8.729170735073718e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.903830000246044
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 95,
+        "off_target_candidate_count": 93,
+        "strongest_off_target_candidate_db": -9.109925315233543,
+        "peak_to_median_db": 12.843020741447617,
+        "peak_power_pcm_squared": 9.310213927102052e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      5.240377600071952,
+      4.970385699998587,
+      4.787346400087699
+    ],
+    "representative_folder": "results\\fd-suite\\independent0\\seed-7"
+  },
+  {
+    "group": "03_interference",
+    "id": "independent10",
+    "title": "Independent mic noise: -30 dBFS",
+    "description": "Broadband channel noise; stronger source is about -40 dBFS at 10 m. Levels are uncalibrated.",
+    "scores": [
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -4.820992923965509
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 156,
+        "off_target_candidate_count": 154,
+        "strongest_off_target_candidate_db": -7.0358644492427524,
+        "peak_to_median_db": 8.912009442532927,
+        "peak_power_pcm_squared": 9.79644892216403e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -4.794112637042186
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 152,
+        "off_target_candidate_count": 150,
+        "strongest_off_target_candidate_db": -6.821254862941377,
+        "peak_to_median_db": 8.858805971456793,
+        "peak_power_pcm_squared": 9.525045727771164e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.289521455465086
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 145,
+        "off_target_candidate_count": 143,
+        "strongest_off_target_candidate_db": -7.130543651779084,
+        "peak_to_median_db": 9.104980625638419,
+        "peak_power_pcm_squared": 0.00010279347837418672,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      5.092130299890414,
+      5.083574200049043,
+      5.003774699987844
+    ],
+    "representative_folder": "results\\fd-suite\\independent10\\seed-7"
+  },
+  {
+    "group": "03_interference",
+    "id": "near_noise",
+    "title": "Nearby interference",
+    "description": "Coherent synthetic 20\u201360 kHz point interferer at [0.15,0,-0.30] m; not a measured drone.",
+    "scores": [
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -8.0
+            ],
+            "error_deg": 0.7191148073946835,
+            "relative_db": -5.283122014618968
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 147,
+        "off_target_candidate_count": 145,
+        "strongest_off_target_candidate_db": -6.1563182780954335,
+        "peak_to_median_db": 9.964205553882282,
+        "peak_power_pcm_squared": 9.39987857654287e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -8.0
+            ],
+            "error_deg": 0.7191148073946835,
+            "relative_db": -5.218190607972043
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 151,
+        "off_target_candidate_count": 149,
+        "strongest_off_target_candidate_db": -6.369138422718673,
+        "peak_to_median_db": 9.936192354654828,
+        "peak_power_pcm_squared": 9.235281578978478e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.4837321404641814
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 144,
+        "off_target_candidate_count": 142,
+        "strongest_off_target_candidate_db": -6.2281500862026995,
+        "peak_to_median_db": 10.057446319058812,
+        "peak_power_pcm_squared": 9.583027327309488e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.973476199898869,
+      4.72533840010874,
+      4.438442900078371
+    ],
+    "representative_folder": "results\\fd-suite\\near_noise\\seed-7"
+  },
+  {
+    "group": "03_interference",
+    "id": "near_noise_strong",
+    "title": "Nearby interference +10 dB",
+    "description": "Coherent synthetic 20\u201360 kHz point interferer at [0.15,0,-0.30] m; not a measured drone.",
+    "scores": [
+      {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": -0.5379032218827324
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 159,
+        "off_target_candidate_count": 158,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 4.812736587454578,
+        "peak_power_pcm_squared": 0.00018149823646437915,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": -0.0736467881697708
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 147,
+        "off_target_candidate_count": 146,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 4.535024994340791,
+        "peak_power_pcm_squared": 0.0001689628787010386,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 1,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              6.0
+            ],
+            "error_deg": 0.805009761927195,
+            "relative_db": -0.5875779918817771
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 154,
+        "off_target_candidate_count": 153,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 5.022889682682161,
+        "peak_power_pcm_squared": 0.0001876057933770635,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.7106292000971735,
+      6.964331399882212,
+      5.6174494998995215
+    ],
+    "representative_folder": "results\\fd-suite\\near_noise_strong\\seed-7"
+  },
+  {
+    "group": "03_interference",
+    "id": "tone_interference",
+    "title": "Strong in-band interfering tone",
+    "description": "40 kHz far-field interferer at (+20,+15), 10 dB above strongest source at equal range.",
+    "scores": [
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -13.0,
+              7.0
+            ],
+            "error_deg": 0.6669917162870741,
+            "relative_db": -8.223023395436174
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              13.0,
+              -7.0
+            ],
+            "error_deg": 0.7171773909088569,
+            "relative_db": -11.170875127566465
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 110,
+        "off_target_candidate_count": 108,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 16.142472692817588,
+        "peak_power_pcm_squared": 0.0009877693843701693,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -13.0,
+              7.0
+            ],
+            "error_deg": 0.6669917162870741,
+            "relative_db": -7.936250112544048
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              13.0,
+              -7.0
+            ],
+            "error_deg": 0.7171773909088569,
+            "relative_db": -11.375836817712678
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 110,
+        "off_target_candidate_count": 108,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 16.170608215455694,
+        "peak_power_pcm_squared": 0.0009930495263085909,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -13.0,
+              7.0
+            ],
+            "error_deg": 0.6669917162870741,
+            "relative_db": -8.03458394637822
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              13.0,
+              -7.0
+            ],
+            "error_deg": 0.7171773909088569,
+            "relative_db": -11.329780494524917
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 110,
+        "off_target_candidate_count": 108,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 16.147840328392423,
+        "peak_power_pcm_squared": 0.0009862508274358017,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      5.489275699947029,
+      4.5287717001046985,
+      4.193954799789935
+    ],
+    "representative_folder": "results\\fd-suite\\tone_interference\\seed-7"
+  },
+  {
+    "group": "03_interference",
+    "id": "audible",
+    "title": "Strong out-of-band noise",
+    "description": "Independent 1\u201315 kHz noise at -20 dBFS; ideal linear input, no clipping/nonlinearity.",
+    "scores": [
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.796962546081136
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 59,
+        "off_target_candidate_count": 57,
+        "strongest_off_target_candidate_db": -9.161418785064587,
+        "peak_to_median_db": 13.610579379547685,
+        "peak_power_pcm_squared": 8.869757074136977e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.714146371142732
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 57,
+        "off_target_candidate_count": 55,
+        "strongest_off_target_candidate_db": -9.134571650352411,
+        "peak_to_median_db": 13.590757808606684,
+        "peak_power_pcm_squared": 8.66016412561066e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.870959805913191
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 56,
+        "off_target_candidate_count": 54,
+        "strongest_off_target_candidate_db": -9.46546651194148,
+        "peak_to_median_db": 13.62854543964471,
+        "peak_power_pcm_squared": 9.141080382782465e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.259439900051802,
+      4.396176399895921,
+      4.560026200022548
+    ],
+    "representative_folder": "results\\fd-suite\\audible\\seed-7"
+  },
+  {
+    "group": "04_controls",
+    "id": "mismatch_small",
+    "title": "Mic errors: 1 dB / 0.5 \u00b5s RMS",
+    "description": "Independent Gaussian channel gain/delay errors, unknown to steering.",
+    "scores": [
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.787207813194235
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 70,
+        "off_target_candidate_count": 68,
+        "strongest_off_target_candidate_db": -9.31568889465715,
+        "peak_to_median_db": 13.512901658135805,
+        "peak_power_pcm_squared": 9.052887816616665e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.6810860827425556
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 65,
+        "off_target_candidate_count": 63,
+        "strongest_off_target_candidate_db": -8.88973618440186,
+        "peak_to_median_db": 13.492825273007057,
+        "peak_power_pcm_squared": 8.103872129033751e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.819355101235483
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 61,
+        "off_target_candidate_count": 59,
+        "strongest_off_target_candidate_db": -9.121332054114855,
+        "peak_to_median_db": 13.467099034961054,
+        "peak_power_pcm_squared": 9.037953680805307e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.362387899775058,
+      4.39641399984248,
+      5.280108000151813
+    ],
+    "representative_folder": "results\\fd-suite\\mismatch_small\\seed-7"
+  },
+  {
+    "group": "04_controls",
+    "id": "mismatch_large",
+    "title": "Mic errors: 2 dB / 3 \u00b5s RMS",
+    "description": "Independent Gaussian channel gain/delay errors, unknown to steering.",
+    "scores": [
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -13.0,
+              7.0
+            ],
+            "error_deg": 0.6669917162870741,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              13.0,
+              -7.0
+            ],
+            "error_deg": 0.7171773909088569,
+            "relative_db": -5.343047118912536
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 148,
+        "off_target_candidate_count": 146,
+        "strongest_off_target_candidate_db": -7.207531323920682,
+        "peak_to_median_db": 11.124200195733332,
+        "peak_power_pcm_squared": 5.857685485661993e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -13.0,
+              7.0
+            ],
+            "error_deg": 0.6669917162870741,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              13.0,
+              -7.0
+            ],
+            "error_deg": 0.7171773909088569,
+            "relative_db": -5.401555587846588
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 113,
+        "off_target_candidate_count": 111,
+        "strongest_off_target_candidate_db": -6.636156805451843,
+        "peak_to_median_db": 11.831900549393987,
+        "peak_power_pcm_squared": 5.7027865187092015e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 2,
+        "source_count": 2,
+        "matches": [
+          {
+            "source": 1,
+            "direction_deg": [
+              -12.0,
+              7.0
+            ],
+            "error_deg": 0.49771833856655273,
+            "relative_db": 0.0
+          },
+          {
+            "source": 2,
+            "direction_deg": [
+              14.0,
+              -7.0
+            ],
+            "error_deg": 0.5634589360144042,
+            "relative_db": -5.1517625650520085
+          }
+        ],
+        "candidate_peak_count_above_minus12_db": 144,
+        "off_target_candidate_count": 142,
+        "strongest_off_target_candidate_db": -5.7476358250777455,
+        "peak_to_median_db": 10.552022852257085,
+        "peak_power_pcm_squared": 4.995248392322544e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.1554914999287575,
+      4.218521900009364,
+      4.104784099850804
+    ],
+    "representative_folder": "results\\fd-suite\\mismatch_large\\seed-7"
+  },
+  {
+    "group": "04_controls",
+    "id": "noise_only",
+    "title": "Noise only: independent channels",
+    "description": "No source; normalized map still has a brightest point.",
+    "scores": [
+      {
+        "matched_sources": 0,
+        "source_count": 0,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 194,
+        "off_target_candidate_count": 194,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 0.6096013767590983,
+        "peak_power_pcm_squared": 9.971478795153072e-07,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 0,
+        "source_count": 0,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 195,
+        "off_target_candidate_count": 195,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 0.5760815955399563,
+        "peak_power_pcm_squared": 9.872305631349356e-07,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 0,
+        "source_count": 0,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 187,
+        "off_target_candidate_count": 187,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 0.6407151525103654,
+        "peak_power_pcm_squared": 1.0088232204729808e-06,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.404086400056258,
+      5.083191100042313,
+      4.717703299829736
+    ],
+    "representative_folder": "results\\fd-suite\\noise_only\\seed-7"
+  },
+  {
+    "group": "04_controls",
+    "id": "coherent_only",
+    "title": "Noise only: directional interferer",
+    "description": "No target; physical interference can form a convincing peak.",
+    "scores": [
+      {
+        "matched_sources": 0,
+        "source_count": 0,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 22,
+        "off_target_candidate_count": 22,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 14.670300708833118,
+        "peak_power_pcm_squared": 9.033623944175128e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 0,
+        "source_count": 0,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 24,
+        "off_target_candidate_count": 24,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 14.666533280708833,
+        "peak_power_pcm_squared": 8.798588998079503e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 0,
+        "source_count": 0,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 22,
+        "off_target_candidate_count": 22,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 14.695477635714361,
+        "peak_power_pcm_squared": 9.3399835363374e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      4.868846300058067,
+      4.341607700102031,
+      4.135542299831286
+    ],
+    "representative_folder": "results\\fd-suite\\coherent_only\\seed-7"
+  },
+  {
+    "group": "04_controls",
+    "id": "outside",
+    "title": "Source outside scan: (+40\u00b0, +7\u00b0)",
+    "description": "Source is off-plot; sidelobes can appear inside the field of view.",
+    "scores": [
+      {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 165,
+        "off_target_candidate_count": 165,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 4.599829404761005,
+        "peak_power_pcm_squared": 9.082698659686152e-06,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 155,
+        "off_target_candidate_count": 155,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 4.650728979554793,
+        "peak_power_pcm_squared": 8.928830539826012e-06,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 141,
+        "off_target_candidate_count": 141,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 4.455115782874563,
+        "peak_power_pcm_squared": 9.04202566946711e-06,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      3.8450856001581997,
+      3.949364800006151,
+      4.029915899969637
+    ],
+    "representative_folder": "results\\fd-suite\\outside\\seed-7"
+  },
+  {
+    "group": "04_controls",
+    "id": "rear",
+    "title": "Source behind planar array",
+    "description": "Front/back ambiguity of an ideal omnidirectional planar array.",
+    "scores": [
+      {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 29,
+        "off_target_candidate_count": 29,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 14.667823218553846,
+        "peak_power_pcm_squared": 8.86934906672313e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 28,
+        "off_target_candidate_count": 28,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 14.6629877869325,
+        "peak_power_pcm_squared": 8.638681229516285e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      },
+      {
+        "matched_sources": 0,
+        "source_count": 1,
+        "matches": [],
+        "candidate_peak_count_above_minus12_db": 26,
+        "off_target_candidate_count": 26,
+        "strongest_off_target_candidate_db": 0.0,
+        "peak_to_median_db": 14.701961449774467,
+        "peak_power_pcm_squared": 9.175805661731236e-05,
+        "matching_tolerance_deg": 1.5,
+        "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+      }
+    ],
+    "processing_seconds": [
+      3.9463766999542713,
+      3.889062700094655,
+      4.118456499883905
+    ],
+    "representative_folder": "results\\fd-suite\\rear\\seed-7"
+  }
+]

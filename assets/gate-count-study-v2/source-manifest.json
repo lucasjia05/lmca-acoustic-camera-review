@@ -1,0 +1,265 @@
+{
+  "files": {
+    "assets/gate-count-study-v2/05-area-bins-precision.svg": {
+      "source": "docs/review/gate-count-study/05-area-bins-precision.svg",
+      "sha256": "03163a9e33ef24b444befb695dded904d5ac28381458a7de026e99a90b9ed42b",
+      "published_sha256": "01b66bac0bafbd57b20324a4051cf4afe813d0624079fab7bc10115c463e5447"
+    },
+    "assets/gate-count-study-v2/06-area-accumulator-width.svg": {
+      "source": "docs/review/gate-count-study/06-area-accumulator-width.svg",
+      "sha256": "8ec91903272d9344285bb8f0188cccbd12bf57c309a72fa89728a1d983c6d83a",
+      "published_sha256": "5bbda0d99f0f6bc7ef9cb84fa07f853cab6f930e79ffe19b4442eaf63e0941c8"
+    },
+    "assets/gate-count-study-v2/07-area-window-length.svg": {
+      "source": "docs/review/gate-count-study/07-area-window-length.svg",
+      "sha256": "6572bb8da6e268c8cbc830c05a8bac05b406503ab7b48bfcda9467e576f9a053",
+      "published_sha256": "2dbb1899d4669429cc72f65f018734236a2c536a3f144d8adf23ca188b682880"
+    },
+    "assets/gate-count-study-v2/08-area-scan-grid.svg": {
+      "source": "docs/review/gate-count-study/08-area-scan-grid.svg",
+      "sha256": "9c0749cf01ea800a08f77bfeb506dde56f50b7019d783abfbb187e9dd11a7789",
+      "published_sha256": "16cbd7269914671003160b2b79bbbacf58508a6c060388a0f9e63379f8dd888a"
+    },
+    "assets/gate-count-study-v2/09-averaging-storage-budget.svg": {
+      "source": "docs/review/gate-count-study/09-averaging-storage-budget.svg",
+      "sha256": "38da1c64afab2d6a857105f34e791a6a143d68d70e463111bd98cb51169a7581",
+      "published_sha256": "3be30317fdf18772c97c747eae9adca7e81057e023654914956042c8e063e760"
+    },
+    "assets/gate-count-study-v2/10-area-sampling-filter.svg": {
+      "source": "docs/review/gate-count-study/10-area-sampling-filter.svg",
+      "sha256": "a3ed5f571bf63d3c5fe991713e38b4567105bc1df3c74333ef24e56111ca8e7e",
+      "published_sha256": "5890dcfe2f2018dd5fcdfeb50a663a427e1af464e071191cbf8b3f6a22365512"
+    },
+    "assets/gate-count-study-v2/11-candidate-maps-signals.svg": {
+      "source": "docs/review/gate-count-study/11-candidate-maps-signals.svg",
+      "sha256": "e52fd88b2c07ccaf87b09d899e8dc01f14aa4f0a2179c8e214921890a9847be2",
+      "published_sha256": "4a290229d56808875bc162c69cee666228b35969c245635a38c955ba4bab0a4e"
+    },
+    "assets/gate-count-study-v2/12-candidate-maps-stress.svg": {
+      "source": "docs/review/gate-count-study/12-candidate-maps-stress.svg",
+      "sha256": "fd5ae4fca261eb5a29a2ea05be689d31626516212bd6a0477886869277f14b47",
+      "published_sha256": "fd542c70bdf22325412b00e0f826a320feb30750ccbb8876c78f762b5f2943cf"
+    },
+    "assets/gate-count-study-v2/13-candidate-power-retention.svg": {
+      "source": "docs/review/gate-count-study/13-candidate-power-retention.svg",
+      "sha256": "cbf9712d863ff571da8d4834864308aad4472dac515becf4df0c06665d776ad5",
+      "published_sha256": "ecc050296795191c68dd0e2c08a60deb88d47f2a401d0b87736708b43373a8c9"
+    },
+    "assets/gate-count-study-v2/14-parameter-area-quality.svg": {
+      "source": "docs/review/gate-count-study/14-parameter-area-quality.svg",
+      "sha256": "bcdf3bd72bac40397231972d6cc29484eb3580346cc7cebf5d687676403568e1",
+      "published_sha256": "04ff1369a466aab79d7b913e08963721a3c39942e17c3e53619eab54285a3bff"
+    },
+    "assets/gate-count-study-v2/charts.json": {
+      "source": "docs/review/gate-count-study/charts.json",
+      "sha256": "8253c644f7edd24e0c80b5e23701f059b0d51f334095b9655ac652cb3d076510",
+      "published_sha256": "8253c644f7edd24e0c80b5e23701f059b0d51f334095b9655ac652cb3d076510"
+    },
+    "assets/gate-count-study-v2/area-axes-configurations.csv": {
+      "source": "docs/review/gate-count-study/area-axes-configurations.csv",
+      "sha256": "d151c892671036fd87e426111df730a08de2a93539752eb377dea4af870dd7bb",
+      "published_sha256": "d151c892671036fd87e426111df730a08de2a93539752eb377dea4af870dd7bb"
+    },
+    "assets/gate-count-study-v2/area-axes-measured.csv": {
+      "source": "docs/review/gate-count-study/area-axes-measured.csv",
+      "sha256": "e84864b15e8debf380acd7ecd050e62007eb05a31d203b57ccbdb82113a62896",
+      "published_sha256": "e84864b15e8debf380acd7ecd050e62007eb05a31d203b57ccbdb82113a62896"
+    },
+    "assets/gate-count-study-v2/area-axes-measurements.json": {
+      "source": "docs/review/gate-count-study/area-axes-measurements.json",
+      "sha256": "18a9fae98dad05065dce1a2213472da40d96b51598b4047e19227413d3e91a29",
+      "published_sha256": "18a9fae98dad05065dce1a2213472da40d96b51598b4047e19227413d3e91a29"
+    },
+    "assets/gate-count-study-v2/area-axes-model.json": {
+      "source": "docs/review/gate-count-study/area-axes-model.json",
+      "sha256": "0f5ef98edeecb020cdc353ce11602632ebcc9519437e0ac31d63ad819551617e",
+      "published_sha256": "0f5ef98edeecb020cdc353ce11602632ebcc9519437e0ac31d63ad819551617e"
+    },
+    "assets/gate-count-study-v2/averaging-storage-budget.json": {
+      "source": "docs/review/gate-count-study/averaging-storage-budget.json",
+      "sha256": "74fe8ab0a54b16f1a4c2d64db19ca34ea031ba724b84977852122248d8c1f75f",
+      "published_sha256": "74fe8ab0a54b16f1a4c2d64db19ca34ea031ba724b84977852122248d8c1f75f"
+    },
+    "assets/gate-count-study-v2/area-axis-investigation.md": {
+      "source": "docs/review/gate-count-study/area-axis-investigation.md",
+      "sha256": "b6528b22aeaff49f3252171c54390667bcaf422e1bcc720ff3187a5b13db0010",
+      "published_sha256": "b6528b22aeaff49f3252171c54390667bcaf422e1bcc720ff3187a5b13db0010"
+    },
+    "assets/gate-count-study-v2/area-estimator-defaults.json": {
+      "source": "docs/review/gate-count-study/area-estimator-defaults.json",
+      "sha256": "f6dfdefbfaf2b23a59cf8d3c11156d7511e0d16187505fad65bcb73c5ba36829",
+      "published_sha256": "f6dfdefbfaf2b23a59cf8d3c11156d7511e0d16187505fad65bcb73c5ba36829"
+    },
+    "assets/gate-count-study-v2/area-estimator.md": {
+      "source": "docs/review/gate-count-study/area-estimator.md",
+      "sha256": "db1ed3039060270f14ce5e039dd991e46e65129264522bcccfdec9ee5cbf7fe2",
+      "published_sha256": "db1ed3039060270f14ce5e039dd991e46e65129264522bcccfdec9ee5cbf7fe2"
+    },
+    "assets/gate-count-study-v2/candidate-comparisons.csv": {
+      "source": "docs/review/gate-count-study/candidate-comparisons.csv",
+      "sha256": "4ac665e935740c8d461328e53bfeb96556bdfe2632a2249eac14decb1cb405b1",
+      "published_sha256": "4ac665e935740c8d461328e53bfeb96556bdfe2632a2249eac14decb1cb405b1"
+    },
+    "assets/gate-count-study-v2/candidate-configurations.json": {
+      "source": "docs/review/gate-count-study/candidate-configurations.json",
+      "sha256": "8f2cadc6d56f63ddcd40bd0d1ccc9cf2be1c6b89d00b2df33e6f83b5b1ee7a33",
+      "published_sha256": "8f2cadc6d56f63ddcd40bd0d1ccc9cf2be1c6b89d00b2df33e6f83b5b1ee7a33"
+    },
+    "assets/gate-count-study-v2/candidate-measurements.json": {
+      "source": "docs/review/gate-count-study/candidate-measurements.json",
+      "sha256": "86e748ad9c574df77783c2b0ce5d3a44b986ba6b01c7a83d3e9b6e1ae6faa5c8",
+      "published_sha256": "86e748ad9c574df77783c2b0ce5d3a44b986ba6b01c7a83d3e9b6e1ae6faa5c8"
+    },
+    "assets/gate-count-study-v2/candidate-summary.json": {
+      "source": "docs/review/gate-count-study/candidate-summary.json",
+      "sha256": "a606247772696cdad20dfbcecc3a3bc4794cc04c4c4c3eb2538ec3d17d8b254f",
+      "published_sha256": "a606247772696cdad20dfbcecc3a3bc4794cc04c4c4c3eb2538ec3d17d8b254f"
+    },
+    "assets/gate-count-study-v2/candidate-validation.json": {
+      "source": "docs/review/gate-count-study/candidate-validation.json",
+      "sha256": "3e5936a9743c105a83628bddf80c8fcc5a1cf3710a48a6e2db8222c6e78eb16d",
+      "published_sha256": "3e5936a9743c105a83628bddf80c8fcc5a1cf3710a48a6e2db8222c6e78eb16d"
+    },
+    "assets/gate-count-study-v2/near-300k-candidates.md": {
+      "source": "docs/review/gate-count-study/near-300k-candidates.md",
+      "sha256": "c83452f31405a0358d07eea99a8b67ffe0a165395c721f7df7e98837eda243fd",
+      "published_sha256": "c83452f31405a0358d07eea99a8b67ffe0a165395c721f7df7e98837eda243fd"
+    },
+    "assets/experiment-library/fd-suite/index.html": {
+      "source": "results/fd-suite/index.html",
+      "sha256": "3f4b7be891d4fa9470008ce6e31562202f35bd41ef30559a7cbdcdc9d579ab15",
+      "published_sha256": "3f4b7be891d4fa9470008ce6e31562202f35bd41ef30559a7cbdcdc9d579ab15"
+    },
+    "assets/experiment-library/fd-suite/01_basics.png": {
+      "source": "results/fd-suite/01_basics.png",
+      "sha256": "2780000e058900baa5291d05ba179390cf5d3bd575271414a874ae1c0bb3aa67",
+      "published_sha256": "2780000e058900baa5291d05ba179390cf5d3bd575271414a874ae1c0bb3aa67"
+    },
+    "assets/experiment-library/fd-suite/02_resolution.png": {
+      "source": "results/fd-suite/02_resolution.png",
+      "sha256": "a21c82647665318afc2f5427745476c00ef7a6d61132b4c109f5c96fb6a6580d",
+      "published_sha256": "a21c82647665318afc2f5427745476c00ef7a6d61132b4c109f5c96fb6a6580d"
+    },
+    "assets/experiment-library/fd-suite/03_interference.png": {
+      "source": "results/fd-suite/03_interference.png",
+      "sha256": "8bfa98c7b99bd39598b869cc24e61db9ee6e303ab6acf134e1e367ebdaa97070",
+      "published_sha256": "8bfa98c7b99bd39598b869cc24e61db9ee6e303ab6acf134e1e367ebdaa97070"
+    },
+    "assets/experiment-library/fd-suite/04_controls.png": {
+      "source": "results/fd-suite/04_controls.png",
+      "sha256": "dc500557d1d510b06fbf0e2f3224686e0476a220ab6d34e03c34f4483d54c297",
+      "published_sha256": "dc500557d1d510b06fbf0e2f3224686e0476a220ab6d34e03c34f4483d54c297"
+    },
+    "assets/experiment-library/fd-suite/summary.json": {
+      "source": "results/fd-suite/summary.json",
+      "sha256": "139d9a65068701f7df103b17fd5885477f950cf859f1629216e9c6b963a79e5b",
+      "published_sha256": "a364c57df8e44806b46163016f5069d8739bfc691d5cf2a6b2dd072b24dd2b4c"
+    },
+    "assets/experiment-library/fd-suite/fine-grid/resolution-grid-check.png": {
+      "source": "results/fd-suite/fine-grid/resolution-grid-check.png",
+      "sha256": "ec75ce60c7f84f128f80dde24f9b7380ea1cc41ecbf462ce7684144bd53cfaae",
+      "published_sha256": "ec75ce60c7f84f128f80dde24f9b7380ea1cc41ecbf462ce7684144bd53cfaae"
+    },
+    "assets/experiment-library/fd-suite/fine-grid/summary.json": {
+      "source": "results/fd-suite/fine-grid/summary.json",
+      "sha256": "23ed530c08cfce4d00be8fa6896cf43c3a97ef627aff81a40709f063966aea30",
+      "published_sha256": "d4f585317b50399cb96ad9d1b5e161df0c7ffa857131a2cd9955cfd3fc4dc55a"
+    },
+    "assets/experiment-library/fd-suite/method.md": {
+      "source": "docs/evaluation-suite.md",
+      "sha256": "eb42af7c2e734a54b5e4252c91f30e35950b39536461ec8190ce6188d0abe76e",
+      "published_sha256": "eb42af7c2e734a54b5e4252c91f30e35950b39536461ec8190ce6188d0abe76e"
+    },
+    "assets/experiment-library/band_tradeoffs/maps.png": {
+      "source": "results/hardware_cost/band_tradeoffs/maps.png",
+      "sha256": "009a763efd20e4244cf4d6c50750e69dc003a5c6ec189a96bdf573a0aff99558",
+      "published_sha256": "009a763efd20e4244cf4d6c50750e69dc003a5c6ec189a96bdf573a0aff99558"
+    },
+    "assets/experiment-library/band_tradeoffs/measurements.json": {
+      "source": "results/hardware_cost/band_tradeoffs/measurements.json",
+      "sha256": "923a105521a630159057da01c72907dcb2fd172fb52758dce33a5789907ca653",
+      "published_sha256": "b83f0cbcab2753463e995582275fac81e49c46cd6b6d1cbe44c83e5c93d63016"
+    },
+    "assets/experiment-library/tradeoffs/maps.png": {
+      "source": "results/hardware_cost/tradeoffs/maps.png",
+      "sha256": "10b5f73f2390f06ac81b49cb0f84264d424cd053d26e524a456bfac5dec84d7b",
+      "published_sha256": "10b5f73f2390f06ac81b49cb0f84264d424cd053d26e524a456bfac5dec84d7b"
+    },
+    "assets/experiment-library/tradeoffs/measurements.json": {
+      "source": "results/hardware_cost/tradeoffs/measurements.json",
+      "sha256": "c4cf232abe55d855ac4aaab0f6376ad2ce199768631dd9d9cadca3033025ddff",
+      "published_sha256": "386ca8627ebc2138d96e75ba26d3bb99e603b4cc419d50e081897c5a9ef34346"
+    },
+    "assets/experiment-library/fd-validation.png": {
+      "source": "results/fd-validation.png",
+      "sha256": "5e320c59a08b5780e216c9077e4b13209f3743a924794d98c5fc70de1a1a7e9b",
+      "published_sha256": "5e320c59a08b5780e216c9077e4b13209f3743a924794d98c5fc70de1a1a7e9b"
+    },
+    "assets/experiment-library/fd-display-contrast.png": {
+      "source": "results/fd-display-contrast.png",
+      "sha256": "3fe7f4216c66b61a7410c526807a36c714f7f34025e47096625069194558214c",
+      "published_sha256": "3fe7f4216c66b61a7410c526807a36c714f7f34025e47096625069194558214c"
+    },
+    "assets/experiment-library/array-layouts.md": {
+      "source": "docs/mic-array-comparison.md",
+      "sha256": "9b9f92ed59a0321751e117c67c4f4940f6e57e11443c0ba82a128461e657a3b7",
+      "published_sha256": "9b9f92ed59a0321751e117c67c4f4940f6e57e11443c0ba82a128461e657a3b7"
+    },
+    "assets/experiment-library/fft-observation.md": {
+      "source": "docs/mic-array-fft-comparison.md",
+      "sha256": "7b2a288162c2a6fe7fa64fdeb173b84f58cabdeadd9d9b06a9a8d9302f701c16",
+      "published_sha256": "7b2a288162c2a6fe7fa64fdeb173b84f58cabdeadd9d9b06a9a8d9302f701c16"
+    },
+    "assets/experiment-library/precision-check/README.md": {
+      "source": "docs/review/precision-check/README.md",
+      "sha256": "9224b4c23407046b321a1255de658378dbd7c736118f026906c50889d63bb511",
+      "published_sha256": "9224b4c23407046b321a1255de658378dbd7c736118f026906c50889d63bb511"
+    },
+    "assets/experiment-library/precision-check/distance-method.md": {
+      "source": "docs/review/precision-check/distance-method.md",
+      "sha256": "409d59a8e7c2a124c51e5d9aa6c60f047fe91f23044cff04f728a9cb41cbcc6f",
+      "published_sha256": "409d59a8e7c2a124c51e5d9aa6c60f047fe91f23044cff04f728a9cb41cbcc6f"
+    },
+    "assets/experiment-library/precision-check/scenes.csv": {
+      "source": "docs/review/precision-check/scenes.csv",
+      "sha256": "5e48ed7520d9d4fa4093dfc0b6f5b435c0fef4e03decd252189e3a8468dda7b5",
+      "published_sha256": "5e48ed7520d9d4fa4093dfc0b6f5b435c0fef4e03decd252189e3a8468dda7b5"
+    },
+    "assets/experiment-library/precision-check/results.json": {
+      "source": "docs/review/precision-check/results.json",
+      "sha256": "68aa7d49965cc00384c075a8f5611d838283125bb49c4a6196628134201649c5",
+      "published_sha256": "f3696b8706ad6af3c0fa616e2394011626a75e1aecdb54b3e4ba9fe02cb698bd"
+    },
+    "assets/experiment-library/precision-check/distance-results.zip": {
+      "source": "docs/review/precision-check/distance-results.zip",
+      "sha256": "93919db15a39c77baf0b6b91526d285311cec93d3d8de1e18df7341f47041284",
+      "published_sha256": "93919db15a39c77baf0b6b91526d285311cec93d3d8de1e18df7341f47041284"
+    },
+    "assets/experiment-library/hardware/full-fft-logic-estimate.md": {
+      "source": "results/rtl_full_pipeline/gate_estimate/README.md",
+      "sha256": "aaae389918cac324013a876548532aa7d80b28b64a549eeb204c22eaab49f1fe",
+      "published_sha256": "ef360948ff7fa357044d1b4e76aa96dfec057601011d8032c9cff8dc619e11e7"
+    },
+    "assets/experiment-library/hardware/full-fft-cost-breakdown.md": {
+      "source": "results/rtl_full_pipeline/cost_breakdown/README.md",
+      "sha256": "ac13399480d427e2664dd2f0c46fe75e2cee162ccafdee65c7b5382d18491393",
+      "published_sha256": "6171e2174145e021240ee02063ad55c4bf0bff8a57785e178dade5e5d32e2a4f"
+    },
+    "assets/experiment-library/hardware/cost-cycles.csv": {
+      "source": "results/rtl_full_pipeline/cost_breakdown/cost_cycles.csv",
+      "sha256": "42a737803721b13853949ea2b5c9b96b8df00f246918f08bc497289c9b3419a0",
+      "published_sha256": "42a737803721b13853949ea2b5c9b96b8df00f246918f08bc497289c9b3419a0"
+    },
+    "assets/experiment-library/hardware/shared-pdm.md": {
+      "source": "results/rtl_full_pipeline/pdm_shared/README.md",
+      "sha256": "419b0d999ea8beff353878b87e46b73ffe130cf6d5a94e1f95413883f9861843",
+      "published_sha256": "40dc3e5266baf4684630365409d456c72f93f295a33171f5e059fa087308ff04"
+    },
+    "assets/experiment-library/hardware/first-compact-candidate.md": {
+      "source": "results/rtl_compact/README.md",
+      "sha256": "eb06d007704fadba890ce38636273bd6d77c1c33699845fcc4871f1d2669e22c",
+      "published_sha256": "eb06d007704fadba890ce38636273bd6d77c1c33699845fcc4871f1d2669e22c"
+    }
+  },
+  "presentation_change": "SVG font fallback uses Arial/Helvetica/sans-serif; archived reports replace local machine identifiers with placeholders."
+}

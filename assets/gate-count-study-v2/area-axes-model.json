@@ -1,0 +1,73 @@
+{
+  "architecture": "compact_selected_dft_rounded_accumulators_with_uart",
+  "features": [
+    "constant",
+    "raw_spectrum_bits",
+    "microphones",
+    "directions",
+    "window_samples"
+  ],
+  "coefficients": [
+    46993.5763485852,
+    9.792462709637531,
+    2556.105090146966,
+    5.270762607601849,
+    4.010310777840912
+  ],
+  "accumulator_width": "fractional_bits + ceil(log2(N)) + 1; fixed-table bound verified for measured points",
+  "screening_fraction": 0.22816075229113697,
+  "training_points": 13,
+  "held_out_points": 5,
+  "held_out_max_error": 0.05916130129445281,
+  "ranges": {
+    "m": [
+      16,
+      30
+    ],
+    "k": [
+      4,
+      24
+    ],
+    "n": [
+      256,
+      1024
+    ],
+    "d": [
+      121,
+      3721
+    ],
+    "frac": [
+      16,
+      32
+    ]
+  },
+  "fixed": {
+    "fs": 192000,
+    "decimation": 16,
+    "cic_order": 3,
+    "pdm_lanes": 1,
+    "pcm_width": 16,
+    "window_width": 18,
+    "coefficient_width": 18,
+    "spectrum_width": 24,
+    "power_width": 48,
+    "phase_bits": 10,
+    "window": "sqrt_hann",
+    "aperture_m": 0.2,
+    "layout": "spiral",
+    "fov_each_axis_deg": 60,
+    "band_hz": [
+      20000,
+      40000
+    ],
+    "frames": 1,
+    "uart_divider": 50
+  },
+  "notes": [
+    "Full-storage whole-top area, including UART. Separate model; original estimator unchanged.",
+    "NNLS empirical model; screening band is an engineering allowance, not a confidence interval.",
+    "Only the listed points are synthesized. Most combinations inside ranges remain unmeasured.",
+    "M=24 points and M=16/K=24/Q16 are held out of fitting. Fs=96k/R=32 comparison is not included in fit or validation.",
+    "No timing closure, physical design, scan/pad budget, real-microphone or image-quality qualification."
+  ]
+}
