@@ -23422,7 +23422,6 @@
 
 
 
-<div class="experiment-tools"><h3>Tools &amp; PDK</h3><ul class="result-links"><li><strong>Synopsys Design Compiler</strong> — synthesis and gate-count estimates</li><li><strong>Verilator</strong> — RTL simulation</li><li><strong>Yosys</strong> — prepares SystemVerilog and maps arrays to registers and logic</li><li><strong>PDK / cell library:</strong> NCSU FreePDK45 · OSU gscl45nm (45 nm)</li></ul></div>
 <div class="experiment-switcher" role="group" aria-label="Experiment studies">
 
 
@@ -23615,7 +23614,7 @@
 
 
 
-<div id="experiment-gate-budget" class="experiment-panel"><div class="study-insight" id="gate-main-findings"><strong>Main findings</strong><ul><li>FFT can fit within 300k gates; the tested DFT designs allow more microphones and higher accumulator precision within the same budget.</li><li>Storage and access logic are the main area drivers.</li></ul></div><div class="algorithm-study"><h3>1. Find configurations that fit</h3>
+<div id="experiment-gate-budget" class="experiment-panel"><div class="study-insight" id="gate-main-findings" style="margin-bottom:20px"><strong>Main findings</strong><ul><li>FFT can fit within 300k gates; the tested DFT designs allow more microphones and higher accumulator precision within the same budget.</li><li>Storage and access logic are the main area drivers.</li></ul><p class="study-table-note" style="margin:12px 0 0"><strong>Tools:</strong> Synopsys Design Compiler · Verilator · Yosys. <strong>PDK:</strong> NCSU FreePDK45 / OSU gscl45nm (45 nm).</p></div><div class="algorithm-study"><h3>1. Find configurations that fit</h3>
 
 
 
@@ -24319,7 +24318,7 @@
 
 
 
-<div id="experiment-map-quality" class="experiment-panel" hidden><div class="study-insight" id="quality-main-findings"><strong>Main finding</strong><p>More microphones with fewer bins can produce cleaner maps, but sparse bins can miss frequencies.</p></div><div class="algorithm-study" id="fft-comparison"><h3>FFT and DFT · matched recordings</h3>
+<div id="experiment-map-quality" class="experiment-panel" hidden><div class="study-insight" id="quality-main-findings" style="margin-bottom:20px"><strong>Main finding</strong><p>More microphones with fewer bins can produce cleaner maps, but sparse bins can miss frequencies.</p><p class="study-table-note" style="margin:12px 0 0"><strong>Tools:</strong> Synopsys Design Compiler · Verilator · Yosys. <strong>PDK:</strong> NCSU FreePDK45 / OSU gscl45nm (45 nm).</p></div><div class="algorithm-study" id="fft-comparison"><h3>FFT and DFT · matched recordings</h3>
 
 <ul class="candidate-settings"><li>20–40 kHz · 20 cm native spirals</li><li>192 ksample/s · 60° per axis · 3° grid</li><li>Window size, precision, observation time and synthesis gates shown per candidate</li></ul>
 
