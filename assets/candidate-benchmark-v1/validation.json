@@ -63,10 +63,21 @@
     "run_benchmark.py": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
   },
   "files_sha256": {
-    "benchmark.json": "8bc3bed7b9a0a6ada5ac613495214939c1247a413b0ad972cd960d27498963f0",
+    "benchmark.json": "c196b73cf05fa79b472f478e01b6b64eb340f0990dcf78421d340acba4682f9e",
     "measurements.json": "a5110163ad598b2178ccbf9c5a91f9d6aef8fc931a1217070dfb7b18f8234b63",
     "configurations.json": "ebe47e86b942d1a8dee7408a5098afb2faf29ed55ce56fbc3cd8a2af72fc9773",
     "null-controls.json": "41f96c423339cf21803ead9f5afdcc65147477367f6d5c4099e3644d2bb0a136",
     "run_benchmark.py": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
+  },
+  "overall_score_validation": {
+    "equal_weight_categories": 8,
+    "checked_candidates": 4,
+    "calculated_scores": {
+      "dft30_n256_k10_w24": 68.418681573786,
+      "dft30_10": 68.3066020288953,
+      "dft24_n512_k15_w24": 60.28947935490988,
+      "dft16_24": 52.017861089685475
+    },
+    "existing_map_results_unchanged": true
   }
 }
