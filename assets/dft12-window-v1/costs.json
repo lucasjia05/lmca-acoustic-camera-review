@@ -1,0 +1,44 @@
+{
+  "previous26": {
+    "gates": 281097.75,
+    "measured": true,
+    "accumulator_width": 26,
+    "accumulator_fraction": 16,
+    "window_samples": 512,
+    "bins": 10,
+    "observation_ms": 2.6666666666666665,
+    "flags": []
+  },
+  "chosen24": {
+    "gates": 269599.25,
+    "measured": true,
+    "accumulator_width": 24,
+    "accumulator_fraction": 14,
+    "window_samples": 512,
+    "bins": 10,
+    "observation_ms": 2.6666666666666665,
+    "flags": []
+  },
+  "n256_k12": {
+    "gates": 296241.53054461046,
+    "measured": false,
+    "accumulator_width": 24,
+    "accumulator_fraction": 15,
+    "window_samples": 256,
+    "bins": 12,
+    "observation_ms": 1.3333333333333333,
+    "flags": [
+      "frac=15 is outside measured range [16,32]"
+    ]
+  },
+  "n512_k12": {
+    "gates": 297642.24999999994,
+    "measured": true,
+    "accumulator_width": 24,
+    "accumulator_fraction": 14,
+    "window_samples": 512,
+    "bins": 12,
+    "observation_ms": 2.6666666666666665,
+    "flags": []
+  }
+}
