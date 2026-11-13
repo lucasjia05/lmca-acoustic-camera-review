@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1800" height="1400" viewBox="0 0 1800 1400" role="img" aria-labelledby="rtl-uart-title rtl-uart-desc">
+<svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1800" height="1205" viewBox="0 0 1800 1205" role="img" aria-labelledby="rtl-uart-title rtl-uart-desc">
 <title id="rtl-uart-title">Compact acoustic camera with UART, organized by SystemVerilog source files</title>
 <desc id="rtl-uart-desc">The diagram groups PDM decimation, PCM serialization, the compact processing core and UART output under lmca_top.sv. Both front-end modules are defined in lmca_pdm_decimator.sv. The core contains windowing, one shared complex arithmetic engine, selected Fourier accumulators, power calculation, phase generation and its controller; these are logic within lmca_compact_core.sv, not separate module files. The core instantiates u_trig from lmca_compact_trig.sv. The UART packetizer instantiates u_tx, the byte transmitter defined in the same UART source file. Ready backpressure returns from the packetizer to the map producer. Physical capture, the host and the video camera are external.</desc>
 <defs>
@@ -20,15 +20,15 @@
 .rtl-modules .host{fill:#fff7e9;stroke:#ad854b;stroke-width:1.5;stroke-dasharray:7 5}
 .rtl-modules .data{fill:none;stroke:#527d80;stroke-width:2;marker-end:url(#rtl-uart-arrow)}
 .rtl-modules .control{fill:none;stroke:#9276ac;stroke-width:1.6;stroke-dasharray:5 4;marker-end:url(#rtl-uart-control)}
-.rtl-modules .rail{fill:none;stroke:#a7b2b7;stroke-width:1.4}
+
 </style>
-<rect width="1800" height="1400" fill="white"/>
-<rect x="205" y="75" width="1540" height="1165" rx="12" class="rootfile"/>
-<text x="230" y="112" class="filename">lmca_top.sv</text>
+<rect width="1800" height="1205" fill="white"/>
+<rect x="205" y="20" width="1540" height="1025" rx="12" class="rootfile"/>
+<text x="230" y="57" class="filename">lmca_top.sv</text><g transform="translate(0 -195)">
 
 
 
-<path d="M230 198H1715" class="rail"/>
+
 
 
 
@@ -39,7 +39,7 @@
 <rect x="270" y="350" width="310" height="115" rx="7" class="box"/>
 <text x="288" y="381" class="name">lmca_pdm_decimator</text>
 <text x="288" y="409" class="instance">u_pdm</text>
-<text x="288" y="440" class="small">Shared CIC → FIR → PCM</text>
+<text x="288" y="440" class="small">Shared CIC → PCM</text>
 <path d="M425 465V552" class="data"/>
 <text x="441" y="492" class="small">PCM vector</text>
 <text x="441" y="515" class="tiny">16 bits/mic<tspan x="441" dy="22">MICS channels</tspan></text>
@@ -150,4 +150,4 @@
 
 
 
-</svg>
+</g></svg>
