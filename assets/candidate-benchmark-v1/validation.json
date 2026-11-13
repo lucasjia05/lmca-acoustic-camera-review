@@ -1,6 +1,6 @@
 {
-  "scored_maps": 11160,
-  "null_maps": 240,
+  "scored_maps": 13950,
+  "null_maps": 300,
   "unique_trial_keys": true,
   "equal_trials_per_candidate": true,
   "metric_control_checks": 6,
@@ -53,7 +53,7 @@
     23,
     91
   ],
-  "nonzero_null_maps": 240,
+  "nonzero_null_maps": 300,
   "source_sha256": {
     "exploration\\compact_pcm.py": "9fa3770fd2367060287da90effe0fc23e714ed67bad7fd79e59b68ae298f9942",
     "exploration\\evaluate_suite.py": "d3b5f4ccf371aa20e1d3e27e8a6beee130fffbcfc6ce9fe84b989857250844bd",
@@ -63,11 +63,10 @@
     "run_benchmark.py": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
   },
   "files_sha256": {
-    "benchmark.json": "c196b73cf05fa79b472f478e01b6b64eb340f0990dcf78421d340acba4682f9e",
-    "measurements.json": "a5110163ad598b2178ccbf9c5a91f9d6aef8fc931a1217070dfb7b18f8234b63",
-    "configurations.json": "ebe47e86b942d1a8dee7408a5098afb2faf29ed55ce56fbc3cd8a2af72fc9773",
-    "null-controls.json": "41f96c423339cf21803ead9f5afdcc65147477367f6d5c4099e3644d2bb0a136",
-    "run_benchmark.py": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
+    "benchmark.json": "1bb8979695a0e4a871b81ce826b7df455f050b6ae52c5e4cd5a28f58c80aa99b",
+    "configurations.json": "6de11a51b39f1e34732c019c8c3c426afe2532a1b78b982c12b0581cf191f5e2",
+    "null-controls.json": "351642d0be4e1c61e452b2f39b7cd396926d6bfae9cfa88d01e521897a784357",
+    "measurements.csv": "5812126b8f09ce4c54e8d06f335a709f1025e74dc7a5f5d0ffa2f008b7f1943d"
   },
   "overall_score_validation": {
     "equal_weight_categories": 8,
@@ -76,8 +75,40 @@
       "dft30_n256_k10_w24": 68.418681573786,
       "dft30_10": 68.3066020288953,
       "dft24_n512_k15_w24": 60.28947935490988,
-      "dft16_24": 52.017861089685475
+      "dft16_24": 52.017861089685475,
+      "reference_all_bins": 72.69761320938858
     },
-    "existing_map_results_unchanged": true
-  }
+    "existing_map_results_unchanged": true,
+    "checked_reference_series": 1
+  },
+  "original_candidate_files_sha256": {
+    "benchmark.json": "c196b73cf05fa79b472f478e01b6b64eb340f0990dcf78421d340acba4682f9e",
+    "measurements.json": "a5110163ad598b2178ccbf9c5a91f9d6aef8fc931a1217070dfb7b18f8234b63",
+    "configurations.json": "ebe47e86b942d1a8dee7408a5098afb2faf29ed55ce56fbc3cd8a2af72fc9773",
+    "null-controls.json": "41f96c423339cf21803ead9f5afdcc65147477367f6d5c4099e3644d2bb0a136",
+    "run_benchmark.py": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
+  },
+  "candidate_scored_maps": 11160,
+  "candidate_null_maps": 240,
+  "reference_validation": {
+    "input_digest_matches_original": true,
+    "input_digest_sha256": "b9e8d5d293b18a708c0e78eaf61f9af76cb89835ec5bbadaaa33194637f6c3b5",
+    "scoring_and_source_code_hashes_match_original": true,
+    "clipped_values": 0,
+    "matched_cases_per_candidate": 2790,
+    "bit_exact_map_reference_anchors": [
+      {
+        "scene": "unequal6",
+        "bit_exact": true
+      },
+      {
+        "scene": "independent10",
+        "bit_exact": true
+      }
+    ],
+    "script_sha256": "4f514198c09c564d86013c3ddba979ae56491bd95ee7a668b431fb6822272c7b",
+    "base_script_sha256": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
+  },
+  "reference_scored_maps": 2790,
+  "reference_null_maps": 60
 }

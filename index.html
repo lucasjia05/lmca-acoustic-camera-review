@@ -194712,7 +194712,8 @@
     <p id="benchmark-curve-note" class="study-table-note" aria-live="polite"></p>
     <details class="study-method"><summary>Exact values for this sweep</summary><div class="study-table-wrap"><table class="precision-table"><thead><tr><th scope="col">Sweep value</th><th scope="col">Candidate</th><th scope="col">Clear / tested</th><th scope="col">Located / tested</th><th scope="col">95% error</th><th scope="col">Median margin</th><th scope="col">Median raw peak (PCM²)</th><th scope="col">Zero maps</th><th scope="col">Clipped values</th></tr></thead><tbody id="benchmark-values"></tbody></table></div></details>
     <details class="study-method"><summary>Setup, limits and reproducible results</summary><div>
-      <ul><li>Four promising DFT candidates; native 20 cm spirals; 192 ksample/s PCM; 20–40 kHz selected-bin processing; ±30° per axis on a 3° scan grid.</li>
+      <ul><li>Four promising DFT candidates and one all-bin software reference; native 20 cm spirals; 192 ksample/s PCM; 20–40 kHz selected-bin processing; ±30° per axis on a 3° scan grid.</li>
+      <li>The dashed reference uses 30 mics, N512, all 53 in-band bins and a 26-bit Q16 accumulator: one window per map, matching the reference in the combined map sheet. It is scored on the same cases and is not gate-budget-qualified.</li>
       <li>One factor changes within each sweep family. Source directions, source bands and three seeds provide a small set of fixed contexts. The same source and channel noise are shared by candidates with the same layout.</li>
       <li>Candidate configurations change several implementation parameters together. These comparisons select complete configurations; they do not isolate the causal effect of microphone count, bin count or precision.</li>
       <li>Nominal baseline levels: source −36 dBFS RMS; independent white microphone noise −46 dBFS (+10 dB input SNR). Exceptions are stated above each sweep. SNR covers the whole PCM bandwidth before bin selection, referenced to the common 30-mic recording; finite-window levels fluctuate.</li>
@@ -194723,7 +194724,7 @@
       <p id="benchmark-run-size"></p>
       <p id="benchmark-null-note"></p>
       <p>The 20–40 kHz range follows our current candidate band. Commercial PD cameras also use broader ultrasonic filters; <a href="https://docs.flir.com/T810637/en-US/latest/s08.html" target="_blank" rel="noopener">FLIR filter guidance</a> motivates testing both spectral coverage and noise. <a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND’s drone-camera description</a> explicitly identifies propeller noise as a design concern. The numerical sweep limits are engineering stress-test choices, not limits established by those products.</p>
-      <ul class="result-links"><li><a href="assets/candidate-benchmark-v1/benchmark.json">Aggregated scores and sweep definitions · JSON</a></li><li><a href="assets/candidate-benchmark-v1/measurements.csv">Every scored map · CSV</a></li><li><a href="assets/candidate-benchmark-v1/configurations.json">Exact candidate configurations · JSON</a></li><li><a href="assets/candidate-benchmark-v1/null-controls.json">Noise-only controls · JSON</a></li><li><a href="assets/candidate-benchmark-v1/run_benchmark.py">Reproducible benchmark script</a></li><li><a href="assets/candidate-benchmark-v1/validation.json">Validation and source hashes · JSON</a></li></ul>
+      <ul class="result-links"><li><a href="assets/candidate-benchmark-v1/benchmark.json">Aggregated scores and sweep definitions · JSON</a></li><li><a href="assets/candidate-benchmark-v1/measurements.csv">Every scored map · CSV</a></li><li><a href="assets/candidate-benchmark-v1/configurations.json">Exact candidate configurations · JSON</a></li><li><a href="assets/candidate-benchmark-v1/null-controls.json">Noise-only controls · JSON</a></li><li><a href="assets/candidate-benchmark-v1/run_benchmark.py">Reproducible benchmark script</a></li><li><a href="assets/benchmark-reference-v1/reference.json">Reference scores, settings and matched-input validation · JSON</a></li><li><a href="assets/candidate-benchmark-v1/validation.json">Validation and source hashes · JSON</a></li></ul>
     </div></details>
   </div>
 </div>
@@ -246695,7 +246696,7 @@ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectTab(i));tab.addEve
 
 
 
-</script><script src="layout-distance-data.js"></script><script src="layout-distance-explorer.js"></script><script src="algorithm-study.js?v=thin-markers-1"></script><script src="fft-study.js?v=thin-markers-1"></script><script src="candidate-benchmark.js?v=overall-1"></script></body></html>
+</script><script src="layout-distance-data.js"></script><script src="layout-distance-explorer.js"></script><script src="algorithm-study.js?v=thin-markers-1"></script><script src="fft-study.js?v=thin-markers-1"></script><script src="candidate-benchmark.js?v=reference-1"></script></body></html>
 
 
 
