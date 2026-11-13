@@ -1,0 +1,72 @@
+{
+  "scored_maps": 11160,
+  "null_maps": 240,
+  "unique_trial_keys": true,
+  "equal_trials_per_candidate": true,
+  "metric_control_checks": 6,
+  "archived_bit_exact_anchors": [
+    {
+      "scene": "single",
+      "variant": "dft30_n256_k10_w24",
+      "bit_exact": true
+    },
+    {
+      "scene": "single",
+      "variant": "dft30_10",
+      "bit_exact": true
+    },
+    {
+      "scene": "single",
+      "variant": "dft24_n512_k15_w24",
+      "bit_exact": true
+    },
+    {
+      "scene": "single",
+      "variant": "dft16_24",
+      "bit_exact": true
+    },
+    {
+      "scene": "tone30000",
+      "variant": "dft30_n256_k10_w24",
+      "bit_exact": true
+    },
+    {
+      "scene": "tone30000",
+      "variant": "dft30_10",
+      "bit_exact": true
+    },
+    {
+      "scene": "tone30000",
+      "variant": "dft24_n512_k15_w24",
+      "bit_exact": true
+    },
+    {
+      "scene": "tone30000",
+      "variant": "dft16_24",
+      "bit_exact": true
+    }
+  ],
+  "unintended_clipped_values": 0,
+  "frequency_points": 161,
+  "seeds": [
+    7,
+    23,
+    91
+  ],
+  "nonzero_null_maps": 240,
+  "source_sha256": {
+    "exploration\\compact_pcm.py": "9fa3770fd2367060287da90effe0fc23e714ed67bad7fd79e59b68ae298f9942",
+    "exploration\\evaluate_suite.py": "d3b5f4ccf371aa20e1d3e27e8a6beee130fffbcfc6ce9fe84b989857250844bd",
+    "exploration\\config.py": "fdffb742a09b8a5f556eedf400ebde5744b92941ac6af928df062383a4c8fe48",
+    "common\\geometry.py": "ab90c7bd2f9a03239efdb2cec4d16a2c3adecc804489dc11434b0e2cbc314a41",
+    "rtl\\full_pipeline\\scripts\\model.py": "e1f98f1d5343bd05fda0ecd80226fe990dfb9b0e5faf77ce72b47d3df8933631",
+    "run_benchmark.py": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
+  },
+  "files_sha256": {
+    "benchmark.json": "8bc3bed7b9a0a6ada5ac613495214939c1247a413b0ad972cd960d27498963f0",
+    "measurements.json": "a5110163ad598b2178ccbf9c5a91f9d6aef8fc931a1217070dfb7b18f8234b63",
+    "configurations.json": "ebe47e86b942d1a8dee7408a5098afb2faf29ed55ce56fbc3cd8a2af72fc9773",
+    "null-controls.json": "41f96c423339cf21803ead9f5afdcc65147477367f6d5c4099e3644d2bb0a136",
+    "run_benchmark.py": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
+  }
+}
