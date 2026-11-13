@@ -1,0 +1,951 @@
+{
+  "m24_n512_k15_acc24": {
+    "method": "All arrays mapped to registers and constant logic by Yosys; entire top mapped by Design Compiler; no memory extraction or extra ports.",
+    "nand2_equivalent_gates": 295013.50000000006,
+    "standard_cells": 163182,
+    "flip_flops": 24349,
+    "library_area": 553799.3422000001,
+    "dc_reported_area": 553799.3421987309,
+    "nand2_area": 1.8772,
+    "lef_area_um2": 523130.5872000001,
+    "lef_nand2_equivalent_gates": 278676.00000000006,
+    "excluded_memory_bits": 0,
+    "memory_macros": 0,
+    "extra_memory_ports": 0,
+    "logical_constant_drivers": 117,
+    "inferred_ram_bits": 23552,
+    "inferred_rom_bits": 40733,
+    "blocks": {
+      "core": {
+        "cells": 124522,
+        "flip_flops": 17614,
+        "area": 425457.0553991717,
+        "nand2_equivalent_gates": 226644.49999955876
+      },
+      "pdm": {
+        "cells": 34927,
+        "flip_flops": 6186,
+        "area": 116339.47000000242,
+        "nand2_equivalent_gates": 61975.00000000129
+      },
+      "serializer": {
+        "cells": 2858,
+        "flip_flops": 417,
+        "area": 9149.003499999464,
+        "nand2_equivalent_gates": 4873.749999999714
+      },
+      "interface": {
+        "cells": 875,
+        "flip_flops": 132,
+        "area": 2853.813300000048,
+        "nand2_equivalent_gates": 1520.2500000000257
+      }
+    },
+    "cells": {
+      "OAI21X1": 42377,
+      "NOR3X1": 2880,
+      "XOR2X1": 1811,
+      "XNOR2X1": 117,
+      "INVX1": 30742,
+      "OR2X1": 43532,
+      "AND2X1": 11157,
+      "MUX2X1": 422,
+      "HAX1": 285,
+      "FAX1": 5418,
+      "DFFPOSX1": 24349,
+      "BUFX2": 92
+    },
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "start": {
+        "direction": "input",
+        "width": 1
+      },
+      "busy": {
+        "direction": "output",
+        "width": 1
+      },
+      "done": {
+        "direction": "output",
+        "width": 1
+      },
+      "pdm_valid": {
+        "direction": "input",
+        "width": 1
+      },
+      "pdm_ready": {
+        "direction": "output",
+        "width": 1
+      },
+      "pdm_bits": {
+        "direction": "input",
+        "width": 24
+      },
+      "tx": {
+        "direction": "output",
+        "width": 1
+      },
+      "clipped": {
+        "direction": "output",
+        "width": 1
+      },
+      "input_overrun": {
+        "direction": "output",
+        "width": 1
+      }
+    },
+    "sha256": {
+      "gy.mem": "7fe660ef3ba7c0c7d23b60735f3227e22d533a68d901761d7ce6f0460967ebf8",
+      "map_registers.ys": "ebe45bb133685797c5071b8f6dc65cfd5c048b8fdc655265ca551808e2d3e9a7",
+      "window.mem": "cf8b6bd7e646b2b371228281dd7cc192ea2c6157661e1488ba1e8fb18c00ca6b",
+      "tb_config.svh": "ddc5c050f0a49ba98231754514fc67995d008616c7a3c353afae0efb2977bac7",
+      "gx.mem": "2c46c733cbf8accc8635f7b50bc166fdeed7f5f4eb76201d62c8e90312334d8b",
+      "window_expected.mem": "6b79f750db8f9b09f49c8f876b140ace6c9a7cb35ceb393f707a76a598322cf2",
+      "dz.mem": "89b7fa73aa1f5dd8f14d8e998f74111ae97d76f0fab54a1a7544778c1c1d7d50",
+      "lmca_uart_map_tx.sv": "b3c949003677f51092d19f39b4dfbba83a064e2b66a7db0158f8f56a7145b69d",
+      "lmca_compact_configured.sv": "038b88dbfc032e5a652fe717d90fc98063e3ff10425d92635403a61592618ca7",
+      "lmca_compact_trig.sv": "77f921e0126362f25632c25295a4f7603f9c4cc3dad2a1d43f2231dba1d67396",
+      "dy.mem": "835ad906dca2744e48e951fc500cde5de251b6bbdb4cea63b8aaf96dee3d404a",
+      "si_expected.mem": "fdab86fe4493a76d5be3722e21719dd541c8e300eabc4380236fd50fcbf76de2",
+      "lmca_compact_core.sv": "f478abb5e495e5c3cc563747309f017f154bd0d27b1744660ea57bbd7b080ed4",
+      "lmca_pdm_decimator.sv": "5d6fc5c925cf139ca8980e94fac44aef620cc37717be969c8b4cc5aa0202cc22",
+      "bins.mem": "615618aa2c919f5131018b8d230f35cf927068861584e4eff7513062b1ae268f",
+      "pdm.mem": "23b19596382064e84597b43801cb53dc780942048a817c45149d067e4b490d88",
+      "dut_params.svh": "cca6cb09a54629bb84974e5da31107fe60bfc11f70c9ac1e3efff517701dfe0c",
+      "sr_expected.mem": "5b7b65302a153476ba221413e88dc7e5a8df9a15170ab1d628de77c0a3ec2a5f",
+      "tb_uart_camera.sv": "7119566186de22ffdab6907fad50d79d5af4b103da7dcd9c2510bf1777a86d8a",
+      "map_expected.mem": "e0d0b9bcdd9eb147bd621cf8a8126106883526c96450265811274c6adc63d68f",
+      "tb_compact.sv": "130ec80a9871f6189af2cb51311068e04ec55c2bd45116b68bbe063024147a32",
+      "cell_models.ys": "83277197f03da3d8b8c439fcc82c7dda0e041931ce08921c1fe06b8d4aa83b6d",
+      "lmca_compact_camera.sv": "b108572cacbb4918fd0a76daf8027158058b0a5e76e2c08409a8a0c05e6c4a3b",
+      "dx.mem": "eb0cc83802f22f632e42d23cf7fa5ddbca06e3de4f52931b1db53d7ed04a9818",
+      "lmca_compact_math.svh": "a456d53a5b18a6cbb8d1866f75dccee4999d6c82846aaae7daad39456296bb3c",
+      "mapped.v": "c7789e5b53483516c4cc2b0ee5cbf3c47f38eb856094fd3c93dd42118002b0ff",
+      "fir.mem": "36736dd83c6e02474284d8c5f112dec95d5ed6876bf5353dcb672f365d6b0fd1",
+      "all_cells.v": "05d52399b8a200f465273b09e0e50ae069895f821fb6165d56ac566df209d27e",
+      "quarter.mem": "80541dd3b79161ff91263c46904d91bdda84d0889f80b69e4f9c4d83e13e4229",
+      "dc.tcl": "b08cc3f4847ba670e192bcb52c592c56b979e4fa2e358aadb149106fd446a41c",
+      "phase_expected.mem": "f66a48f57f4a58ce227dee7895844fff7cf01ed04ac0dec21b6533d4725323ce",
+      "infer.ys": "d93e58f3d241109c2bca17d7a17808496bd7987d3a8672f11d36dab4259b4dc2",
+      "gz.mem": "615b251bbc25e068cb64d56b8757a0001317fac398b26fd9bcfbfffa974c4cf7",
+      "pcm_expected.mem": "7135b5aca8d7cc4395961279130c9f88e6977d101ae6589a901be41545962a82"
+    },
+    "limitations": [
+      "Educational gscl45nm mapping, not target-process area signoff.",
+      "100 ns synthesis constraint; no timing closure, placement, routing, clock tree, scan or pad-cell budget.",
+      "Register-only refers to all variable storage being inside this counted top.",
+      "Input is a backpressured PDM test stream, not yet a qualified continuous microphone capture interface."
+    ],
+    "settings": {
+      "name": "m24_n512_k15_acc24",
+      "settings": {
+        "name": "m24_n512_k15_acc24",
+        "sample_rate_hz": 192000,
+        "microphones": 24,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 3.0,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 512,
+        "selected_bins": [
+          54,
+          58,
+          61,
+          65,
+          69,
+          73,
+          76,
+          80,
+          84,
+          87,
+          91,
+          95,
+          99,
+          102,
+          106
+        ],
+        "window": "sqrt_hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        }
+      },
+      "parameters": {
+        "MICS": 24,
+        "N": 512,
+        "BINS": 15,
+        "DIRECTIONS": 441,
+        "PDM_LANES": 1,
+        "DECIMATION": 16,
+        "CIC_ORDER": 3,
+        "FIR_TAPS": 1,
+        "PCM_W": 16,
+        "PCM_FRAC": 15,
+        "WIN_W": 18,
+        "WIN_FRAC": 16,
+        "DATA_W": 24,
+        "DATA_FRAC": 22,
+        "COEF_W": 18,
+        "COEF_FRAC": 16,
+        "PHASE_BITS": 10,
+        "POWER_FRAC": 32,
+        "MAP_W": 48,
+        "GAIN_NUM": 4,
+        "GAIN_DEN": 1
+      },
+      "acc_fraction": 14,
+      "acc_width": 24,
+      "held_out": false
+    },
+    "functional_logs": {
+      "baseline/simulation.log": "PASS compact: mics=24 bins=15 directions=441 maps=2 PDM=16384 PCM=24576 cycles=742312 clipped=0\n- tb_compact.sv:80: Verilog $finish\n",
+      "baseline/uart_simulation.log": "PASS PDM-to-UART: mics=24 bins=15 maps=2 points=882 bytes=5310 cycles=3066977\n- tb_uart_camera.sv:66: Verilog $finish\n",
+      "random/simulation.log": "PASS compact: mics=24 bins=15 directions=441 maps=2 PDM=16384 PCM=24576 cycles=742312 clipped=0\n- tb_compact.sv:80: Verilog $finish\n",
+      "random/uart_simulation.log": "PASS PDM-to-UART: mics=24 bins=15 maps=2 points=882 bytes=5310 cycles=3066977\n- tb_uart_camera.sv:66: Verilog $finish\n"
+    }
+  },
+  "m24_n512_k16_acc24": {
+    "method": "All arrays mapped to registers and constant logic by Yosys; entire top mapped by Design Compiler; no memory extraction or extra ports.",
+    "nand2_equivalent_gates": 306294.75000000006,
+    "standard_cells": 169599,
+    "flip_flops": 25501,
+    "library_area": 574976.5047,
+    "dc_reported_area": 574976.5046985677,
+    "nand2_area": 1.8772,
+    "lef_area_um2": 542722.4543,
+    "lef_nand2_equivalent_gates": 289112.74999999994,
+    "excluded_memory_bits": 0,
+    "memory_macros": 0,
+    "extra_memory_ports": 0,
+    "logical_constant_drivers": 115,
+    "inferred_ram_bits": 24704,
+    "inferred_rom_bits": 40740,
+    "blocks": {
+      "core": {
+        "cells": 130939,
+        "flip_flops": 18766,
+        "area": 446634.2178990086,
+        "nand2_equivalent_gates": 237925.74999947188
+      },
+      "pdm": {
+        "cells": 34927,
+        "flip_flops": 6186,
+        "area": 116339.47000000242,
+        "nand2_equivalent_gates": 61975.00000000129
+      },
+      "serializer": {
+        "cells": 2858,
+        "flip_flops": 417,
+        "area": 9149.003499999464,
+        "nand2_equivalent_gates": 4873.749999999714
+      },
+      "interface": {
+        "cells": 875,
+        "flip_flops": 132,
+        "area": 2853.813300000048,
+        "nand2_equivalent_gates": 1520.2500000000257
+      }
+    },
+    "cells": {
+      "OAI21X1": 44314,
+      "NOR3X1": 2916,
+      "XOR2X1": 1823,
+      "XNOR2X1": 110,
+      "INVX1": 31979,
+      "OR2X1": 45734,
+      "AND2X1": 11019,
+      "MUX2X1": 422,
+      "HAX1": 285,
+      "FAX1": 5396,
+      "DFFPOSX1": 25501,
+      "BUFX2": 100
+    },
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "start": {
+        "direction": "input",
+        "width": 1
+      },
+      "busy": {
+        "direction": "output",
+        "width": 1
+      },
+      "done": {
+        "direction": "output",
+        "width": 1
+      },
+      "pdm_valid": {
+        "direction": "input",
+        "width": 1
+      },
+      "pdm_ready": {
+        "direction": "output",
+        "width": 1
+      },
+      "pdm_bits": {
+        "direction": "input",
+        "width": 24
+      },
+      "tx": {
+        "direction": "output",
+        "width": 1
+      },
+      "clipped": {
+        "direction": "output",
+        "width": 1
+      },
+      "input_overrun": {
+        "direction": "output",
+        "width": 1
+      }
+    },
+    "sha256": {
+      "gy.mem": "7fe660ef3ba7c0c7d23b60735f3227e22d533a68d901761d7ce6f0460967ebf8",
+      "map_registers.ys": "ebe45bb133685797c5071b8f6dc65cfd5c048b8fdc655265ca551808e2d3e9a7",
+      "window.mem": "cf8b6bd7e646b2b371228281dd7cc192ea2c6157661e1488ba1e8fb18c00ca6b",
+      "tb_config.svh": "d70fe2defe7c1b2fc01375036c68ffefb8eed942fa022c04a7b10fb287bb40a5",
+      "gx.mem": "2c46c733cbf8accc8635f7b50bc166fdeed7f5f4eb76201d62c8e90312334d8b",
+      "window_expected.mem": "11ea12bdce3d49af812ca3eec0cd2d0564745400013c99e3d365e357801b0aae",
+      "dz.mem": "89b7fa73aa1f5dd8f14d8e998f74111ae97d76f0fab54a1a7544778c1c1d7d50",
+      "lmca_uart_map_tx.sv": "b3c949003677f51092d19f39b4dfbba83a064e2b66a7db0158f8f56a7145b69d",
+      "lmca_compact_configured.sv": "445c7c621a0c0a9b4b314ebeb8850d47f98d052bd5735e917a250b22a39cfb25",
+      "lmca_compact_trig.sv": "77f921e0126362f25632c25295a4f7603f9c4cc3dad2a1d43f2231dba1d67396",
+      "dy.mem": "835ad906dca2744e48e951fc500cde5de251b6bbdb4cea63b8aaf96dee3d404a",
+      "si_expected.mem": "0e10e0880c093d7eb1f887c768f93646a87f7531faf424da8a27d827bbd7830f",
+      "lmca_compact_core.sv": "f478abb5e495e5c3cc563747309f017f154bd0d27b1744660ea57bbd7b080ed4",
+      "lmca_pdm_decimator.sv": "5d6fc5c925cf139ca8980e94fac44aef620cc37717be969c8b4cc5aa0202cc22",
+      "bins.mem": "0eff4187f8da494db55a13f257a9ac1b2e35d13c8265919013198795539859a9",
+      "pdm.mem": "8c24a4e49a4edd34a6219ad0409685e44eee1481156d5201153499779604e815",
+      "dut_params.svh": "cca6cb09a54629bb84974e5da31107fe60bfc11f70c9ac1e3efff517701dfe0c",
+      "sr_expected.mem": "4b731a59abc89bb83739968437534ac5d791c74bfc39d906c4730f3263981a32",
+      "tb_uart_camera.sv": "7119566186de22ffdab6907fad50d79d5af4b103da7dcd9c2510bf1777a86d8a",
+      "map_expected.mem": "1a571aaa68b29f0db2899c78cb783b20a9321547f6d7d37ab20f1317605e387d",
+      "tb_compact.sv": "130ec80a9871f6189af2cb51311068e04ec55c2bd45116b68bbe063024147a32",
+      "cell_models.ys": "83277197f03da3d8b8c439fcc82c7dda0e041931ce08921c1fe06b8d4aa83b6d",
+      "lmca_compact_camera.sv": "b108572cacbb4918fd0a76daf8027158058b0a5e76e2c08409a8a0c05e6c4a3b",
+      "dx.mem": "eb0cc83802f22f632e42d23cf7fa5ddbca06e3de4f52931b1db53d7ed04a9818",
+      "lmca_compact_math.svh": "a456d53a5b18a6cbb8d1866f75dccee4999d6c82846aaae7daad39456296bb3c",
+      "mapped.v": "b13d68b97d6e1823d3d223798a5c3d8eafc66569e5f13c4eb40505ba2ce0ded2",
+      "fir.mem": "36736dd83c6e02474284d8c5f112dec95d5ed6876bf5353dcb672f365d6b0fd1",
+      "all_cells.v": "58c30e5d77f73ddfabb6d2b903793df9447f9d25d5f1e534555ff9c3f32fd8d3",
+      "quarter.mem": "80541dd3b79161ff91263c46904d91bdda84d0889f80b69e4f9c4d83e13e4229",
+      "dc.tcl": "b08cc3f4847ba670e192bcb52c592c56b979e4fa2e358aadb149106fd446a41c",
+      "phase_expected.mem": "0be57a57b9fddb28c4f0f1be1417d56476a7dff76aa43f465a51e62252db6098",
+      "infer.ys": "d93e58f3d241109c2bca17d7a17808496bd7987d3a8672f11d36dab4259b4dc2",
+      "gz.mem": "615b251bbc25e068cb64d56b8757a0001317fac398b26fd9bcfbfffa974c4cf7",
+      "pcm_expected.mem": "aa6f95a209d562d84225bb9ccb99dd4be332f2a14ebf238a450d81cfd289f8d7"
+    },
+    "limitations": [
+      "Educational gscl45nm mapping, not target-process area signoff.",
+      "100 ns synthesis constraint; no timing closure, placement, routing, clock tree, scan or pad-cell budget.",
+      "Register-only refers to all variable storage being inside this counted top.",
+      "Input is a backpressured PDM test stream, not yet a qualified continuous microphone capture interface."
+    ],
+    "settings": {
+      "name": "m24_n512_k16_acc24",
+      "settings": {
+        "name": "m24_n512_k16_acc24",
+        "sample_rate_hz": 192000,
+        "microphones": 24,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 3.0,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 512,
+        "selected_bins": [
+          54,
+          57,
+          61,
+          64,
+          68,
+          71,
+          75,
+          78,
+          82,
+          85,
+          89,
+          92,
+          96,
+          99,
+          103,
+          106
+        ],
+        "window": "sqrt_hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        }
+      },
+      "parameters": {
+        "MICS": 24,
+        "N": 512,
+        "BINS": 16,
+        "DIRECTIONS": 441,
+        "PDM_LANES": 1,
+        "DECIMATION": 16,
+        "CIC_ORDER": 3,
+        "FIR_TAPS": 1,
+        "PCM_W": 16,
+        "PCM_FRAC": 15,
+        "WIN_W": 18,
+        "WIN_FRAC": 16,
+        "DATA_W": 24,
+        "DATA_FRAC": 22,
+        "COEF_W": 18,
+        "COEF_FRAC": 16,
+        "PHASE_BITS": 10,
+        "POWER_FRAC": 32,
+        "MAP_W": 48,
+        "GAIN_NUM": 4,
+        "GAIN_DEN": 1
+      },
+      "acc_fraction": 14,
+      "acc_width": 24,
+      "held_out": false
+    },
+    "functional_logs": {
+      "baseline/simulation.log": "PASS compact: mics=24 bins=16 directions=441 maps=2 PDM=16384 PCM=24576 cycles=773051 clipped=0\n- tb_compact.sv:80: Verilog $finish\n",
+      "baseline/uart_simulation.log": "PASS PDM-to-UART: mics=24 bins=16 maps=2 points=882 bytes=5310 cycles=3075281\n- tb_uart_camera.sv:66: Verilog $finish\n",
+      "random/simulation.log": "PASS compact: mics=24 bins=16 directions=441 maps=2 PDM=16384 PCM=24576 cycles=773051 clipped=0\n- tb_compact.sv:80: Verilog $finish\n",
+      "random/uart_simulation.log": "PASS PDM-to-UART: mics=24 bins=16 maps=2 points=882 bytes=5310 cycles=3075281\n- tb_uart_camera.sv:66: Verilog $finish\n"
+    }
+  },
+  "m24_n512_k20_acc24": {
+    "method": "All arrays mapped to registers and constant logic by Yosys; entire top mapped by Design Compiler; no memory extraction or extra ports.",
+    "nand2_equivalent_gates": 351436.0,
+    "standard_cells": 195049,
+    "flip_flops": 30110,
+    "library_area": 659715.6592,
+    "dc_reported_area": 659715.6591976007,
+    "nand2_area": 1.8772,
+    "lef_area_um2": 621062.7033,
+    "lef_nand2_equivalent_gates": 330845.25,
+    "excluded_memory_bits": 0,
+    "memory_macros": 0,
+    "extra_memory_ports": 0,
+    "logical_constant_drivers": 115,
+    "inferred_ram_bits": 29312,
+    "inferred_rom_bits": 40768,
+    "blocks": {
+      "core": {
+        "cells": 156389,
+        "flip_flops": 23375,
+        "area": 531373.3723984157,
+        "nand2_equivalent_gates": 283066.99999915605
+      },
+      "pdm": {
+        "cells": 34927,
+        "flip_flops": 6186,
+        "area": 116339.47000000242,
+        "nand2_equivalent_gates": 61975.00000000129
+      },
+      "serializer": {
+        "cells": 2858,
+        "flip_flops": 417,
+        "area": 9149.003499999464,
+        "nand2_equivalent_gates": 4873.749999999714
+      },
+      "interface": {
+        "cells": 875,
+        "flip_flops": 132,
+        "area": 2853.813300000048,
+        "nand2_equivalent_gates": 1520.2500000000257
+      }
+    },
+    "cells": {
+      "OAI21X1": 51844,
+      "NOR3X1": 3256,
+      "XOR2X1": 1810,
+      "XNOR2X1": 111,
+      "INVX1": 36986,
+      "OR2X1": 53753,
+      "AND2X1": 11003,
+      "MUX2X1": 422,
+      "HAX1": 288,
+      "FAX1": 5410,
+      "DFFPOSX1": 30110,
+      "BUFX2": 56
+    },
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "start": {
+        "direction": "input",
+        "width": 1
+      },
+      "busy": {
+        "direction": "output",
+        "width": 1
+      },
+      "done": {
+        "direction": "output",
+        "width": 1
+      },
+      "pdm_valid": {
+        "direction": "input",
+        "width": 1
+      },
+      "pdm_ready": {
+        "direction": "output",
+        "width": 1
+      },
+      "pdm_bits": {
+        "direction": "input",
+        "width": 24
+      },
+      "tx": {
+        "direction": "output",
+        "width": 1
+      },
+      "clipped": {
+        "direction": "output",
+        "width": 1
+      },
+      "input_overrun": {
+        "direction": "output",
+        "width": 1
+      }
+    },
+    "sha256": {
+      "gy.mem": "7fe660ef3ba7c0c7d23b60735f3227e22d533a68d901761d7ce6f0460967ebf8",
+      "map_registers.ys": "ebe45bb133685797c5071b8f6dc65cfd5c048b8fdc655265ca551808e2d3e9a7",
+      "window.mem": "cf8b6bd7e646b2b371228281dd7cc192ea2c6157661e1488ba1e8fb18c00ca6b",
+      "tb_config.svh": "9bfe76b2a05d38ea613c85052cc740393422e7036a60094ffb8f413f110ae2ad",
+      "gx.mem": "2c46c733cbf8accc8635f7b50bc166fdeed7f5f4eb76201d62c8e90312334d8b",
+      "window_expected.mem": "b753576a3bdf4bb7ed9763f83f5992270ef4a2c626ea3317f452cc4fa4b44f1c",
+      "dz.mem": "89b7fa73aa1f5dd8f14d8e998f74111ae97d76f0fab54a1a7544778c1c1d7d50",
+      "lmca_uart_map_tx.sv": "b3c949003677f51092d19f39b4dfbba83a064e2b66a7db0158f8f56a7145b69d",
+      "lmca_compact_configured.sv": "25fb2bb2a52a50a5c17c2e577201a747700bd6357c525e0f0741b6e824937b53",
+      "lmca_compact_trig.sv": "77f921e0126362f25632c25295a4f7603f9c4cc3dad2a1d43f2231dba1d67396",
+      "dy.mem": "835ad906dca2744e48e951fc500cde5de251b6bbdb4cea63b8aaf96dee3d404a",
+      "si_expected.mem": "ebac9d57d5482410ea590aca84679c17aa08abb56e2bfff440dbb6dd35a412a0",
+      "lmca_compact_core.sv": "f478abb5e495e5c3cc563747309f017f154bd0d27b1744660ea57bbd7b080ed4",
+      "lmca_pdm_decimator.sv": "5d6fc5c925cf139ca8980e94fac44aef620cc37717be969c8b4cc5aa0202cc22",
+      "bins.mem": "9dc23a112eac0a76ce96f82728bb381281ca48e7b78afd7e7921cb53cbb45b58",
+      "pdm.mem": "7f90d70961717b94775c3f837d6d37c55a72804af620f9896f83840067ad2902",
+      "dut_params.svh": "cca6cb09a54629bb84974e5da31107fe60bfc11f70c9ac1e3efff517701dfe0c",
+      "sr_expected.mem": "e7fab226087c4d464e2907f200e915e88d660c2716eefeef3d8c7288e281f4dd",
+      "tb_uart_camera.sv": "7119566186de22ffdab6907fad50d79d5af4b103da7dcd9c2510bf1777a86d8a",
+      "map_expected.mem": "922d2a0f7628977cec80c337fb5396e530fe618a593a76748f73efd3d6def511",
+      "tb_compact.sv": "130ec80a9871f6189af2cb51311068e04ec55c2bd45116b68bbe063024147a32",
+      "cell_models.ys": "83277197f03da3d8b8c439fcc82c7dda0e041931ce08921c1fe06b8d4aa83b6d",
+      "lmca_compact_camera.sv": "b108572cacbb4918fd0a76daf8027158058b0a5e76e2c08409a8a0c05e6c4a3b",
+      "dx.mem": "eb0cc83802f22f632e42d23cf7fa5ddbca06e3de4f52931b1db53d7ed04a9818",
+      "lmca_compact_math.svh": "a456d53a5b18a6cbb8d1866f75dccee4999d6c82846aaae7daad39456296bb3c",
+      "mapped.v": "34b34cf2e754441875c582be82cf42a71b432bbad24388cf7ff9c2d759991732",
+      "fir.mem": "36736dd83c6e02474284d8c5f112dec95d5ed6876bf5353dcb672f365d6b0fd1",
+      "all_cells.v": "69c79e145e6f6bf75e31702714b4dd35a69fb07a9304c508084516e31f8e7579",
+      "quarter.mem": "80541dd3b79161ff91263c46904d91bdda84d0889f80b69e4f9c4d83e13e4229",
+      "dc.tcl": "b08cc3f4847ba670e192bcb52c592c56b979e4fa2e358aadb149106fd446a41c",
+      "phase_expected.mem": "0240bc2cf47508dfdbe87db6c1401513678c7f7e09ffd573d1a05d1fed16e1da",
+      "infer.ys": "d93e58f3d241109c2bca17d7a17808496bd7987d3a8672f11d36dab4259b4dc2",
+      "gz.mem": "615b251bbc25e068cb64d56b8757a0001317fac398b26fd9bcfbfffa974c4cf7",
+      "pcm_expected.mem": "b37de76468b1936965318d061124183631d0b03067f68b79f0e9a94a5c074db2"
+    },
+    "limitations": [
+      "Educational gscl45nm mapping, not target-process area signoff.",
+      "100 ns synthesis constraint; no timing closure, placement, routing, clock tree, scan or pad-cell budget.",
+      "Register-only refers to all variable storage being inside this counted top.",
+      "Input is a backpressured PDM test stream, not yet a qualified continuous microphone capture interface."
+    ],
+    "settings": {
+      "name": "m24_n512_k20_acc24",
+      "settings": {
+        "name": "m24_n512_k20_acc24",
+        "sample_rate_hz": 192000,
+        "microphones": 24,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 3.0,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 512,
+        "selected_bins": [
+          54,
+          57,
+          59,
+          62,
+          65,
+          68,
+          70,
+          73,
+          76,
+          79,
+          81,
+          84,
+          87,
+          90,
+          92,
+          95,
+          98,
+          101,
+          103,
+          106
+        ],
+        "window": "sqrt_hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        }
+      },
+      "parameters": {
+        "MICS": 24,
+        "N": 512,
+        "BINS": 20,
+        "DIRECTIONS": 441,
+        "PDM_LANES": 1,
+        "DECIMATION": 16,
+        "CIC_ORDER": 3,
+        "FIR_TAPS": 1,
+        "PCM_W": 16,
+        "PCM_FRAC": 15,
+        "WIN_W": 18,
+        "WIN_FRAC": 16,
+        "DATA_W": 24,
+        "DATA_FRAC": 22,
+        "COEF_W": 18,
+        "COEF_FRAC": 16,
+        "PHASE_BITS": 10,
+        "POWER_FRAC": 32,
+        "MAP_W": 48,
+        "GAIN_NUM": 4,
+        "GAIN_DEN": 1
+      },
+      "acc_fraction": 14,
+      "acc_width": 24,
+      "held_out": false
+    },
+    "functional_logs": {
+      "baseline/simulation.log": "PASS compact: mics=24 bins=20 directions=441 maps=2 PDM=16384 PCM=24576 cycles=958824 clipped=0\n- tb_compact.sv:80: Verilog $finish\n",
+      "baseline/uart_simulation.log": "PASS PDM-to-UART: mics=24 bins=20 maps=2 points=882 bytes=5310 cycles=3173785\n- tb_uart_camera.sv:66: Verilog $finish\n",
+      "random/simulation.log": "PASS compact: mics=24 bins=20 directions=441 maps=2 PDM=16384 PCM=24576 cycles=958824 clipped=0\n- tb_compact.sv:80: Verilog $finish\n",
+      "random/uart_simulation.log": "PASS PDM-to-UART: mics=24 bins=20 maps=2 points=882 bytes=5310 cycles=3173785\n- tb_uart_camera.sv:66: Verilog $finish\n"
+    }
+  },
+  "m30_n256_k10_acc24": {
+    "method": "All arrays mapped to registers and constant logic by Yosys; entire top mapped by Design Compiler; no memory extraction or extra ports.",
+    "nand2_equivalent_gates": 268455.75,
+    "standard_cells": 148244,
+    "flip_flops": 21671,
+    "library_area": 503945.13389999996,
+    "dc_reported_area": 503945.1338991655,
+    "nand2_area": 1.8772,
+    "lef_area_um2": 477175.79260000004,
+    "lef_nand2_equivalent_gates": 254195.5,
+    "excluded_memory_bits": 0,
+    "memory_macros": 0,
+    "extra_memory_ports": 0,
+    "logical_constant_drivers": 116,
+    "inferred_ram_bits": 20672,
+    "inferred_rom_bits": 36720,
+    "blocks": {
+      "core": {
+        "cells": 108595,
+        "flip_flops": 14732,
+        "area": 372112.66299957765,
+        "nand2_equivalent_gates": 198227.499999775
+      },
+      "pdm": {
+        "cells": 35351,
+        "flip_flops": 6288,
+        "area": 117876.89680000253,
+        "nand2_equivalent_gates": 62794.00000000135
+      },
+      "serializer": {
+        "cells": 3401,
+        "flip_flops": 513,
+        "area": 11000.391999999265,
+        "nand2_equivalent_gates": 5859.999999999609
+      },
+      "interface": {
+        "cells": 897,
+        "flip_flops": 138,
+        "area": 2955.1821000000496,
+        "nand2_equivalent_gates": 1574.2500000000264
+      }
+    },
+    "cells": {
+      "OAI21X1": 37576,
+      "NOR3X1": 2708,
+      "XOR2X1": 1990,
+      "XNOR2X1": 123,
+      "INVX1": 27901,
+      "OR2X1": 38617,
+      "AND2X1": 11534,
+      "MUX2X1": 432,
+      "HAX1": 284,
+      "FAX1": 5342,
+      "DFFPOSX1": 21671,
+      "BUFX2": 66
+    },
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "start": {
+        "direction": "input",
+        "width": 1
+      },
+      "busy": {
+        "direction": "output",
+        "width": 1
+      },
+      "done": {
+        "direction": "output",
+        "width": 1
+      },
+      "pdm_valid": {
+        "direction": "input",
+        "width": 1
+      },
+      "pdm_ready": {
+        "direction": "output",
+        "width": 1
+      },
+      "pdm_bits": {
+        "direction": "input",
+        "width": 30
+      },
+      "tx": {
+        "direction": "output",
+        "width": 1
+      },
+      "clipped": {
+        "direction": "output",
+        "width": 1
+      },
+      "input_overrun": {
+        "direction": "output",
+        "width": 1
+      }
+    },
+    "sha256": {
+      "gy.mem": "8409de0a949f1c99aecdc2c4fefc1c772a7c2f1aa0df19c27ad4b4c6a08c4ad0",
+      "map_registers.ys": "ebe45bb133685797c5071b8f6dc65cfd5c048b8fdc655265ca551808e2d3e9a7",
+      "window.mem": "03531b4935b54a15097e10c75dd1f9d60169ae25b955a10576368f5bf8d4b605",
+      "tb_config.svh": "fb73dd91839b1ff40c89535e257ca75645f9d6d5ff47d23d9e70b0065676ffe2",
+      "gx.mem": "50ac43792b2962bcdfcd49eaf026ebaa0519e2147c6565d773b42b8e75b1dbb0",
+      "window_expected.mem": "96a104065395aef78eb0ea43f381c423eed993ef1af9aca2f89ef4998644090a",
+      "dz.mem": "89b7fa73aa1f5dd8f14d8e998f74111ae97d76f0fab54a1a7544778c1c1d7d50",
+      "lmca_uart_map_tx.sv": "b3c949003677f51092d19f39b4dfbba83a064e2b66a7db0158f8f56a7145b69d",
+      "lmca_compact_configured.sv": "6de81424e984e7cab58468d2080d8b28b7271ce6c2d32960fbbf73d323d0184e",
+      "lmca_compact_trig.sv": "77f921e0126362f25632c25295a4f7603f9c4cc3dad2a1d43f2231dba1d67396",
+      "dy.mem": "835ad906dca2744e48e951fc500cde5de251b6bbdb4cea63b8aaf96dee3d404a",
+      "si_expected.mem": "f3218817267cc5417d4a12cf02301dae532d6444f984942f49bf1f869ef4220e",
+      "lmca_compact_core.sv": "f583120de37f50fb7d3f6abf3e81cff4e6d6926d74e5afc636889b13f5878918",
+      "lmca_pdm_decimator.sv": "5d6fc5c925cf139ca8980e94fac44aef620cc37717be969c8b4cc5aa0202cc22",
+      "bins.mem": "1840a303af88b6471d281cb32904188dc0a2b15cda64eb3fd8d814a874786cc4",
+      "pdm.mem": "2743e3dda8d7b2e3b56e1ea7462361001f7eccf70ef46437c48a87b6a33a4b14",
+      "dut_params.svh": "cca6cb09a54629bb84974e5da31107fe60bfc11f70c9ac1e3efff517701dfe0c",
+      "sr_expected.mem": "e69f8867bf2be887a87a009eb78ac6c20ee3d4d2d99ccecee4ea856da85e25d0",
+      "tb_uart_camera.sv": "7119566186de22ffdab6907fad50d79d5af4b103da7dcd9c2510bf1777a86d8a",
+      "map_expected.mem": "278f1caa8fe343dcba80d9a2e298b9ca765a34baddd424157dab059c1f88ed48",
+      "tb_compact.sv": "130ec80a9871f6189af2cb51311068e04ec55c2bd45116b68bbe063024147a32",
+      "cell_models.ys": "83277197f03da3d8b8c439fcc82c7dda0e041931ce08921c1fe06b8d4aa83b6d",
+      "lmca_compact_camera.sv": "b108572cacbb4918fd0a76daf8027158058b0a5e76e2c08409a8a0c05e6c4a3b",
+      "dx.mem": "eb0cc83802f22f632e42d23cf7fa5ddbca06e3de4f52931b1db53d7ed04a9818",
+      "lmca_compact_math.svh": "a456d53a5b18a6cbb8d1866f75dccee4999d6c82846aaae7daad39456296bb3c",
+      "mapped.v": "b08899fa6b9b22b79ac66a2efb6ab98a8360ab4711a08711cea4a5b1951b7269",
+      "fir.mem": "36736dd83c6e02474284d8c5f112dec95d5ed6876bf5353dcb672f365d6b0fd1",
+      "all_cells.v": "9150aff35a7abf37f9c1ab914c91494fa240971dabd8c5cce14dc15ca24eb039",
+      "quarter.mem": "80541dd3b79161ff91263c46904d91bdda84d0889f80b69e4f9c4d83e13e4229",
+      "dc.tcl": "b08cc3f4847ba670e192bcb52c592c56b979e4fa2e358aadb149106fd446a41c",
+      "phase_expected.mem": "6ce59cce7f92e0f08adcb51f02f4a70fe86c89be1695d2710db52ad32bb68eea",
+      "infer.ys": "d93e58f3d241109c2bca17d7a17808496bd7987d3a8672f11d36dab4259b4dc2",
+      "gz.mem": "326d1c61a1989b462f567fcf7e15b65ec65d38b48dfc06566fdba3397b3e8cc2",
+      "pcm_expected.mem": "af3f30405fb5c024b8deb87de5f2dd47b26033663ab5a4e336dfd5d8a4ea5124"
+    },
+    "limitations": [
+      "Educational gscl45nm mapping, not target-process area signoff.",
+      "100 ns synthesis constraint; no timing closure, placement, routing, clock tree, scan or pad-cell budget.",
+      "Register-only refers to all variable storage being inside this counted top.",
+      "Input is a backpressured PDM test stream, not yet a qualified continuous microphone capture interface."
+    ],
+    "settings": {
+      "name": "m30_n256_k10_acc24",
+      "settings": {
+        "name": "m30_n256_k10_acc24",
+        "sample_rate_hz": 192000,
+        "microphones": 30,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 3.0,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 256,
+        "selected_bins": [
+          27,
+          30,
+          33,
+          36,
+          39,
+          41,
+          44,
+          47,
+          50,
+          53
+        ],
+        "window": "sqrt_hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        }
+      },
+      "parameters": {
+        "MICS": 30,
+        "N": 256,
+        "BINS": 10,
+        "DIRECTIONS": 441,
+        "PDM_LANES": 1,
+        "DECIMATION": 16,
+        "CIC_ORDER": 3,
+        "FIR_TAPS": 1,
+        "PCM_W": 16,
+        "PCM_FRAC": 15,
+        "WIN_W": 18,
+        "WIN_FRAC": 16,
+        "DATA_W": 24,
+        "DATA_FRAC": 22,
+        "COEF_W": 18,
+        "COEF_FRAC": 16,
+        "PHASE_BITS": 10,
+        "POWER_FRAC": 32,
+        "MAP_W": 48,
+        "GAIN_NUM": 4,
+        "GAIN_DEN": 1
+      },
+      "acc_fraction": 15,
+      "acc_width": 24,
+      "held_out": false
+    },
+    "functional_logs": {
+      "baseline/simulation.log": "PASS compact: mics=30 bins=10 directions=441 maps=2 PDM=8192 PCM=15360 cycles=528836 clipped=0\n- tb_compact.sv:80: Verilog $finish\n",
+      "baseline/uart_simulation.log": "PASS PDM-to-UART: mics=30 bins=10 maps=2 points=882 bytes=5310 cycles=2910850\n- tb_uart_camera.sv:66: Verilog $finish\n",
+      "random/simulation.log": "PASS compact: mics=30 bins=10 directions=441 maps=2 PDM=8192 PCM=15360 cycles=528836 clipped=0\n- tb_compact.sv:80: Verilog $finish\n",
+      "random/uart_simulation.log": "PASS PDM-to-UART: mics=30 bins=10 maps=2 points=882 bytes=5310 cycles=2910850\n- tb_uart_camera.sv:66: Verilog $finish\n"
+    }
+  }
+}

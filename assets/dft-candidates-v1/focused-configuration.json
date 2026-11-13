@@ -1,0 +1,2293 @@
+{
+  "scenes": {
+    "focus_frequency_0": {
+      "group": "frequency",
+      "row": 0,
+      "source_direction": [
+        -12.0,
+        6.0
+      ],
+      "displayed_seed": 7,
+      "tone_hz": 28875.0,
+      "source_rms_dbfs": -26,
+      "noise_rms_dbfs": null,
+      "total_input_snr_db": null
+    },
+    "focus_frequency_1": {
+      "group": "frequency",
+      "row": 1,
+      "source_direction": [
+        -12.0,
+        6.0
+      ],
+      "displayed_seed": 7,
+      "tone_hz": 30000.0,
+      "source_rms_dbfs": -26,
+      "noise_rms_dbfs": null,
+      "total_input_snr_db": null
+    },
+    "focus_frequency_2": {
+      "group": "frequency",
+      "row": 2,
+      "source_direction": [
+        -12.0,
+        6.0
+      ],
+      "displayed_seed": 7,
+      "tone_hz": 28875.0,
+      "source_rms_dbfs": -26,
+      "noise_rms_dbfs": -26,
+      "total_input_snr_db": 0
+    },
+    "focus_frequency_3": {
+      "group": "frequency",
+      "row": 3,
+      "source_direction": [
+        -12.0,
+        6.0
+      ],
+      "displayed_seed": 7,
+      "tone_hz": 30000.0,
+      "source_rms_dbfs": -26,
+      "noise_rms_dbfs": -26,
+      "total_input_snr_db": 0
+    },
+    "focus_weak_0": {
+      "group": "weak",
+      "row": 0,
+      "source_direction": [
+        -12.0,
+        6.0
+      ],
+      "displayed_seed": 7,
+      "reference_array_peak_dbfs": -30,
+      "band_hz": [
+        20250,
+        39750
+      ],
+      "envelope_sigma_us": 80,
+      "window_alignment": "All windows centered at sample 256 of the same 512-sample event recording.",
+      "level_definition": "Peak level referenced to the 30-mic recording; source amplitude held fixed across arrays."
+    },
+    "focus_weak_1": {
+      "group": "weak",
+      "row": 1,
+      "source_direction": [
+        -12.0,
+        6.0
+      ],
+      "displayed_seed": 7,
+      "reference_array_peak_dbfs": -50,
+      "band_hz": [
+        20250,
+        39750
+      ],
+      "envelope_sigma_us": 80,
+      "window_alignment": "All windows centered at sample 256 of the same 512-sample event recording.",
+      "level_definition": "Peak level referenced to the 30-mic recording; source amplitude held fixed across arrays."
+    },
+    "focus_weak_2": {
+      "group": "weak",
+      "row": 2,
+      "source_direction": [
+        -12.0,
+        6.0
+      ],
+      "displayed_seed": 7,
+      "reference_array_peak_dbfs": -65,
+      "band_hz": [
+        20250,
+        39750
+      ],
+      "envelope_sigma_us": 80,
+      "window_alignment": "All windows centered at sample 256 of the same 512-sample event recording.",
+      "level_definition": "Peak level referenced to the 30-mic recording; source amplitude held fixed across arrays."
+    },
+    "focus_weak_3": {
+      "group": "weak",
+      "row": 3,
+      "source_direction": [
+        -12.0,
+        6.0
+      ],
+      "displayed_seed": 7,
+      "reference_array_peak_dbfs": -80,
+      "band_hz": [
+        20250,
+        39750
+      ],
+      "envelope_sigma_us": 80,
+      "window_alignment": "All windows centered at sample 256 of the same 512-sample event recording.",
+      "level_definition": "Peak level referenced to the 30-mic recording; source amplitude held fixed across arrays."
+    }
+  },
+  "variants": {
+    "fft16_64_w18": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 16,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 64,
+          "map_hop_samples": 64,
+          "fft_size": 64,
+          "fft_hop_samples": 64,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "FFT",
+      "stored_width": 18,
+      "gates": 282252.5
+    },
+    "fft8_128_w18": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 8,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 128,
+          "map_hop_samples": 128,
+          "fft_size": 128,
+          "fft_hop_samples": 128,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "FFT",
+      "stored_width": 18,
+      "gates": 265476.99999999994
+    },
+    "fft16_64_w16": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 16,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 64,
+          "map_hop_samples": 64,
+          "fft_size": 64,
+          "fft_hop_samples": 64,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "FFT",
+      "stored_width": 16,
+      "gates": 262533.25
+    },
+    "fft12_64_w24": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 12,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 64,
+          "map_hop_samples": 64,
+          "fft_size": 64,
+          "fft_hop_samples": 64,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "FFT",
+      "stored_width": 24,
+      "gates": 281124.0
+    },
+    "dft30_8": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 30,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 512,
+          "map_hop_samples": 512,
+          "fft_size": 512,
+          "fft_hop_samples": 512,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            54,
+            61,
+            69,
+            76,
+            84,
+            91,
+            99,
+            106
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "DFT",
+      "stored_width": 34,
+      "gates": 288105.75
+    },
+    "dft30_10": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 30,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 512,
+          "map_hop_samples": 512,
+          "fft_size": 512,
+          "fft_hop_samples": 512,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            54,
+            60,
+            66,
+            71,
+            77,
+            83,
+            89,
+            94,
+            100,
+            106
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "DFT",
+      "stored_width": 26,
+      "gates": 281097.75
+    },
+    "dft24_10": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 24,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 512,
+          "map_hop_samples": 512,
+          "fft_size": 512,
+          "fft_hop_samples": 512,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            54,
+            60,
+            66,
+            71,
+            77,
+            83,
+            89,
+            94,
+            100,
+            106
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "DFT",
+      "stored_width": 34,
+      "gates": 285554.75
+    },
+    "dft16_24": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 16,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 512,
+          "map_hop_samples": 512,
+          "fft_size": 512,
+          "fft_hop_samples": 512,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            54,
+            56,
+            59,
+            61,
+            63,
+            65,
+            68,
+            70,
+            72,
+            74,
+            77,
+            79,
+            81,
+            83,
+            86,
+            88,
+            90,
+            92,
+            95,
+            97,
+            99,
+            101,
+            104,
+            106
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "DFT",
+      "stored_width": 26,
+      "gates": 287823.25
+    },
+    "dft24_n512_k15_w24": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 24,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 512,
+          "map_hop_samples": 512,
+          "fft_size": 512,
+          "fft_hop_samples": 512,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            54,
+            58,
+            61,
+            65,
+            69,
+            73,
+            76,
+            80,
+            84,
+            87,
+            91,
+            95,
+            99,
+            102,
+            106
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "DFT",
+      "stored_width": 24,
+      "gates": null
+    },
+    "dft24_n512_k20_w24": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 24,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 512,
+          "map_hop_samples": 512,
+          "fft_size": 512,
+          "fft_hop_samples": 512,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            54,
+            57,
+            59,
+            62,
+            65,
+            68,
+            70,
+            73,
+            76,
+            79,
+            81,
+            84,
+            87,
+            90,
+            92,
+            95,
+            98,
+            101,
+            103,
+            106
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "DFT",
+      "stored_width": 24,
+      "gates": null
+    },
+    "dft24_n512_k16_w24": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 24,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 512,
+          "map_hop_samples": 512,
+          "fft_size": 512,
+          "fft_hop_samples": 512,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            54,
+            57,
+            61,
+            64,
+            68,
+            71,
+            75,
+            78,
+            82,
+            85,
+            89,
+            92,
+            96,
+            99,
+            103,
+            106
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "DFT",
+      "stored_width": 24,
+      "gates": null
+    },
+    "dft30_n256_k10_w24": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 30,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 256,
+          "map_hop_samples": 256,
+          "fft_size": 256,
+          "fft_hop_samples": 256,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            27,
+            30,
+            33,
+            36,
+            39,
+            41,
+            44,
+            47,
+            50,
+            53
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "DFT",
+      "stored_width": 24,
+      "gates": null
+    },
+    "reference": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 30,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 512,
+          "map_hop_samples": 512,
+          "fft_size": 512,
+          "fft_hop_samples": 512,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "DFT",
+      "stored_width": 26,
+      "gates": null
+    },
+    "precision_control": {
+      "config": {
+        "name": "ultrasonic-configurable-baseline",
+        "seed": 7,
+        "algorithms": [
+          "fd",
+          "td"
+        ],
+        "sample_rate_hz": 192000,
+        "array": {
+          "count": 30,
+          "layout": "spiral",
+          "aperture_m": 0.2,
+          "positions_m": []
+        },
+        "scan": {
+          "azimuth_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "elevation_limits_deg": [
+            -30.0,
+            30.0
+          ],
+          "step_deg": 3.0,
+          "focus_distance_m": 0.0
+        },
+        "processing": {
+          "band_hz": [
+            20000.0,
+            40000.0
+          ],
+          "observation_samples": 512,
+          "map_hop_samples": 512,
+          "fft_size": 512,
+          "fft_hop_samples": 512,
+          "window": "sqrt_hann",
+          "bin_mode": "explicit",
+          "bin_indices": [
+            54,
+            60,
+            66,
+            71,
+            77,
+            83,
+            89,
+            94,
+            100,
+            106
+          ],
+          "bin_count": 16,
+          "bin_stride": 2,
+          "td_upsample": 4,
+          "td_fir_taps": 65
+        },
+        "precision": {
+          "mode": "float",
+          "input": [
+            16,
+            15
+          ],
+          "fft": [
+            24,
+            22
+          ],
+          "coefficient": [
+            18,
+            16
+          ],
+          "product": [
+            24,
+            22
+          ],
+          "accumulator": [
+            32,
+            22
+          ],
+          "power": [
+            48,
+            32
+          ]
+        },
+        "scene": {
+          "duration_s": 0.021333333333333333,
+          "speed_of_sound_m_s": 343.0,
+          "self_noise_dbfs": -70.0,
+          "absorption_db_per_m": 0.0,
+          "sources": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "distance_m": 10.0,
+              "azimuth_deg": 15.0,
+              "elevation_deg": 0.0,
+              "band_hz": [
+                25000.0,
+                50000.0
+              ],
+              "level_dbfs": -20.0,
+              "tone_hz": 37500.0,
+              "pulse_rate_hz": 100.0,
+              "pulse_width_s": 0.001
+            }
+          ],
+          "interferers": [
+            {
+              "kind": "broadband",
+              "spatial": "point",
+              "position_m": [
+                0.15,
+                0.0,
+                -0.3
+              ],
+              "band_hz": [
+                20000.0,
+                60000.0
+              ],
+              "level_dbfs": -45.0,
+              "tone_hz": 40000.0,
+              "pulse_rate_hz": 10.0,
+              "pulse_width_s": 0.002
+            }
+          ]
+        },
+        "microphone": {
+          "name": "IM66D130MV01",
+          "response_hz": [],
+          "response_db": [],
+          "gain_std_db": 0.0,
+          "delay_std_us": 0.0
+        }
+      },
+      "architecture": "DFT",
+      "stored_width": 34,
+      "gates": null
+    }
+  },
+  "seeds": [
+    7,
+    23,
+    91
+  ],
+  "input_sha256": {
+    "focus_frequency_0_7_16m": "33eadf8856ff96e9b7ff958e466efe14397a574444fd4a7855b8cab9cc3aa39b",
+    "focus_frequency_0_7_8m": "e9d1b4fc2a762ce2f1ff42a6f0e60d92b661f44de22e7a93eee369833b57d892",
+    "focus_frequency_0_7_12m": "dd93e123247a21c4f92a8746a9d0ff8d0f04c98f523ffb8ed02d7c8699e5af62",
+    "focus_frequency_0_7_30m": "4958de1c9f51c07de15b0d82eb8302c94709d506ea8c92df2e05582731ba49db",
+    "focus_frequency_0_7_24m": "c402e8279ce754a7dab1ca326247a81eb5db4113a34814bf49a2140cd1ba3151",
+    "focus_frequency_0_23_16m": "82bcfc117b3a3940e30ed9526b1ae4ac70e34090cfa59d960f4390e1b7530a52",
+    "focus_frequency_0_23_8m": "41c699efcb9909430a23d19b594b8c502ab67e03ba78232a4d4f8be4f92b482f",
+    "focus_frequency_0_23_12m": "cbcca9035134824264c3b6d1321a274b29a74aa76d164d1fe0b814650c6e2873",
+    "focus_frequency_0_23_30m": "46095da209d24a052e39d7b6ae0da9814e08137e127dea1c25ec0fd2e4d63083",
+    "focus_frequency_0_23_24m": "72803d87bd8b3afed2eb539fdb6e8e78b9e56f3b3950cf7ec20c716ffc8fcf8b",
+    "focus_frequency_0_91_16m": "e677644d8e5035a82947b21f08aa925c34ab169d3ba12930ae40fa6bc27eca4a",
+    "focus_frequency_0_91_8m": "d87085cac66517508f781d6626b83bbd6a0b392d0612bd16763dfde681af5979",
+    "focus_frequency_0_91_12m": "861dc24ea109b48d5907ca0333244e14956abb74fc38dd246c3e6fabd2a8c9e4",
+    "focus_frequency_0_91_30m": "85ee205f109a0f4a219f2d40d0a19f2d130e93487bef10500e277c35e817e7c5",
+    "focus_frequency_0_91_24m": "2f8cf309cf4aa4e982f2d9a2a7d046a405dec7cba8d4f989a37be1ed788d3aab",
+    "focus_frequency_1_7_16m": "826491c21816819739c6455836608aa0007f251904115caa2a7210390dac6f22",
+    "focus_frequency_1_7_8m": "a0cdcf5e0a683e12748d19ea5ffb4922267403cc9e3a5f482853523e96b7a17c",
+    "focus_frequency_1_7_12m": "faf55b7e970084ce111c5c19577f172b41f1fbf09c750224b18d8ae1e1f135c1",
+    "focus_frequency_1_7_30m": "78efd84b6fd16aaa910c5d7afbcffbe0b23b6c2acf0fcd5621fbe3db0c2a6f41",
+    "focus_frequency_1_7_24m": "32b9e0a4b83106efb6457a1cf270699012964bb93b956919ce3f7c821a7e3fe2",
+    "focus_frequency_1_23_16m": "381a2dcc21cf45b4985b290f36d66350d04e476d7451602deec423dd06c521dc",
+    "focus_frequency_1_23_8m": "77499b8a2986196623e0c04aae6227d5df2d664135146037e53d2f63c0576176",
+    "focus_frequency_1_23_12m": "6d54148ecf5c1577cf0d51532761f81fda4f7299c4a26dab9293ff0e54e64675",
+    "focus_frequency_1_23_30m": "4d2910d439996afbfd9298ef4433385ff202df8bdcaf39bc3ee5d8625d4d1a7c",
+    "focus_frequency_1_23_24m": "0e0ad16a8d35acc864f7e652acbb92981821f6c76c5cbf1056bb23d311968492",
+    "focus_frequency_1_91_16m": "4718d2b96f5ccb0cf4530ed2e1dbd501dbf7279862f14ae8a727d41ec7dba4ab",
+    "focus_frequency_1_91_8m": "b65119faa020bce5ab385ce75fa7a325aaa19d0a88b8dacaafc4a1b71f03f19c",
+    "focus_frequency_1_91_12m": "6184a4a320429e0f11021bc3336c9e8e8bca0eeb6bec35d4fcf8a4eb2f0ebbd4",
+    "focus_frequency_1_91_30m": "b4b28f328101b841beef96318c6df196ee5e76932ba7faa832d9ae6bcd68a66b",
+    "focus_frequency_1_91_24m": "1592e888d70e14e65139d02bb9d75fb803d5208e6d1f83935d4a17be3cb0df91",
+    "focus_frequency_2_7_16m": "f9d03a71a01cf8257784ae2d24e1ee958dac80aec7b543603abef2996e42cb9f",
+    "focus_frequency_2_7_8m": "030d0d11f3cae77ae25b371c73d382e98a8bdb58addb523af0d15fc8b9580a20",
+    "focus_frequency_2_7_12m": "d62bf6bc3c60c5c373558d2c11ba5e42df74fc94f6c96eec0ab543294ceeea05",
+    "focus_frequency_2_7_30m": "4df33a61f2fffe62a4d5917406f17d0c31d8bfef093733d1df93914b860a803f",
+    "focus_frequency_2_7_24m": "2f636e1973b509685196ef3ad9082b60515a558298e5aa68cd0363580604f03f",
+    "focus_frequency_2_23_16m": "e3a8295fa5ae426303060452f12e36199ae4314d59574e4c6336546973d5e433",
+    "focus_frequency_2_23_8m": "97c8f762ff80a1f89159b1116d2c91d06ec238842334418343c0fe864de97b13",
+    "focus_frequency_2_23_12m": "6babd902f09b7ec5678a2d660e9f29f41d7c427405bd00fb5b758049e9684117",
+    "focus_frequency_2_23_30m": "f95167b74b7dd9c4c0a73cd324e7b1d1236250eea4d12a58f50eab3625473418",
+    "focus_frequency_2_23_24m": "ececab9a81a02d52701b6d7c682900d6ef0b881aeb8f8d605ac716e9ab6bfd67",
+    "focus_frequency_2_91_16m": "6cb5f2d53c3304818b92644cba3fbb5c2a5191cfc9035448756f3be44cd5ea1c",
+    "focus_frequency_2_91_8m": "7bd2604a71f02e463514bfc576f9607cb2f3944f04098780546612f58c3612d0",
+    "focus_frequency_2_91_12m": "7af085f6d49c6626cc8689f913a5eda28aa982461d57d4624e4d3252cdd83a51",
+    "focus_frequency_2_91_30m": "9002f44d6fca998573499b5bd36a074c02ad13766fbfafc7a507b042dab45492",
+    "focus_frequency_2_91_24m": "7d8df64cfb915ebc8440501b12d71697893b2d805120bcc8021ac415490f6260",
+    "focus_frequency_3_7_16m": "d76f5ae149d6db6cf8fda7a88b5690d9fbe2e35dc14fe188c991b8ea4e23ba40",
+    "focus_frequency_3_7_8m": "3807f7ac8b917e0476babbb00df8b88044e24df815eeded5fe451a6da954bb81",
+    "focus_frequency_3_7_12m": "817cd5f6c2eb3f8c6a46493bce217779195f516d40181fa58841aacd5f767c44",
+    "focus_frequency_3_7_30m": "694391aa064d5133b447d7a18c3856672084f2750f7f1a56c3a009b68569c08a",
+    "focus_frequency_3_7_24m": "c456b3af736a1effb3c2a32d4ccd249be749d7948a9fb0a8f6c6111978448417",
+    "focus_frequency_3_23_16m": "5d70c115ebd0df52268a6ea02146955b04af016968c6695f2339779cb7bbd8b3",
+    "focus_frequency_3_23_8m": "861cf3126511e252b9eabda17bc4e964ecdfea1a52799bf0c0180468c963eb51",
+    "focus_frequency_3_23_12m": "fce7fe60cb699eb177ee74236c5def9dc584aabc5814d7d87fabf70ea636d73a",
+    "focus_frequency_3_23_30m": "c2d0ff7831f0f2b56b8dd3354fdba085b2538248eec8709fbb40c5eb6eba8bb2",
+    "focus_frequency_3_23_24m": "cf7f0a24d56b9db358eb4ee4cef1a917017d9be9099a361ad4e44b35a014d4c2",
+    "focus_frequency_3_91_16m": "73b9e66b191b46adaba2a9f1520e3e85880d59535b93a94bb2d4f0afe277bc1f",
+    "focus_frequency_3_91_8m": "222ea4059240725f11f7afe610ac9cd34b5915db07a856acba98023267599ca0",
+    "focus_frequency_3_91_12m": "f608fa7bb88b6d74429ec2cabfd3a3cb9aa4ce39747397f044f339e53e056b64",
+    "focus_frequency_3_91_30m": "0d9db8b41e98be98fe15c0befcf928c41f433f32c6d1008d82e4554ef115ae32",
+    "focus_frequency_3_91_24m": "e9fb23ab5f3d1578dded7c2e082abbffe9f086c5f97587d02c5e9b105934fdba",
+    "focus_weak_0_7_16m": "171b0f6dd91791adc95ccc6105fc6c1dd889106cd2b2fa98cf471253aec47b3b",
+    "focus_weak_0_7_8m": "0a4def9d5adee83a6a2100199f57f91045098e95906574ba99e6e3df5b79319a",
+    "focus_weak_0_7_12m": "d39c5d7797096879a8297d57cb065066031af2393de269468618a916888345bb",
+    "focus_weak_0_7_30m": "6bbecd4c4673326efd7bbbfe9f4e824709d8c3f0d9f37f24aecfd7b10a0f9753",
+    "focus_weak_0_7_24m": "29de5ba4e0ccfd90dd1b0d0b0e7fcfba21a2f2a647596f145a088bf965b507e0",
+    "focus_weak_0_23_16m": "8b6ed0739d45d55c3ebf1cc897ba7b2398089451ee3ea5f4481da0732feb4ba0",
+    "focus_weak_0_23_8m": "9439bad07a4b6a260800bdf68d8ba1f4e77b3a85b0a35120cf5a8a1f137737a1",
+    "focus_weak_0_23_12m": "8fb0a9c3c26781bde164db5ce6eec4d5f79d5a2ec405afaf0ef042bfec977d4e",
+    "focus_weak_0_23_30m": "88ec7ab852de32c73b880907bef0057cbf644ca5dca7b2abcce917dee37e2731",
+    "focus_weak_0_23_24m": "cc4e6781a33cb31c03f97e9994407d1f4d3797c3f0758b991dc49248b5019da3",
+    "focus_weak_0_91_16m": "af5b20e8aeffbd907db185e2feb785ba7084950c415fa316484eab0df325cdfa",
+    "focus_weak_0_91_8m": "6dbadacb1b82ae4cccf527f4b9e146b535f3ce4796a7f76f70d4e6f834a70f48",
+    "focus_weak_0_91_12m": "4112f08d1b28bea47eef68b2e7566615762cda12284dfa232f7565a1e0469567",
+    "focus_weak_0_91_30m": "dceaebe7c4d2f91e136907dc71f35130dbd2778ab12c439a038f1f500ea1648a",
+    "focus_weak_0_91_24m": "21c07850a6b3e070aa261fcf82b4db4fe172cad70f1e0f89885cdfe2ddea6107",
+    "focus_weak_1_7_16m": "b9d21a47258f691a5f53948fd0d098e36898e2bd09470ab2bcce90d4d718d9df",
+    "focus_weak_1_7_8m": "c47cc3bee3ce59fe933217ecec5521ddf027055197a70b3983d735ed3cf70d7f",
+    "focus_weak_1_7_12m": "ea52a0cf357151456508f2ec486573fd8cc3f9d3dedbdbeca2ecfef1cbabff79",
+    "focus_weak_1_7_30m": "1250dbe474d41bd77b6e5a578bcc9388bab835f6a1e868648ee67f48b1b34c90",
+    "focus_weak_1_7_24m": "a1da6eda0033267a4df6e93250b606389f81389e4b7ab3ee19611923de6e64b7",
+    "focus_weak_1_23_16m": "a2d8f53a02d1ffc3fabcf85d0c5e722544ee46f451e58c43d0a9ba7fde19aa69",
+    "focus_weak_1_23_8m": "79bd047f2be4ad9e39982be29a2a8268b91e8c9d4848e0d10c20989b9cf7fd93",
+    "focus_weak_1_23_12m": "486b78489919311279e6be4cbfef933a9aeb82acd3edc003a4bfdd5990cdf6e2",
+    "focus_weak_1_23_30m": "93ef06c0e74c24391de463434d2f4092529a799bf9b9995d24a6a140f04a9306",
+    "focus_weak_1_23_24m": "efef3fc55a5efc38d2848a5044b201bdb164293e3980051e579a97fa832b8e89",
+    "focus_weak_1_91_16m": "3eb9e8ff64a1fd4e1026a861e40d2ba0a1fc230c1bd057f774bb0cabafc9bc52",
+    "focus_weak_1_91_8m": "2b7068778e1315ba2df9d6c9f5b834035a2fa5f092649670d587b0e31f49851a",
+    "focus_weak_1_91_12m": "ef44285c72e2b62ef61208b2e26035f1caab48368e9643540ad11f6800dba4d1",
+    "focus_weak_1_91_30m": "9fb30437b0b302e87bcc8fc5168b3ce25466ee9e1b6c9c73c50849350c68975b",
+    "focus_weak_1_91_24m": "88745a0b5d5cecda03bf412e22563c0a5e3a34effd1bd577b7feb0df5da817b7",
+    "focus_weak_2_7_16m": "570e16a7c8df6fa0ad434ce1e31d39e1c3fa4bc939c01ffa7a7037c760bce143",
+    "focus_weak_2_7_8m": "0a1f2a357a7526f799befec2032cb9548b075d6d6be94cdef848e9d48072b103",
+    "focus_weak_2_7_12m": "bed893508a1c21410de10bc3c8f3f2c54ba87783892b52526effa90f2069fb2c",
+    "focus_weak_2_7_30m": "59c22fb307ebf5cd9040db036e84bd0e09dcfe248da3ce39b8c012740338bd94",
+    "focus_weak_2_7_24m": "d6292fed4314c4ae5a712a76f7fcdf74f7614a12b1c12c6edc33c8cd4237f22d",
+    "focus_weak_2_23_16m": "76ce9ee101c5467be26023866ae6324ed7a81c7a12d972d8f42ea3a0bdbe3680",
+    "focus_weak_2_23_8m": "e27bf80b7c4e2a827f8aa90aa17b068b7ef94f8b374d820a4c394c32a27958d0",
+    "focus_weak_2_23_12m": "13aa9585339753c24a0ad7aba3fbaa414c3bec83b00915c7869638590bd19b3e",
+    "focus_weak_2_23_30m": "66535122f4c0ed68f71e182d8d217ea050315c5c234db7fc92f07dfd67f66672",
+    "focus_weak_2_23_24m": "7a49c3e3ca33b10feb760613a026cc87bf8428f883f47a94c5983c8fd8d0ade0",
+    "focus_weak_2_91_16m": "9625ae918cdb23761cdd57da7fde06e3176503bbbf1ef5c18d286fb36d0aae80",
+    "focus_weak_2_91_8m": "ee6aa86cc48d8eb5e881d7d008f4289e2e314ce1cea5b87d804640a132dbe55b",
+    "focus_weak_2_91_12m": "7dd70dfa32ee7530764102a85abfba5f9658f7f41d588f10eecbb0ff89697cab",
+    "focus_weak_2_91_30m": "0e5990efec3ad4675348705b3fdba206442140518abb54ebcdf56d7860fe981d",
+    "focus_weak_2_91_24m": "abb8a32bde70f9739b46703d8ba830043867a49c594d293169ae7428c4a1ab46",
+    "focus_weak_3_7_16m": "6ec6d4533491fb8c9d1bc34d9a268b8d2da6c899c1c159dedc6375f38342ce8d",
+    "focus_weak_3_7_8m": "14ad22d4fd792827dfd1880eec3d9059e74570ce2a4bf337ba05dddae2f01c1c",
+    "focus_weak_3_7_12m": "410f2c2e98400ca9a5e41bd9b257eef25603809b47c1eaa8c0581f08fbc8e470",
+    "focus_weak_3_7_30m": "f0e792a2d50bc15de6b0cf70d6c076a854f15486873e17b204d29872aff1846d",
+    "focus_weak_3_7_24m": "8e06281c94d0e2d1aac54154d0d88c94a5c92f1c1349775360a93ba35f89e215",
+    "focus_weak_3_23_16m": "7b66829aa5ed960beaf0fc505f3132514f2505ea9a66d43b90d0f906d255f705",
+    "focus_weak_3_23_8m": "0adcc26979bfe1bd4d6518fd95f1b272297be87388c130103da6e7d7fb54e9ee",
+    "focus_weak_3_23_12m": "4781319be72bd2b426e72e9b2747379c07802c58b142d661e51782fbf6cf9694",
+    "focus_weak_3_23_30m": "5450d3bc7cdf006f13ff427886efcc71f1d4f1d443b980626f1869b514faebf2",
+    "focus_weak_3_23_24m": "d68b01abc97b68f649c245eb53ff19c44ef4c43f6e7f5da679d0eef45d6c1f08",
+    "focus_weak_3_91_16m": "1603cd4defe965db52857dbf1f0b8eb12506b094e6ac5e57465ca5fc0d9a0829",
+    "focus_weak_3_91_8m": "5a7a14c6b63a3f755bf34da8e661bbe76f026e60caac1c7e0180288b89a3e36c",
+    "focus_weak_3_91_12m": "3d9a407b9b77d0f7d2a862cc87263608bd5f8e34f2d3f59d54ba13c6efaf6d3d",
+    "focus_weak_3_91_30m": "4bb9c3163978f41c6612b301243334804506abba2154f28ac250eeca2c2aef2a",
+    "focus_weak_3_91_24m": "16774aee82df4b66fe249bf13eebb24e5a7a05b03155968f9355c243451f8765"
+  },
+  "pulse_normalization": [
+    {
+      "scene": "focus_weak_0",
+      "seed": 7,
+      "reference_array_peak_before_scaling": 9.1473337666123
+    },
+    {
+      "scene": "focus_weak_0",
+      "seed": 23,
+      "reference_array_peak_before_scaling": 9.43091995678878
+    },
+    {
+      "scene": "focus_weak_0",
+      "seed": 91,
+      "reference_array_peak_before_scaling": 8.993336033131236
+    },
+    {
+      "scene": "focus_weak_1",
+      "seed": 7,
+      "reference_array_peak_before_scaling": 9.1473337666123
+    },
+    {
+      "scene": "focus_weak_1",
+      "seed": 23,
+      "reference_array_peak_before_scaling": 9.43091995678878
+    },
+    {
+      "scene": "focus_weak_1",
+      "seed": 91,
+      "reference_array_peak_before_scaling": 8.993336033131236
+    },
+    {
+      "scene": "focus_weak_2",
+      "seed": 7,
+      "reference_array_peak_before_scaling": 9.1473337666123
+    },
+    {
+      "scene": "focus_weak_2",
+      "seed": 23,
+      "reference_array_peak_before_scaling": 9.43091995678878
+    },
+    {
+      "scene": "focus_weak_2",
+      "seed": 91,
+      "reference_array_peak_before_scaling": 8.993336033131236
+    },
+    {
+      "scene": "focus_weak_3",
+      "seed": 7,
+      "reference_array_peak_before_scaling": 9.1473337666123
+    },
+    {
+      "scene": "focus_weak_3",
+      "seed": 23,
+      "reference_array_peak_before_scaling": 9.43091995678878
+    },
+    {
+      "scene": "focus_weak_3",
+      "seed": 91,
+      "reference_array_peak_before_scaling": 8.993336033131236
+    }
+  ],
+  "original_handoff_peak_and_error_checks": 48,
+  "original_displayed_arrays_matched": 16,
+  "window_alignment": "Centered subwindows of each common N512 recording; 64 => [224:288], 128 => [192:320], 512 => [0:512].",
+  "reference": "30-mic N512, all 53 bins, 26-bit accumulator, one window; software control, not budget-qualified."
+}
