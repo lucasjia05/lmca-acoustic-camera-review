@@ -194698,6 +194698,7 @@
     <p class="study-table-note">Pass: source peaks within 3°, with at least a 3 dB lead over distant competing hotspots. Each spoke shows its synthetic-test pass rate. Overall is the equal-weight average of the eight spokes, not field detection probability.</p>
     <details class="study-method"><summary>Scores and pass criterion</summary><div>
       <p>A single-source map passes when its output is nonzero, its strongest pixel is within 3° of the source, and its target neighborhood stands at least 3 dB above the strongest pixel more than 9° from the source. Two-source tests require two distinct local peaks within 3°, both above −12 dB relative to the maximum, with the same 3 dB separation from distant hotspots.</p>
+      <p>Rear interference equally weights the broadband check and a 161-frequency tone sweep across 20–40 kHz. Every tone is tested at the same nine interference levels, two target directions and three seeds. The strength plot regroups those same cases and is not counted again.</p>
       <p>Scores use raw map values, not image colors or per-image normalization. Each sweep family has equal weight within its spoke. Overall is the arithmetic mean of all eight category scores, out of 100; every category has equal weight regardless of its number of test cases. Test ranges deliberately include failure conditions.</p>
       <p>The frequency spoke measures correct pointing plus the 3 dB hotspot-separation rule; it does not measure spectral energy captured. Select “Correctly located maps” to inspect pointing alone.</p>
       <div class="study-table-wrap"><table class="precision-table"><caption>Clear-map pass rate by test axis (%)</caption><thead id="benchmark-score-head"></thead><tbody id="benchmark-score-rows"></tbody></table></div>
@@ -194725,7 +194726,7 @@
       <p id="benchmark-run-size"></p>
       <p id="benchmark-null-note"></p>
       <p>The 20–40 kHz range follows our current candidate band. Commercial PD cameras also use broader ultrasonic filters; <a href="https://docs.flir.com/T810637/en-US/latest/s08.html" target="_blank" rel="noopener">FLIR filter guidance</a> motivates testing both spectral coverage and noise. <a href="https://www.crysound.com/product/cry2626g-drone-mounted-acoustic-imaging-camera/" target="_blank" rel="noopener">CRYSOUND’s drone-camera description</a> explicitly identifies propeller noise as a design concern. The numerical sweep limits are engineering stress-test choices, not limits established by those products.</p>
-      <ul class="result-links"><li><a href="assets/candidate-benchmark-v1/benchmark.json">Aggregated scores and sweep definitions · JSON</a></li><li><a href="assets/candidate-benchmark-v1/measurements.csv">Every scored map · CSV</a></li><li><a href="assets/candidate-benchmark-v1/configurations.json">Exact candidate configurations · JSON</a></li><li><a href="assets/candidate-benchmark-v1/null-controls.json">Noise-only controls · JSON</a></li><li><a href="assets/candidate-benchmark-v1/run_benchmark.py">Reproducible benchmark script</a></li><li><a href="assets/benchmark-float-reference-v1/reference.json">Float64 FFT reference scores, settings and validation · JSON</a></li><li><a href="assets/candidate-benchmark-v1/validation.json">Validation and source hashes · JSON</a></li></ul>
+      <ul class="result-links"><li><a href="assets/candidate-benchmark-v1/benchmark.json">Aggregated scores and sweep definitions · JSON</a></li><li><a href="assets/candidate-benchmark-v1/measurements.csv">Every scored map · CSV</a></li><li><a href="assets/candidate-benchmark-v1/configurations.json">Exact candidate configurations · JSON</a></li><li><a href="assets/candidate-benchmark-v1/null-controls.json">Noise-only controls · JSON</a></li><li><a href="assets/candidate-benchmark-v1/run_benchmark.py">Original candidate benchmark script</a></li><li><a href="assets/benchmark-float-reference-v1/reference.json">Float64 reference implementation and original-run validation · JSON</a></li><li><a href="assets/rear-frequency-sweep-v1/sweep.json">Rear-frequency sweep results and validation · JSON</a></li><li><a href="assets/rear-frequency-sweep-v1/evaluate.py">Rear-frequency sweep source</a></li><li><a href="assets/candidate-benchmark-v1/validation.json">Validation and source hashes · JSON</a></li></ul>
     </div></details>
   </div>
 </div>
@@ -246697,7 +246698,7 @@ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectTab(i));tab.addEve
 
 
 
-</script><script src="layout-distance-data.js"></script><script src="layout-distance-explorer.js"></script><script src="algorithm-study.js?v=thin-markers-1"></script><script src="fft-study.js?v=thin-markers-1"></script><script src="candidate-benchmark.js?v=float64-reference-1"></script></body></html>
+</script><script src="layout-distance-data.js"></script><script src="layout-distance-explorer.js"></script><script src="algorithm-study.js?v=thin-markers-1"></script><script src="fft-study.js?v=thin-markers-1"></script><script src="candidate-benchmark.js?v=rear-frequency-1"></script></body></html>
 
 
 

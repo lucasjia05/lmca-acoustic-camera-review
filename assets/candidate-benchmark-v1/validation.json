@@ -1,5 +1,5 @@
 {
-  "scored_maps": 13950,
+  "scored_maps": 56880,
   "null_maps": 300,
   "unique_trial_keys": true,
   "equal_trials_per_candidate": true,
@@ -63,20 +63,20 @@
     "run_benchmark.py": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
   },
   "files_sha256": {
-    "benchmark.json": "e080e143bd6457effb4cb63aafab415cd47517f16c6a2bfb7a8b4d7ad6657140",
+    "benchmark.json": "339059cee5ad16c22d4543469319342eb9de47e7a17345e98d7ff10c8048fba1",
     "null-controls.json": "afb6807326cead7403690a2ede8fa937f09209ad7c8e1c1e1a88409a564c64dd",
     "configurations.json": "72f0512e23868db4a155c282961216beedf7634f65b55fa2b7b7b8c953488227",
-    "measurements.csv": "2f775e0e44b93db24cd03be0c34c6d6d8eb022d0078822621568d24df0552e16"
+    "measurements.csv": "3dfc8509b7904d1304deb4d6612b10e68898bafb80ad665a4dcf40a5613290d1"
   },
   "overall_score_validation": {
     "equal_weight_categories": 8,
     "checked_candidates": 4,
     "calculated_scores": {
-      "dft30_n256_k10_w24": 68.418681573786,
-      "dft30_10": 68.3066020288953,
-      "dft24_n512_k15_w24": 60.28947935490988,
-      "dft16_24": 52.017861089685475,
-      "reference_float64": 73.28494355215369
+      "dft30_n256_k10_w24": 68.85097204230836,
+      "dft30_10": 68.44151307866142,
+      "dft24_n512_k15_w24": 61.3083812796089,
+      "dft16_24": 52.010911852663774,
+      "reference_float64": 73.62401839304013
     },
     "existing_map_results_unchanged": true,
     "checked_reference_series": 1
@@ -88,7 +88,7 @@
     "null-controls.json": "41f96c423339cf21803ead9f5afdcc65147477367f6d5c4099e3644d2bb0a136",
     "run_benchmark.py": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
   },
-  "candidate_scored_maps": 11160,
+  "candidate_scored_maps": 45504,
   "candidate_null_maps": 240,
   "reference_validation": {
     "input_digest_matches_original": true,
@@ -102,7 +102,66 @@
     "script_sha256": "78964c90ac4f5beb97dbc343c7283a9cb46a3068574ea32c4d75c48faa4b49eb",
     "base_script_sha256": "7ccac487a4dc8ada947b6a4a73a6bdcdcad79179745dc572c3dd0b0905a6de8c"
   },
-  "reference_scored_maps": 2790,
+  "reference_scored_maps": 11376,
   "reference_null_maps": 60,
-  "reference_replacement": "The prior all-bin reference used a 26-bit integer DFT oracle. Replaced by verified float64 FFT/DAS; original candidate results are unchanged."
+  "reference_replacement": "The prior all-bin reference used a 26-bit integer DFT oracle. Replaced by verified float64 FFT/DAS; original candidate results are unchanged.",
+  "previous_scored_maps": 13950,
+  "rear_frequency_sweep_validation": {
+    "variants": [
+      {
+        "variant": "dft30_n256_k10_w24",
+        "maps": 8694,
+        "earlier_anchor_checks": 108,
+        "clipped_values": 0,
+        "full_window_input_sha256": "9cc1a646a8bc0d48a16046114e2469fb4aa81fb7b52b7efcc8fdf2c78bd6f3cd",
+        "microphones": 30,
+        "seconds": 145.21735140000237
+      },
+      {
+        "variant": "reference_float64",
+        "maps": 8694,
+        "earlier_anchor_checks": 108,
+        "clipped_values": 0,
+        "full_window_input_sha256": "9cc1a646a8bc0d48a16046114e2469fb4aa81fb7b52b7efcc8fdf2c78bd6f3cd",
+        "microphones": 30,
+        "seconds": 30.97906409999996
+      },
+      {
+        "variant": "dft30_10",
+        "maps": 8694,
+        "earlier_anchor_checks": 108,
+        "clipped_values": 0,
+        "full_window_input_sha256": "9cc1a646a8bc0d48a16046114e2469fb4aa81fb7b52b7efcc8fdf2c78bd6f3cd",
+        "microphones": 30,
+        "seconds": 208.08932920001098
+      },
+      {
+        "variant": "dft24_n512_k15_w24",
+        "maps": 8694,
+        "earlier_anchor_checks": 108,
+        "clipped_values": 0,
+        "full_window_input_sha256": "e8031a46b2f844e49b47fd7b12a0fc5d95cbb7f7f1ee782211f8e9bb527ffef8",
+        "microphones": 24,
+        "seconds": 227.20814289999544
+      },
+      {
+        "variant": "dft16_24",
+        "maps": 8694,
+        "earlier_anchor_checks": 108,
+        "clipped_values": 0,
+        "full_window_input_sha256": "980f5ca0974e85f6aef1d39075d755364938457d37d56d54a9048bed2d7fea48",
+        "microphones": 16,
+        "seconds": 233.88094360000105
+      }
+    ],
+    "earlier_anchor_checks": 540,
+    "same_pcm_for_all_30_mic_variants": true,
+    "clipped_values": 0,
+    "source_benchmark_sha256": "e080e143bd6457effb4cb63aafab415cd47517f16c6a2bfb7a8b4d7ad6657140",
+    "script_sha256": "fe2be629105ebf526d0be1497fe8092a0f1b25ed65e9623784c3d300a9522409"
+  },
+  "rear_frequency_sweep_maps": 43470,
+  "other_seven_category_scores_unchanged": true,
+  "broadband_cases_unchanged": true,
+  "projection_not_counted_twice": true
 }
