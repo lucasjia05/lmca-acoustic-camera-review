@@ -41,8 +41,8 @@
 <text x="288" y="409" class="instance">u_pdm</text>
 <text x="288" y="440" class="small">Shared CIC → FIR → PCM</text>
 <path d="M425 465V552" class="data"/>
-<text x="441" y="502" class="small">PCM vector</text>
-<text x="441" y="528" class="tiny">MICS channels</text>
+<text x="441" y="492" class="small">PCM vector</text>
+<text x="441" y="515" class="tiny">16 bits/mic<tspan x="441" dy="22">MICS channels</tspan></text>
 <rect x="270" y="555" width="310" height="110" rx="7" class="box"/>
 <text x="288" y="587" class="name">lmca_pcm_serializer</text>
 <text x="288" y="615" class="instance">u_serializer</text>
@@ -54,13 +54,13 @@
 <text x="36" y="409" class="name">bank</text>
 <text x="36" y="440" class="tiny">Physical capture</text>
 <path d="M185 407H267" class="data"/>
-<text x="225" y="389" class="tiny" text-anchor="middle">PDM</text>
+<text x="225" y="372" class="tiny" text-anchor="middle">PDM<tspan x="225" dy="18">1 bit/mic</tspan></text>
 
 <rect x="655" y="290" width="1010" height="585" rx="9" class="file"/>
 <text x="680" y="322" class="filename">lmca_compact_core.sv</text>
 <text x="1640" y="322" class="instance" text-anchor="end">u_core</text>
 <path d="M580 610H625V405H687" class="data"/>
-<text x="610" y="775" class="tiny" text-anchor="end">PCM samples</text>
+<text x="614" y="508" class="tiny" text-anchor="middle" transform="rotate(-90 614 508)">PCM samples · 16 bits</text>
 
 <rect x="690" y="350" width="240" height="115" rx="7" class="logic"/>
 <text x="707" y="382" class="name" style="font-size:20px">Window + sample hold</text>
@@ -84,14 +84,14 @@
 <rect x="690" y="555" width="240" height="110" rx="7" class="box"/>
 <text x="707" y="586" class="filename" style="font-size:19px">lmca_compact_trig.sv</text>
 <text x="707" y="615" class="instance">u_trig</text>
-<text x="707" y="645" class="tiny">Quarter-wave sin/cos table</text>
+<text x="707" y="645" class="tiny">18-bit sin/cos table</text>
 <path d="M930 610H960V510H1030V483" class="data"/>
 <text x="975" y="497" class="tiny">cos / sin</text>
 
 <rect x="1000" y="555" width="295" height="110" rx="7" class="logic"/>
 <text x="1018" y="587" class="name">Fourier registers</text>
 <text x="1018" y="616" class="instance">spectrum_r / spectrum_i</text>
-<text x="1018" y="645" class="small">MICS × BINS complex values</text>
+<text x="1018" y="638" class="tiny">MICS × BINS complex values<tspan x="1018" dy="19">2 × ACC_W bits / value</tspan></text>
 <path d="M1100 480V552" class="data"/>
 <path d="M1200 555V483" class="data"/>
 <text x="1220" y="522" class="tiny">read / update</text>
@@ -101,7 +101,7 @@
 <text x="1378" y="616" class="small">Mic geometry + scan vectors</text>
 <text x="1378" y="645" class="small">DFT / steering phase</text>
 <path d="M1490 665V710H810V668" class="data"/>
-<text x="1320" y="700" class="tiny">phase</text>
+<text x="1320" y="700" class="tiny">phase · 10 bits</text>
 
 <rect x="690" y="745" width="240" height="105" rx="7" class="logic"/>
 <text x="707" y="776" class="name">Controller</text>
@@ -113,9 +113,9 @@
 
 
 <path d="M1620 407H1645V925H870V1110H937" class="data"/>
-<text x="1210" y="914" class="tiny">map_power[MAP_W] / valid / last</text>
+<text x="1160" y="914" class="tiny">map_power: 48 bits · valid / last: 1 bit each</text>
 <path d="M1650 1015V950H1688V440H1623" class="control"/>
-<text x="1550" y="940" class="tiny">map_ready</text>
+<text x="1530" y="940" class="tiny">map_ready · 1 bit</text>
 
 
 
@@ -128,13 +128,13 @@
 <text x="958" y="1096" class="small">Map packetizer + one-word buffer</text>
 <text x="958" y="1127" class="tiny">Header → power words → status byte</text>
 <path d="M1290 1110H1367" class="data"/>
-<text x="1330" y="1094" class="tiny" text-anchor="middle">bytes</text>
+<text x="1330" y="1094" class="tiny" style="font-size:14px" text-anchor="middle">8-bit bytes</text>
 <rect x="1370" y="1065" width="290" height="90" rx="6" class="box"/>
 <text x="1388" y="1096" class="name">lmca_uart_tx</text>
 <text x="1388" y="1127" class="instance">u_tx · 8-N-1</text>
 
 <path d="M1515 1155V1267" class="data"/>
-<text x="1533" y="1226" class="small">tx · UART serial output</text>
+<text x="1533" y="1226" class="small">tx · 1 bit (serial)</text>
 <rect x="1320" y="1270" width="420" height="90" rx="7" class="host"/>
 <text x="1340" y="1303" class="name">External host</text>
 <text x="1340" y="1335" class="small">UART receiver + map / video overlay</text>
