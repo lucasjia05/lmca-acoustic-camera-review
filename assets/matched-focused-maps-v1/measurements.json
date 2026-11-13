@@ -1,0 +1,6692 @@
+[
+  {
+    "scene": "focus_frequency_0",
+    "seed": 7,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 43,
+      "off_target_candidate_count": 42,
+      "strongest_off_target_candidate_db": -3.6503858702373257,
+      "peak_to_median_db": 12.61030715466015,
+      "peak_power_pcm_squared": 0.0022370994556695223,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 7,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 60,
+      "off_target_candidate_count": 59,
+      "strongest_off_target_candidate_db": -1.264719770723102,
+      "peak_to_median_db": 9.85927292073703,
+      "peak_power_pcm_squared": 0.00244659255258739,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 7,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 43,
+      "off_target_candidate_count": 42,
+      "strongest_off_target_candidate_db": -3.6509303347794635,
+      "peak_to_median_db": 12.608168880231464,
+      "peak_power_pcm_squared": 0.0022384857293218374,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 7,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -3.9412486630042403,
+      "peak_to_median_db": 11.181415271643328,
+      "peak_power_pcm_squared": 0.0022367038764059544,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 7,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 28,
+      "off_target_candidate_count": 27,
+      "strongest_off_target_candidate_db": -5.497781339323461,
+      "peak_to_median_db": 17.14949788077793,
+      "peak_power_pcm_squared": 0.0002247930970042944,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 7,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -5.715414890378838,
+      "peak_to_median_db": 17.24471322727962,
+      "peak_power_pcm_squared": 0.0020362180657684803,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 7,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 35,
+      "off_target_candidate_count": 34,
+      "strongest_off_target_candidate_db": -5.831774397364717,
+      "peak_to_median_db": 15.862031788388574,
+      "peak_power_pcm_squared": 0.0020362038630992174,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 7,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -4.11018107134073,
+      "peak_to_median_db": 13.76509953264377,
+      "peak_power_pcm_squared": 0.0020471203606575727,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 7,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -5.750523089093909,
+      "peak_to_median_db": 17.1675826404691,
+      "peak_power_pcm_squared": 0.0025078689213842154,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 7,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -5.715448772414005,
+      "peak_to_median_db": 17.244627789868446,
+      "peak_power_pcm_squared": 0.002036202698945999,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 23,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 43,
+      "off_target_candidate_count": 42,
+      "strongest_off_target_candidate_db": -3.650147616666486,
+      "peak_to_median_db": 12.60969157935509,
+      "peak_power_pcm_squared": 0.002236939501017332,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 23,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 60,
+      "off_target_candidate_count": 59,
+      "strongest_off_target_candidate_db": -1.2641354209950395,
+      "peak_to_median_db": 9.857540773396384,
+      "peak_power_pcm_squared": 0.0024453781079500914,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 23,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 43,
+      "off_target_candidate_count": 42,
+      "strongest_off_target_candidate_db": -3.648814004855197,
+      "peak_to_median_db": 12.603175646403827,
+      "peak_power_pcm_squared": 0.0022363460157066584,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 23,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -3.9421365936150483,
+      "peak_to_median_db": 11.181076363222807,
+      "peak_power_pcm_squared": 0.0022366424091160297,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 23,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 28,
+      "off_target_candidate_count": 27,
+      "strongest_off_target_candidate_db": -5.497843942313505,
+      "peak_to_median_db": 17.148716944984585,
+      "peak_power_pcm_squared": 0.00022478890605270863,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 23,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -5.7154890814348125,
+      "peak_to_median_db": 17.244972561606403,
+      "peak_power_pcm_squared": 0.0020362285431474447,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 23,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 35,
+      "off_target_candidate_count": 34,
+      "strongest_off_target_candidate_db": -5.831727928623264,
+      "peak_to_median_db": 15.861843255608644,
+      "peak_power_pcm_squared": 0.0020362052600830793,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 23,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -4.110116535155412,
+      "peak_to_median_db": 13.765023383399654,
+      "peak_power_pcm_squared": 0.002047134330496192,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 23,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -5.7505617559725,
+      "peak_to_median_db": 17.167784572434364,
+      "peak_power_pcm_squared": 0.0025078763719648123,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 23,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -5.715502781234107,
+      "peak_to_median_db": 17.244928861470633,
+      "peak_power_pcm_squared": 0.002036208054050803,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 91,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 43,
+      "off_target_candidate_count": 42,
+      "strongest_off_target_candidate_db": -3.6501383171275,
+      "peak_to_median_db": 12.609751872434616,
+      "peak_power_pcm_squared": 0.0022370172664523125,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 91,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 60,
+      "off_target_candidate_count": 59,
+      "strongest_off_target_candidate_db": -1.2649242577043416,
+      "peak_to_median_db": 9.860311204628792,
+      "peak_power_pcm_squared": 0.002445635385811329,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 91,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 43,
+      "off_target_candidate_count": 42,
+      "strongest_off_target_candidate_db": -3.644888011130876,
+      "peak_to_median_db": 12.60648077441867,
+      "peak_power_pcm_squared": 0.002236164640635252,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 91,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -3.9426602489330187,
+      "peak_to_median_db": 11.18494223611438,
+      "peak_power_pcm_squared": 0.0022367164492607117,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 91,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 28,
+      "off_target_candidate_count": 27,
+      "strongest_off_target_candidate_db": -5.497962151019967,
+      "peak_to_median_db": 17.14827285453293,
+      "peak_power_pcm_squared": 0.0002247900702059269,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 91,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -5.71558561632448,
+      "peak_to_median_db": 17.244723679531763,
+      "peak_power_pcm_squared": 0.0020361982751637697,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 91,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 35,
+      "off_target_candidate_count": 34,
+      "strongest_off_target_candidate_db": -5.831682475101254,
+      "peak_to_median_db": 15.861716867886477,
+      "peak_power_pcm_squared": 0.0020362178329378366,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 91,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -4.110140082926223,
+      "peak_to_median_db": 13.764800180366926,
+      "peak_power_pcm_squared": 0.0020471676252782345,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 91,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -5.750622940310429,
+      "peak_to_median_db": 17.167634433289123,
+      "peak_power_pcm_squared": 0.002507838187739253,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_0",
+    "seed": 91,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -5.715557849123303,
+      "peak_to_median_db": 17.244597993990855,
+      "peak_power_pcm_squared": 0.00203618872910738,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 7,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 49,
+      "off_target_candidate_count": 48,
+      "strongest_off_target_candidate_db": -3.7086302990771935,
+      "peak_to_median_db": 13.060030359761443,
+      "peak_power_pcm_squared": 0.0023109575267881155,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 7,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 61,
+      "off_target_candidate_count": 60,
+      "strongest_off_target_candidate_db": -1.1975259658879605,
+      "peak_to_median_db": 10.428515082760828,
+      "peak_power_pcm_squared": 0.002451039617881179,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 7,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 49,
+      "off_target_candidate_count": 48,
+      "strongest_off_target_candidate_db": -3.7077091299065135,
+      "peak_to_median_db": 13.05294289600859,
+      "peak_power_pcm_squared": 0.0023113039787858725,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 7,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -2.4334175686073407,
+      "peak_to_median_db": 11.681071837041642,
+      "peak_power_pcm_squared": 0.002311172429472208,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 7,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 26,
+      "off_target_candidate_count": 25,
+      "strongest_off_target_candidate_db": -6.257831553415492,
+      "peak_to_median_db": 16.007551496396182,
+      "peak_power_pcm_squared": 9.285286068916321e-07,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 7,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 30,
+      "off_target_candidate_count": 29,
+      "strongest_off_target_candidate_db": -6.163987465902169,
+      "peak_to_median_db": 16.32188105354189,
+      "peak_power_pcm_squared": 3.1543895602226257e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 7,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 33,
+      "off_target_candidate_count": 32,
+      "strongest_off_target_candidate_db": -6.067677487019539,
+      "peak_to_median_db": 14.992803944827353,
+      "peak_power_pcm_squared": 3.1313393265008926e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 7,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -3.659118058958315,
+      "peak_to_median_db": 13.758042834554134,
+      "peak_power_pcm_squared": 0.00045239529572427273,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 7,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 34,
+      "off_target_candidate_count": 33,
+      "strongest_off_target_candidate_db": -6.033295150401498,
+      "peak_to_median_db": 17.4552391139296,
+      "peak_power_pcm_squared": 0.0025079252663999796,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 7,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 30,
+      "off_target_candidate_count": 29,
+      "strongest_off_target_candidate_db": -6.163666894223187,
+      "peak_to_median_db": 16.321560481862907,
+      "peak_power_pcm_squared": 3.154156729578972e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 23,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 49,
+      "off_target_candidate_count": 48,
+      "strongest_off_target_candidate_db": -3.708552174114726,
+      "peak_to_median_db": 13.068817939331987,
+      "peak_power_pcm_squared": 0.002310441806912422,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 23,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 61,
+      "off_target_candidate_count": 60,
+      "strongest_off_target_candidate_db": -1.197102424260798,
+      "peak_to_median_db": 10.424132607461019,
+      "peak_power_pcm_squared": 0.002451404230669141,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 23,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 49,
+      "off_target_candidate_count": 48,
+      "strongest_off_target_candidate_db": -3.709230140950738,
+      "peak_to_median_db": 13.063037541867747,
+      "peak_power_pcm_squared": 0.0023109556641429663,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 23,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -2.4354058927749818,
+      "peak_to_median_db": 11.68192761903785,
+      "peak_power_pcm_squared": 0.0023109454195946455,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 23,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 26,
+      "off_target_candidate_count": 25,
+      "strongest_off_target_candidate_db": -6.254322278005766,
+      "peak_to_median_db": 16.008640363098397,
+      "peak_power_pcm_squared": 9.28761437535286e-07,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 23,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 30,
+      "off_target_candidate_count": 29,
+      "strongest_off_target_candidate_db": -6.163025679868111,
+      "peak_to_median_db": 16.320919267507833,
+      "peak_power_pcm_squared": 3.153691068291664e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 23,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 33,
+      "off_target_candidate_count": 32,
+      "strongest_off_target_candidate_db": -6.066371927166317,
+      "peak_to_median_db": 14.992803944827353,
+      "peak_power_pcm_squared": 3.1313393265008926e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 23,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -3.6592841301553247,
+      "peak_to_median_db": 13.758942478387716,
+      "peak_power_pcm_squared": 0.00045236176811158657,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 23,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 34,
+      "off_target_candidate_count": 33,
+      "strongest_off_target_candidate_db": -6.033068968777194,
+      "peak_to_median_db": 17.45550180033146,
+      "peak_power_pcm_squared": 0.002507791854441166,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 23,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 30,
+      "off_target_candidate_count": 29,
+      "strongest_off_target_candidate_db": -6.163346298879667,
+      "peak_to_median_db": 16.30751809052591,
+      "peak_power_pcm_squared": 3.153923898935318e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 91,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 49,
+      "off_target_candidate_count": 48,
+      "strongest_off_target_candidate_db": -3.7104726124021066,
+      "peak_to_median_db": 13.074800084851399,
+      "peak_power_pcm_squared": 0.0023112869821488857,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 91,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 61,
+      "off_target_candidate_count": 60,
+      "strongest_off_target_candidate_db": -1.1964891407163167,
+      "peak_to_median_db": 10.421674653331403,
+      "peak_power_pcm_squared": 0.0024509562645107508,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 91,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 49,
+      "off_target_candidate_count": 48,
+      "strongest_off_target_candidate_db": -3.708935780996081,
+      "peak_to_median_db": 13.070433747766257,
+      "peak_power_pcm_squared": 0.00230881804600358,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 91,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -2.436695756821636,
+      "peak_to_median_db": 11.68375198122407,
+      "peak_power_pcm_squared": 0.0023111409973353148,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 91,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 26,
+      "off_target_candidate_count": 25,
+      "strongest_off_target_candidate_db": -6.2554108717748536,
+      "peak_to_median_db": 16.00972895686748,
+      "peak_power_pcm_squared": 9.289942681789398e-07,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 91,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 30,
+      "off_target_candidate_count": 29,
+      "strongest_off_target_candidate_db": -6.161700601347068,
+      "peak_to_median_db": 16.307197471514353,
+      "peak_power_pcm_squared": 3.153691068291664e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 91,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 33,
+      "off_target_candidate_count": 32,
+      "strongest_off_target_candidate_db": -6.068646137590975,
+      "peak_to_median_db": 14.993772595398791,
+      "peak_power_pcm_squared": 3.1320378184318542e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 91,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -3.6593924375279356,
+      "peak_to_median_db": 13.758576751858023,
+      "peak_power_pcm_squared": 0.00045237899757921696,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 91,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 34,
+      "off_target_candidate_count": 33,
+      "strongest_off_target_candidate_db": -6.032770913535522,
+      "peak_to_median_db": 17.45504624570155,
+      "peak_power_pcm_squared": 0.0025078009348362684,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_1",
+    "seed": 91,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 30,
+      "off_target_candidate_count": 29,
+      "strongest_off_target_candidate_db": -6.163346298879667,
+      "peak_to_median_db": 16.30751809052591,
+      "peak_power_pcm_squared": 3.153923898935318e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 7,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 43,
+      "off_target_candidate_count": 42,
+      "strongest_off_target_candidate_db": -3.808126995612518,
+      "peak_to_median_db": 11.605949045962053,
+      "peak_power_pcm_squared": 0.0021474366076290607,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 7,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 58,
+      "off_target_candidate_count": 57,
+      "strongest_off_target_candidate_db": -1.1203534573245852,
+      "peak_to_median_db": 9.248366050883732,
+      "peak_power_pcm_squared": 0.0025623778346925974,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 7,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 43,
+      "off_target_candidate_count": 42,
+      "strongest_off_target_candidate_db": -3.807948242297858,
+      "peak_to_median_db": 11.614468354745519,
+      "peak_power_pcm_squared": 0.0021473851520568132,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 7,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 42,
+      "off_target_candidate_count": 41,
+      "strongest_off_target_candidate_db": -3.6303617805729376,
+      "peak_to_median_db": 10.275198966473527,
+      "peak_power_pcm_squared": 0.0021541842725127935,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 7,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 33,
+      "off_target_candidate_count": 32,
+      "strongest_off_target_candidate_db": -5.943275678674858,
+      "peak_to_median_db": 15.019113501990367,
+      "peak_power_pcm_squared": 0.00022218958474695683,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 7,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -5.640466631170855,
+      "peak_to_median_db": 16.711683306926354,
+      "peak_power_pcm_squared": 0.0020393526647239923,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 7,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 38,
+      "off_target_candidate_count": 37,
+      "strongest_off_target_candidate_db": -5.779513176490179,
+      "peak_to_median_db": 15.462502842894219,
+      "peak_power_pcm_squared": 0.0019933858420699835,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 7,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 45,
+      "off_target_candidate_count": 44,
+      "strongest_off_target_candidate_db": -4.169027066425001,
+      "peak_to_median_db": 13.231951242830053,
+      "peak_power_pcm_squared": 0.002111174166202545,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 7,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 29,
+      "off_target_candidate_count": 28,
+      "strongest_off_target_candidate_db": -5.640837459105077,
+      "peak_to_median_db": 15.713371119426164,
+      "peak_power_pcm_squared": 0.0025152896996587515,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 7,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -5.640502480266518,
+      "peak_to_median_db": 16.711688265215706,
+      "peak_power_pcm_squared": 0.002039354993030429,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 23,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 38,
+      "off_target_candidate_count": 37,
+      "strongest_off_target_candidate_db": -3.2340689438992882,
+      "peak_to_median_db": 11.746375019721418,
+      "peak_power_pcm_squared": 0.002164423931390047,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 23,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 54,
+      "off_target_candidate_count": 53,
+      "strongest_off_target_candidate_db": -1.2830331076846149,
+      "peak_to_median_db": 8.832584727143193,
+      "peak_power_pcm_squared": 0.0027772304601967335,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 23,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 38,
+      "off_target_candidate_count": 37,
+      "strongest_off_target_candidate_db": -3.233906984467523,
+      "peak_to_median_db": 11.758816713882483,
+      "peak_power_pcm_squared": 0.0021642628125846386,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 23,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -3.492989774707328,
+      "peak_to_median_db": 10.500454770218358,
+      "peak_power_pcm_squared": 0.002522732364013791,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 23,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 34,
+      "off_target_candidate_count": 33,
+      "strongest_off_target_candidate_db": -5.635352226825843,
+      "peak_to_median_db": 15.326529531467067,
+      "peak_power_pcm_squared": 0.00023924140259623528,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 23,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 30,
+      "off_target_candidate_count": 29,
+      "strongest_off_target_candidate_db": -5.71198196434656,
+      "peak_to_median_db": 16.840565429978056,
+      "peak_power_pcm_squared": 0.002071634866297245,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 23,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 38,
+      "off_target_candidate_count": 37,
+      "strongest_off_target_candidate_db": -5.7582288523386165,
+      "peak_to_median_db": 15.618493012128642,
+      "peak_power_pcm_squared": 0.0020353749860078096,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 23,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 46,
+      "off_target_candidate_count": 45,
+      "strongest_off_target_candidate_db": -4.024396534302523,
+      "peak_to_median_db": 13.065845005393582,
+      "peak_power_pcm_squared": 0.002002761233597994,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 23,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 32,
+      "off_target_candidate_count": 31,
+      "strongest_off_target_candidate_db": -5.739707596897197,
+      "peak_to_median_db": 15.872170727364486,
+      "peak_power_pcm_squared": 0.0025662658736109734,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 23,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 30,
+      "off_target_candidate_count": 29,
+      "strongest_off_target_candidate_db": -5.71198700915923,
+      "peak_to_median_db": 16.840681050573384,
+      "peak_power_pcm_squared": 0.0020716225262731314,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 91,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 42,
+      "off_target_candidate_count": 41,
+      "strongest_off_target_candidate_db": -3.3100111837317807,
+      "peak_to_median_db": 11.56389674475507,
+      "peak_power_pcm_squared": 0.002265746472403407,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 91,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 56,
+      "off_target_candidate_count": 55,
+      "strongest_off_target_candidate_db": -1.1759726902228707,
+      "peak_to_median_db": 9.020946592959055,
+      "peak_power_pcm_squared": 0.002448498969897628,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 91,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 42,
+      "off_target_candidate_count": 41,
+      "strongest_off_target_candidate_db": -3.305477310677639,
+      "peak_to_median_db": 11.570744662607048,
+      "peak_power_pcm_squared": 0.002267279429361224,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 91,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 43,
+      "off_target_candidate_count": 42,
+      "strongest_off_target_candidate_db": -3.844137800494525,
+      "peak_to_median_db": 10.306816392162297,
+      "peak_power_pcm_squared": 0.0023640617728233337,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 91,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 33,
+      "off_target_candidate_count": 32,
+      "strongest_off_target_candidate_db": -5.794782659812489,
+      "peak_to_median_db": 15.010658700925001,
+      "peak_power_pcm_squared": 0.00023259990848600864,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 91,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 27,
+      "off_target_candidate_count": 26,
+      "strongest_off_target_candidate_db": -5.568424831942127,
+      "peak_to_median_db": 16.960159115124537,
+      "peak_power_pcm_squared": 0.0020715580321848392,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 91,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 34,
+      "off_target_candidate_count": 33,
+      "strongest_off_target_candidate_db": -5.8178233533665855,
+      "peak_to_median_db": 15.591565622554334,
+      "peak_power_pcm_squared": 0.0019807855132967234,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 91,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 46,
+      "off_target_candidate_count": 45,
+      "strongest_off_target_candidate_db": -4.055558026019593,
+      "peak_to_median_db": 13.154158159402215,
+      "peak_power_pcm_squared": 0.002100158715620637,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 91,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 32,
+      "off_target_candidate_count": 31,
+      "strongest_off_target_candidate_db": -5.596458966932668,
+      "peak_to_median_db": 15.885945308689305,
+      "peak_power_pcm_squared": 0.002578264568001032,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_2",
+    "seed": 91,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 27,
+      "off_target_candidate_count": 26,
+      "strongest_off_target_candidate_db": -5.568437748993411,
+      "peak_to_median_db": 16.960050438915122,
+      "peak_power_pcm_squared": 0.0020715524442493916,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 7,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 50,
+      "off_target_candidate_count": 49,
+      "strongest_off_target_candidate_db": -3.4259234521329693,
+      "peak_to_median_db": 12.06377831261319,
+      "peak_power_pcm_squared": 0.0024207590613514185,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 7,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 61,
+      "off_target_candidate_count": 60,
+      "strongest_off_target_candidate_db": -0.9318021916595909,
+      "peak_to_median_db": 9.590998350381017,
+      "peak_power_pcm_squared": 0.002532477956265211,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 7,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 50,
+      "off_target_candidate_count": 49,
+      "strongest_off_target_candidate_db": -3.424735520601166,
+      "peak_to_median_db": 12.059019342833261,
+      "peak_power_pcm_squared": 0.002421167679131031,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 7,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -2.0485857502065272,
+      "peak_to_median_db": 10.60398106348936,
+      "peak_power_pcm_squared": 0.0025077136233448982,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 7,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 52,
+      "off_target_candidate_count": 52,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 3.77940546607285,
+      "peak_power_pcm_squared": 6.244750693440437e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 33.02805671955781,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 7,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 48,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 3.5069633655861514,
+      "peak_power_pcm_squared": 7.573282346129417e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 17.47799716373498,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 7,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": -0.6464515000130323
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 3.7827351908484137,
+      "peak_power_pcm_squared": 9.705312550067902e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 31.25796367193469,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 7,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 50,
+      "off_target_candidate_count": 49,
+      "strongest_off_target_candidate_db": -3.601935689247271,
+      "peak_to_median_db": 11.462632308249791,
+      "peak_power_pcm_squared": 0.0004974536132067442,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 7,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 35,
+      "off_target_candidate_count": 34,
+      "strongest_off_target_candidate_db": -5.903755448324932,
+      "peak_to_median_db": 15.728181174346716,
+      "peak_power_pcm_squared": 0.0025668672751635313,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 7,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 48,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 3.506429260150394,
+      "peak_power_pcm_squared": 7.572351023554802e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 17.47799716373498,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 23,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 50,
+      "off_target_candidate_count": 49,
+      "strongest_off_target_candidate_db": -3.4652603999128258,
+      "peak_to_median_db": 11.863023363999293,
+      "peak_power_pcm_squared": 0.002494197804480791,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 23,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 60,
+      "off_target_candidate_count": 59,
+      "strongest_off_target_candidate_db": -1.1427889016611,
+      "peak_to_median_db": 9.220036705735367,
+      "peak_power_pcm_squared": 0.0024770356249064207,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 23,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 50,
+      "off_target_candidate_count": 49,
+      "strongest_off_target_candidate_db": -3.4686576914829432,
+      "peak_to_median_db": 11.86691490276446,
+      "peak_power_pcm_squared": 0.0024916024412959814,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 23,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -2.5967672288319217,
+      "peak_to_median_db": 10.721916959858733,
+      "peak_power_pcm_squared": 0.0021192957647144794,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 23,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 48,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 3.3655601469078316,
+      "peak_power_pcm_squared": 4.96814027428627e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 2.9835619612585393,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 23,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 3.3858603960477223,
+      "peak_power_pcm_squared": 6.916699931025505e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 21.193309486253153,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 23,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": -0.16871708953007075
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 59,
+      "off_target_candidate_count": 58,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 3.1009872580261972,
+      "peak_power_pcm_squared": 8.731847628951073e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 18.979216046343925,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 23,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -3.390916744489223,
+      "peak_to_median_db": 11.405795158638224,
+      "peak_power_pcm_squared": 0.0004740126896649599,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 23,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 34,
+      "off_target_candidate_count": 33,
+      "strongest_off_target_candidate_db": -5.927909458257329,
+      "peak_to_median_db": 16.06483626848141,
+      "peak_power_pcm_squared": 0.002538367174565792,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 23,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 3.3849568027674,
+      "peak_power_pcm_squared": 6.91576860845089e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 21.193309486253153,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 91,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -3.8921213773294454,
+      "peak_to_median_db": 11.848526009152849,
+      "peak_power_pcm_squared": 0.0023254260886460543,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 91,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 58,
+      "off_target_candidate_count": 57,
+      "strongest_off_target_candidate_db": -1.2976551483847967,
+      "peak_to_median_db": 9.455706447100853,
+      "peak_power_pcm_squared": 0.0027154115960001945,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 91,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -3.8899454423045015,
+      "peak_to_median_db": 11.844882911312363,
+      "peak_power_pcm_squared": 0.0023228032514452934,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 91,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 49,
+      "off_target_candidate_count": 48,
+      "strongest_off_target_candidate_db": -2.3238916097650026,
+      "peak_to_median_db": 10.649019447347072,
+      "peak_power_pcm_squared": 0.002230265410616994,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 91,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 53,
+      "off_target_candidate_count": 53,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 4.225126064255904,
+      "peak_power_pcm_squared": 6.799586117267609e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 18.00000000000001,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 91,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": -1.3608387741575556
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 55,
+      "off_target_candidate_count": 54,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 3.7401083122482444,
+      "peak_power_pcm_squared": 8.380971848964691e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 22.499418770144047,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 91,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -0.6236008758863164,
+      "peak_to_median_db": 3.8298370139047573,
+      "peak_power_pcm_squared": 1.0193558409810066e-05,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 91,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 50,
+      "off_target_candidate_count": 49,
+      "strongest_off_target_candidate_db": -3.541772196576431,
+      "peak_to_median_db": 11.274408065336786,
+      "peak_power_pcm_squared": 0.0004615138750523329,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 91,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 38,
+      "off_target_candidate_count": 37,
+      "strongest_off_target_candidate_db": -6.01554122198179,
+      "peak_to_median_db": 16.06263131053025,
+      "peak_power_pcm_squared": 0.0026453728787600994,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_frequency_3",
+    "seed": 91,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": -1.3608387741575556
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 55,
+      "off_target_candidate_count": 54,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 3.740393778762892,
+      "peak_power_pcm_squared": 8.380971848964691e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 22.499418770144047,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 7,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 46,
+      "off_target_candidate_count": 45,
+      "strongest_off_target_candidate_db": -6.25969014034256,
+      "peak_to_median_db": 12.476826735050299,
+      "peak_power_pcm_squared": 0.0001862398348748684,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 7,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 52,
+      "off_target_candidate_count": 51,
+      "strongest_off_target_candidate_db": -4.372798387470226,
+      "peak_to_median_db": 9.363315962016701,
+      "peak_power_pcm_squared": 0.00012237206101417542,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 7,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 45,
+      "off_target_candidate_count": 44,
+      "strongest_off_target_candidate_db": -6.2798821740090185,
+      "peak_to_median_db": 12.474060289728806,
+      "peak_power_pcm_squared": 0.00018626940436661243,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 7,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -5.27763343858066,
+      "peak_to_median_db": 10.976104463293385,
+      "peak_power_pcm_squared": 0.00018645147792994976,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 7,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 13,
+      "off_target_candidate_count": 12,
+      "strongest_off_target_candidate_db": -8.927525589253747,
+      "peak_to_median_db": 15.209396511313212,
+      "peak_power_pcm_squared": 4.8908405005931854e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 7,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 13,
+      "off_target_candidate_count": 12,
+      "strongest_off_target_candidate_db": -8.808755060996862,
+      "peak_to_median_db": 15.26538084663585,
+      "peak_power_pcm_squared": 6.206566467881203e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 7,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 24,
+      "off_target_candidate_count": 23,
+      "strongest_off_target_candidate_db": -8.025676346471277,
+      "peak_to_median_db": 14.376006690167154,
+      "peak_power_pcm_squared": 6.2051694840192795e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 7,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 41,
+      "off_target_candidate_count": 40,
+      "strongest_off_target_candidate_db": -6.100272139593433,
+      "peak_to_median_db": 12.629715619454299,
+      "peak_power_pcm_squared": 1.5357276424765587e-05,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 7,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 13,
+      "off_target_candidate_count": 12,
+      "strongest_off_target_candidate_db": -8.737376584094475,
+      "peak_to_median_db": 15.195384878919374,
+      "peak_power_pcm_squared": 3.42873390763998e-05,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 7,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 13,
+      "off_target_candidate_count": 12,
+      "strongest_off_target_candidate_db": -8.808755060996862,
+      "peak_to_median_db": 15.26538084663585,
+      "peak_power_pcm_squared": 6.206566467881203e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 23,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -5.159906061033852,
+      "peak_to_median_db": 12.541785759568818,
+      "peak_power_pcm_squared": 0.00018777558580040932,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 23,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 57,
+      "off_target_candidate_count": 56,
+      "strongest_off_target_candidate_db": -3.9349129866354304,
+      "peak_to_median_db": 9.509737602898765,
+      "peak_power_pcm_squared": 0.00012065330520272255,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 23,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -5.146045473299092,
+      "peak_to_median_db": 12.560783244375273,
+      "peak_power_pcm_squared": 0.00018789758905768394,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 23,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -5.269679980916694,
+      "peak_to_median_db": 11.223160769178131,
+      "peak_power_pcm_squared": 0.00018797884695231915,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 23,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 20,
+      "off_target_candidate_count": 19,
+      "strongest_off_target_candidate_db": -7.658176852300304,
+      "peak_to_median_db": 15.601212021364603,
+      "peak_power_pcm_squared": 4.760688170790672e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 23,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 18,
+      "off_target_candidate_count": 17,
+      "strongest_off_target_candidate_db": -7.711603440289653,
+      "peak_to_median_db": 15.55154431242459,
+      "peak_power_pcm_squared": 6.06919638812542e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 23,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 26,
+      "off_target_candidate_count": 25,
+      "strongest_off_target_candidate_db": -6.826332883070637,
+      "peak_to_median_db": 14.47508127678714,
+      "peak_power_pcm_squared": 6.067799404263496e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 23,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -5.7607302857068525,
+      "peak_to_median_db": 12.72578016487845,
+      "peak_power_pcm_squared": 1.5103258192539215e-05,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 23,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 18,
+      "off_target_candidate_count": 17,
+      "strongest_off_target_candidate_db": -7.5787428457598836,
+      "peak_to_median_db": 15.559788432077266,
+      "peak_power_pcm_squared": 3.372877836227417e-05,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 23,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 18,
+      "off_target_candidate_count": 17,
+      "strongest_off_target_candidate_db": -7.711770044099744,
+      "peak_to_median_db": 15.551710916234683,
+      "peak_power_pcm_squared": 6.0694292187690735e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 91,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -5.597077263022291,
+      "peak_to_median_db": 12.577478998871474,
+      "peak_power_pcm_squared": 0.0002301845233887434,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 91,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 57,
+      "off_target_candidate_count": 56,
+      "strongest_off_target_candidate_db": -4.487502535806978,
+      "peak_to_median_db": 9.433077840718877,
+      "peak_power_pcm_squared": 0.00014774617739021778,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 91,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -5.590672522722267,
+      "peak_to_median_db": 12.569668032398454,
+      "peak_power_pcm_squared": 0.000230040168389678,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 91,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 53,
+      "off_target_candidate_count": 52,
+      "strongest_off_target_candidate_db": -5.245363455456666,
+      "peak_to_median_db": 11.079934432681846,
+      "peak_power_pcm_squared": 0.0002302743960171938,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 91,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 17,
+      "off_target_candidate_count": 16,
+      "strongest_off_target_candidate_db": -8.331556149031018,
+      "peak_to_median_db": 15.432695056729601,
+      "peak_power_pcm_squared": 5.946028977632523e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 91,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 16,
+      "off_target_candidate_count": 15,
+      "strongest_off_target_candidate_db": -8.327622037813923,
+      "peak_to_median_db": 15.39033000126812,
+      "peak_power_pcm_squared": 7.507391273975372e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 91,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 25,
+      "off_target_candidate_count": 24,
+      "strongest_off_target_candidate_db": -7.496344892230734,
+      "peak_to_median_db": 14.248924133027856,
+      "peak_power_pcm_squared": 7.506459951400757e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 91,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 44,
+      "off_target_candidate_count": 43,
+      "strongest_off_target_candidate_db": -6.460664561477239,
+      "peak_to_median_db": 12.681431069983923,
+      "peak_power_pcm_squared": 1.8602004274725914e-05,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 91,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 16,
+      "off_target_candidate_count": 15,
+      "strongest_off_target_candidate_db": -8.205948692952132,
+      "peak_to_median_db": 15.413543743404645,
+      "peak_power_pcm_squared": 4.126899875700474e-05,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_0",
+    "seed": 91,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 16,
+      "off_target_candidate_count": 15,
+      "strongest_off_target_candidate_db": -8.328673248866144,
+      "peak_to_median_db": 15.390464689193792,
+      "peak_power_pcm_squared": 7.507624104619026e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 7,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -6.222711492594132,
+      "peak_to_median_db": 12.432012866066163,
+      "peak_power_pcm_squared": 1.8586870282888412e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 7,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 55,
+      "off_target_candidate_count": 54,
+      "strongest_off_target_candidate_db": -4.414404220551733,
+      "peak_to_median_db": 9.390906941911947,
+      "peak_power_pcm_squared": 1.2263190001249313e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 7,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 45,
+      "off_target_candidate_count": 44,
+      "strongest_off_target_candidate_db": -6.286719414680619,
+      "peak_to_median_db": 12.407001647542,
+      "peak_power_pcm_squared": 1.8763821572065353e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 7,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -5.274206658015649,
+      "peak_to_median_db": 10.960974880153845,
+      "peak_power_pcm_squared": 1.8649734556674957e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 7,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 11,
+      "off_target_candidate_count": 10,
+      "strongest_off_target_candidate_db": -9.072459467631013,
+      "peak_to_median_db": 15.440680443502757,
+      "peak_power_pcm_squared": 4.889443516731262e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 7,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 13,
+      "off_target_candidate_count": 12,
+      "strongest_off_target_candidate_db": -8.808135922807914,
+      "peak_to_median_db": 15.797835966168101,
+      "peak_power_pcm_squared": 6.193295121192932e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 7,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 22,
+      "off_target_candidate_count": 21,
+      "strongest_off_target_candidate_db": -8.016323462331666,
+      "peak_to_median_db": 14.70639127191742,
+      "peak_power_pcm_squared": 6.193295121192932e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 7,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 42,
+      "off_target_candidate_count": 41,
+      "strongest_off_target_candidate_db": -6.106864449430093,
+      "peak_to_median_db": 12.638989587183529,
+      "peak_power_pcm_squared": 1.5390105545520782e-07,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 7,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 13,
+      "off_target_candidate_count": 12,
+      "strongest_off_target_candidate_db": -8.743257941525888,
+      "peak_to_median_db": 15.253393438279943,
+      "peak_power_pcm_squared": 3.434251993894577e-07,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 7,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 13,
+      "off_target_candidate_count": 12,
+      "strongest_off_target_candidate_db": -8.824432170142996,
+      "peak_to_median_db": 15.814132213503182,
+      "peak_power_pcm_squared": 6.216578185558319e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 23,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 50,
+      "off_target_candidate_count": 49,
+      "strongest_off_target_candidate_db": -5.191744149308337,
+      "peak_to_median_db": 12.56885186057404,
+      "peak_power_pcm_squared": 1.8845312297344208e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 23,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 58,
+      "off_target_candidate_count": 57,
+      "strongest_off_target_candidate_db": -3.9902543233897694,
+      "peak_to_median_db": 9.539924118326994,
+      "peak_power_pcm_squared": 1.212581992149353e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 23,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -5.229308158375492,
+      "peak_to_median_db": 12.575171958053023,
+      "peak_power_pcm_squared": 1.9420403987169266e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 23,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -5.271463664195668,
+      "peak_to_median_db": 11.227403154982976,
+      "peak_power_pcm_squared": 1.8810387700796127e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 23,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 20,
+      "off_target_candidate_count": 19,
+      "strongest_off_target_candidate_db": -7.655621230756231,
+      "peak_to_median_db": 16.1066016308988,
+      "peak_power_pcm_squared": 4.7497451305389404e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 23,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 17,
+      "off_target_candidate_count": 16,
+      "strongest_off_target_candidate_db": -7.731878308520935,
+      "peak_to_median_db": 15.715424673240241,
+      "peak_power_pcm_squared": 6.076879799365997e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 23,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 24,
+      "off_target_candidate_count": 23,
+      "strongest_off_target_candidate_db": -6.842467475153125,
+      "peak_to_median_db": 14.62397997898956,
+      "peak_power_pcm_squared": 6.076879799365997e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 23,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -5.773849097353066,
+      "peak_to_median_db": 12.814344396006005,
+      "peak_power_pcm_squared": 1.5133991837501526e-07,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 23,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 18,
+      "off_target_candidate_count": 17,
+      "strongest_off_target_candidate_db": -7.582474810591569,
+      "peak_to_median_db": 15.593080109070126,
+      "peak_power_pcm_squared": 3.3760443329811096e-07,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 23,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 16,
+      "off_target_candidate_count": 15,
+      "strongest_off_target_candidate_db": -7.715206714846305,
+      "peak_to_median_db": 15.698753079565611,
+      "peak_power_pcm_squared": 6.05359673500061e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 91,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -5.60827178979164,
+      "peak_to_median_db": 12.55976386103259,
+      "peak_power_pcm_squared": 2.300366759300232e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 91,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 59,
+      "off_target_candidate_count": 58,
+      "strongest_off_target_candidate_db": -4.499628097382603,
+      "peak_to_median_db": 9.371934345481623,
+      "peak_power_pcm_squared": 1.4828983694314957e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 91,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -5.4717682270637225,
+      "peak_to_median_db": 12.483362889164669,
+      "peak_power_pcm_squared": 2.2849999368190765e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 91,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 53,
+      "off_target_candidate_count": 52,
+      "strongest_off_target_candidate_db": -5.251831673914943,
+      "peak_to_median_db": 11.08661651718972,
+      "peak_power_pcm_squared": 2.3024622350931168e-06,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 91,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 14,
+      "off_target_candidate_count": 13,
+      "strongest_off_target_candidate_db": -8.383384563669601,
+      "peak_to_median_db": 15.614421404196984,
+      "peak_power_pcm_squared": 5.9371814131736755e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 91,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 14,
+      "off_target_candidate_count": 13,
+      "strongest_off_target_candidate_db": -8.357580137601134,
+      "peak_to_median_db": 15.53613362256506,
+      "peak_power_pcm_squared": 7.497146725654602e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 91,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 24,
+      "off_target_candidate_count": 23,
+      "strongest_off_target_candidate_db": -7.519810160233396,
+      "peak_to_median_db": 14.286746256482061,
+      "peak_power_pcm_squared": 7.497146725654602e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 91,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 44,
+      "off_target_candidate_count": 43,
+      "strongest_off_target_candidate_db": -6.478174818886375,
+      "peak_to_median_db": 12.69621531412357,
+      "peak_power_pcm_squared": 1.862645149230957e-07,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 91,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 16,
+      "off_target_candidate_count": 15,
+      "strongest_off_target_candidate_db": -8.22931700078007,
+      "peak_to_median_db": 15.418727853446459,
+      "peak_power_pcm_squared": 4.1350722312927246e-07,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_1",
+    "seed": 91,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 14,
+      "off_target_candidate_count": 13,
+      "strongest_off_target_candidate_db": -8.357580137601134,
+      "peak_to_median_db": 15.53613362256506,
+      "peak_power_pcm_squared": 7.497146725654602e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 7,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 48,
+      "off_target_candidate_count": 47,
+      "strongest_off_target_candidate_db": -6.3738795366970535,
+      "peak_to_median_db": 12.621119296336117,
+      "peak_power_pcm_squared": 5.960464477539063e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 7,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 55,
+      "off_target_candidate_count": 54,
+      "strongest_off_target_candidate_db": -4.094536442067225,
+      "peak_to_median_db": 9.133091521736297,
+      "peak_power_pcm_squared": 4.0046870708465576e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 7,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 52,
+      "off_target_candidate_count": 51,
+      "strongest_off_target_candidate_db": -5.754077965565222,
+      "peak_to_median_db": 11.986570869544227,
+      "peak_power_pcm_squared": 7.35744833946228e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 7,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 47,
+      "off_target_candidate_count": 46,
+      "strongest_off_target_candidate_db": -5.338888014448417,
+      "peak_to_median_db": 11.020905255118368,
+      "peak_power_pcm_squared": 5.8906152844429016e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 7,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 1,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 1.3969838619232178e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 7,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 3,
+      "off_target_candidate_count": 2,
+      "strongest_off_target_candidate_db": -9.030899869919436,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 1.862645149230957e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 7,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 6,
+      "off_target_candidate_count": 5,
+      "strongest_off_target_candidate_db": -9.030899869919436,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 1.862645149230957e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 7,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 31,
+      "off_target_candidate_count": 30,
+      "strongest_off_target_candidate_db": -6.232492903979004,
+      "peak_to_median_db": 13.222192947339193,
+      "peak_power_pcm_squared": 4.889443516731262e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 7,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 14,
+      "off_target_candidate_count": 13,
+      "strongest_off_target_candidate_db": -8.93946607552074,
+      "peak_to_median_db": 16.720978579357176,
+      "peak_power_pcm_squared": 1.0943040251731873e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 7,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 3,
+      "off_target_candidate_count": 2,
+      "strongest_off_target_candidate_db": -9.030899869919436,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 1.862645149230957e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 23,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -5.358269150574896,
+      "peak_to_median_db": 12.705124716600428,
+      "peak_power_pcm_squared": 6.076879799365997e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 23,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 58,
+      "off_target_candidate_count": 57,
+      "strongest_off_target_candidate_db": -3.704514044224498,
+      "peak_to_median_db": 9.232933730802305,
+      "peak_power_pcm_squared": 4.0978193283081055e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 23,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 50,
+      "off_target_candidate_count": 49,
+      "strongest_off_target_candidate_db": -4.811239971733364,
+      "peak_to_median_db": 11.923284579263669,
+      "peak_power_pcm_squared": 5.075708031654358e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 23,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -5.240201243391467,
+      "peak_to_median_db": 11.26080115667109,
+      "peak_power_pcm_squared": 5.9138983488082886e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 23,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 2,
+      "off_target_candidate_count": 1,
+      "strongest_off_target_candidate_db": -7.781512503836437,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 1.3969838619232178e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 23,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 5,
+      "off_target_candidate_count": 4,
+      "strongest_off_target_candidate_db": -9.030899869919436,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 1.862645149230957e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 23,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 9,
+      "off_target_candidate_count": 8,
+      "strongest_off_target_candidate_db": -9.030899869919436,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 1.862645149230957e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 23,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 34,
+      "off_target_candidate_count": 33,
+      "strongest_off_target_candidate_db": -6.020599913279624,
+      "peak_to_median_db": 13.010299956639813,
+      "peak_power_pcm_squared": 4.6566128730773926e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 23,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 18,
+      "off_target_candidate_count": 17,
+      "strongest_off_target_candidate_db": -7.596678446896306,
+      "peak_to_median_db": 16.62757831681574,
+      "peak_power_pcm_squared": 1.0710209608078003e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 23,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 5,
+      "off_target_candidate_count": 4,
+      "strongest_off_target_candidate_db": -9.030899869919436,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 1.862645149230957e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 91,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 51,
+      "off_target_candidate_count": 50,
+      "strongest_off_target_candidate_db": -5.629078673658141,
+      "peak_to_median_db": 12.471546148811266,
+      "peak_power_pcm_squared": 7.404014468193054e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 91,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 55,
+      "off_target_candidate_count": 54,
+      "strongest_off_target_candidate_db": -4.293484729236617,
+      "peak_to_median_db": 9.344984512435676,
+      "peak_power_pcm_squared": 5.005858838558197e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 91,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 52,
+      "off_target_candidate_count": 51,
+      "strongest_off_target_candidate_db": -5.380776806610882,
+      "peak_to_median_db": 11.709516194032702,
+      "peak_power_pcm_squared": 5.8673322200775146e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 91,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 54,
+      "off_target_candidate_count": 53,
+      "strongest_off_target_candidate_db": -5.256716454645077,
+      "peak_to_median_db": 11.139433523068368,
+      "peak_power_pcm_squared": 7.264316082000732e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 91,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 3,
+      "off_target_candidate_count": 2,
+      "strongest_off_target_candidate_db": -9.030899869919436,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 1.862645149230957e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 91,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 6,
+      "off_target_candidate_count": 5,
+      "strongest_off_target_candidate_db": -10.0,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 2.3283064365386963e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 91,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 10,
+      "off_target_candidate_count": 9,
+      "strongest_off_target_candidate_db": -10.0,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 2.3283064365386963e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 91,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 43,
+      "off_target_candidate_count": 42,
+      "strongest_off_target_candidate_db": -6.9897000433601875,
+      "peak_to_median_db": 13.979400086720375,
+      "peak_power_pcm_squared": 5.820766091346741e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 91,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 12,
+      "off_target_candidate_count": 11,
+      "strongest_off_target_candidate_db": -8.450980400142567,
+      "peak_to_median_db": 17.481880270062003,
+      "peak_power_pcm_squared": 1.30385160446167e-08,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_2",
+    "seed": 91,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 6,
+      "off_target_candidate_count": 5,
+      "strongest_off_target_candidate_db": -10.0,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 2.3283064365386963e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 7,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 46,
+      "off_target_candidate_count": 45,
+      "strongest_off_target_candidate_db": -5.228787452803376,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 2.3283064365386963e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 7,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 7,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 7,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 36,
+      "off_target_candidate_count": 35,
+      "strongest_off_target_candidate_db": -6.020599913279624,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 1.862645149230957e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 7,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 7,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 7,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 7,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 7,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 1,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 2.3283064365386963e-10,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 7,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 23,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 39,
+      "off_target_candidate_count": 38,
+      "strongest_off_target_candidate_db": -4.771212547196624,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 2.0954757928848267e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 23,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 23,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 23,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 40,
+      "off_target_candidate_count": 39,
+      "strongest_off_target_candidate_db": -6.020599913279624,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 1.862645149230957e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 23,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 23,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 23,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 23,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 23,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 1,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 2.3283064365386963e-10,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 23,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 91,
+    "variant": "fft16_64_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 40,
+      "off_target_candidate_count": 39,
+      "strongest_off_target_candidate_db": -3.521825181113625,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 2.0954757928848267e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 91,
+    "variant": "fft8_128_w18",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 8,
+      "off_target_candidate_count": 7,
+      "strongest_off_target_candidate_db": 0.0,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 2.3283064365386963e-10,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 33.12753630268129,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 91,
+    "variant": "fft16_64_w16",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 91,
+    "variant": "fft12_64_w24",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 45,
+      "off_target_candidate_count": 44,
+      "strongest_off_target_candidate_db": -5.228787452803376,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 2.3283064365386963e-09,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 91,
+    "variant": "dft30_8",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 91,
+    "variant": "dft30_10",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 91,
+    "variant": "dft24_10",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 91,
+    "variant": "dft16_24",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 91,
+    "variant": "reference",
+    "score": {
+      "matched_sources": 1,
+      "source_count": 1,
+      "matches": [
+        {
+          "source": 1,
+          "direction_deg": [
+            -12.0,
+            6.0
+          ],
+          "error_deg": 0.0,
+          "relative_db": 0.0
+        }
+      ],
+      "candidate_peak_count_above_minus12_db": 1,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 2.3283064365386963e-10,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": 0.0,
+    "clipped_values": 0
+  },
+  {
+    "scene": "focus_weak_3",
+    "seed": 91,
+    "variant": "precision_control",
+    "score": {
+      "matched_sources": 0,
+      "source_count": 1,
+      "matches": [],
+      "candidate_peak_count_above_minus12_db": 0,
+      "off_target_candidate_count": 0,
+      "strongest_off_target_candidate_db": null,
+      "peak_to_median_db": 120.0,
+      "peak_power_pcm_squared": 0.0,
+      "matching_tolerance_deg": 2.2,
+      "note": "One-to-one local-peak matching above -12 dB; not a calibrated detection rule."
+    },
+    "peak_error_deg": null,
+    "clipped_values": 0
+  }
+]
