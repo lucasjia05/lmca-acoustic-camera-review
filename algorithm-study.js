@@ -86,7 +86,7 @@ if(picker)picker.addEventListener('change',()=>{const scene=picker.value;if(!Obj
 
 
 
-const areaPicker=document.getElementById('area-chart-picker');areaPicker?.addEventListener('change',()=>{const key=areaPicker.value;const chart=areaCharts[key];if(!chart)return;const path='assets/gate-count-study-v2/'+key+'.svg';document.getElementById('area-chart').src=path;document.getElementById('area-chart').alt=chart.alt;document.getElementById('area-chart-link').href=path;document.getElementById('area-chart-title').textContent=chart.title;});
+const areaPicker=document.getElementById('area-chart-picker');areaPicker?.addEventListener('change',()=>{const key=areaPicker.value;const chart=areaCharts[key];if(!chart)return;const path='assets/gate-count-study-v2/'+key+'.svg?v=thin-markers-1';document.getElementById('area-chart').src=path;document.getElementById('area-chart').alt=chart.alt;document.getElementById('area-chart-link').href=path;document.getElementById('area-chart-title').textContent=chart.title;});
 
 
 
@@ -112,7 +112,7 @@ const scenePicker=document.getElementById('candidate-score-scene');function upda
 
 const mapPicker=document.getElementById('candidate-map-picker');
 
-mapPicker?.addEventListener('change',()=>{const key=mapPicker.value;const path='assets/gate-count-study-v8/'+key+'.svg';document.getElementById('candidate-map-image').src=path;document.getElementById('candidate-map-image').alt=key.startsWith('11')?'Candidate maps: sources, tones and bursts':'Candidate maps: noise, mismatch and controls';document.getElementById('candidate-map-link').href=path;document.getElementById('candidate-map-zoom').href=path;scenePicker.value=key.startsWith('11')?'unequal6':'independent10';updateCandidateMetrics();});
+mapPicker?.addEventListener('change',()=>{const key=mapPicker.value;const path='assets/gate-count-study-v8/'+key+'.svg?v=thin-markers-1';document.getElementById('candidate-map-image').src=path;document.getElementById('candidate-map-image').alt=key.startsWith('11')?'Candidate maps: sources, tones and bursts':'Candidate maps: noise, mismatch and controls';document.getElementById('candidate-map-link').href=path;document.getElementById('candidate-map-zoom').href=path;scenePicker.value=key.startsWith('11')?'unequal6':'independent10';updateCandidateMetrics();});
 
 })();
 

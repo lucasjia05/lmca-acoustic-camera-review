@@ -1,0 +1,432 @@
+{
+  "foreground_stroke_pt": 0.45,
+  "white_halo_stroke_pt": 0.8,
+  "marker_positions_and_sizes_unchanged": true,
+  "plots": [
+    {
+      "path": "assets/dft-candidates-v1/dft-frequency.svg",
+      "marker_collections": 40,
+      "marker_styles": 80,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "9e184817063be6b9a3f2b692723201ce528dbf01",
+      "updated_sha256": "52a46e6c812036dd9cee92cc80b5f9304925f9a64f5ed922799ff759d4169c08"
+    },
+    {
+      "path": "assets/dft-candidates-v1/dft-signals.svg",
+      "marker_collections": 35,
+      "marker_styles": 70,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "1bd05e8d1d619baff4ecdb543f4a43d7bd33ec5f",
+      "updated_sha256": "adcb44bd6be2728ee7e643b6f008327b938ac70a97f76c69a23470fa3c992554"
+    },
+    {
+      "path": "assets/dft-candidates-v1/dft-stress.svg",
+      "marker_collections": 20,
+      "marker_styles": 40,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "69baa55b9515457c637325f3b64e00719e0f7019",
+      "updated_sha256": "eb942ab91a95880b99c5d8a63d05f57c8148f9f88bc514c7d7645d133709128e"
+    },
+    {
+      "path": "assets/dft-candidates-v1/dft-weak.svg",
+      "marker_collections": 37,
+      "marker_styles": 74,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "c199ed822e052ed3f5ea37d4d65a32ac38005afa",
+      "updated_sha256": "309f387e3629dfb4c3f5ce50c70ffa9e8a89e19f47f4345edc053be2e0f6db50"
+    },
+    {
+      "path": "assets/dft-candidates-v1/dft_worse-signals.svg",
+      "marker_collections": 35,
+      "marker_styles": 70,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "90153a3ec7907fdafbab1be428156640d321934a",
+      "updated_sha256": "dbeb7acf3f6a0dd2522f1010ddce3e8b49c4f4059ccbfb96abae874efc2d0ab2"
+    },
+    {
+      "path": "assets/dft-focused-checks-v1/frequency-maps.svg",
+      "marker_collections": 16,
+      "marker_styles": 32,
+      "embedded_images_unchanged": 9,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "43f043811218499978911bb0a07002257d6203bc",
+      "updated_sha256": "5f77d287bd325a5a98720177907f0351e9868d80565423b80f2bb6984fef1aa0"
+    },
+    {
+      "path": "assets/dft-focused-checks-v1/weak-maps.svg",
+      "marker_collections": 14,
+      "marker_styles": 28,
+      "embedded_images_unchanged": 9,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "fe20fe4bfad59ab42bc4d89fc12996a6ff4d8bd0",
+      "updated_sha256": "39d1d8178f71fbc875a7b5add7a95099a5db17e5afde37600ac09b225d142668"
+    },
+    {
+      "path": "assets/dft12-window-v1/01-signals.svg",
+      "marker_collections": 35,
+      "marker_styles": 70,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "37e32e523e3f486b8401983a0892f24d4371e054",
+      "updated_sha256": "bd9c7fe26d0fa395e7df580967f001f7946663277cabaa772b0cd8de473c5059"
+    },
+    {
+      "path": "assets/dft12-window-v1/02-stress.svg",
+      "marker_collections": 20,
+      "marker_styles": 40,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "5723cd950bf140d3c438692dc7ccd4b759864e45",
+      "updated_sha256": "26f835eb78237321ffa7f08c711f5f8790316c281a6e69d08c905a38508f9dfc"
+    },
+    {
+      "path": "assets/dft12-window-v1/03-spatial.svg",
+      "marker_collections": 40,
+      "marker_styles": 80,
+      "embedded_images_unchanged": 26,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "325bac86983b4eef75e125ed6142623859365a08",
+      "updated_sha256": "71b1fcfd4d901c3e89f7205a1e080fb5edcb7641eaf256ae19a08702e4c5b3a5"
+    },
+    {
+      "path": "assets/dft12-window-v1/04-interference.svg",
+      "marker_collections": 35,
+      "marker_styles": 70,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "ea257eacd08841dc3f401232ac8d2f8646cd7ff3",
+      "updated_sha256": "37df72c08aefd6b7680529a1d0f6c273e52d03e12ff3e4f7090fbb62e58c1c6c"
+    },
+    {
+      "path": "assets/fft-study-v1/19-fft-candidate-signals.svg",
+      "marker_collections": 35,
+      "marker_styles": 70,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "c17fd5333ad1efbfb1c88d195913ba1f984cb959",
+      "updated_sha256": "bf291230351c003f2a6aef49e4b71fbb30853a0233bd2fb12ca0c02eb6077386"
+    },
+    {
+      "path": "assets/fft-study-v1/20-dft-candidate-signals-matched.svg",
+      "marker_collections": 35,
+      "marker_styles": 70,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "d5f67e5ac48acae3f3d55f2ce14937d111d097ad",
+      "updated_sha256": "07479a52af814f266a4a1067077672ce6358e4cc336fd7e893285e6f65b5e9f3"
+    },
+    {
+      "path": "assets/fft-study-v1/21-fft-candidate-stress.svg",
+      "marker_collections": 20,
+      "marker_styles": 40,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "78f4db46c8ef726ec939ab011cfd4a08b9a395d9",
+      "updated_sha256": "17a6005345e2fde19d8ac07eb8f0b3328707e2a5229f83e2f5e16bed9e76d23d"
+    },
+    {
+      "path": "assets/fft-study-v1/22-dft-candidate-stress-matched.svg",
+      "marker_collections": 20,
+      "marker_styles": 40,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "4d0cd219f683b4ce05a3d3b8301b79c8bc03d32f",
+      "updated_sha256": "fce4f8034b573e457d1a66f7fc516dc54416514e72a2927708078fce543f6336"
+    },
+    {
+      "path": "assets/fft-study-v1/23-equal-coverage-architecture.svg",
+      "marker_collections": 16,
+      "marker_styles": 32,
+      "embedded_images_unchanged": 13,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "d70388012cf26eb8d521004ea45fdddf2fc51513",
+      "updated_sha256": "365ebbd8a395c6f0cfe6c65b2b168bacbdda7b377914d89ee20a1af4663e3f5c"
+    },
+    {
+      "path": "assets/fft-study-v1/25-contiguous-bin-architecture.svg",
+      "marker_collections": 20,
+      "marker_styles": 40,
+      "embedded_images_unchanged": 13,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "f7c79fcd1eb27f6b0b992abb459cb476fe04ab7e",
+      "updated_sha256": "a597b53931236614e9e89c549b6ad95fecf35c010b36a846331b160ddc4ac5c6"
+    },
+    {
+      "path": "assets/gate-count-study-v1/04-precision-map-example.svg",
+      "marker_collections": 6,
+      "marker_styles": 6,
+      "embedded_images_unchanged": 8,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "47a2f7405e1ea6c38baaec1309f9a61722e4df5e",
+      "updated_sha256": "22d52ceb50acc7dcd3da96346b35aa32552471e367ce7cbb86833b0d74651445"
+    },
+    {
+      "path": "assets/gate-count-study-v2/11-candidate-maps-signals.svg",
+      "marker_collections": 55,
+      "marker_styles": 56,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "830c7e01f4285931cc99f3946b7a30045b71c2c5",
+      "updated_sha256": "6a916d3682d666c5effb48c629d079779f2d330760b49840c2073addca6fbc65"
+    },
+    {
+      "path": "assets/gate-count-study-v2/12-candidate-maps-stress.svg",
+      "marker_collections": 40,
+      "marker_styles": 41,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "8664e01723e9b02b831fd8cab5adbe99173d8d19",
+      "updated_sha256": "654add58383f9ecf7a6ac51c595c417eca24c46c77aa35976c96961b6dcac5e3"
+    },
+    {
+      "path": "assets/gate-count-study-v3/11-candidate-maps-signals.svg",
+      "marker_collections": 35,
+      "marker_styles": 70,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "f4f1bd2992fc4fcd301a6e1b296b578ae08b5f34",
+      "updated_sha256": "bac25003c533d6fc1498098805f87419436692b0e81b48f75d731260aee5b4a1",
+      "png_dimensions": [
+        2400,
+        1664
+      ]
+    },
+    {
+      "path": "assets/gate-count-study-v3/12-candidate-maps-stress.svg",
+      "marker_collections": 20,
+      "marker_styles": 40,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "ede90808d3ffe6870f9fbcff58d7ce1911f42fdf",
+      "updated_sha256": "436993391b1689de237521b1d0825308698b2c0d7a6934b26895af7188a05486",
+      "png_dimensions": [
+        2400,
+        1664
+      ]
+    },
+    {
+      "path": "assets/gate-count-study-v4/11-candidate-maps-signals.svg",
+      "marker_collections": 35,
+      "marker_styles": 70,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "767552588d8926b75f9ae64d894fc6519ba001c5",
+      "updated_sha256": "70fdf6e125231474dbccc7c2f5d62012e61b82510fa7ab740c80283a0bcce73b",
+      "png_dimensions": [
+        2400,
+        1664
+      ]
+    },
+    {
+      "path": "assets/gate-count-study-v4/12-candidate-maps-stress.svg",
+      "marker_collections": 20,
+      "marker_styles": 40,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "2b580b8c84dd8d8cee235ff8de798f74131e01d2",
+      "updated_sha256": "d945f9a45740e42b08012eeb982bdec30d02ec22b5bd62d30d5234e8fdbd6a67",
+      "png_dimensions": [
+        2400,
+        1664
+      ]
+    },
+    {
+      "path": "assets/gate-count-study-v5/11-candidate-maps-signals.svg",
+      "marker_collections": 35,
+      "marker_styles": 70,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "217ada57352016c4268b0218824a911e9b1ab7f1",
+      "updated_sha256": "0af4d49fe277a6501c2ee028a111875a31d941e8d4349dec26c385e98c1bf088",
+      "png_dimensions": [
+        2400,
+        1664
+      ]
+    },
+    {
+      "path": "assets/gate-count-study-v5/12-candidate-maps-stress.svg",
+      "marker_collections": 20,
+      "marker_styles": 40,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "8518aba010c409addf5b5b6babd12caf8247f23e",
+      "updated_sha256": "730c11430df7e26f55f2ae3a10fc975780434747328b0f1182cd4db351c44c0b",
+      "png_dimensions": [
+        2400,
+        1664
+      ]
+    },
+    {
+      "path": "assets/gate-count-study-v6/11-candidate-maps-all.svg",
+      "marker_collections": 55,
+      "marker_styles": 110,
+      "embedded_images_unchanged": 41,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "64ed7e60b28e0c784d35df48bee1f097f5ac2b8c",
+      "updated_sha256": "a8a02b5459eb3d39397ce1fb8b0932d20a36516e8200dbcb1448af64df66a191",
+      "png_dimensions": [
+        2720,
+        3440
+      ]
+    },
+    {
+      "path": "assets/gate-count-study-v7/11-candidate-maps-signals.svg",
+      "marker_collections": 35,
+      "marker_styles": 70,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "1c47fbf8f495e7d1852dcf119e59ab4d008db86e",
+      "updated_sha256": "4f79526d010cdcbf1b670b52f50bd2de31d99dbece7dd4c68e2200180bd9dce2",
+      "png_dimensions": [
+        2720,
+        1888
+      ]
+    },
+    {
+      "path": "assets/gate-count-study-v7/12-candidate-maps-stress.svg",
+      "marker_collections": 20,
+      "marker_styles": 40,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "2b59ddd45c023fd05f4288d2c9986cb4df7a73c5",
+      "updated_sha256": "76b50a202c14ab0f0db95d11510af349081bdd39435f7bb1107fece392437186",
+      "png_dimensions": [
+        2720,
+        1888
+      ]
+    },
+    {
+      "path": "assets/gate-count-study-v8/11-candidate-maps-signals.svg",
+      "marker_collections": 35,
+      "marker_styles": 70,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "3688928f6ecab60551fa6ec561702ae008b50a3c",
+      "updated_sha256": "26b1bf66a161a6a07b2e41bc0d4e706ea445b3365858398449bcba52573a0028",
+      "png_dimensions": [
+        2720,
+        1888
+      ]
+    },
+    {
+      "path": "assets/gate-count-study-v8/12-candidate-maps-stress.svg",
+      "marker_collections": 20,
+      "marker_styles": 40,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "b286272a4849f3b1d54d4a22499a5c5a1b7f6c67",
+      "updated_sha256": "18f98583e2e25be6ee13502f335718cffaf98305e548b22b226d32a6d0c17dde",
+      "png_dimensions": [
+        2720,
+        1888
+      ]
+    },
+    {
+      "path": "assets/matched-focused-maps-v1/dft-frequency.svg",
+      "marker_collections": 40,
+      "marker_styles": 80,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "31e54d68925394f757033e6c0702fea554c9755a",
+      "updated_sha256": "339c82dfd2c98834cd3339ca7d54f5cf71fc0235f9605df5d5efc7e31b465079"
+    },
+    {
+      "path": "assets/matched-focused-maps-v1/dft-weak.svg",
+      "marker_collections": 36,
+      "marker_styles": 72,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "24aae54d7533a3ee580d923ca3b4250bf75d29a6",
+      "updated_sha256": "7e7fe1a8c7dbd0f9d9a5d266a0f10bc20d323730fc656bf018f0f1bed1be77c0"
+    },
+    {
+      "path": "assets/matched-focused-maps-v1/fft-frequency.svg",
+      "marker_collections": 40,
+      "marker_styles": 80,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "2ad8ca71026a425d97889a7963f77e8b16264712",
+      "updated_sha256": "2e62c9238ba5c5ff149c5826fbb0eae5b6ba703595981ee6f98116d73e2c9df2"
+    },
+    {
+      "path": "assets/matched-focused-maps-v1/fft-weak.svg",
+      "marker_collections": 38,
+      "marker_styles": 76,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "decd4685527aa2edef4ca65f8aa8e5c1b3231589",
+      "updated_sha256": "54751125f7e5e24cce106f36116ddd4118d1bec907f45bbed28a52232ebb258b"
+    },
+    {
+      "path": "assets/representative-maps-v1/representative-tradeoffs.svg",
+      "marker_collections": 50,
+      "marker_styles": 100,
+      "embedded_images_unchanged": 21,
+      "non_marker_content_unchanged": true,
+      "original_git_sha": "b923d65b4c9e0de5a3d8e7b1235826279e3e9fa2",
+      "updated_sha256": "1ff170ea96c678ab485a40033311b0590a40e4f7218d5ba0f4c9184d30907f81",
+      "png_dimensions": [
+        2720,
+        1888
+      ]
+    }
+  ],
+  "svg_count": 36,
+  "png_count": 12,
+  "original_commit": "882bd6430afe82659a22032b1842aeff631c14d5",
+  "files": [
+    "assets/dft-candidates-v1/dft-frequency.svg",
+    "assets/dft-candidates-v1/dft-signals.svg",
+    "assets/dft-candidates-v1/dft-stress.svg",
+    "assets/dft-candidates-v1/dft-weak.svg",
+    "assets/dft-candidates-v1/dft_worse-signals.svg",
+    "assets/dft-focused-checks-v1/frequency-maps.svg",
+    "assets/dft-focused-checks-v1/weak-maps.svg",
+    "assets/dft12-window-v1/01-signals.svg",
+    "assets/dft12-window-v1/02-stress.svg",
+    "assets/dft12-window-v1/03-spatial.svg",
+    "assets/dft12-window-v1/04-interference.svg",
+    "assets/fft-study-v1/19-fft-candidate-signals.svg",
+    "assets/fft-study-v1/20-dft-candidate-signals-matched.svg",
+    "assets/fft-study-v1/21-fft-candidate-stress.svg",
+    "assets/fft-study-v1/22-dft-candidate-stress-matched.svg",
+    "assets/fft-study-v1/23-equal-coverage-architecture.svg",
+    "assets/fft-study-v1/25-contiguous-bin-architecture.svg",
+    "assets/gate-count-study-v1/04-precision-map-example.svg",
+    "assets/gate-count-study-v2/11-candidate-maps-signals.svg",
+    "assets/gate-count-study-v2/12-candidate-maps-stress.svg",
+    "assets/gate-count-study-v3/11-candidate-maps-signals.svg",
+    "assets/gate-count-study-v3/11-candidate-maps-signals.png",
+    "assets/gate-count-study-v3/12-candidate-maps-stress.svg",
+    "assets/gate-count-study-v3/12-candidate-maps-stress.png",
+    "assets/gate-count-study-v4/11-candidate-maps-signals.svg",
+    "assets/gate-count-study-v4/11-candidate-maps-signals.png",
+    "assets/gate-count-study-v4/12-candidate-maps-stress.svg",
+    "assets/gate-count-study-v4/12-candidate-maps-stress.png",
+    "assets/gate-count-study-v5/11-candidate-maps-signals.svg",
+    "assets/gate-count-study-v5/11-candidate-maps-signals.png",
+    "assets/gate-count-study-v5/12-candidate-maps-stress.svg",
+    "assets/gate-count-study-v5/12-candidate-maps-stress.png",
+    "assets/gate-count-study-v6/11-candidate-maps-all.svg",
+    "assets/gate-count-study-v6/11-candidate-maps-all.png",
+    "assets/gate-count-study-v7/11-candidate-maps-signals.svg",
+    "assets/gate-count-study-v7/11-candidate-maps-signals.png",
+    "assets/gate-count-study-v7/12-candidate-maps-stress.svg",
+    "assets/gate-count-study-v7/12-candidate-maps-stress.png",
+    "assets/gate-count-study-v8/11-candidate-maps-signals.svg",
+    "assets/gate-count-study-v8/11-candidate-maps-signals.png",
+    "assets/gate-count-study-v8/12-candidate-maps-stress.svg",
+    "assets/gate-count-study-v8/12-candidate-maps-stress.png",
+    "assets/matched-focused-maps-v1/dft-frequency.svg",
+    "assets/matched-focused-maps-v1/dft-weak.svg",
+    "assets/matched-focused-maps-v1/fft-frequency.svg",
+    "assets/matched-focused-maps-v1/fft-weak.svg",
+    "assets/representative-maps-v1/representative-tradeoffs.svg",
+    "assets/representative-maps-v1/representative-tradeoffs.png"
+  ]
+}
