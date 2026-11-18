@@ -1,0 +1,54 @@
+{
+  "new_hardware_configurations": 14,
+  "reused_hardware_controls": 3,
+  "rtl_maps": 168,
+  "rtl_uart_bytes": 981720,
+  "pcm_map_anchors": 172,
+  "independent_fir_checks": 88,
+  "reference_unit_tests": 4,
+  "input_hash_audit": "All original synthesis input hashes match generated fixtures. All 17 production SV/parameter/ROM hashes match reused controls. Actual RTL map words match goldens. Gap-scene PDM is identical across each matching geometry.",
+  "mapped_netlists": {
+    "fine22": {
+      "cases": {
+        "fine22_gap_pulse": {
+          "result": "PASS PDM-to-UART: mics=30 bins=22 maps=1 points=1681 bytes=10095 cycles=5236018",
+          "input_sha256": {
+            "pdm.mem": "e8193f25190aeaf80eb64af55e53dab8c7e5f2071890e1fe38e4c5c7d9ffb6e2",
+            "map_expected.mem": "d9ceada5ce8e44157d9555aeca12c31a5ab76ec9cc0c72d04eeb6641320799c0"
+          }
+        }
+      },
+      "netlist_sha256": "0957c58d8043c0b1a035b84ab51a09e91d106f0650f467bac4e8689e27ac86e2",
+      "cell_library_sha256": "56f87774951fff24602647965313c41cb3737ac44e2e8cc9c012cb53d5f32bbf",
+      "limitation": "Zero-delay, two-state Verilator simulation; not formal equivalence or physical timing signoff."
+    },
+    "m40fine16": {
+      "cases": {
+        "m40fine16_gap_pulse": {
+          "result": "PASS PDM-to-UART: mics=40 bins=16 maps=1 points=1681 bytes=10095 cycles=5233578",
+          "input_sha256": {
+            "pdm.mem": "324efa761d5530ff6f7e7c4a2ee20b8b7bb0d492fb23b958843146e8f03e92a8",
+            "map_expected.mem": "3098d3e02ff9a28a15956b9cfa70f9dfce9bb16f51a5912389d1cf6151c05aa9"
+          }
+        }
+      },
+      "netlist_sha256": "448bb05a1018db0ab6202e65b16873746db580faffded7f72ea083ec979c54d8",
+      "cell_library_sha256": "56f87774951fff24602647965313c41cb3737ac44e2e8cc9c012cb53d5f32bbf",
+      "limitation": "Zero-delay, two-state Verilator simulation; not formal equivalence or physical timing signoff."
+    },
+    "notch18": {
+      "cases": {
+        "notch18_gap_pulse": {
+          "result": "PASS PDM-to-UART: mics=30 bins=18 maps=1 points=441 bytes=2655 cycles=1477618",
+          "input_sha256": {
+            "pdm.mem": "e8193f25190aeaf80eb64af55e53dab8c7e5f2071890e1fe38e4c5c7d9ffb6e2",
+            "map_expected.mem": "3c1db200259170f760813c0dc1ccb1dc7ad000ab501a7aca06d0bd8cd8a756c6"
+          }
+        }
+      },
+      "netlist_sha256": "14c123d13b4a3dc9ba642361120287f74e9925f434b0ada568f44ba01d08c45a",
+      "cell_library_sha256": "56f87774951fff24602647965313c41cb3737ac44e2e8cc9c012cb53d5f32bbf",
+      "limitation": "Zero-delay, two-state Verilator simulation; not formal equivalence or physical timing signoff."
+    }
+  }
+}
