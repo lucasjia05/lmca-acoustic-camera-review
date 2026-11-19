@@ -254,6 +254,21 @@
       "source": "Nov 17 verified archive",
       "compute2": 1381443,
       "uart2": 2981728
+    },
+    {
+      "key": "k24",
+      "mics": 30,
+      "bins": 24,
+      "window": 256,
+      "width": 24,
+      "frac": 15,
+      "step": 3,
+      "fir": 1,
+      "gates": 322778.25,
+      "slack": 56.74,
+      "source": "Archived 24-bin Hann synthesis and UART replay",
+      "compute2": 1654563,
+      "uart2": 3043648
     }
   ],
   "architecture": [

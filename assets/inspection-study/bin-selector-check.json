@@ -1,0 +1,59 @@
+{
+  "conditions": "30 microphones, 3-degree spacing, 256 samples, 24-bit accumulators. Full rotating banks, one physical tile. Direct DC at 10 MHz in gscl45nm typical.",
+  "change": "For SPECTRUM_TILE_MICS == MICS, read_address = bin_index. All other synthesis inputs match their respective original build.",
+  "tap_count": "Unique spectrum word positions with register outputs wired to combinational logic in the mapped core, excluding register-to-register rotation wires. Counts independently agree for all 24 real and 24 imaginary bit columns.",
+  "rows": [
+    {
+      "bins": 21,
+      "measurements": {
+        "original": {
+          "whole_chip_nand2_equivalents": 295067.25,
+          "flip_flops": 37546,
+          "setup_slack_ns": 56.74,
+          "spectrum_positions_feeding_combinational_logic": 374,
+          "mapped_netlist_sha256": "4c85e83619f1a07197a4f0cf1fc1e49530063a276ca692905c0efee2e048bc57",
+          "original_core_source_sha256": "127f38d49612a1b82c0685442df44f6ca30d6ef3ad8e919a3fd251139b9fb019"
+        },
+        "direct": {
+          "whole_chip_nand2_equivalents": 261818.5,
+          "flip_flops": 37546,
+          "setup_slack_ns": 56.74,
+          "spectrum_positions_feeding_combinational_logic": 32,
+          "mapped_netlist_sha256": "94522716fcf0abb91bd9a4ecc1a82eebe26977bef3121c839f313ac40d4ca65d",
+          "original_core_source_sha256": "54005947dd91c1b14bd724958b1fbeac02cb1f54ddfb92a0c6a6e4fe100128ad"
+        }
+      },
+      "verification_for_each_build": {
+        "pipeline": "PASS pipeline: mics=30 bins=21 directions=441 maps=2 PDM=8192 PCM=15360 cycles=2993222 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=21 maps=2 points=882 bytes=5310 cycles=2997208",
+        "actual_map_words_sha256": "a80b7e688dca1325748c3db3a9e734c85e5c41c50414ce6468209a99ae27b0db"
+      }
+    },
+    {
+      "bins": 22,
+      "measurements": {
+        "original": {
+          "whole_chip_nand2_equivalents": 283751.75,
+          "flip_flops": 38986,
+          "setup_slack_ns": 56.72,
+          "spectrum_positions_feeding_combinational_logic": 180,
+          "mapped_netlist_sha256": "d82dc89e8bf6ad0be14b00ce2db66077b08d88de9e7cc7443c97744235d2039a",
+          "original_core_source_sha256": "127f38d49612a1b82c0685442df44f6ca30d6ef3ad8e919a3fd251139b9fb019"
+        },
+        "direct": {
+          "whole_chip_nand2_equivalents": 268077.25,
+          "flip_flops": 38986,
+          "setup_slack_ns": 56.74,
+          "spectrum_positions_feeding_combinational_logic": 32,
+          "mapped_netlist_sha256": "39e4e92e4f4e31ddcd91069b11e8e57c0946a522875d578bb8f53e1e4aad94ed",
+          "original_core_source_sha256": "54005947dd91c1b14bd724958b1fbeac02cb1f54ddfb92a0c6a6e4fe100128ad"
+        }
+      },
+      "verification_for_each_build": {
+        "pipeline": "PASS pipeline: mics=30 bins=22 directions=441 maps=2 PDM=8192 PCM=15360 cycles=3008702 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=22 maps=2 points=882 bytes=5310 cycles=3012688",
+        "actual_map_words_sha256": "997616be44db3411199ced75aaaa83e425cdba6cff1619bb1cbd15793507427f"
+      }
+    }
+  ]
+}
