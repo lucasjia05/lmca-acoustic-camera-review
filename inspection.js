@@ -2,7 +2,6 @@
   const directory = "assets/inspection-study/";
   const get = id => document.getElementById(id);
   const experimentButtons = Array.from(document.querySelectorAll("[data-experiment]"));
-  const architectureButtons = Array.from(document.querySelectorAll("[data-arch-view]"));
   const query = () => new URLSearchParams(location.search);
 
   function choose(buttons, active) {
@@ -17,7 +16,6 @@
   function sync() {
     const params = query();
     choose(experimentButtons, experimentButtons.find(b => b.dataset.experiment === params.get("study")));
-    choose(architectureButtons, architectureButtons.find(b => b.dataset.archView === params.get("view")));
   }
 
   function navigate(section, key, value) {
@@ -29,10 +27,6 @@
     sync();
   }
   experimentButtons.forEach(b => b.addEventListener("click", () => navigate("experiments", "study", b.dataset.experiment)));
-  architectureButtons.forEach(b => b.addEventListener("click", () => navigate("architecture", "view", b.dataset.archView)));
-  document.querySelectorAll("[data-arch-link]").forEach(a => a.addEventListener("click", e => {
-    e.preventDefault(); navigate("architecture", "view", "savings"); get("tab-architecture").focus();
-  }));
   document.querySelectorAll("[data-study-link]").forEach(a => a.addEventListener("click", e => {
     e.preventDefault(); navigate("experiments", "study", a.dataset.studyTarget || "map-quality");
     const target = get(a.dataset.studyAnchor || "experiment-map-quality");

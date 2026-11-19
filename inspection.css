@@ -21,9 +21,7 @@
 .review-layout th,.review-layout td { padding: .6rem .75rem; }
 .review-layout summary { font-weight: 600; cursor: pointer; padding: .6rem 0; }
 .review-layout details { margin: 1rem 0; }
-.experiment-switcher button[aria-pressed=true],.arch-switch button[aria-pressed=true] { background: #174a4b; color: white; }
-.arch-switch { display:flex; flex-wrap:wrap; gap:.45rem; margin:1rem 0; }
-.arch-switch button { border:1px solid var(--line); background:white; border-radius:5px; padding:.6rem .85rem; }
-[data-arch-panel][hidden],.review-layout[hidden] {display:none;}
+.experiment-switcher button[aria-pressed=true] { background: #174a4b; color: white; }
+.review-layout[hidden] {display:none;}
 @media (max-width:760px) { .review-layout .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width:420px) { .review-layout .gallery { gap:0; padding:.2rem; } .review-layout table { font-size:.85rem; } }

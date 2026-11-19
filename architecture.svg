@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1800" height="1205" viewBox="0 0 1800 1205" role="img" aria-labelledby="rtl-uart-title rtl-uart-desc">
 <title id="rtl-uart-title">Compact acoustic camera with UART, organized by SystemVerilog source files</title>
-<desc id="rtl-uart-desc">The diagram groups PDM decimation, PCM serialization, the compact processing core and UART output under lmca_top.sv. Both front-end modules are defined in lmca_pdm_decimator.sv. The core contains windowing, one shared complex arithmetic engine, selected Fourier accumulators, power calculation, phase generation and its controller; these are logic within lmca_compact_core.sv, not separate module files. The core instantiates u_trig from lmca_compact_trig.sv. The UART packetizer instantiates u_tx, the byte transmitter defined in the same UART source file. Ready backpressure returns from the packetizer to the map producer. Physical capture, the host and the video camera are external.</desc>
+<desc id="rtl-uart-desc">The diagram groups PDM decimation, PCM serialization, the compact processing core and UART output under top.sv. Both front-end modules are defined in lmca_pdm_decimator.sv. The core contains windowing, one shared complex arithmetic engine, selected Fourier accumulators, power calculation, phase generation and its controller; these are logic within lmca_compact_core.sv, not separate module files. The core instantiates u_trig from lmca_compact_trig.sv. The UART packetizer instantiates u_tx, the byte transmitter defined in the same UART source file. Ready backpressure returns from the packetizer to the map producer. Physical capture, the host and the video camera are external.</desc>
 <defs>
 <marker id="rtl-uart-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#527d80"/></marker>
 <marker id="rtl-uart-control" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9276ac"/></marker>
@@ -24,7 +24,7 @@
 </style>
 <rect width="1800" height="1205" fill="white"/>
 <rect x="205" y="20" width="1540" height="1025" rx="12" class="rootfile"/>
-<text x="230" y="57" class="filename">lmca_top.sv</text><g transform="translate(0 -195)">
+<text x="230" y="57" class="filename">top.sv</text><g transform="translate(0 -195)">
 
 
 
@@ -51,7 +51,7 @@
 
 <rect x="20" y="350" width="165" height="115" rx="7" class="external"/>
 <text x="36" y="393" class="name">PDM mic</text>
-<text x="36" y="426" class="tiny">30 × 3.072 MHz</text>
+<text x="36" y="426" class="tiny">3.072 MHz per mic</text>
 
 <path d="M185 407H267" class="data"/>
 <text x="225" y="372" class="tiny" text-anchor="middle">PDM<tspan x="225" dy="18">1 bit/mic</tspan></text>
@@ -89,7 +89,7 @@
 <text x="975" y="497" class="tiny">cos / sin</text>
 
 <rect x="1000" y="555" width="295" height="110" rx="7" class="logic"/>
-<text x="1018" y="587" class="name">Fourier registers</text>
+<text x="1018" y="587" class="name">Rotating Fourier banks</text>
 <text x="1018" y="616" class="instance">spectrum_r / spectrum_i</text>
 <text x="1018" y="638" class="tiny">MICS × BINS complex values<tspan x="1018" dy="19">2 × ACC_W bits / value</tspan></text>
 <path d="M1100 480V552" class="data"/>
