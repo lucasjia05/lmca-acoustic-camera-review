@@ -74,30 +74,37 @@ def gate_charts():
             "width":[24,25,26,27,28,29,30,31,32], "window":[256,512,1024],
             "step":[1.25,1.5,2,2.5,3,4], "fir":[1,3,5,7,9,11,13,15,17],
         }[xkey]
-        fig,ax=plt.subplots(figsize=(8.5,4.45))
-        fig.subplots_adjust(left=.12,right=.97,top=.85,bottom=.23)
+        fig,ax=plt.subplots(figsize=(8.5,5.35 if name=="bins" else 4.45))
+        fig.subplots_adjust(left=.12,right=.97,top=.84 if name=="bins" else .85,bottom=.20 if name=="bins" else .23)
         def predictor(x):
             # A fixed 60-degree field of view has two angular grid dimensions.
             return (60/x+1)**2 if xkey=="step" else x
         series=[]
-        for (label,ids),color in zip(sets,[TEAL,ORANGE,SLATE]):
+        colors=[TEAL,ORANGE,"#794877",SLATE] if name=="bins" else [TEAL,ORANGE,SLATE]
+        for (label,ids),color in zip(sets,colors[:len(sets)],strict=True):
             x=np.array([rows[k][xkey] for k in ids],dtype=float)
             y=np.array([rows[k]["gates"]/1000 for k in ids])
-            slope,intercept=np.polyfit(predictor(x),y,1)
-            segments=[(ticks[0],x.min(),"--"),(x.min(),x.max(),"-"),(x.max(),ticks[-1],"--")]
-            for start,end,style in segments:
+            if name=="bins":
+                # A bin change can resize the spectrum selector. Preserve measured bends.
+                ax.plot(x,y,color=color,lw=1.7)
+                segments=[(ticks[0],x[0],"--",x[:2],y[:2]),(x[-1],ticks[-1],"--",x[-2:],y[-2:])]
+            else:
+                segments=[(ticks[0],x.min(),"--",x,y),(x.min(),x.max(),"-",x,y),(x.max(),ticks[-1],"--",x,y)]
+            for start,end,style,fit_x,fit_y in segments:
                 if end>start:
+                    slope,intercept=np.polyfit(predictor(fit_x),fit_y,1)
                     domain=np.linspace(start,end,160)
                     ax.plot(domain,intercept+slope*predictor(domain),ls=style,color=color,lw=1.7,
                             alpha=1 if style=="-" else .73)
             ax.scatter(x,y,s=38,color=color,edgecolors="white",linewidths=.85,zorder=4)
             for key,xx,yy in zip(ids,x,y):
-                offset=-13 if (name,key) in {("bins","k20"),("bins","k22"),("bins","k18"),("grid","m40k14"),("grid","m40fine14")} else 7
+                below=(name=="bins" and rows[key]["step"]==3) or (name=="grid" and key in {"m40k14","m40fine14"})
+                offset=-13 if below else 7
                 ax.annotate(f"{yy:.1f}k",(xx,yy),xytext=(0,offset),textcoords="offset points",ha="center",fontsize=8,color=color,
                             bbox=dict(facecolor="white",alpha=.85,edgecolor="none",pad=.35))
             series.append(Line2D([],[],color=color,lw=2,label=label))
         handles=[Line2D([],[],ls="none",marker="o",color=INK,label="Measured"),
-                 Line2D([],[],color=INK,label="Fit")]
+                 Line2D([],[],color=INK,label="Between measurements" if name=="bins" else "Fit")]
         if xkey!="window":
             handles.append(Line2D([],[],ls="--",color=INK,label="Extrapolated fit"))
         handles.append(Line2D([],[],ls=":",color="#965549",label="295k budget"))
@@ -108,11 +115,23 @@ def gate_charts():
         ax.margins(x=.04,y=.12)
         ax.grid(axis="y",color=LINE)
         ax.set_axisbelow(True)
-        fig.legend(handles=series,loc="upper center",bbox_to_anchor=(.53,.98),ncol=len(series),frameon=False,fontsize=10)
+        fig.legend(handles=series,loc="upper center",bbox_to_anchor=(.53,.98),ncol=2 if name=="bins" else len(series),frameon=False,fontsize=10)
         fig.legend(handles=handles,loc="lower center",bbox_to_anchor=(.53,.012),ncol=len(handles),frameon=False,fontsize=9)
         save(fig,"gates-"+name)
-    panel("bins",[("30 mics · 3°",["k14","k18","k20","k21","k22","k23","k24"]),
-                  ("30 mics · 1.5°",["fine18","fine20","fine22"]),("40 mics · 1.5°",["m40fine14","m40fine16"])],"bins","Selected frequency bins")
+    # Both grid fits for a microphone count use the very same bin selections.
+    bin_series=[]
+    for mics, pairs in [
+        (30,[("k14","fine14"),("k18","fine18"),("k20","fine20"),("k21","fine21"),
+             ("k22","fine22"),("k23","fine23"),("k24","fine24")]),
+        (40,[("m40k14","m40fine14"),("m40k16","m40fine16"),("m40k22","m40fine22")]),
+    ]:
+        for coarse,fine in pairs:
+            assert rows[coarse]["mics"]==rows[fine]["mics"]==mics
+            assert rows[coarse]["step"]==3 and rows[fine]["step"]==1.5
+            assert rows[coarse]["bins"]==rows[fine]["bins"]
+        for step,ids in zip([3,1.5],zip(*pairs),strict=True):
+            bin_series.append((f"{mics} mics · {step}°",ids))
+    panel("bins",bin_series,"bins","Selected frequency bins")
     panel("mics",[("14 bins · 3°",["k14","m40k14"]),("18 bins · 3°",["k18","m36k18"])],"mics","Microphones on a 200 mm spiral")
     panel("width",[("30 mics · 18 bins · N256",["k18","width26","width28"])],"width","Accumulator width (bits), with 15 fractional bits")
     panel("window",[("30 mics · 18 bins · 28-bit accumulators",["width28","window512","window1024"])],"window","Samples per window, same 18 physical frequencies")

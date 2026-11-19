@@ -418,6 +418,610 @@
         }
       },
       "compute2": 2557654
+    },
+    {
+      "key": "m40k16",
+      "mics": 40,
+      "bins": 16,
+      "window": 256,
+      "width": 24,
+      "frac": 15,
+      "step": 3,
+      "fir": 1,
+      "gates": 284942.25,
+      "slack": 63.99,
+      "uart2": 3007618,
+      "source": "Matched grid comparison, direct DC and Verilator",
+      "configuration": {
+        "name": "m40k16",
+        "sample_rate_hz": 192000,
+        "microphones": 40,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 3,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 256,
+        "selected_bins": [
+          27,
+          29,
+          31,
+          33,
+          34,
+          35,
+          37,
+          39,
+          41,
+          43,
+          45,
+          46,
+          47,
+          49,
+          51,
+          53
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 24,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": false,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 40,
+          "tile_capture_vector": true
+        }
+      }
+    },
+    {
+      "key": "m40k22",
+      "mics": 40,
+      "bins": 22,
+      "window": 256,
+      "width": 24,
+      "frac": 15,
+      "step": 3,
+      "fir": 1,
+      "gates": 416552.5,
+      "slack": 63.99,
+      "uart2": 3131458,
+      "source": "Matched grid comparison, direct DC and Verilator",
+      "configuration": {
+        "name": "m40k22",
+        "sample_rate_hz": 192000,
+        "microphones": 40,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 3,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 256,
+        "selected_bins": [
+          27,
+          28,
+          29,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          39,
+          40,
+          41,
+          43,
+          44,
+          45,
+          46,
+          47,
+          49,
+          51,
+          52,
+          53
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 24,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": false,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 40,
+          "tile_capture_vector": true
+        }
+      }
+    },
+    {
+      "key": "m40fine22",
+      "mics": 40,
+      "bins": 22,
+      "window": 256,
+      "width": 24,
+      "frac": 15,
+      "step": 1.5,
+      "fir": 1,
+      "gates": 424277.75,
+      "slack": 64.15,
+      "uart2": 10586338,
+      "source": "Matched grid comparison, direct DC and Verilator",
+      "configuration": {
+        "name": "m40fine22",
+        "sample_rate_hz": 192000,
+        "microphones": 40,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 1.5,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 256,
+        "selected_bins": [
+          27,
+          28,
+          29,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          39,
+          40,
+          41,
+          43,
+          44,
+          45,
+          46,
+          47,
+          49,
+          51,
+          52,
+          53
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 24,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": false,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 40,
+          "tile_capture_vector": true
+        }
+      }
+    },
+    {
+      "key": "fine14",
+      "mics": 30,
+      "bins": 14,
+      "window": 256,
+      "width": 24,
+      "frac": 15,
+      "step": 1.5,
+      "fir": 1,
+      "gates": 230050.0,
+      "slack": 56.72,
+      "uart2": 10366738,
+      "source": "Matched grid comparison, direct DC and Verilator",
+      "configuration": {
+        "name": "fine14",
+        "sample_rate_hz": 192000,
+        "microphones": 30,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 1.5,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 256,
+        "selected_bins": [
+          27,
+          29,
+          31,
+          33,
+          35,
+          37,
+          39,
+          41,
+          43,
+          45,
+          47,
+          49,
+          51,
+          53
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 24,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": false,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 30,
+          "tile_capture_vector": true
+        }
+      }
+    },
+    {
+      "key": "fine21",
+      "mics": 30,
+      "bins": 21,
+      "window": 256,
+      "width": 24,
+      "frac": 15,
+      "step": 1.5,
+      "fir": 1,
+      "gates": 300686.75,
+      "slack": 56.72,
+      "uart2": 10452088,
+      "source": "Matched grid comparison, direct DC and Verilator",
+      "configuration": {
+        "name": "fine21",
+        "sample_rate_hz": 192000,
+        "microphones": 30,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 1.5,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 256,
+        "selected_bins": [
+          27,
+          28,
+          29,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          39,
+          41,
+          43,
+          44,
+          45,
+          46,
+          47,
+          49,
+          51,
+          52,
+          53
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 24,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": false,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 30,
+          "tile_capture_vector": true
+        }
+      }
+    },
+    {
+      "key": "fine23",
+      "mics": 30,
+      "bins": 23,
+      "window": 256,
+      "width": 24,
+      "frac": 15,
+      "step": 1.5,
+      "fir": 1,
+      "gates": 319171.0,
+      "slack": 56.72,
+      "uart2": 10483048,
+      "source": "Matched grid comparison, direct DC and Verilator",
+      "configuration": {
+        "name": "fine23",
+        "sample_rate_hz": 192000,
+        "microphones": 30,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 1.5,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 256,
+        "selected_bins": [
+          27,
+          28,
+          29,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          39,
+          40,
+          41,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          51,
+          52,
+          53
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 24,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": false,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 30,
+          "tile_capture_vector": true
+        }
+      }
+    },
+    {
+      "key": "fine24",
+      "mics": 30,
+      "bins": 24,
+      "window": 256,
+      "width": 24,
+      "frac": 15,
+      "step": 1.5,
+      "fir": 1,
+      "gates": 328360.0,
+      "slack": 56.72,
+      "uart2": 10498528,
+      "source": "Matched grid comparison, direct DC and Verilator",
+      "configuration": {
+        "name": "fine24",
+        "sample_rate_hz": 192000,
+        "microphones": 30,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 1.5,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 256,
+        "selected_bins": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          49,
+          50,
+          51,
+          52,
+          53
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 24,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": false,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 30,
+          "tile_capture_vector": true
+        }
+      }
     }
   ],
   "timing": [
@@ -475,6 +1079,114 @@
       "actual_maps_sha256": "64343d455bc51565b1399d6cc38133d76dc120a76011d60ef1b858f74324b042",
       "map_words": 3362,
       "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791"
+    },
+    "m40k16": {
+      "report_sha256": "51a565aad3d4a8fa30accd5f52612c69a401ebf062bab72383df7d6d36f52913",
+      "timing_sha256": "eabc956b3124f1765f7d8988dc85aaed92dab1929d1d261857813d77cd6147da",
+      "actual_maps_sha256": "150974cd5dfb4b7e47e68e996e8500ee4abf0053242b6b89448949f0bd457c99",
+      "map_words": 882,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "core_rtl_sha256": "127f38d49612a1b82c0685442df44f6ca30d6ef3ad8e919a3fd251139b9fb019"
+    },
+    "m40k22": {
+      "report_sha256": "73ee211ed924507f095a1b151e89752a554b9153a68e9f22c6ef15508bc6645a",
+      "timing_sha256": "d1a64df94c9739b76ba11a37b1100acbd6d1522a52f2a5ce6355d43652a38b7e",
+      "actual_maps_sha256": "0525b451a33f7cbeae8321f71a545d7105b666bdb488f214739285abc56ce226",
+      "map_words": 882,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "core_rtl_sha256": "127f38d49612a1b82c0685442df44f6ca30d6ef3ad8e919a3fd251139b9fb019"
+    },
+    "m40fine22": {
+      "report_sha256": "b4ca63610cda293c3e5f2f1171a83bbdf3e00007706abe91f53467684a70e4dc",
+      "timing_sha256": "a4274365d699694c382283c2532b9dabe1c6e23a13e8738bbe9d2d4ccba4d75a",
+      "actual_maps_sha256": "bc7248c16c951f41a082b6cdfc65c8196ab55454d4d44af49c2c64fac4af64ce",
+      "map_words": 3362,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "core_rtl_sha256": "127f38d49612a1b82c0685442df44f6ca30d6ef3ad8e919a3fd251139b9fb019"
+    },
+    "fine14": {
+      "report_sha256": "07097d8938da8c011ce748476385be4729b44cd27efa523a25c94451c632253b",
+      "timing_sha256": "cf96cb4b1444510352da438bc73d49c61c02390225043158e229924f4c827703",
+      "actual_maps_sha256": "5fc36d0bad7e3354ba0e48862dcf60296d6a2aa7c265945db7b1044565f31e83",
+      "map_words": 3362,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "core_rtl_sha256": "127f38d49612a1b82c0685442df44f6ca30d6ef3ad8e919a3fd251139b9fb019"
+    },
+    "fine21": {
+      "report_sha256": "f373d43c57d4229379c8db5b3f24ce2a5c84cb71d80c3af7cd60d090c56dffee",
+      "timing_sha256": "7a4fe3d4e124694da73cae46b8f8fc67b68fc7506d69a78af07ecbdfa738d9f8",
+      "actual_maps_sha256": "86c88fe4b234388415cbee12e5823f7785b6bdd717bccd035f19329817162a0f",
+      "map_words": 3362,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "core_rtl_sha256": "127f38d49612a1b82c0685442df44f6ca30d6ef3ad8e919a3fd251139b9fb019"
+    },
+    "fine23": {
+      "report_sha256": "748a42741c8f68eed63804b01dc96152b64c086ad34a85c16fc2ac8587a6d19b",
+      "timing_sha256": "2e52c28cfb7e27b92e91a11a50d104d8450bbc20f704777401e60dc9457848cf",
+      "actual_maps_sha256": "c69205c753d6c7c1599408bc3a4c8ce9be46201ea628a7040e3efb66ea3e42cd",
+      "map_words": 3362,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "core_rtl_sha256": "127f38d49612a1b82c0685442df44f6ca30d6ef3ad8e919a3fd251139b9fb019"
+    },
+    "fine24": {
+      "report_sha256": "49dc685a1befac427c509d1696d91d78bc37faac8e809d33526301f41f4ec6be",
+      "timing_sha256": "f1e8b2b16d12f2f71bebe68efde8e87ce2e2d53d0d5c6e80ada2a18ae2f4bb89",
+      "actual_maps_sha256": "80763851a49b5c059d093d927c1a0be421d79563b71cf6c50b108106c8ea6ff8",
+      "map_words": 3362,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "core_rtl_sha256": "127f38d49612a1b82c0685442df44f6ca30d6ef3ad8e919a3fd251139b9fb019"
     }
-  }
+  },
+  "matched_grid_checks": [
+    {
+      "mics": 30,
+      "bins": 14,
+      "matching_output_words": 882
+    },
+    {
+      "mics": 30,
+      "bins": 18,
+      "matching_output_words": 882
+    },
+    {
+      "mics": 30,
+      "bins": 20,
+      "matching_output_words": 882
+    },
+    {
+      "mics": 30,
+      "bins": 21,
+      "matching_output_words": 882
+    },
+    {
+      "mics": 30,
+      "bins": 22,
+      "matching_output_words": 882
+    },
+    {
+      "mics": 30,
+      "bins": 23,
+      "matching_output_words": 882
+    },
+    {
+      "mics": 30,
+      "bins": 24,
+      "matching_output_words": 882
+    },
+    {
+      "mics": 40,
+      "bins": 14,
+      "matching_output_words": 882
+    },
+    {
+      "mics": 40,
+      "bins": 16,
+      "matching_output_words": 882
+    },
+    {
+      "mics": 40,
+      "bins": 22,
+      "matching_output_words": 882
+    }
+  ]
 }
