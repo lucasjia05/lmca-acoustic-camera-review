@@ -1,0 +1,29 @@
+.review-layout { margin-top: 1.2rem; }
+.review-layout h3 { font-size: clamp(1.35rem, 3vw, 1.8rem); margin: .8rem 0; }
+.review-layout p { max-width: 78ch; }
+.review-layout .findings { padding: .85rem 1.15rem; border-left: 3px solid #087a78; background: #e8f1ee; }
+.findings p { margin: .4rem 0; }
+.review-layout .controls { display: flex; gap: .65rem; align-items: center; flex-wrap: wrap; margin: 1.25rem 0 .65rem; }
+.review-layout select { font: inherit; max-width: 100%; background: white; color: var(--ink); padding: .5rem .65rem; border: 1px solid #899b9d; border-radius: 4px; }
+.review-layout figure { margin: .7rem 0; }
+.review-layout .chart { display: block; width: min(100%, 860px); height: auto; background: white; border: 1px solid var(--line); }
+.review-layout .radar { width: min(100%, 650px); }
+.review-layout .fineprint { color: #425a63; font-size: .93rem; line-height: 1.55; }
+.review-layout .gallery { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .45rem; background: white; padding: .7rem; border: 1px solid var(--line); }
+.gallery a, .gallery img { display: block; width: 100%; }
+.gallery strong { display:block; padding:.5rem .4rem 0; font-size:clamp(.78rem,1.5vw,1rem); line-height:1.3; }
+.review-layout .scale { width: min(100%, 320px); display: block; }
+.review-layout .map-key { margin: .5rem 0; }
+.review-layout .map-key b { color: #155855; }
+.review-layout .evidence { display: inline-block; margin-top: .8rem; }
+.review-layout .summary-wrap { overflow-x: auto; }
+.review-layout table { font-size: .95rem; max-width: 900px; }
+.review-layout th,.review-layout td { padding: .6rem .75rem; }
+.review-layout summary { font-weight: 600; cursor: pointer; padding: .6rem 0; }
+.review-layout details { margin: 1rem 0; }
+.experiment-switcher button[aria-pressed=true],.arch-switch button[aria-pressed=true] { background: #174a4b; color: white; }
+.arch-switch { display:flex; flex-wrap:wrap; gap:.45rem; margin:1rem 0; }
+.arch-switch button { border:1px solid var(--line); background:white; border-radius:5px; padding:.6rem .85rem; }
+[data-arch-panel][hidden],.review-layout[hidden] {display:none;}
+@media (max-width:760px) { .review-layout .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:420px) { .review-layout .gallery { gap:0; padding:.2rem; } .review-layout table { font-size:.85rem; } }

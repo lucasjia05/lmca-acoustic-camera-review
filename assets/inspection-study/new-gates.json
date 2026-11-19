@@ -1,0 +1,471 @@
+{
+  "rows": [
+    {
+      "key": "width26",
+      "mics": 30,
+      "bins": 18,
+      "window": 256,
+      "width": 26,
+      "frac": 15,
+      "step": 3.0,
+      "fir": 1,
+      "gates": 259717.5,
+      "slack": 56.74,
+      "uart2": 2950768,
+      "source": "New direct DC and Verilator",
+      "configuration": {
+        "name": "width26",
+        "sample_rate_hz": 192000,
+        "microphones": 30,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 3.0,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 256,
+        "selected_bins": [
+          27,
+          28,
+          29,
+          31,
+          33,
+          35,
+          36,
+          37,
+          39,
+          41,
+          43,
+          44,
+          45,
+          47,
+          49,
+          51,
+          52,
+          53
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 26,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": false,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 30,
+          "tile_capture_vector": true
+        }
+      }
+    },
+    {
+      "key": "width28",
+      "mics": 30,
+      "bins": 18,
+      "window": 256,
+      "width": 28,
+      "frac": 15,
+      "step": 3.0,
+      "fir": 1,
+      "gates": 270082.75,
+      "slack": 56.74,
+      "uart2": 2950768,
+      "source": "New direct DC and Verilator",
+      "configuration": {
+        "name": "width28",
+        "sample_rate_hz": 192000,
+        "microphones": 30,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 3.0,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 256,
+        "selected_bins": [
+          27,
+          28,
+          29,
+          31,
+          33,
+          35,
+          36,
+          37,
+          39,
+          41,
+          43,
+          44,
+          45,
+          47,
+          49,
+          51,
+          52,
+          53
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 28,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": false,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 30,
+          "tile_capture_vector": true
+        }
+      }
+    },
+    {
+      "key": "window512",
+      "mics": 30,
+      "bins": 18,
+      "window": 512,
+      "width": 28,
+      "frac": 15,
+      "step": 3.0,
+      "fir": 1,
+      "gates": 270642.75,
+      "slack": 56.72,
+      "uart2": 3242608,
+      "source": "New direct DC and Verilator",
+      "configuration": {
+        "name": "window512",
+        "sample_rate_hz": 192000,
+        "microphones": 30,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 3.0,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 512,
+        "selected_bins": [
+          54,
+          56,
+          58,
+          62,
+          66,
+          70,
+          72,
+          74,
+          78,
+          82,
+          86,
+          88,
+          90,
+          94,
+          98,
+          102,
+          104,
+          106
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 28,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": false,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 30,
+          "tile_capture_vector": true
+        }
+      }
+    },
+    {
+      "key": "window1024",
+      "mics": 30,
+      "bins": 18,
+      "window": 1024,
+      "width": 28,
+      "frac": 15,
+      "step": 3.0,
+      "fir": 1,
+      "gates": 271676.25,
+      "slack": 56.74,
+      "uart2": 3826288,
+      "source": "New direct DC and Verilator",
+      "configuration": {
+        "name": "window1024",
+        "sample_rate_hz": 192000,
+        "microphones": 30,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 3.0,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 1024,
+        "selected_bins": [
+          108,
+          112,
+          116,
+          124,
+          132,
+          140,
+          144,
+          148,
+          156,
+          164,
+          172,
+          176,
+          180,
+          188,
+          196,
+          204,
+          208,
+          212
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 28,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": false,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 30,
+          "tile_capture_vector": true
+        }
+      }
+    },
+    {
+      "key": "ring40",
+      "mics": 40,
+      "bins": 16,
+      "window": 256,
+      "width": 24,
+      "frac": 15,
+      "step": 1.5,
+      "fir": 1,
+      "gates": 396584.75,
+      "slack": 64.0,
+      "uart2": 10461297,
+      "source": "New direct DC and Verilator",
+      "configuration": {
+        "name": "ring40",
+        "sample_rate_hz": 192000,
+        "microphones": 40,
+        "layout": "spiral",
+        "aperture_m": 0.2,
+        "azimuth_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "elevation_limits_deg": [
+          -30.0,
+          30.0
+        ],
+        "scan_step_deg": 1.5,
+        "speed_of_sound_m_s": 343.0,
+        "window_samples": 256,
+        "selected_bins": [
+          27,
+          29,
+          31,
+          33,
+          34,
+          35,
+          37,
+          39,
+          41,
+          43,
+          45,
+          46,
+          47,
+          49,
+          51,
+          53
+        ],
+        "window": "hann",
+        "phase_bits": 10,
+        "windowed_width": 18,
+        "windowed_fraction": 16,
+        "spectrum_width": 24,
+        "spectrum_fraction": 22,
+        "coefficient_width": 18,
+        "coefficient_fraction": 16,
+        "power_fraction": 32,
+        "map_width": 48,
+        "band_hz": [
+          20000.0,
+          40000.0
+        ],
+        "accumulator_width": 24,
+        "accumulator_fraction": 15,
+        "uart_clocks_per_bit": 50,
+        "positions_m": [],
+        "pdm": {
+          "lanes": 1,
+          "decimation": 16,
+          "cic_order": 3,
+          "fir_coefficients": [
+            1.0
+          ]
+        },
+        "architecture": {
+          "spectrum_ring": true,
+          "serial_cmac": false,
+          "spectrum_tile_mics": 0,
+          "tile_capture_vector": false
+        }
+      },
+      "compute2": 2557654
+    }
+  ],
+  "timing": [
+    {
+      "key": "m40fine16",
+      "name": "40 / 16",
+      "mhz": 80,
+      "slack": -7.11,
+      "met": false,
+      "gates": 297120.25,
+      "report_sha256": "cd088191b1a12fd0fedbb3cc5a8e5e9d08f504faca0488ea9e5446ef73902645"
+    }
+  ],
+  "proof": {
+    "width26": {
+      "report_sha256": "8274fd18447f6cf2c062fdd96b208bdf057095ea12fe201cc70e09a81519e273",
+      "timing_sha256": "f482d4ddc0144f86f2b7b372c9f96a3e3ffa8bf51bf397fd7ace51376ee365ba",
+      "actual_maps_sha256": "930082ea3a6f021b152d962a889dfa3be7395a7db35667a49054f96014085750",
+      "map_words": 882,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791"
+    },
+    "width28": {
+      "report_sha256": "aff7893f3864f71aab34a12f068ed192c7e0b21b685af4b7565e6c8221c3031e",
+      "timing_sha256": "4484229605490300fdd67cf8c464231e4f7cbc7b81b569a14579376259919b94",
+      "actual_maps_sha256": "930082ea3a6f021b152d962a889dfa3be7395a7db35667a49054f96014085750",
+      "map_words": 882,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791"
+    },
+    "window512": {
+      "report_sha256": "6cf8d45a60dbd345d64b45a43091c6fb23eec1eae13c21b41a388a5c4deed56d",
+      "timing_sha256": "b1251b59535156c3ebba91d9e40a83534dda5cbfb612c191a1d02684b64af448",
+      "actual_maps_sha256": "84bc565a9180412e9ae4062aac05d45b818cdbbf239aefe7fde403dc085dfc73",
+      "map_words": 882,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791"
+    },
+    "window1024": {
+      "report_sha256": "fcb03cd908103a3948050a6bc8f937d109873ca07dd9344503f80840c7bd2d60",
+      "timing_sha256": "da4f9938ad936ad4648a429415535b286fde3475cb5288328cf500bb57b346dc",
+      "actual_maps_sha256": "e93e0b7df471067bedad21d5a74b3dc93aef80409b06d379e676f224b4a2e632",
+      "map_words": 882,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791"
+    },
+    "ring40": {
+      "report_sha256": "9b4ddabc219a4a00411a5461cd76d34223276110cb9067bb975cc98bb9712162",
+      "timing_sha256": "643a735115f86e06d7f20e2f7d169d271c248486d6c8d18a5b684c48283abc94",
+      "actual_maps_sha256": "64343d455bc51565b1399d6cc38133d76dc120a76011d60ef1b858f74324b042",
+      "map_words": 3362,
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791"
+    }
+  }
+}

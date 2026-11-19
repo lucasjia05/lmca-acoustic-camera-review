@@ -1,0 +1,83 @@
+{
+  "balanced": {
+    "baseline": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "64343d455bc51565b1399d6cc38133d76dc120a76011d60ef1b858f74324b042"
+    },
+    "gap_pulse": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "7965111c3f7d25601685b2f1515da39090391553d8775f27c179a0af1a28c793"
+    },
+    "gap_tone": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "9bfabc8a7c392d2a95dffd3568b1e39a416fd0d42305b401adb5e8c4c1f73d33"
+    },
+    "noisy": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "9c33944ac2df14e7a94f239116adc6300f44197d71f67453236fe3e7626f303c"
+    },
+    "random": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "d16e5f2cba48ffb3526c9e63755cab53bbffcf39806b25ba94c581231cad4f90"
+    },
+    "weak_gap": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "275e049afa28cfc697a94fe7ae683e0cbbe25c57f2c4836591d2c78bee183bfd"
+    }
+  },
+  "coverage": {
+    "baseline": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "2d4a2f9929f2307f01bd7192c7fa20d2baaf60293b81e833621d8be0ce3ac081"
+    },
+    "gap_pulse": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "9a0beb42b90a61f364b252a6ada3dd2e7a2789c804830825b207bc86e46f354c"
+    },
+    "gap_tone": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "1e587bd4d96420a83ae738f91ee097de6e6c166e1f0d902698272af8a5961c11"
+    },
+    "noisy": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "1e89e504e339d3e2cc63fe8d6aac8207180fb3270884cb6a7e1139eda230e956"
+    },
+    "random": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "0b84406a2999549bb8e95f91a13fb80f2634405decbbf6461fb49ef03f0d04da"
+    },
+    "weak_gap": {
+      "exact_frames": 2,
+      "map_words": 3362,
+      "source_sha256": "9c4e4b99b8bfde37356520ecdb8ef15cb5bf538cc99d559077191d3c6c5dbae7"
+    }
+  },
+  "control": {
+    "baseline": {
+      "exact_frames": 2,
+      "map_words": 882,
+      "source_sha256": "1fe8a43e67d5603cffc8d954dd4f8b0b89b19492c299ea25f67883efc1c59b5f"
+    },
+    "noisy": {
+      "exact_frames": 2,
+      "map_words": 882,
+      "source_sha256": "9d24e9f26e7b2a71ef460c482a7990a1d4b68b23635a28877de5236e82f4afcd"
+    },
+    "random": {
+      "exact_frames": 2,
+      "map_words": 882,
+      "source_sha256": "0bbb03fa7edc52f430f83caf0b579764150d83d67500340991005f1ddead37ab"
+    }
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "labels": {
+    "balanced": "40 mics / 16 bins",
+    "coverage": "30 mics / 22 bins",
+    "control": "Earlier 30 mics / 10 bins",
+    "reference": "30 mics / all 27 bins (float)"
+  },
+  "axes": {
+    "burst": "Weak bursts",
+    "frequency": "Frequency coverage",
+    "environment": "Environmental noise",
+    "drone": "Drone interference",
+    "field": "Field of view",
+    "pair": "Two sources"
+  },
+  "counts": {
+    "calibration": 144,
+    "null": 180,
+    "burst": 120,
+    "frequency": 322,
+    "environment": 108,
+    "drone": 120,
+    "field": 96,
+    "pair": 108
+  },
+  "thresholds": {
+    "balanced": 7.3374249041080475e-06,
+    "coverage": 1.1444091796875e-05,
+    "control": 5.0282105803489685e-06,
+    "reference": 1.5053670866271956e-05
+  },
+  "scores": [
+    {
+      "axis": "null",
+      "design": "balanced",
+      "passed": 14,
+      "total": 180
+    },
+    {
+      "axis": "null",
+      "design": "coverage",
+      "passed": 14,
+      "total": 180
+    },
+    {
+      "axis": "null",
+      "design": "control",
+      "passed": 13,
+      "total": 180
+    },
+    {
+      "axis": "null",
+      "design": "reference",
+      "passed": 14,
+      "total": 180
+    },
+    {
+      "axis": "burst",
+      "design": "balanced",
+      "passed": 11,
+      "total": 120
+    },
+    {
+      "axis": "burst",
+      "design": "coverage",
+      "passed": 9,
+      "total": 120
+    },
+    {
+      "axis": "burst",
+      "design": "control",
+      "passed": 7,
+      "total": 120
+    },
+    {
+      "axis": "burst",
+      "design": "reference",
+      "passed": 8,
+      "total": 120
+    },
+    {
+      "axis": "frequency",
+      "design": "balanced",
+      "passed": 193,
+      "total": 322
+    },
+    {
+      "axis": "frequency",
+      "design": "coverage",
+      "passed": 265,
+      "total": 322
+    },
+    {
+      "axis": "frequency",
+      "design": "control",
+      "passed": 102,
+      "total": 322
+    },
+    {
+      "axis": "frequency",
+      "design": "reference",
+      "passed": 322,
+      "total": 322
+    },
+    {
+      "axis": "environment",
+      "design": "balanced",
+      "passed": 10,
+      "total": 108
+    },
+    {
+      "axis": "environment",
+      "design": "coverage",
+      "passed": 5,
+      "total": 108
+    },
+    {
+      "axis": "environment",
+      "design": "control",
+      "passed": 0,
+      "total": 108
+    },
+    {
+      "axis": "environment",
+      "design": "reference",
+      "passed": 5,
+      "total": 108
+    },
+    {
+      "axis": "drone",
+      "design": "balanced",
+      "passed": 74,
+      "total": 120
+    },
+    {
+      "axis": "drone",
+      "design": "coverage",
+      "passed": 64,
+      "total": 120
+    },
+    {
+      "axis": "drone",
+      "design": "control",
+      "passed": 67,
+      "total": 120
+    },
+    {
+      "axis": "drone",
+      "design": "reference",
+      "passed": 66,
+      "total": 120
+    },
+    {
+      "axis": "field",
+      "design": "balanced",
+      "passed": 96,
+      "total": 96
+    },
+    {
+      "axis": "field",
+      "design": "coverage",
+      "passed": 96,
+      "total": 96
+    },
+    {
+      "axis": "field",
+      "design": "control",
+      "passed": 96,
+      "total": 96
+    },
+    {
+      "axis": "field",
+      "design": "reference",
+      "passed": 96,
+      "total": 96
+    },
+    {
+      "axis": "pair",
+      "design": "balanced",
+      "passed": 58,
+      "total": 108
+    },
+    {
+      "axis": "pair",
+      "design": "coverage",
+      "passed": 44,
+      "total": 108
+    },
+    {
+      "axis": "pair",
+      "design": "control",
+      "passed": 27,
+      "total": 108
+    },
+    {
+      "axis": "pair",
+      "design": "reference",
+      "passed": 41,
+      "total": 108
+    }
+  ],
+  "scenes": {
+    "null-2": {
+      "truths": [],
+      "axis": "null",
+      "condition": "wind",
+      "seed": 861002,
+      "index": 2
+    },
+    "burst-1": {
+      "truths": [
+        [
+          6.633214026529117,
+          -15.460316931667432
+        ]
+      ],
+      "axis": "burst",
+      "condition": "quiet",
+      "seed": 871001,
+      "index": 1
+    },
+    "frequency-71": {
+      "truths": [
+        [
+          -15.786265536548694,
+          1.137015781085175
+        ]
+      ],
+      "axis": "frequency",
+      "condition": "quiet",
+      "seed": 881071,
+      "index": 71
+    },
+    "environment-0": {
+      "truths": [
+        [
+          -12.314559526111434,
+          -8.579905059557579
+        ]
+      ],
+      "axis": "environment",
+      "condition": "quiet",
+      "seed": 891000,
+      "index": 0
+    },
+    "environment-1": {
+      "truths": [
+        [
+          -12.314559526111434,
+          -8.579905059557579
+        ]
+      ],
+      "axis": "environment",
+      "condition": "ambient",
+      "seed": 891000,
+      "index": 1
+    },
+    "environment-2": {
+      "truths": [
+        [
+          -12.314559526111434,
+          -8.579905059557579
+        ]
+      ],
+      "axis": "environment",
+      "condition": "wind",
+      "seed": 891000,
+      "index": 2
+    },
+    "drone-6": {
+      "truths": [
+        [
+          -16.906642174688514,
+          -14.223494389065667
+        ]
+      ],
+      "axis": "drone",
+      "condition": "quiet",
+      "seed": 901006,
+      "index": 6
+    },
+    "field-2": {
+      "truths": [
+        [
+          24.673186941330684,
+          -25.86363388347138
+        ]
+      ],
+      "axis": "field",
+      "condition": "quiet",
+      "seed": 911002,
+      "index": 2
+    },
+    "pair-4": {
+      "truths": [
+        [
+          3.3083684155480215,
+          -2.7168667992781277
+        ],
+        [
+          -4.206058436931888,
+          -12.072794817317218
+        ]
+      ],
+      "axis": "pair",
+      "condition": "quiet",
+      "seed": 921004,
+      "index": 4
+    }
+  },
+  "anchors": {
+    "balanced": {
+      "fixture": "design-space/evidence/m40fine16/baseline",
+      "exact_maps": 2,
+      "actual_map_file_sha256": "64343d455bc51565b1399d6cc38133d76dc120a76011d60ef1b858f74324b042"
+    },
+    "coverage": {
+      "fixture": "design-space/evidence/fine22/baseline",
+      "exact_maps": 2,
+      "actual_map_file_sha256": "2d4a2f9929f2307f01bd7192c7fa20d2baaf60293b81e833621d8be0ce3ac081"
+    },
+    "control": {
+      "fixture": "tiling/evidence/DFT-DAS/build/tiling/control/baseline",
+      "exact_maps": 2,
+      "actual_map_file_sha256": "1fe8a43e67d5603cffc8d954dd4f8b0b89b19492c299ea25f67883efc1c59b5f"
+    }
+  },
+  "config_hashes": {
+    "balanced": "92ea1d505c5d8ff6f3f7ad89082429106e9c389d186a14a21567dd6d147c4fbc",
+    "coverage": "ea00e7b80567764afb5d168113e70ca8ff2acb308e2a29c776cc30145a8cfb3e",
+    "control": "f074d912e6b4e38f898aa9712f241b2764e6b48b68257e34b636fd054be61802"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "method": "For six RTL-scoreboard-checked completed spectrum snapshots, XOR each 24-bit real and imaginary accumulator with the subsequent microphone in its cyclic bin bank, and sum the Hamming distances. This models one idle transition of the spectrum data registers only, excluding clocks, glitches, other logic, capacitance and leakage. Enabled rings hold these values at idle. No power estimate.",
+  "results": [
+    {
+      "case": "baseline",
+      "frame": 0,
+      "spectrum_bit_changes_one_idle_clock": 15566,
+      "total_spectrum_bits": 30720,
+      "enabled_ring_idle_changes": 0,
+      "spectrum_hashes": {
+        "sr_expected.mem": "035efafad3bb7e46648cba3e134a35723405e1e93e933bda781d94d9dc1a32b0",
+        "si_expected.mem": "f5ff8d4bb3a37caa2c5836dbb6bdfbaf28b81c5b96c77d7e8681ae299d48778e"
+      }
+    },
+    {
+      "case": "baseline",
+      "frame": 1,
+      "spectrum_bit_changes_one_idle_clock": 15552,
+      "total_spectrum_bits": 30720,
+      "enabled_ring_idle_changes": 0,
+      "spectrum_hashes": {
+        "sr_expected.mem": "035efafad3bb7e46648cba3e134a35723405e1e93e933bda781d94d9dc1a32b0",
+        "si_expected.mem": "f5ff8d4bb3a37caa2c5836dbb6bdfbaf28b81c5b96c77d7e8681ae299d48778e"
+      }
+    },
+    {
+      "case": "noisy",
+      "frame": 0,
+      "spectrum_bit_changes_one_idle_clock": 15544,
+      "total_spectrum_bits": 30720,
+      "enabled_ring_idle_changes": 0,
+      "spectrum_hashes": {
+        "sr_expected.mem": "1ff9c84634969f6d1e451249cd738a3cabd089c248a7bf7c5cbdca8e3e661236",
+        "si_expected.mem": "fb3b8f7982526b10023d5a60fb2e281afba4f72292e4141220b1568a93085b7b"
+      }
+    },
+    {
+      "case": "noisy",
+      "frame": 1,
+      "spectrum_bit_changes_one_idle_clock": 15260,
+      "total_spectrum_bits": 30720,
+      "enabled_ring_idle_changes": 0,
+      "spectrum_hashes": {
+        "sr_expected.mem": "1ff9c84634969f6d1e451249cd738a3cabd089c248a7bf7c5cbdca8e3e661236",
+        "si_expected.mem": "fb3b8f7982526b10023d5a60fb2e281afba4f72292e4141220b1568a93085b7b"
+      }
+    },
+    {
+      "case": "random",
+      "frame": 0,
+      "spectrum_bit_changes_one_idle_clock": 15398,
+      "total_spectrum_bits": 30720,
+      "enabled_ring_idle_changes": 0,
+      "spectrum_hashes": {
+        "sr_expected.mem": "12715fca5b817cd0eeaeaecce628853c5fea76a977b784ec8a19b9c20f07caae",
+        "si_expected.mem": "98f598812a04b0f1a158772122665bdc777af60ffcc4f994f034acfb0752b78f"
+      }
+    },
+    {
+      "case": "random",
+      "frame": 1,
+      "spectrum_bit_changes_one_idle_clock": 15326,
+      "total_spectrum_bits": 30720,
+      "enabled_ring_idle_changes": 0,
+      "spectrum_hashes": {
+        "sr_expected.mem": "12715fca5b817cd0eeaeaecce628853c5fea76a977b784ec8a19b9c20f07caae",
+        "si_expected.mem": "98f598812a04b0f1a158772122665bdc777af60ffcc4f994f034acfb0752b78f"
+      }
+    }
+  ]
+}
