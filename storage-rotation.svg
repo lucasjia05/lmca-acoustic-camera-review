@@ -9,7 +9,7 @@
 <rect x="20" y="25" width="1760" height="845" rx="7" class="panel"/>
 <text x="45" y="67" class="heading">Before · indexed storage</text>
 <text x="45" y="101" class="file">lmca_compact_core.sv / u_core</text>
-<text x="1730" y="101" class="small" text-anchor="end">Gate estimates: 30 mics × 10 bins · N256 · 24-bit real + 24-bit imag · 441 directions</text>
+<text x="1730" y="101" class="small" text-anchor="end">Gate estimates: 30 mics × 10 bins × (24-bit real + 24-bit imag)</text>
 <rect x="45" y="135" width="1325" height="280" rx="7" class="group"/>
 <text x="65" y="170" class="group-title">Window + sample hold</text>
 <text x="1335" y="170" class="group-title" text-anchor="end">4.01k NAND2 eq</text>
@@ -77,7 +77,7 @@
 <rect x="20" y="25" width="1760" height="845" rx="7" class="panel"/>
 <text x="45" y="67" class="heading">After · continuous rotation</text>
 <text x="45" y="101" class="file">lmca_compact_core.sv / u_core</text>
-<text x="1730" y="101" class="small" text-anchor="end">Gate estimates: 30 mics × 10 bins · N256 · 24-bit real + 24-bit imag · 441 directions</text>
+<text x="1730" y="101" class="small" text-anchor="end">Gate estimates: 30 mics × 10 bins × (24-bit real + 24-bit imag)</text>
 <rect x="45" y="135" width="1325" height="280" rx="7" class="group"/>
 <text x="65" y="170" class="group-title">Window + sample hold</text>
 <text x="1335" y="170" class="group-title" text-anchor="end">6.15k NAND2 eq</text>
