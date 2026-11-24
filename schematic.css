@@ -1,0 +1,14 @@
+:root{color-scheme:light;--ink:#162b35;--muted:#536873;--line:#d7e0e3;--accent:#006e72}
+*{box-sizing:border-box}body{margin:0;background:#f3f5f4;color:var(--ink);font-family:Segoe UI,Arial,sans-serif}
+a{color:var(--accent)}a:focus-visible{outline:3px solid #e39a34;outline-offset:4px}
+header{background:white;border-bottom:1px solid var(--line);padding:20px 4vw;display:flex;flex-wrap:wrap;gap:20px 30px;align-items:center}
+.brand{font-weight:750;text-decoration:none;letter-spacing:.08em;font-size:14px}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:15px}nav span[aria-current]{font-weight:650}nav .separator{color:#83959b}
+main{max-width:1480px;margin:auto;padding:30px 4vw 36px}.schematic-heading{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.scope{font-size:14px;color:var(--muted);margin:0 0 6px}h1{font-size:30px;margin:0;letter-spacing:-.6px}.up{border:1px solid #a9bfc0;border-radius:6px;background:white;padding:10px 16px;text-decoration:none;white-space:nowrap;font-size:15px}
+.summary{max-width:1000px;font-size:16px;line-height:1.6;margin:16px 0;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:20px;font-size:14px;color:var(--muted);margin:18px 0 12px}.legend span{display:flex;align-items:center;gap:8px}.legend i{display:inline-block;width:26px;height:17px;border-radius:3px;background:white}.legend .expandable{border:3px solid var(--accent)}.legend .leaf{border:1px solid #98a7af}
+.drawing{border:1px solid var(--line);border-radius:10px;background:white;padding:18px;overflow-x:auto}.drawing svg{display:block;width:100%;min-width:850px;height:auto}
+.caption{font-size:14px;line-height:1.6;color:var(--muted);margin:16px 0}footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:24px}
+@media(max-width:700px){header{padding:16px}main{padding:24px 16px}.schematic-heading{align-items:flex-start}h1{font-size:25px}.up{font-size:14px;padding:8px 10px}.drawing{padding:8px}.drawing svg{min-width:900px}}
+@media print{.up,.legend{display:none}main{padding:10px}.drawing{overflow:visible}.drawing svg{min-width:0}footer{font-size:11px}}

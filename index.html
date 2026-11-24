@@ -190997,7 +190997,7 @@
 
 
 
-<div class="diagram-actions"><a href="architecture.svg?v=rotating-storage" target="_blank" rel="noopener">Open full-size diagram ↗</a></div><figure class="architecture-figure"><svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1800" height="1205" viewBox="0 0 1800 1205" role="img" aria-labelledby="rtl-uart-title rtl-uart-desc">
+<div class="diagram-actions"><a href="architecture.svg?v=hierarchy-20261124" target="_blank" rel="noopener">Open full-size diagram ↗</a></div><p style="font-size:0.9rem;color:#536873"><strong style="color:#006e72">Solid teal outline: click to open internal structure.</strong> Thin or dashed outline: no deeper view. Use the breadcrumb or Up button to return.</p><figure class="architecture-figure"><svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1800" height="1205" viewBox="0 0 1800 1205" role="group" aria-labelledby="rtl-uart-title rtl-uart-desc">
 
 
 
@@ -196885,6 +196885,10 @@
 
 
 
+
+.rtl-modules a.drillable rect{stroke:#006e72;stroke-width:3;stroke-dasharray:none}
+.rtl-modules a.drillable:hover rect,.rtl-modules a.drillable:focus rect{fill:#e0f1ed;stroke-width:4}
+.rtl-modules a.drillable:focus{outline:none}
 </style>
 
 
@@ -200725,7 +200729,7 @@
 
 
 
-<rect x="270" y="350" width="310" height="115" rx="7" class="box"/>
+<a class="drillable" href="schematic.html?block=decimator" aria-label="Open decimator internal structure"><rect x="270" y="350" width="310" height="115" rx="7" class="box"/>
 
 
 
@@ -201493,7 +201497,7 @@
 
 
 
-<text x="288" y="440" class="small">Shared CIC → PCM</text>
+<text x="288" y="440" class="small">Shared CIC → PCM</text></a>
 
 
 
@@ -202517,7 +202521,7 @@
 
 
 
-<rect x="270" y="555" width="310" height="110" rx="7" class="box"/>
+<a class="drillable" href="schematic.html?block=serializer" aria-label="Open serializer internal structure"><rect x="270" y="555" width="310" height="110" rx="7" class="box"/>
 
 
 
@@ -203285,7 +203289,7 @@
 
 
 
-<text x="288" y="645" class="small">PCM vector → sample stream</text>
+<text x="288" y="645" class="small">PCM vector → sample stream</text></a>
 
 
 
@@ -205845,7 +205849,7 @@
 
 
 
-<rect x="655" y="290" width="1010" height="585" rx="9" class="file"/>
+<a class="drillable" href="schematic.html?block=core" aria-label="Open core internal structure"><rect x="655" y="290" width="1010" height="585" rx="9" class="file"/>
 
 
 
@@ -206357,7 +206361,7 @@
 
 
 
-<text x="1640" y="322" class="instance" text-anchor="end">u_core</text>
+<text x="1640" y="322" class="instance" text-anchor="end">u_core</text></a>
 
 
 
@@ -207381,7 +207385,7 @@
 
 
 
-<rect x="690" y="350" width="240" height="115" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?block=window" aria-label="Open window internal structure"><rect x="690" y="350" width="240" height="115" rx="7" class="logic"/>
 
 
 
@@ -208149,7 +208153,7 @@
 
 
 
-<text x="707" y="441" class="tiny">One N-sample window / map</text>
+<text x="707" y="441" class="tiny">One N-sample window / map</text></a>
 
 
 
@@ -208917,7 +208921,7 @@
 
 
 
-<rect x="1000" y="350" width="295" height="130" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?block=arithmetic" aria-label="Open arithmetic internal structure"><rect x="1000" y="350" width="295" height="130" rx="7" class="logic"/>
 
 
 
@@ -209941,7 +209945,7 @@
 
 
 
-<text x="1018" y="466" class="tiny">Reused across mics and directions</text>
+<text x="1018" y="466" class="tiny">Reused across mics and directions</text></a>
 
 
 
@@ -210709,7 +210713,7 @@
 
 
 
-<rect x="1360" y="350" width="260" height="130" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?block=power" aria-label="Open power internal structure"><rect x="1360" y="350" width="260" height="130" rx="7" class="logic"/>
 
 
 
@@ -211733,7 +211737,7 @@
 
 
 
-<text x="1378" y="466" class="tiny">No full output-map buffer</text>
+<text x="1378" y="466" class="tiny">No full output-map buffer</text></a>
 
 
 
@@ -212245,7 +212249,7 @@
 
 
 
-<rect x="690" y="555" width="240" height="110" rx="7" class="box"/>
+<a class="drillable" href="schematic.html?block=trig" aria-label="Open trig internal structure"><rect x="690" y="555" width="240" height="110" rx="7" class="box"/>
 
 
 
@@ -213013,7 +213017,7 @@
 
 
 
-<text x="707" y="645" class="tiny">18-bit sin/cos table</text>
+<text x="707" y="645" class="tiny">18-bit sin/cos table</text></a>
 
 
 
@@ -214037,7 +214041,7 @@
 
 
 
-<rect x="1000" y="555" width="295" height="110" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?block=storage" aria-label="Open storage internal structure"><rect x="1000" y="555" width="295" height="110" rx="7" class="logic"/>
 
 
 
@@ -214805,7 +214809,7 @@
 
 
 
-<text x="1018" y="638" class="tiny">MICS × BINS complex values<tspan x="1018" dy="19">2 × ACC_W bits / value</tspan></text>
+<text x="1018" y="638" class="tiny">MICS × BINS complex values<tspan x="1018" dy="19">2 × ACC_W bits / value</tspan></text></a>
 
 
 
@@ -216085,7 +216089,7 @@
 
 
 
-<rect x="1360" y="555" width="260" height="110" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?block=phase" aria-label="Open phase internal structure"><rect x="1360" y="555" width="260" height="110" rx="7" class="logic"/>
 
 
 
@@ -216853,7 +216857,7 @@
 
 
 
-<text x="1378" y="645" class="small">DFT / steering phase</text>
+<text x="1378" y="645" class="small">DFT / steering phase</text></a>
 
 
 
@@ -217877,7 +217881,7 @@
 
 
 
-<rect x="690" y="745" width="240" height="105" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?block=controller" aria-label="Open controller internal structure"><rect x="690" y="745" width="240" height="105" rx="7" class="logic"/>
 
 
 
@@ -218645,7 +218649,7 @@
 
 
 
-<text x="707" y="832" class="tiny">DAS · POWER · EMIT</text>
+<text x="707" y="832" class="tiny">DAS · POWER · EMIT</text></a>
 
 
 
@@ -222485,7 +222489,7 @@
 
 
 
-<rect x="920" y="1015" width="760" height="165" rx="7" class="box"/>
+<a class="drillable" href="schematic.html?block=uart" aria-label="Open uart internal structure"><rect x="920" y="1015" width="760" height="165" rx="7" class="box"/>
 
 
 
@@ -222997,7 +223001,7 @@
 
 
 
-<text x="1200" y="1047" class="instance">u_uart</text>
+<text x="1200" y="1047" class="instance">u_uart</text></a>
 
 
 
@@ -223253,7 +223257,7 @@
 
 
 
-<rect x="940" y="1065" width="350" height="90" rx="6" class="logic"/>
+<a class="drillable" href="schematic.html?block=packetizer" aria-label="Open packetizer internal structure"><rect x="940" y="1065" width="350" height="90" rx="6" class="logic"/>
 
 
 
@@ -223765,7 +223769,7 @@
 
 
 
-<text x="958" y="1127" class="tiny">Header → power words → status byte</text>
+<text x="958" y="1127" class="tiny">Header → power words → status byte</text></a>
 
 
 
@@ -224533,7 +224537,7 @@
 
 
 
-<rect x="1370" y="1065" width="290" height="90" rx="6" class="box"/>
+<a class="drillable" href="schematic.html?block=uart-tx" aria-label="Open uart-tx internal structure"><rect x="1370" y="1065" width="290" height="90" rx="6" class="box"/>
 
 
 
@@ -225045,7 +225049,7 @@
 
 
 
-<text x="1388" y="1127" class="instance">u_tx · 8-N-1</text>
+<text x="1388" y="1127" class="instance">u_tx · 8-N-1</text></a>
 
 
 
@@ -234271,7 +234275,7 @@
 
 
 
-<details class="changelog"><summary>Changelog</summary><ul><li><time datetime="2026-11-23">23 Nov 2026</time> · Added a before/after storage architecture diagram with measured gate savings, a close-up matching the existing core blocks, and unchanged-map verification.</li><li><time datetime="2026-11-18">18 Nov 2026</time> · Rebuilt the gate trends, matched maps and inspection benchmark for the rotating-storage candidates.</li><li><time datetime="2026-11-17">17 Nov 2026</time> · Added five measured DFT-DAS candidate presets, exact parameter downloads and seven comparison plots to Experiments.</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Software configuration inputs and separate analysis/display output</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Simplified Software to a block diagram</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Software flow, proposed RTL boundary and verification reference</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Gunshot spec removed; open specs marked TBD; ASIC answer updated</li><li><time datetime="2026-11-06">6 Nov 2026</time> · PD sound evidence and PRPD; demo row restored</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Drone platform; commercial PD references; priorities</li><li><time datetime="2026-11-06">6 Nov 2026</time> · 25–50 kHz PD band with research justification</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Transmission-tower use case and field evidence</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Direct PD answers; matching spec expansions</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Eight PD justifications with research evidence</li><li><time datetime="2026-11-06">6 Nov 2026</time> · ESD uncertainty / approach table</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Gunshot limitations grouped; PD questions added</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Separate gunshot and partial-discharge specs</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Limitations reordered; parameter evidence caveats</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Limitations and supporting papers</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Vehicle mounting added alongside drones</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Unified application rows; How it works removed</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Alternatives moved to Applications with main objections</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Mechanical inspection and processing alternatives</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Live-overlay targets for tapeout demonstrator</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Use-case limitations</li><li><time datetime="2026-11-04">4 Nov 2026</time> — Secondary specs moved to details</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Application-specific spec targets</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Use-case rationale condensed</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Applications and sensing limitations</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Drone-mounted acoustic camera focus</li></ul></details><footer><span id="page-number">01 / 06</span></footer></main><script>
+<details class="changelog"><summary>Changelog</summary><ul><li><time datetime="2026-11-24">24 Nov 2026</time> · Added clickable RTL block hierarchy with internal schematics, primitive outlines, breadcrumbs and parent navigation.</li><li><time datetime="2026-11-23">23 Nov 2026</time> · Added a before/after storage architecture diagram with measured gate savings, a close-up matching the existing core blocks, and unchanged-map verification.</li><li><time datetime="2026-11-18">18 Nov 2026</time> · Rebuilt the gate trends, matched maps and inspection benchmark for the rotating-storage candidates.</li><li><time datetime="2026-11-17">17 Nov 2026</time> · Added five measured DFT-DAS candidate presets, exact parameter downloads and seven comparison plots to Experiments.</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Software configuration inputs and separate analysis/display output</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Simplified Software to a block diagram</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Software flow, proposed RTL boundary and verification reference</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Gunshot spec removed; open specs marked TBD; ASIC answer updated</li><li><time datetime="2026-11-06">6 Nov 2026</time> · PD sound evidence and PRPD; demo row restored</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Drone platform; commercial PD references; priorities</li><li><time datetime="2026-11-06">6 Nov 2026</time> · 25–50 kHz PD band with research justification</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Transmission-tower use case and field evidence</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Direct PD answers; matching spec expansions</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Eight PD justifications with research evidence</li><li><time datetime="2026-11-06">6 Nov 2026</time> · ESD uncertainty / approach table</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Gunshot limitations grouped; PD questions added</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Separate gunshot and partial-discharge specs</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Limitations reordered; parameter evidence caveats</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Limitations and supporting papers</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Vehicle mounting added alongside drones</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Unified application rows; How it works removed</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Alternatives moved to Applications with main objections</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Mechanical inspection and processing alternatives</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Live-overlay targets for tapeout demonstrator</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Use-case limitations</li><li><time datetime="2026-11-04">4 Nov 2026</time> — Secondary specs moved to details</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Application-specific spec targets</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Use-case rationale condensed</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Applications and sensing limitations</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Drone-mounted acoustic camera focus</li></ul></details><footer><span id="page-number">01 / 06</span></footer></main><script>
 
 
 
