@@ -1,0 +1,1172 @@
+{
+  "m40k14": {
+    "gates": 273574.00000000006,
+    "slack_ns": 63.99,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "7a5cfedf2653a5fe5c21009bdf9bfc98d956bbfb166c78de2276dd60d50c6ee7",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00036741807603307133,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.0003678751823427969,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=40 bins=14 directions=1681 maps=2 PDM=8192 PCM=20480 cycles=10445192 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=40 bins=14 maps=2 points=3362 bytes=20190 cycles=10449178"
+      }
+    }
+  },
+  "m32k20": {
+    "gates": 271892.5,
+    "slack_ns": 69.73,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "2612eb6787ca336b904a97d450ddad32111e4f48b57562160e6f72c32b548fd7",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0001901155618256132,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00019014663233705542,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=32 bins=20 directions=1681 maps=2 PDM=8192 PCM=16384 cycles=10454296 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=32 bins=20 maps=2 points=3362 bytes=20190 cycles=10458282"
+      }
+    }
+  },
+  "m40k16": {
+    "gates": 292386.75000000006,
+    "slack_ns": 64.01,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "92c256a746d36da3f22b8af49d5c02f948165e1478789086de65bb5eda7b1992",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00030518235637256365,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00030490705811466823,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=40 bins=16 directions=1681 maps=2 PDM=8192 PCM=20480 cycles=10458512 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=40 bins=16 maps=2 points=3362 bytes=20190 cycles=10462498"
+      }
+    }
+  },
+  "m30k22": {
+    "gates": 273659.50000000006,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "f3feaa2071444d7540dd7c9e8a9582c56769dbb8fd47af2e76cba949409f6bd8",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00010499158625774507,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00010497659396445215,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=22 directions=1681 maps=2 PDM=8192 PCM=15360 cycles=10463582 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=22 maps=2 points=3362 bytes=20190 cycles=10467568"
+      }
+    }
+  },
+  "m40k16w22f13": {
+    "gates": 277925.75,
+    "slack_ns": 63.99,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "92c256a746d36da3f22b8af49d5c02f948165e1478789086de65bb5eda7b1992",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0003008361010134968,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.0003006162876008193,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=40 bins=16 directions=1681 maps=2 PDM=8192 PCM=20480 cycles=10458512 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=40 bins=16 maps=2 points=3362 bytes=20190 cycles=10462498"
+      }
+    }
+  },
+  "m30k24": {
+    "gates": 286230.24999999994,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "810afb6df597dba49f0dfcbe4a0116ea42b487ba9844249858051b86aee19af0",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0001619493261424751,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00016170122126175728,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=24 directions=1681 maps=2 PDM=8192 PCM=15360 cycles=10494542 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=24 maps=2 points=3362 bytes=20190 cycles=10498528"
+      }
+    }
+  },
+  "m40k18": {
+    "gates": 310759.25,
+    "slack_ns": 64.01,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "f09f511906ce7a206823cf75d0717291498f488f62498ea5c7fa66d080a01d77",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0003171003480003076,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.000317494709455692,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=40 bins=18 directions=1681 maps=2 PDM=8192 PCM=20480 cycles=10499792 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=40 bins=18 maps=2 points=3362 bytes=20190 cycles=10503778"
+      }
+    }
+  },
+  "m30k23": {
+    "gates": 279972.25,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "132e35f21cff37f4e13275a0acb944663f26f6b09fbcb78fadca158d9ea2c43e",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 9.809109618635365e-05,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 9.804841161244413e-05,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=23 directions=1681 maps=2 PDM=8192 PCM=15360 cycles=10479062 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=23 maps=2 points=3362 bytes=20190 cycles=10483048"
+      }
+    }
+  },
+  "m32k16": {
+    "gates": 243454.0,
+    "slack_ns": 69.61,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "ee786aec5684149d5ba2f4daed0c6f165db8428a7f26967db596896137135b62",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00020277164695213878,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00020277193605377526,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=32 bins=16 directions=1681 maps=2 PDM=8192 PCM=16384 cycles=10388248 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=32 bins=16 maps=2 points=3362 bytes=20190 cycles=10392234"
+      }
+    }
+  },
+  "m30k26": {
+    "gates": 298760.0,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "295310fc0e4d5e24606216cf6084ca368a97f2968f0fb3ac6f949115fc6c7045",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.000124995234444267,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00012484277517838587,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=26 directions=1681 maps=2 PDM=8192 PCM=15360 cycles=10525502 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=26 maps=2 points=3362 bytes=20190 cycles=10529488"
+      }
+    }
+  },
+  "m30k18": {
+    "gates": 248541.75000000003,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "8d4454c91be6c81a60c846f9f0765b16f025a53263095fcbfbc578a53bc4e543",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00011826314732724566,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.000118260918841671,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=18 directions=1681 maps=2 PDM=8192 PCM=15360 cycles=10401662 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=18 maps=2 points=3362 bytes=20190 cycles=10405648"
+      }
+    }
+  },
+  "m30k18wide": {
+    "gates": 248548.25000000003,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "f52fd588c1dea0d6c839160cbab9a1896185954f00f090d812de0d4d5fe7e47c",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00017169786786036404,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.0001718141981014805,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=18 directions=1681 maps=2 PDM=8192 PCM=15360 cycles=10401662 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=18 maps=2 points=3362 bytes=20190 cycles=10405648"
+      }
+    }
+  },
+  "m30k27": {
+    "gates": 305058.75,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "747c7fb3b4e8b203c2ebfceaeb795459c95fd9fde7a4514b5835eb4e0e4058d2",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 9.808517415207298e-05,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 9.80500934197896e-05,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=27 directions=1681 maps=2 PDM=8192 PCM=15360 cycles=10540982 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=27 maps=2 points=3362 bytes=20190 cycles=10544968"
+      }
+    }
+  },
+  "m30k25": {
+    "gates": 292503.5,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "d2648bf7b1c2a1d39335850340e5d6e2be36a14147b2c2873f08b9f38e784a1f",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00012500015549540914,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.0001248477727392979,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=25 directions=1681 maps=2 PDM=8192 PCM=15360 cycles=10510022 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=25 maps=2 points=3362 bytes=20190 cycles=10514008"
+      }
+    }
+  },
+  "m30k18n512": {
+    "gates": 249622.00000000003,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "5a0c016d8adb346425476005983aac7c9a32f20e29bafb5af7141422d1d77cda",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0001690539210653211,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00016899586470742816,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=18 directions=1681 maps=2 PDM=16384 PCM=30720 cycles=10693502 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=18 maps=2 points=3362 bytes=20190 cycles=10697488"
+      }
+    }
+  },
+  "m30k22w22f13": {
+    "gates": 260729.00000000003,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "f3feaa2071444d7540dd7c9e8a9582c56769dbb8fd47af2e76cba949409f6bd8",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00010496012920128396,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00010503164380821355,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=22 directions=1681 maps=2 PDM=8192 PCM=15360 cycles=10463582 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=22 maps=2 points=3362 bytes=20190 cycles=10467568"
+      }
+    }
+  },
+  "m40k16n512": {
+    "gates": 291651.25,
+    "slack_ns": 64.15,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "f0af7e65449e967b8ffb5291d629bd15244ad08a2459ecb9fd37b211f03b4a8c",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0003094497864573368,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00030946559507456534,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=40 bins=16 directions=1681 maps=2 PDM=16384 PCM=40960 cycles=10806672 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=40 bins=16 maps=2 points=3362 bytes=20190 cycles=10810658"
+      }
+    }
+  },
+  "m32k18": {
+    "gates": 258489.25000000003,
+    "slack_ns": 69.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "fe7cc0af0870219cfebc6fe56be2bec5733d69f9f84b11288b4b229c79f01e0d",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00022239549317097914,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.0002223037100804351,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=32 bins=18 directions=1681 maps=2 PDM=8192 PCM=16384 cycles=10421272 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=32 bins=18 maps=2 points=3362 bytes=20190 cycles=10425258"
+      }
+    }
+  },
+  "m30k27w22f13": {
+    "gates": 289516.5,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "747c7fb3b4e8b203c2ebfceaeb795459c95fd9fde7a4514b5835eb4e0e4058d2",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00010239995712299189,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00010244124395100796,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=27 directions=1681 maps=2 PDM=8192 PCM=15360 cycles=10540982 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=27 maps=2 points=3362 bytes=20190 cycles=10544968"
+      }
+    }
+  },
+  "m30k22w24f16": {
+    "gates": 273642.0,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "f3feaa2071444d7540dd7c9e8a9582c56769dbb8fd47af2e76cba949409f6bd8",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00010499158625774507,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00010490581559390175,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=22 directions=1681 maps=2 PDM=8192 PCM=15360 cycles=10463582 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=22 maps=2 points=3362 bytes=20190 cycles=10467568"
+      }
+    }
+  },
+  "m32k22w22f13": {
+    "gates": 271558.0,
+    "slack_ns": 69.76,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "8b5dd2b37a3f51f7f910f209b79af0829a9aca702ed410d20069faea8846b926",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00021984935551700585,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00021985307769964687,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=32 bins=22 directions=1681 maps=2 PDM=8192 PCM=16384 cycles=10487320 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=32 bins=22 maps=2 points=3362 bytes=20190 cycles=10491306"
+      }
+    }
+  },
+  "m40k18w22f13": {
+    "gates": 296857.25,
+    "slack_ns": 64.01,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "f09f511906ce7a206823cf75d0717291498f488f62498ea5c7fa66d080a01d77",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00031909542505877386,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.0003189540710823195,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=40 bins=18 directions=1681 maps=2 PDM=8192 PCM=20480 cycles=10499792 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=40 bins=18 maps=2 points=3362 bytes=20190 cycles=10503778"
+      }
+    }
+  },
+  "m40k16w24f16": {
+    "gates": 292372.24999999994,
+    "slack_ns": 64.01,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "92c256a746d36da3f22b8af49d5c02f948165e1478789086de65bb5eda7b1992",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0003067913955906012,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.0003066825493617781,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=40 bins=16 directions=1681 maps=2 PDM=8192 PCM=20480 cycles=10458512 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=40 bins=16 maps=2 points=3362 bytes=20190 cycles=10462498"
+      }
+    }
+  },
+  "m32k18n512": {
+    "gates": 259461.99999999994,
+    "slack_ns": 69.66,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "bd5d7e00c2d308e57eeb8bfd7951aecd11f8bcf34f2ea6eaaac4cb644b7afb90",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0002478166713363792,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.0002478178232172192,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=32 bins=18 directions=1681 maps=2 PDM=16384 PCM=32768 cycles=10732568 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=32 bins=18 maps=2 points=3362 bytes=20190 cycles=10736554"
+      }
+    }
+  },
+  "m30k24n512": {
+    "gates": 287439.25,
+    "slack_ns": 56.72,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "5d1ede23fef60e6fa243418934c779c2ce568e509e8ac3462938189e4b3e5e06",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0002837004682800053,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.0002836444602260907,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=24 directions=1681 maps=2 PDM=16384 PCM=30720 cycles=10878542 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=24 maps=2 points=3362 bytes=20190 cycles=10882528"
+      }
+    }
+  },
+  "m30k27w22f13@3": {
+    "gates": 283918.50000000006,
+    "slack_ns": 56.74,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "76c2cecd05e00b60c90745b872f225f5eff936751d25d0c7a410a70ff2b3c89b",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 8.852316922726677e-05,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 8.852270642608681e-05,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=27 directions=441 maps=2 PDM=8192 PCM=15360 cycles=3086102 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=27 maps=2 points=882 bytes=5310 cycles=3090088"
+      }
+    }
+  },
+  "m32k22w22f13@3": {
+    "gates": 265931.0,
+    "slack_ns": 71.2,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "899418a87efcd4faf77a30dfa6e7cf3e5c05b28dd0d894e26fe82ec98d427972",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0001745392419062961,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.0001745017606391768,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=32 bins=22 directions=441 maps=2 PDM=8192 PCM=16384 cycles=3032456 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=32 bins=22 maps=2 points=882 bytes=5310 cycles=3036442"
+      }
+    }
+  },
+  "m30k18n512@3": {
+    "gates": 244084.75000000003,
+    "slack_ns": 56.74,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "0551bf854a1c39e64be0fce437ce5231923171d909466209989bcf5e5032a30f",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.00012228260921207063,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00012227899354880488,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=30 bins=18 directions=441 maps=2 PDM=16384 PCM=30720 cycles=3238622 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=30 bins=18 maps=2 points=882 bytes=5310 cycles=3242608"
+      }
+    }
+  },
+  "m40k18w22f13@3": {
+    "gates": 286530.74999999994,
+    "slack_ns": 63.99,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "c16d5631313db1cadddb37ef5833707a5dd3ccfba0303b450eeebec8ecd5f086",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0001013011136925296,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00010131148369586401,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=40 bins=18 directions=441 maps=2 PDM=8192 PCM=20480 cycles=3044912 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=40 bins=18 maps=2 points=882 bytes=5310 cycles=3048898"
+      }
+    }
+  },
+  "m40k16n512@3": {
+    "gates": 283464.75,
+    "slack_ns": 63.99,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "2b1637227d4dddf5bb89df989fdb486bbee74befc2a546fdc9efd2ade717bad6",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0001140429085514321,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.00011404301165054994,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=40 bins=16 directions=441 maps=2 PDM=16384 PCM=40960 cycles=3351792 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=40 bins=16 maps=2 points=882 bytes=5310 cycles=3355778"
+      }
+    }
+  }
+}

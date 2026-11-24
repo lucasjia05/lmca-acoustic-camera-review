@@ -1,0 +1,486 @@
+{
+  "designs": [
+    "m30k18n512",
+    "m32k22w22f13",
+    "m30k27w22f13",
+    "m40k16n512",
+    "old",
+    "float60"
+  ],
+  "labels": {
+    "m30k18n512": "30 mics / 18 bins \u00b7 N512",
+    "m32k22w22f13": "32 mics / 22 bins \u00b7 N256",
+    "m30k27w22f13": "30 mics / 27 bins \u00b7 N256",
+    "m40k16n512": "40 mics / 16 bins \u00b7 N512",
+    "old": "Earlier 30 mics / 10 bins",
+    "float60": "60 mics / all bins \u00b7 float"
+  },
+  "selection": {
+    "rule": "Screen candidates on independent seeds and retain four useful area/performance choices. Require measured area at or below 295,000 GE, positive 10 MHz setup slack and passing pipeline and UART verification. The transition screen used 12 trial IDs, 14 backgrounds, 19 frequencies and five source levels.",
+    "m30k18n512": "Low-area option. At -33 dBFS the long window localized 55.1% in the transition screen, compared with 35.3% for the roughly equal-area wide-aperture N256 option.",
+    "m32k22w22f13": "Intermediate-area 32-mic option. Use lower accumulator precision to retain 22 bins. Transition-screen localization at -36 dBFS rose from 4.0% with 32 mics/18 bins to 9.5% with this configuration.",
+    "m30k27w22f13": "Full spectral coverage in silicon. All 27 in-band bins fit using 22 total/13 fractional accumulator bits. It matched the 24/15 all-bin contender to the reported tenth of a percentage point at -36, -33 and -30 dBFS.",
+    "m40k16n512": "Highest transition-screen localization among these four, with 22.6% at -36 dBFS and 72.9% at -33 dBFS. The 40/16 baseline with N256 scored 8.0% and 35.5% respectively."
+  },
+  "historical_revision": "8b983291d80a5cc19ac1c50e09b89c523cf1b298",
+  "candidate_rtl_revision": "9458624ba3ab3af88abd1f1944244bb8f43ba921",
+  "historical_area": {
+    "archived_original_flow_ge": 268455.75,
+    "archived_direct_dc_ge": 265690
+  },
+  "grid_comparison": "Hardware areas correspond to the native 1.5-degree grid for all four optimized finalists. Diagnostic 3-degree scores are available in the counts export. The historical hardware uses its 3-degree grid.",
+  "silicon_candidates_screened": 25,
+  "excluded_by_generator": {
+    "m30k22w22f15": "Accumulator width cannot hold worst-case input",
+    "m30k22w24f17": "Accumulator width cannot hold worst-case input",
+    "m40k16w22f15": "Accumulator width cannot hold worst-case input",
+    "m40k16w24f17": "Accumulator width cannot hold worst-case input"
+  },
+  "configs": {
+    "m30k18n512": {
+      "name": "m30k18n512",
+      "sample_rate_hz": 192000,
+      "microphones": 30,
+      "layout": "spiral",
+      "aperture_m": 0.2,
+      "azimuth_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "elevation_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "scan_step_deg": 1.5,
+      "speed_of_sound_m_s": 343.0,
+      "window_samples": 512,
+      "selected_bins": [
+        54,
+        56,
+        58,
+        62,
+        66,
+        70,
+        72,
+        74,
+        78,
+        82,
+        86,
+        88,
+        90,
+        94,
+        98,
+        102,
+        104,
+        106
+      ],
+      "window": "hann",
+      "phase_bits": 10,
+      "windowed_width": 18,
+      "windowed_fraction": 16,
+      "spectrum_width": 24,
+      "spectrum_fraction": 22,
+      "coefficient_width": 18,
+      "coefficient_fraction": 16,
+      "power_fraction": 32,
+      "map_width": 48,
+      "band_hz": [
+        20000.0,
+        40000.0
+      ],
+      "accumulator_width": 24,
+      "accumulator_fraction": 15,
+      "uart_clocks_per_bit": 50,
+      "positions_m": [],
+      "pdm": {
+        "lanes": 1,
+        "decimation": 16,
+        "cic_order": 3,
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      "architecture": {
+        "spectrum_ring": false,
+        "serial_cmac": false,
+        "spectrum_tile_mics": 30,
+        "tile_capture_vector": true
+      }
+    },
+    "m32k22w22f13": {
+      "name": "m32k22w22f13",
+      "sample_rate_hz": 192000,
+      "microphones": 32,
+      "layout": "spiral",
+      "aperture_m": 0.2,
+      "azimuth_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "elevation_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "scan_step_deg": 1.5,
+      "speed_of_sound_m_s": 343.0,
+      "window_samples": 256,
+      "selected_bins": [
+        27,
+        28,
+        29,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        39,
+        40,
+        41,
+        43,
+        44,
+        45,
+        46,
+        47,
+        49,
+        51,
+        52,
+        53
+      ],
+      "window": "hann",
+      "phase_bits": 10,
+      "windowed_width": 18,
+      "windowed_fraction": 16,
+      "spectrum_width": 24,
+      "spectrum_fraction": 22,
+      "coefficient_width": 18,
+      "coefficient_fraction": 16,
+      "power_fraction": 32,
+      "map_width": 48,
+      "band_hz": [
+        20000.0,
+        40000.0
+      ],
+      "accumulator_width": 22,
+      "accumulator_fraction": 13,
+      "uart_clocks_per_bit": 50,
+      "positions_m": [],
+      "pdm": {
+        "lanes": 1,
+        "decimation": 16,
+        "cic_order": 3,
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      "architecture": {
+        "spectrum_ring": false,
+        "serial_cmac": false,
+        "spectrum_tile_mics": 32,
+        "tile_capture_vector": true
+      }
+    },
+    "m30k27w22f13": {
+      "name": "m30k27w22f13",
+      "sample_rate_hz": 192000,
+      "microphones": 30,
+      "layout": "spiral",
+      "aperture_m": 0.2,
+      "azimuth_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "elevation_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "scan_step_deg": 1.5,
+      "speed_of_sound_m_s": 343.0,
+      "window_samples": 256,
+      "selected_bins": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "window": "hann",
+      "phase_bits": 10,
+      "windowed_width": 18,
+      "windowed_fraction": 16,
+      "spectrum_width": 24,
+      "spectrum_fraction": 22,
+      "coefficient_width": 18,
+      "coefficient_fraction": 16,
+      "power_fraction": 32,
+      "map_width": 48,
+      "band_hz": [
+        20000.0,
+        40000.0
+      ],
+      "accumulator_width": 22,
+      "accumulator_fraction": 13,
+      "uart_clocks_per_bit": 50,
+      "positions_m": [],
+      "pdm": {
+        "lanes": 1,
+        "decimation": 16,
+        "cic_order": 3,
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      "architecture": {
+        "spectrum_ring": false,
+        "serial_cmac": false,
+        "spectrum_tile_mics": 30,
+        "tile_capture_vector": true
+      }
+    },
+    "m40k16n512": {
+      "name": "m40k16n512",
+      "sample_rate_hz": 192000,
+      "microphones": 40,
+      "layout": "spiral",
+      "aperture_m": 0.2,
+      "azimuth_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "elevation_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "scan_step_deg": 1.5,
+      "speed_of_sound_m_s": 343.0,
+      "window_samples": 512,
+      "selected_bins": [
+        54,
+        58,
+        62,
+        66,
+        68,
+        70,
+        74,
+        78,
+        82,
+        86,
+        90,
+        92,
+        94,
+        98,
+        102,
+        106
+      ],
+      "window": "hann",
+      "phase_bits": 10,
+      "windowed_width": 18,
+      "windowed_fraction": 16,
+      "spectrum_width": 24,
+      "spectrum_fraction": 22,
+      "coefficient_width": 18,
+      "coefficient_fraction": 16,
+      "power_fraction": 32,
+      "map_width": 48,
+      "band_hz": [
+        20000.0,
+        40000.0
+      ],
+      "accumulator_width": 24,
+      "accumulator_fraction": 15,
+      "uart_clocks_per_bit": 50,
+      "positions_m": [],
+      "pdm": {
+        "lanes": 1,
+        "decimation": 16,
+        "cic_order": 3,
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      "architecture": {
+        "spectrum_ring": false,
+        "serial_cmac": false,
+        "spectrum_tile_mics": 40,
+        "tile_capture_vector": true
+      }
+    },
+    "old": {
+      "name": "m30_n256_k10_acc24",
+      "sample_rate_hz": 192000,
+      "microphones": 30,
+      "layout": "spiral",
+      "aperture_m": 0.2,
+      "azimuth_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "elevation_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "scan_step_deg": 3.0,
+      "speed_of_sound_m_s": 343.0,
+      "window_samples": 256,
+      "selected_bins": [
+        27,
+        30,
+        33,
+        36,
+        39,
+        41,
+        44,
+        47,
+        50,
+        53
+      ],
+      "window": "sqrt_hann",
+      "phase_bits": 10,
+      "windowed_width": 18,
+      "windowed_fraction": 16,
+      "spectrum_width": 24,
+      "spectrum_fraction": 22,
+      "coefficient_width": 18,
+      "coefficient_fraction": 16,
+      "power_fraction": 32,
+      "map_width": 48,
+      "band_hz": [
+        20000.0,
+        40000.0
+      ],
+      "accumulator_width": 24,
+      "accumulator_fraction": 15,
+      "uart_clocks_per_bit": 50,
+      "positions_m": [],
+      "pdm": {
+        "lanes": 1,
+        "decimation": 16,
+        "cic_order": 3,
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      "architecture": {}
+    },
+    "float60": {
+      "name": "float60",
+      "sample_rate_hz": 192000,
+      "microphones": 60,
+      "layout": "spiral",
+      "aperture_m": 0.2,
+      "azimuth_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "elevation_limits_deg": [
+        -30.0,
+        30.0
+      ],
+      "scan_step_deg": 1.5,
+      "speed_of_sound_m_s": 343.0,
+      "window_samples": 256,
+      "selected_bins": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "window": "hann",
+      "phase_bits": 10,
+      "windowed_width": 18,
+      "windowed_fraction": 16,
+      "spectrum_width": 24,
+      "spectrum_fraction": 22,
+      "coefficient_width": 18,
+      "coefficient_fraction": 16,
+      "power_fraction": 32,
+      "map_width": 48,
+      "band_hz": [
+        20000.0,
+        40000.0
+      ],
+      "accumulator_width": 24,
+      "accumulator_fraction": 15,
+      "uart_clocks_per_bit": 50,
+      "positions_m": [],
+      "pdm": {
+        "lanes": 1,
+        "decimation": 16,
+        "cic_order": 3,
+        "fir_coefficients": [
+          1.0
+        ]
+      },
+      "architecture": {
+        "spectrum_ring": false,
+        "serial_cmac": false,
+        "spectrum_tile_mics": 30,
+        "tile_capture_vector": true
+      }
+    }
+  },
+  "validation": {
+    "m30k18n512": {
+      "pcm_to_map_exact_frames": 2,
+      "rtl_uart": "PASS PDM-to-UART: mics=30 bins=18 maps=2 points=3362 bytes=20190 cycles=10697488"
+    },
+    "m32k22w22f13": {
+      "pcm_to_map_exact_frames": 2,
+      "rtl_uart": "PASS PDM-to-UART: mics=32 bins=22 maps=2 points=3362 bytes=20190 cycles=10491306"
+    },
+    "m30k27w22f13": {
+      "pcm_to_map_exact_frames": 2,
+      "rtl_uart": "PASS PDM-to-UART: mics=30 bins=27 maps=2 points=3362 bytes=20190 cycles=10544968"
+    },
+    "m40k16n512": {
+      "pcm_to_map_exact_frames": 2,
+      "rtl_uart": "PASS PDM-to-UART: mics=40 bins=16 maps=2 points=3362 bytes=20190 cycles=10810658"
+    }
+  }
+}
