@@ -1168,5 +1168,44 @@
         "uart": "PASS PDM-to-UART: mics=40 bins=16 maps=2 points=882 bytes=5310 cycles=3355778"
       }
     }
+  },
+  "m32k23n512": {
+    "gates": 293107.75000000006,
+    "slack_ns": 70.36,
+    "met": true,
+    "verified": true,
+    "library": "gscl45nm.db",
+    "area_sha": "e586508853ddf2a1064c511dbb25d882778553c8dfaeaea3dd248b99e86b183e",
+    "verification": {
+      "baseline": {
+        "generated": true,
+        "quality": [
+          {
+            "max_error_relative_to_float_peak": 0.0002438188811345396,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          },
+          {
+            "max_error_relative_to_float_peak": 0.0002438181439550514,
+            "float_peak": [
+              15.0,
+              0.0
+            ],
+            "rtl_reference_peak": [
+              15.0,
+              0.0
+            ]
+          }
+        ],
+        "pipeline": "PASS pipeline: mics=32 bins=23 directions=1681 maps=2 PDM=16384 PCM=32768 cycles=10897048 clipped=0",
+        "uart": "PASS PDM-to-UART: mics=32 bins=23 maps=2 points=3362 bytes=20190 cycles=10901034"
+      }
+    }
   }
 }
