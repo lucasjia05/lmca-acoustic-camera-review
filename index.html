@@ -190997,7 +190997,7 @@
 
 
 
-<div class="diagram-actions"><a href="architecture.svg?v=rotating-storage" target="_blank" rel="noopener">Open full-size diagram ↗</a></div><figure class="architecture-figure"><svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1800" height="1205" viewBox="0 0 1800 1205" role="img" aria-labelledby="rtl-uart-title rtl-uart-desc">
+<div class="diagram-actions"><a href="architecture.svg?v=storage-detail-2" target="_blank" rel="noopener">Open full-size diagram ↗</a></div><figure class="architecture-figure"><svg xmlns="http://www.w3.org/2000/svg" class="rtl-modules" id="diagram" width="1800" height="1205" viewBox="0 0 1800 1205" role="img" aria-labelledby="rtl-uart-title rtl-uart-desc">
 
 
 
@@ -207381,7 +207381,8 @@
 
 
 
-<rect x="690" y="350" width="240" height="115" rx="7" class="logic"/>
+<rect x="690" y="350" width="240" height="115" rx="7" fill="#e0f1ed" stroke="#006e72" stroke-width="2.5"/>
+<circle cx="690" cy="350" r="18" fill="#006e72"/><text x="690" y="357" text-anchor="middle" style="font-size:22px;font-weight:700;fill:white">A</text>
 
 
 
@@ -207637,7 +207638,7 @@
 
 
 
-<text x="707" y="382" class="name" style="font-size:20px">Window + sample hold</text>
+<text x="707" y="382" class="name" style="font-size:18px">Window + sample buffer</text>
 
 
 
@@ -208149,7 +208150,7 @@
 
 
 
-<text x="707" y="441" class="tiny">One N-sample window / map</text>
+<text x="707" y="441" class="tiny">Hold 1 sample per mic</text>
 
 
 
@@ -214037,7 +214038,8 @@
 
 
 
-<rect x="1000" y="555" width="295" height="110" rx="7" class="logic"/>
+<rect x="1000" y="555" width="295" height="110" rx="7" fill="#fff4dc" stroke="#a66a13" stroke-width="2.5"/>
+<circle cx="1000" cy="555" r="18" fill="#a66a13"/><text x="1000" y="562" text-anchor="middle" style="font-size:22px;font-weight:700;fill:white">B</text>
 
 
 
@@ -220181,6 +220183,10 @@
 
 
 
+<circle cx="1018" cy="780" r="17" fill="#006e72"/><text x="1018" y="787" text-anchor="middle" style="font-size:21px;font-weight:700;fill:white">A</text>
+<circle cx="1060" cy="780" r="17" fill="#a66a13"/><text x="1060" y="787" text-anchor="middle" style="font-size:21px;font-weight:700;fill:white">B</text>
+<text x="1090" y="787" class="name" style="font-size:21px">Storage optimization · detail below</text>
+<text x="1000" y="823" class="small">Inside u_core; same shared DFT / DAS arithmetic</text>
 <path d="M1620 407H1645V925H870V1110H937" class="data"/>
 
 
@@ -230167,13 +230173,13 @@
 
 </figure>
 <section class="storage-change" id="storage-rotation" aria-labelledby="storage-rotation-heading">
-<h3 id="storage-rotation-heading">Continuous rotation + sample buffer</h3>
-<p>The arithmetic stays shared. Rotating the Fourier values reduces register-access logic; buffering one sample per microphone lets the core follow the data with fewer waits.</p>
+<h3 id="storage-rotation-heading">Inside u_core: continuous rotation + sample buffer</h3>
+<p><strong>A</strong> is the window + sample buffer above; <strong>B</strong> is the rotating Fourier storage. Most savings come from simpler access and hold logic around <strong>B</strong>. The small buffer in <strong>A</strong> reduces waiting for the rotating data.</p>
 <figure>
-<div class="rotation-scroll" tabindex="0" role="region" aria-label="Storage architecture comparison; scroll horizontally on small screens"><a href="storage-rotation.svg?v=20261123" target="_blank" rel="noopener" aria-label="Open full-size rotating storage comparison"><img src="storage-rotation.svg?v=20261123" width="1200" height="760" loading="lazy" alt="Before: indexed Fourier registers with a read selector and per-word hold logic. After: one windowed sample per mic feeds shared arithmetic alongside continuously rotating Fourier banks. Measured whole-chip area: 265.7k to 238.3k to 199.5k NAND2 equivalents, retaining all Fourier values and the same tested map results."></a></div>
+<div class="rotation-scroll" tabindex="0" role="region" aria-label="Storage architecture comparison; scroll horizontally on small screens"><a href="storage-rotation.svg?v=20261123-2" target="_blank" rel="noopener" aria-label="Open full-size rotating storage comparison"><img src="storage-rotation.svg?v=20261123-2" width="1200" height="800" loading="lazy" alt="Close-up inside u_core: A marks the sample buffer and B marks Fourier storage, matching the main diagram. Before: indexed Fourier registers with a read selector and per-word hold logic. After: one windowed sample per mic feeds shared arithmetic alongside continuously rotating Fourier banks. Measured whole-chip area: 265.7k to 238.3k to 199.5k NAND2 equivalents, retaining all Fourier values and the same tested map results."></a></div>
 <figcaption><strong>Fixed comparison:</strong> 30 mics · N256 · 10 bins · 24-bit accumulators · 441 directions. Direct Design Compiler / gscl45nm, 10 MHz target; complete register-based chip including PDM conversion and UART. These are architecture-comparison counts, not the newer 40-mic / 16-bin preset.</figcaption>
 </figure>
-<div class="rotation-links"><a href="storage-rotation.svg?v=20261123" target="_blank" rel="noopener">Open full-size comparison</a><a href="assets/storage-rotation-comparison.json">Exact measurements</a></div>
+<div class="rotation-links"><a href="storage-rotation.svg?v=20261123-2" target="_blank" rel="noopener">Open full-size comparison</a><a href="assets/storage-rotation-comparison.json">Exact measurements</a></div>
 </section>
 
 
@@ -234271,7 +234277,7 @@
 
 
 
-<details class="changelog"><summary>Changelog</summary><ul><li><time datetime="2026-11-23">23 Nov 2026</time> · Added a before/after storage architecture diagram with measured gate savings and unchanged-map verification.</li><li><time datetime="2026-11-18">18 Nov 2026</time> · Rebuilt the gate trends, matched maps and inspection benchmark for the rotating-storage candidates.</li><li><time datetime="2026-11-17">17 Nov 2026</time> · Added five measured DFT-DAS candidate presets, exact parameter downloads and seven comparison plots to Experiments.</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Software configuration inputs and separate analysis/display output</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Simplified Software to a block diagram</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Software flow, proposed RTL boundary and verification reference</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Gunshot spec removed; open specs marked TBD; ASIC answer updated</li><li><time datetime="2026-11-06">6 Nov 2026</time> · PD sound evidence and PRPD; demo row restored</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Drone platform; commercial PD references; priorities</li><li><time datetime="2026-11-06">6 Nov 2026</time> · 25–50 kHz PD band with research justification</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Transmission-tower use case and field evidence</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Direct PD answers; matching spec expansions</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Eight PD justifications with research evidence</li><li><time datetime="2026-11-06">6 Nov 2026</time> · ESD uncertainty / approach table</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Gunshot limitations grouped; PD questions added</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Separate gunshot and partial-discharge specs</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Limitations reordered; parameter evidence caveats</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Limitations and supporting papers</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Vehicle mounting added alongside drones</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Unified application rows; How it works removed</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Alternatives moved to Applications with main objections</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Mechanical inspection and processing alternatives</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Live-overlay targets for tapeout demonstrator</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Use-case limitations</li><li><time datetime="2026-11-04">4 Nov 2026</time> — Secondary specs moved to details</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Application-specific spec targets</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Use-case rationale condensed</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Applications and sensing limitations</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Drone-mounted acoustic camera focus</li></ul></details><footer><span id="page-number">01 / 06</span></footer></main><script>
+<details class="changelog"><summary>Changelog</summary><ul><li><time datetime="2026-11-23">23 Nov 2026</time> · Added a before/after storage architecture diagram with measured gate savings, matching A/B labels in the main architecture, and unchanged-map verification.</li><li><time datetime="2026-11-18">18 Nov 2026</time> · Rebuilt the gate trends, matched maps and inspection benchmark for the rotating-storage candidates.</li><li><time datetime="2026-11-17">17 Nov 2026</time> · Added five measured DFT-DAS candidate presets, exact parameter downloads and seven comparison plots to Experiments.</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Software configuration inputs and separate analysis/display output</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Simplified Software to a block diagram</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Software flow, proposed RTL boundary and verification reference</li><li><time datetime="2026-11-11">11 Nov 2026</time> · Gunshot spec removed; open specs marked TBD; ASIC answer updated</li><li><time datetime="2026-11-06">6 Nov 2026</time> · PD sound evidence and PRPD; demo row restored</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Drone platform; commercial PD references; priorities</li><li><time datetime="2026-11-06">6 Nov 2026</time> · 25–50 kHz PD band with research justification</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Transmission-tower use case and field evidence</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Direct PD answers; matching spec expansions</li><li><time datetime="2026-11-06">6 Nov 2026</time> · Eight PD justifications with research evidence</li><li><time datetime="2026-11-06">6 Nov 2026</time> · ESD uncertainty / approach table</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Gunshot limitations grouped; PD questions added</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Separate gunshot and partial-discharge specs</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Limitations reordered; parameter evidence caveats</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Limitations and supporting papers</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Vehicle mounting added alongside drones</li><li><time datetime="2026-11-05">5 Nov 2026</time> · Unified application rows; How it works removed</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Alternatives moved to Applications with main objections</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Mechanical inspection and processing alternatives</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Live-overlay targets for tapeout demonstrator</li><li><time datetime="2026-11-05">5 Nov 2026</time> — Use-case limitations</li><li><time datetime="2026-11-04">4 Nov 2026</time> — Secondary specs moved to details</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Application-specific spec targets</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Use-case rationale condensed</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Applications and sensing limitations</li><li><time datetime="2026-11-03">3 Nov 2026</time> — Drone-mounted acoustic camera focus</li></ul></details><footer><span id="page-number">01 / 06</span></footer></main><script>
 
 
 
