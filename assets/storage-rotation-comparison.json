@@ -25,5 +25,56 @@
     "https://github.com/EasonLi292/lmco-acoustic-camera-algorithm/blob/9458624ba3ab3af88abd1f1944244bb8f43ba921/DFT-DAS/tests/architecture_comparison.json",
     "https://github.com/EasonLi292/lmco-acoustic-camera-algorithm/blob/9458624ba3ab3af88abd1f1944244bb8f43ba921/DFT-DAS/tests/tiling_comparison.json"
   ],
-  "note": "Enabled-ring control remeasured after optional schedules were added: 238281.75 GE versus 238284.25 in the first study (2.5 GE difference). Comparison retains numerical settings and all Fourier bits. All totals include register storage, decimator and UART; power and live capture unqualified."
+  "note": "Enabled-ring control remeasured after optional schedules were added: 238281.75 GE versus 238284.25 in the first study (2.5 GE difference). Comparison retains numerical settings and all Fourier bits. All totals include register storage, decimator and UART; power and live capture unqualified.",
+  "block_area_attribution": {
+    "units": "NAND2-equivalent mapped cell area",
+    "method": "Trace mapped netlist fan-in to conceptual block outputs and register D inputs. Stop at sequential outputs and, for Fourier writes, updated_r/updated_i. Sum mapped gscl45nm cell areas; retain synthesized arithmetic subhierarchies as whole units. Not separate block synthesis.",
+    "shared_cell_policy": "Fourier read/scaling takes precedence over write logic; Fourier block takes precedence over window block. Each mapped cell is counted once. This assigns 43 GE shared between window and Fourier cones to Fourier in the after design (0 before).",
+    "library_nand2_area": 1.8772,
+    "library_dff_area": 7.9781,
+    "variants": {
+      "before": {
+        "window_block": 4006.25,
+        "fourier_block": 144050.0,
+        "sample_registers": 76.5,
+        "fourier_registers": 61200.0,
+        "fourier_write_exclusive": 51474.25,
+        "fourier_read_and_scale": 31375.75,
+        "other_core": 50800.25,
+        "combined_blocks": 148056.25,
+        "core_total": 198856.5,
+        "whole_chip": 265688.0,
+        "input_sha256": {
+          "mapped.v": "c02946d46eb75bc019e4055a0ee171ba59577e41bdc3f43ee179bc2c1848aa85",
+          "dc_cells.tsv": "2c1cc03e022cf5140147e283518185e6e98fea8a3a3d102ef087cf02e66f4954",
+          "library_areas.tsv": "323c44b8c7ea6f349b878fd12ed48618dd1c0201d67736428c4feb634aa1742b"
+        }
+      },
+      "after": {
+        "window_block": 6151.5,
+        "fourier_block": 75730.0,
+        "sample_registers": 2295.0,
+        "fourier_registers": 61200.0,
+        "fourier_write_exclusive": 1809.75,
+        "fourier_read_and_scale": 12720.25,
+        "other_core": 50807.25,
+        "combined_blocks": 81881.5,
+        "core_total": 132688.75,
+        "whole_chip": 199520.25,
+        "input_sha256": {
+          "mapped.v": "393d6dc7f9c7e6aae4d10435564f0c09ef3380f5baebdebbf1bd29ad8da7874d",
+          "dc_cells.tsv": "b7f9eb9c40e031d3b66238d8be872c561497638d23c16d0025eead2bafefb349",
+          "library_areas.tsv": "323c44b8c7ea6f349b878fd12ed48618dd1c0201d67736428c4feb634aa1742b"
+        }
+      }
+    },
+    "limitations": [
+      "Conceptual block boundaries are an attribution convention because synthesis optimizes across their RTL logic.",
+      "Counts include combinational control feeding the traced cones; other controller logic stays outside these blocks.",
+      "Area is standard-cell synthesis area, not post-layout area or power."
+    ],
+    "combined_blocks_saving": 66174.75,
+    "whole_chip_saving": 66167.75,
+    "other_core_change": 7.0
+  }
 }
