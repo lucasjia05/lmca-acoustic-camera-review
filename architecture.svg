@@ -62,11 +62,10 @@
 <path d="M580 610H625V405H687" class="data"/>
 <text x="614" y="508" class="tiny" text-anchor="middle" transform="rotate(-90 614 508)">PCM samples · 16 bits</text>
 
-<rect x="690" y="350" width="240" height="115" rx="7" fill="#e0f1ed" stroke="#006e72" stroke-width="2.5"/>
-<circle cx="690" cy="350" r="18" fill="#006e72"/><text x="690" y="357" text-anchor="middle" style="font-size:22px;font-weight:700;fill:white">A</text>
-<text x="707" y="382" class="name" style="font-size:18px">Window + sample buffer</text>
+<rect x="690" y="350" width="240" height="115" rx="7" class="logic"/>
+<text x="707" y="382" class="name" style="font-size:20px">Window + sample hold</text>
 <text x="707" y="412" class="small">Window table × PCM</text>
-<text x="707" y="441" class="tiny">Hold 1 sample per mic</text>
+<text x="707" y="441" class="tiny">One N-sample window / map</text>
 <path d="M930 407H997" class="data"/>
 
 <rect x="1000" y="350" width="295" height="130" rx="7" class="logic"/>
@@ -89,8 +88,7 @@
 <path d="M930 610H960V510H1030V483" class="data"/>
 <text x="975" y="497" class="tiny">cos / sin</text>
 
-<rect x="1000" y="555" width="295" height="110" rx="7" fill="#fff4dc" stroke="#a66a13" stroke-width="2.5"/>
-<circle cx="1000" cy="555" r="18" fill="#a66a13"/><text x="1000" y="562" text-anchor="middle" style="font-size:22px;font-weight:700;fill:white">B</text>
+<rect x="1000" y="555" width="295" height="110" rx="7" class="logic"/>
 <text x="1018" y="587" class="name">Rotating Fourier banks</text>
 <text x="1018" y="616" class="instance">spectrum_r / spectrum_i</text>
 <text x="1018" y="638" class="tiny">MICS × BINS complex values<tspan x="1018" dy="19">2 × ACC_W bits / value</tspan></text>
@@ -114,10 +112,6 @@
 
 
 
-<circle cx="1018" cy="780" r="17" fill="#006e72"/><text x="1018" y="787" text-anchor="middle" style="font-size:21px;font-weight:700;fill:white">A</text>
-<circle cx="1060" cy="780" r="17" fill="#a66a13"/><text x="1060" y="787" text-anchor="middle" style="font-size:21px;font-weight:700;fill:white">B</text>
-<text x="1090" y="787" class="name" style="font-size:21px">Storage optimization · detail below</text>
-<text x="1000" y="823" class="small">Inside u_core; same shared DFT / DAS arithmetic</text>
 <path d="M1620 407H1645V925H870V1110H937" class="data"/>
 <text x="1160" y="914" class="tiny">map_power: 48 bits · valid / last: 1 bit each</text>
 <path d="M1650 1015V950H1688V440H1623" class="control"/>
