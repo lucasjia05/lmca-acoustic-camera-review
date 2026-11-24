@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="rotation-title rotation-desc">
+<title id="rotation-title">How continuous rotation and a sample buffer reduce gate count</title>
+<desc id="rotation-desc">Before: indexed Fourier registers need a read selector and per-word write and hold logic. After: each frequency bin has a continuously rotating bank of microphone values, with one windowed sample per microphone buffered to follow the data. The shared DFT and DAS arithmetic and all Fourier values are retained. Whole-chip synthesis for the same 30-microphone, N256, 10-bin, 24-bit, 441-direction configuration drops from 265,688 NAND2 equivalents to 238,282 with enabled rings and 199,520 with continuous rotation plus the sample buffer. The final step takes 1.48 times the processing cycles, but the tested UART output time is nearly unchanged. Power has not been measured.</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#527d80"/></marker>
+  <marker id="write-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9276ac"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35;font-size:20px}
+ .heading{font-size:25px;font-weight:650}.label{font-size:21px;font-weight:650}
+ .muted{font-size:18px;fill:#536873}.small{font-size:16px;fill:#536873}
+ .panel{fill:#fbfdfc;stroke:#d7e0e3;stroke-width:1.5}
+ .box{fill:white;stroke:#7da3a4;stroke-width:1.5}
+ .extra{fill:#faf8fc;stroke:#b29bc5;stroke-width:1.5}
+ .head{fill:#e0f1ed;stroke:#006e72;stroke-width:2}
+ .flow{fill:none;stroke:#527d80;stroke-width:2;marker-end:url(#arrow)}
+ .write{fill:none;stroke:#9276ac;stroke-width:1.7;stroke-dasharray:5 4;marker-end:url(#write-arrow)}
+ .gate{font-size:32px;font-weight:700}.accent{fill:#006e72}
+</style>
+<rect width="1200" height="760" fill="white"/>
+
+<!-- Before: a single sample and indexed access. -->
+<rect x="20" y="20" width="560" height="485" rx="10" class="panel"/>
+<text x="44" y="60" class="heading">Before · indexed storage</text>
+<text x="44" y="91" class="muted">Choose a register; hold the others.</text>
+<rect x="44" y="120" width="206" height="84" rx="7" class="box"/>
+<text x="147" y="154" class="label" text-anchor="middle">Sample hold</text>
+<text x="147" y="183" class="muted" text-anchor="middle">1 windowed sample</text>
+<rect x="292" y="120" width="260" height="116" rx="7" class="box"/>
+<text x="422" y="151" class="label" text-anchor="middle">Fourier registers</text>
+<rect x="308" y="171" width="60" height="43" rx="4" class="box"/>
+<rect x="376" y="171" width="60" height="43" rx="4" class="box"/>
+<rect x="476" y="171" width="60" height="43" rx="4" class="box"/>
+<text x="338" y="199" text-anchor="middle">m0</text><text x="406" y="199" text-anchor="middle">m1</text>
+<text x="456" y="199" text-anchor="middle">…</text><text x="506" y="199" text-anchor="middle">m29</text>
+<path d="M338 236V269M422 236V269M506 236V269" class="flow"/>
+<rect x="292" y="272" width="260" height="64" rx="7" class="extra"/>
+<text x="422" y="311" class="label" text-anchor="middle">Read selector</text>
+<path d="M147 204V366H210" class="flow"/>
+<path d="M422 336V366H390" class="flow"/>
+<rect x="210" y="345" width="180" height="81" rx="7" class="box"/>
+<text x="300" y="377" class="label" text-anchor="middle" style="font-size:19px">Shared arithmetic</text>
+<text x="300" y="406" class="muted" text-anchor="middle">DFT / DAS</text>
+<path d="M390 408H565V143H553" class="write"/>
+<text x="415" y="393" class="small">DFT write-back</text>
+<text x="44" y="466" class="muted">Selection + per-word write / hold logic</text>
+
+<!-- After: a one-sample vector follows continuously rotating banks. -->
+<rect x="620" y="20" width="560" height="485" rx="10" class="panel"/>
+<text x="644" y="60" class="heading">After · continuous rotation</text>
+<text x="644" y="91" class="muted">Bring the next microphone value to the arithmetic.</text>
+<rect x="644" y="120" width="340" height="84" rx="7" class="head"/>
+<text x="814" y="154" class="label" text-anchor="middle">Sample buffer · 30 × 18 bits</text>
+<text x="814" y="183" class="muted" text-anchor="middle">1 windowed sample per mic</text>
+<text x="814" y="227" class="small" text-anchor="middle">For each bin, sweep the microphones in order.</text>
+<text x="644" y="263" class="label">Rotating Fourier bank · one per bin</text>
+<rect x="660" y="280" width="90" height="48" rx="5" class="head"/>
+<rect x="785" y="280" width="90" height="48" rx="5" class="box"/>
+<rect x="910" y="280" width="90" height="48" rx="5" class="box"/>
+<rect x="1035" y="280" width="90" height="48" rx="5" class="box"/>
+<text x="705" y="311" text-anchor="middle">m0</text><text x="830" y="311" text-anchor="middle">m1</text>
+<text x="955" y="311" text-anchor="middle">…</text><text x="1080" y="311" text-anchor="middle">m29</text>
+<path d="M785 304H753M910 304H878M1035 304H1003" class="flow"/>
+<path d="M705 328V365H940V338H1080V329" class="flow"/>
+<text x="925" y="359" class="small" text-anchor="end">Head returns to tail</text>
+<path d="M705 365V387" class="flow"/>
+<path d="M660 204H632V417H644" class="flow"/>
+<rect x="644" y="390" width="260" height="70" rx="7" class="box"/>
+<text x="774" y="419" class="label" text-anchor="middle">Same shared arithmetic</text>
+<text x="774" y="447" class="muted" text-anchor="middle">DFT / DAS</text>
+<path d="M904 417H1152V304H1128" class="write"/>
+<text x="932" y="382" class="small">DFT updates</text>
+<text x="932" y="403" class="small">the returning value</text>
+<text x="644" y="485" class="small">Rotate every clock, including idle / UART stalls.</text>
+
+<!-- Measured whole-chip area, identical numerical settings. -->
+<text x="24" y="550" class="label">Whole-chip NAND2 equivalents · same calculation</text>
+<rect x="20" y="570" width="1160" height="112" rx="9" fill="#eef5f3"/>
+<text x="52" y="607" class="muted">Indexed storage</text><text x="52" y="650" class="gate">265.7k</text>
+<path d="M273 624H337" class="flow"/>
+<text x="365" y="607" class="muted">Enabled rings</text><text x="365" y="650" class="gate">238.3k</text>
+<path d="M565 624H629" class="flow"/>
+<text x="657" y="607" class="muted">Continuous + sample buffer</text><text x="657" y="650" class="gate accent">199.5k</text>
+<text x="1148" y="613" class="gate accent" text-anchor="end">−66.2k</text>
+<text x="1148" y="645" class="label accent" text-anchor="end">24.9% smaller</text>
+<text x="24" y="720" class="muted">All 14,400 Fourier bits retained · identical tested maps · no SRAM</text>
+<text x="24" y="748" class="small">Final step vs enabled rings: 1.48× processing cycles; UART output time nearly unchanged. Power unmeasured.</text>
+</svg>

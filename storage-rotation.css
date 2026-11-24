@@ -1,0 +1,11 @@
+#architecture .storage-change{margin-top:36px}
+#architecture .storage-change h3{font-size:24px;letter-spacing:-.3px;margin:0 0 10px}
+#architecture .storage-change>p{color:var(--muted);font-size:16px;margin:0 0 18px;max-width:900px}
+#architecture .storage-change figure{margin:0;padding:16px;background:white;border:1px solid var(--line);border-radius:10px}
+#architecture .storage-change .rotation-scroll{overflow-x:auto}
+#architecture .storage-change .rotation-scroll a{display:block;min-width:850px}
+#architecture .storage-change img{display:block;width:100%;height:auto}
+#architecture .storage-change figcaption{font-size:14px;line-height:1.6;color:var(--muted);margin:14px 8px 0}
+#architecture .storage-change .rotation-links{font-size:14px;margin:10px 0 0;display:flex;gap:18px;flex-wrap:wrap}
+@media(max-width:700px){#architecture .storage-change figure{padding:8px;margin:0 -8px}#architecture .storage-change h3{font-size:22px}}
+@media print{#architecture .storage-change figure{break-inside:avoid}#architecture .storage-change .rotation-scroll a{min-width:0}#architecture .storage-change .rotation-links{display:none}}

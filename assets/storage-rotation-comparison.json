@@ -1,0 +1,29 @@
+{
+  "configuration": "30 mics / N256 / 10 bins / ACC24 / 441 directions",
+  "flow": "Direct Design Compiler R-2020.09-SP4, gscl45nm typical, 100 ns target, all storage mapped to standard cells",
+  "variants": {
+    "indexed": {
+      "gates_nand2": 265688.0,
+      "flip_flops": 21178,
+      "compute_cycles_two_maps": 528247,
+      "uart_cycles_two_maps": 2910850
+    },
+    "enabled_rings": {
+      "gates_nand2": 238281.75000000003,
+      "flip_flops": 21178,
+      "compute_cycles_two_maps": 528247,
+      "uart_cycles_two_maps": 2910850
+    },
+    "continuous_with_sample_vector": {
+      "gates_nand2": 199520.25,
+      "flip_flops": 21705,
+      "compute_cycles_two_maps": 782853,
+      "uart_cycles_two_maps": 2911138
+    }
+  },
+  "source_evidence": [
+    "https://github.com/EasonLi292/lmco-acoustic-camera-algorithm/blob/9458624ba3ab3af88abd1f1944244bb8f43ba921/DFT-DAS/tests/architecture_comparison.json",
+    "https://github.com/EasonLi292/lmco-acoustic-camera-algorithm/blob/9458624ba3ab3af88abd1f1944244bb8f43ba921/DFT-DAS/tests/tiling_comparison.json"
+  ],
+  "note": "Enabled-ring control remeasured after optional schedules were added: 238281.75 GE versus 238284.25 in the first study (2.5 GE difference). Comparison retains numerical settings and all Fourier bits. All totals include register storage, decimator and UART; power and live capture unqualified."
+}
