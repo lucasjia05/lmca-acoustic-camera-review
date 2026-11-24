@@ -40,14 +40,14 @@
 
 <rect x="250" y="290" width="350" height="430" rx="9" class="file"/>
 <text x="270" y="322" class="filename" style="font-size:22px">lmca_pdm_decimator.sv</text>
-<a class="drillable" href="schematic.html?block=decimator" aria-label="Open decimator internal structure"><rect x="270" y="350" width="310" height="115" rx="7" class="box"/>
+<a class="drillable" href="schematic.html?v=3&amp;block=decimator" aria-label="Open decimator internal structure"><rect x="270" y="350" width="310" height="115" rx="7" class="box"/>
 <text x="288" y="381" class="name">lmca_pdm_decimator</text>
 <text x="288" y="409" class="instance">u_pdm</text>
 <text x="288" y="440" class="small">Shared CIC → PCM</text></a>
 <path d="M425 465V552" class="data"/>
 <text x="441" y="492" class="small">PCM vector</text>
 <text x="441" y="515" class="tiny">16 bits/mic<tspan x="441" dy="22">MICS channels</tspan></text>
-<a class="drillable" href="schematic.html?block=serializer" aria-label="Open serializer internal structure"><rect x="270" y="555" width="310" height="110" rx="7" class="box"/>
+<a class="drillable" href="schematic.html?v=3&amp;block=serializer" aria-label="Open serializer internal structure"><rect x="270" y="555" width="310" height="110" rx="7" class="box"/>
 <text x="288" y="587" class="name">lmca_pcm_serializer</text>
 <text x="288" y="615" class="instance">u_serializer</text>
 <text x="288" y="645" class="small">PCM vector → sample stream</text></a>
@@ -66,33 +66,33 @@
 <path d="M580 610H625V405H687" class="data"/>
 <text x="614" y="508" class="tiny" text-anchor="middle" transform="rotate(-90 614 508)">PCM samples · 16 bits</text>
 
-<a class="drillable" href="schematic.html?block=window" aria-label="Open window internal structure"><rect x="690" y="350" width="240" height="115" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?v=3&amp;block=window" aria-label="Open window internal structure"><rect x="690" y="350" width="240" height="115" rx="7" class="logic"/>
 <text x="707" y="382" class="name" style="font-size:20px">Window + sample hold</text>
 <text x="707" y="412" class="small">Window table × PCM</text>
 <text x="707" y="441" class="tiny">One N-sample window / map</text></a>
 <path d="M930 407H997" class="data"/>
 
-<a class="drillable" href="schematic.html?block=arithmetic" aria-label="Open arithmetic internal structure"><rect x="1000" y="350" width="295" height="130" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?v=3&amp;block=arithmetic" aria-label="Open arithmetic internal structure"><rect x="1000" y="350" width="295" height="130" rx="7" class="logic"/>
 <text x="1018" y="382" class="name">Shared complex arithmetic</text>
 <text x="1018" y="412" class="small">Selected-bin DFT accumulation</text>
 <text x="1018" y="441" class="small">Then frequency-domain DAS</text>
 <text x="1018" y="466" class="tiny">Reused across mics and directions</text></a>
 <path d="M1295 407H1357" class="data"/>
 
-<a class="drillable" href="schematic.html?block=power" aria-label="Open power internal structure"><rect x="1360" y="350" width="260" height="130" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?v=3&amp;block=power" aria-label="Open power internal structure"><rect x="1360" y="350" width="260" height="130" rx="7" class="logic"/>
 <text x="1378" y="382" class="name">Power + normalization</text>
 <text x="1378" y="412" class="small">Sum selected-bin powers</text>
 <text x="1378" y="441" class="small">Emit one point / direction</text>
 <text x="1378" y="466" class="tiny">No full output-map buffer</text></a>
 
-<a class="drillable" href="schematic.html?block=trig" aria-label="Open trig internal structure"><rect x="690" y="555" width="240" height="110" rx="7" class="box"/>
+<a class="drillable" href="schematic.html?v=3&amp;block=trig" aria-label="Open trig internal structure"><rect x="690" y="555" width="240" height="110" rx="7" class="box"/>
 <text x="707" y="586" class="filename" style="font-size:19px">lmca_compact_trig.sv</text>
 <text x="707" y="615" class="instance">u_trig</text>
 <text x="707" y="645" class="tiny">18-bit sin/cos table</text></a>
 <path d="M930 610H960V510H1030V483" class="data"/>
 <text x="975" y="497" class="tiny">cos / sin</text>
 
-<a class="drillable" href="schematic.html?block=storage" aria-label="Open storage internal structure"><rect x="1000" y="555" width="295" height="110" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?v=3&amp;block=storage" aria-label="Open storage internal structure"><rect x="1000" y="555" width="295" height="110" rx="7" class="logic"/>
 <text x="1018" y="587" class="name">Rotating Fourier banks</text>
 <text x="1018" y="616" class="instance">spectrum_r / spectrum_i</text>
 <text x="1018" y="638" class="tiny">MICS × BINS complex values<tspan x="1018" dy="19">2 × ACC_W bits / value</tspan></text></a>
@@ -100,14 +100,14 @@
 <path d="M1200 555V483" class="data"/>
 <text x="1220" y="522" class="tiny">read / update</text>
 
-<a class="drillable" href="schematic.html?block=phase" aria-label="Open phase internal structure"><rect x="1360" y="555" width="260" height="110" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?v=3&amp;block=phase" aria-label="Open phase internal structure"><rect x="1360" y="555" width="260" height="110" rx="7" class="logic"/>
 <text x="1378" y="587" class="name">Phase generation</text>
 <text x="1378" y="616" class="small">Mic geometry + scan vectors</text>
 <text x="1378" y="645" class="small">DFT / steering phase</text></a>
 <path d="M1490 665V710H810V668" class="data"/>
 <text x="1320" y="700" class="tiny">phase · 10 bits</text>
 
-<a class="drillable" href="schematic.html?block=controller" aria-label="Open controller internal structure"><rect x="690" y="745" width="240" height="105" rx="7" class="logic"/>
+<a class="drillable" href="schematic.html?v=3&amp;block=controller" aria-label="Open controller internal structure"><rect x="690" y="745" width="240" height="105" rx="7" class="logic"/>
 <text x="707" y="776" class="name">Controller</text>
 <text x="707" y="805" class="tiny">IDLE · CAPTURE · DFT</text>
 <text x="707" y="832" class="tiny">DAS · POWER · EMIT</text></a>
@@ -128,12 +128,12 @@
 <rect x="920" y="1015" width="760" height="165" rx="7" class="box"/>
 <text x="940" y="1047" class="name">lmca_uart_map_tx</text>
 <text x="1200" y="1047" class="instance">u_uart</text>
-<a class="drillable" href="schematic.html?block=packetizer" aria-label="Open packetizer internal structure"><rect x="940" y="1065" width="350" height="90" rx="6" class="logic"/>
+<a class="drillable" href="schematic.html?v=3&amp;block=packetizer" aria-label="Open packetizer internal structure"><rect x="940" y="1065" width="350" height="90" rx="6" class="logic"/>
 <text x="958" y="1096" class="small">Map packetizer + one-word buffer</text>
 <text x="958" y="1127" class="tiny">Header → power words → status byte</text></a>
 <path d="M1290 1110H1367" class="data"/>
 <text x="1330" y="1094" class="tiny" style="font-size:14px" text-anchor="middle">8-bit bytes</text>
-<a class="drillable" href="schematic.html?block=uart-tx" aria-label="Open uart-tx internal structure"><rect x="1370" y="1065" width="290" height="90" rx="6" class="box"/>
+<a class="drillable" href="schematic.html?v=3&amp;block=uart-tx" aria-label="Open uart-tx internal structure"><rect x="1370" y="1065" width="290" height="90" rx="6" class="box"/>
 <text x="1388" y="1096" class="name">lmca_uart_tx</text>
 <text x="1388" y="1127" class="instance">u_tx · 8-N-1</text></a>
 

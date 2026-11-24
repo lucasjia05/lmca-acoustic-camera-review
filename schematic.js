@@ -253,7 +253,7 @@
   for(const key of ['trig']) scenes[key].wires=scenes[key].wires.filter(x=>!x.path.startsWith('M1105'));
   const escape = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const requested = new URLSearchParams(location.search).get('block') || 'arithmetic';
-  if(['core','uart'].includes(requested)){location.replace('index.html#architecture');return;}
+  if(['core','uart'].includes(requested)){location.replace('index.html?v=diagram-3#architecture');return;}
   const resolved = aliases[requested] || requested;
   const id = Object.hasOwn(scenes,resolved) ? resolved : 'arithmetic';
   const scene = scenes[id];
@@ -263,8 +263,8 @@
   document.getElementById('summary').textContent=scene.summary;
   document.getElementById('caption').textContent=scene.caption;
   document.getElementById('source').href=sourceRoot+scene.file;
-  document.getElementById('up').href='index.html#architecture';
-  document.getElementById('breadcrumbs').innerHTML='<a href="index.html#architecture">Architecture / top</a>'+`<span class="separator" aria-hidden="true">/</span><span aria-current="page">${escape(scene.crumb)}</span>`;
+  document.getElementById('up').href='index.html?v=diagram-3#architecture';
+  document.getElementById('breadcrumbs').innerHTML='<a href="index.html?v=diagram-3#architecture">Architecture / top</a>'+`<span class="separator" aria-hidden="true">/</span><span aria-current="page">${escape(scene.crumb)}</span>`;
   const box = item => {
     const titles=Array.isArray(item.title)?item.title:[item.title];
     const titleY=item.y+33;
