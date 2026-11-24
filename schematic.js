@@ -201,11 +201,61 @@
     }
   });
 
+
+  // Only top-level blocks have pages. Their internal views are flat.
+  scenes.arithmetic.boxes = scenes.arithmetic.boxes.filter(x => x.to !== 'accumulation');
+  scenes.arithmetic.boxes.push(
+    b(1020,130,185,150,['Real accumulator'],['DFT: round + wrap','DAS: round + saturate','Add previous value']),
+    b(1020,430,185,150,['Imag accumulator'],['DFT: round + wrap','DAS: round + saturate','Add previous value']));
+  scenes.arithmetic.wires = scenes.arithmetic.wires.filter(x => !x.path.startsWith('M935'));
+  scenes.arithmetic.wires.push(e('M935 180H1020','real',952,165),e('M935 480H1020','imag',950,510),e('M995 550H1020'));
+  scenes.arithmetic.summary='Four real multipliers form the complex product. Rounding and accumulation reuse this result for DFT updates or DAS microphone sums.';
+  scenes.arithmetic.caption+=' DFT sums wrap to ACC_W; DAS sums saturate to SUM_W. The accumulation boxes include the previous-value feedback.';
+  scenes.arithmetic.boxes.find(x=>x.to==='trig').title='Trig input';
+  scenes.window.boxes=scenes.window.boxes.filter(x=>x.to!=='arithmetic');
+  scenes.window.wires=scenes.window.wires.filter(x=>x.path!=='M900 380H1000');
+  scenes.storage.boxes=scenes.storage.boxes.filter(x=>x.to!=='arithmetic');
+  scenes.storage.wires=scenes.storage.wires.filter(x=>x.path!=='M260 530H390');
+  scenes.phase.boxes=scenes.phase.boxes.filter(x=>x.to!=='trig');
+  scenes.phase.wires=scenes.phase.wires.filter(x=>x.path!=='M925 495V555');
+  scenes.packetizer.boxes=scenes.packetizer.boxes.filter(x=>x.to!=='uart-tx');
+  scenes.packetizer.wires=scenes.packetizer.wires.filter(x=>!['M735 255H945','M1075 330V505H735'].includes(x.path));
+  scenes.decimator.height=830;
+  scenes.decimator.boxes=[
+    b(25,70,190,110,'PDM capture',['One bit per mic']),b(270,70,190,110,'Mic selector',['PDM → +1 / −1']),
+    b(515,70,180,110,'Integrator 1',['state[m] + x']),b(740,70,180,110,'Integrator 2',['state[m] + x']),b(965,70,230,110,'Integrator 3',['state[m] + x']),
+    b(965,300,230,110,'Comb 1',['x − previous[m]']),b(740,300,180,110,'Comb 2',['x − previous[m]']),b(515,300,180,110,'Comb 3',['x − previous[m]']),
+    b(25,300,330,140,'Capture / slot control',['working · slot · count','Advance on accepted vector','Comb enable every R = 16']),
+    b(515,540,200,130,'Normalize + clip',['Divide gain R³','PCM16 Q15']),
+    b(790,540,200,130,'FIR tap sum',['Σ tap × history[m]','Round and clip']),
+    b(1060,540,150,130,['PCM vector','registers'],['16 bits / mic'])];
+  scenes.decimator.wires=[e('M215 125H270'),e('M460 125H515'),e('M695 125H740'),e('M920 125H965'),
+    e('M1080 180V300','every R',1095,240),e('M965 355H920'),e('M740 355H695'),e('M605 410V540'),
+    e('M715 605H790'),e('M990 605H1060'),e('M355 370H425V205H365V180','slot / enable',440,245,true)];
+  scenes.decimator.caption='One shared lane is shown. Each integrator, comb and FIR history retains separate state per microphone. The three integrators run on every accepted PDM sample; the three combs update every 16th sample. The current one-tap unity FIR can synthesize away. Input uses a handshaked vector interface.';
+  const aliases={accumulation:'arithmetic',cic:'decimator',fir:'decimator'};
+  for(const key of ['core','uart','accumulation','cic','fir']) delete scenes[key];
+  for(const view of Object.values(scenes)) for(const node of view.boxes) node.to=null;
+  const pin=(side,y,name,width,path,control=false)=>({side,y,name,width,path,control});
+  const ports={
+    arithmetic:[pin('in',50,'DFT / DAS mode','State selects operation','M-10 50H155V85',true),pin('in',620,'Previous DFT r/i','2 × ACC_W','M-10 620H995V250H1020'),pin('in',170,'Sample / spectrum','a, b · 24 bits each','M-10 170H25'),pin('in',420,'cos / sin','18 bits each','M-10 420H25'),pin('out',205,'updated_r / acc_r','ACC_W / SUM_W','M1205 205H1250'),pin('out',505,'updated_i / acc_i','ACC_W / SUM_W','M1205 505H1250')],
+    window:[pin('in',140,'s_pcm','PCM_W = 16','M-10 140H25'),pin('in',345,'sample_index','Select window[n]','M-10 345H25',true),pin('out',380,'dft_sample','WIN_W = 18','M900 380H1250')],
+    storage:[pin('in',135,'updated_r / i','2 × ACC_W','M-10 135H30'),pin('in',340,'bin_index','Select current bin','M-10 340H30',true),pin('out',530,'spectrum_value_r/i','2 × DATA_W','M260 530H1250'),pin('out',600,'spectrum head','2 × ACC_W to DFT','M260 355H300V600H1250')],
+    phase:[pin('in',115,'Mic geometry','gx, gy, gz · Q24','M-10 115H25'),pin('in',290,'Scan direction','dx, dy, dz · Q18','M-10 290H25'),pin('in',440,'Sample / bin index','n, k','M-10 440H25'),pin('out',440,'phase','PHASE_BITS = 10','M1055 440H1250')],
+    trig:[pin('in',140,'phase','PHASE_BITS = 10','M-10 140H25'),pin('out',130,'sine','COEF_W = 18','M1200 130H1250'),pin('out',355,'cosine','COEF_W = 18','M1200 355H1250')],
+    power:[pin('in',132,'acc_r','SUM_W bits','M-10 132H25'),pin('in',332,'acc_i','SUM_W bits','M-10 332H25'),pin('out',495,'m_power','MAP_W = 48','M1200 495H1250')],
+    controller:[pin('in',140,'start','1 bit','M-10 140H35',true),pin('in',350,'valid / ready','Operation / I/O events','M-10 350H610V190',true),pin('out',550,'state / counters','Datapath enables','M1185 450H1220V550H1250',true),pin('out',600,'busy / done','1 bit each','M35 150H5V600H1250',true)],
+    decimator:[pin('in',125,'s_bits','MICS PDM bits','M-10 125H25'),pin('in',365,'s_valid / m_ready','1 bit each','M-10 365H25',true),pin('out',605,'m_pcm / m_valid','MICS × PCM_W + valid','M1210 605H1250'),pin('out',735,'s_ready','1 bit','M190 440V735H1250',true),pin('out',700,'clipped','1 bit','M990 640H1025V700H1250',true)],
+    serializer:[pin('in',165,'s_pcm / s_valid','MICS × PCM_W + valid','M-10 165H25'),pin('in',390,'m_ready','1 bit','M-10 390H440',true),pin('out',165,'m_pcm / m_valid','PCM_W + valid','M1175 165H1250'),pin('out',390,'s_ready','1 bit','M700 415H1210V390H1250',true)],
+    packetizer:[pin('in',125,'s_power / s_valid','MAP_W + valid','M-10 125H25'),pin('in',370,'last / status','Last, clip, overrun','M-10 370H10V155H25',true),pin('in',505,'byte_ready','From UART transmitter','M-10 505H435',true),pin('out',255,'byte_data / valid','8 bits + valid','M735 255H1250'),pin('out',505,'s_ready','Backpressure to core','M735 505H1250',true)],
+    'uart-tx':[pin('in',130,'s_data / s_valid','8 bits + valid','M-10 130H25'),pin('out',130,'tx','1 bit · serial','M1195 130H1250'),pin('out',387,'s_ready','1 bit','M755 387H1250',true)]
+  };
+  for(const key of ['trig']) scenes[key].wires=scenes[key].wires.filter(x=>!x.path.startsWith('M1105'));
   const escape = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const shownWrappers = new Set(['core','uart']);
-  const href = id => shownWrappers.has(id) ? 'index.html#architecture' : `schematic.html?block=${encodeURIComponent(id)}`;
-  const requested = new URLSearchParams(location.search).get('block') || 'core';
-  const id = Object.hasOwn(scenes,requested) ? requested : 'core';
+  const requested = new URLSearchParams(location.search).get('block') || 'arithmetic';
+  if(['core','uart'].includes(requested)){location.replace('index.html#architecture');return;}
+  const resolved = aliases[requested] || requested;
+  const id = Object.hasOwn(scenes,resolved) ? resolved : 'arithmetic';
   const scene = scenes[id];
   document.title = `LMCA · ${scene.title}`;
   document.getElementById('title').textContent=scene.title;
@@ -213,23 +263,25 @@
   document.getElementById('summary').textContent=scene.summary;
   document.getElementById('caption').textContent=scene.caption;
   document.getElementById('source').href=sourceRoot+scene.file;
-  document.getElementById('up').href=scene.parent?href(scene.parent):'index.html#architecture';
-  const ancestors=[];let parent=scene.parent;
-  while(parent){ancestors.unshift(parent);parent=scenes[parent].parent;}
-  document.getElementById('breadcrumbs').innerHTML='<a href="index.html#architecture">Architecture / top</a>'+ancestors.map(key=>`<span class="separator" aria-hidden="true">/</span>`+(shownWrappers.has(key)?`<span>${escape(scenes[key].crumb)}</span>`:`<a href="${href(key)}">${escape(scenes[key].crumb)}</a>`)).join('')+`<span class="separator" aria-hidden="true">/</span><span aria-current="page">${escape(scene.crumb)}</span>`;
+  document.getElementById('up').href='index.html#architecture';
+  document.getElementById('breadcrumbs').innerHTML='<a href="index.html#architecture">Architecture / top</a>'+`<span class="separator" aria-hidden="true">/</span><span aria-current="page">${escape(scene.crumb)}</span>`;
   const box = item => {
     const titles=Array.isArray(item.title)?item.title:[item.title];
     const titleY=item.y+33;
     const title= titles.map((t,i)=>`<text class="node-title" x="${item.x+item.w/2}" y="${titleY+i*26}" text-anchor="middle">${escape(t)}</text>`).join('');
     const lines=item.lines.map((t,i)=>`<text class="node-detail" x="${item.x+item.w/2}" y="${titleY+titles.length*26+5+i*24}" text-anchor="middle">${escape(t)}</text>`).join('');
     const content=`<rect class="node-body" x="${item.x}" y="${item.y}" width="${item.w}" height="${item.h}" rx="8"/>${title}${lines}`;
-    return item.to?`<a class="expandable" href="${href(item.to)}" aria-label="Open ${escape(Array.isArray(item.title)?item.title.join(' '):item.title)}" data-block="${item.to}"><title>Open ${escape(scenes[item.to].title)}</title>${content}</a>`:`<g class="primitive" data-kind="${item.kind}">${content}</g>`;
+    return `<g class="primitive" data-kind="${item.kind}">${content}</g>`;
   };
   const wires=scene.wires.map(w=>`<path d="${w.path}" class="${w.control?'control':'wire'}"/>${w.label?`<text x="${w.x}" y="${w.y}" class="wire-label">${escape(w.label)}</text>`:''}`).join('');
-  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 ${scene.height}" width="1240" height="${scene.height}" role="group" aria-labelledby="schematic-title schematic-description">
+  const isSequential=!['phase','trig'].includes(id);
+  const pinMarkup=(ports[id]||[]).map(p=>`<g class="signal-pin" data-direction="${p.side}"><path d="${p.path}" class="${p.control?'control':'wire'}"/><circle cx="${p.side==='in'?-10:1250}" cy="${p.y}" r="5" fill="white" stroke="#006e72" stroke-width="2"/><text x="${p.side==='in'?-165:1268}" y="${p.y-8}" class="pin-name">${escape(p.name)}</text><text x="${p.side==='in'?-165:1268}" y="${p.y+14}" class="pin-detail">${escape(p.width)}</text></g>`).join('');
+  const clockY=scene.height-25;
+  const clockPin=isSequential?`<g class="signal-pin" data-direction="in"><path d="M-10 ${clockY}H95" class="control"/><circle cx="-10" cy="${clockY}" r="5" fill="white" stroke="#006e72" stroke-width="2"/><text x="-165" y="${clockY-8}" class="pin-name">clk / rst</text><text x="-165" y="${clockY+14}" class="pin-detail">1 bit each</text><text x="110" y="${clockY+5}" class="pin-detail">Shared by state registers</text></g>`:'';
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1660 ${scene.height+70}" width="1660" height="${scene.height+70}" role="group" aria-labelledby="schematic-title schematic-description">
   <title id="schematic-title">${escape(scene.title)} internal structure</title><desc id="schematic-description">${escape(scene.summary)}</desc>
   <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#527d80"/></marker><marker id="control-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9276ac"/></marker></defs>
-  <style>text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}.node-title{font-size:21px;font-weight:650}.node-detail{font-size:17px;fill:#536873}.node-body{fill:#fbfdfc;stroke:#98a7af;stroke-width:1.4}.expandable .node-body{fill:#f5fbf9;stroke:#006e72;stroke-width:3}.expandable:hover .node-body,.expandable:focus .node-body{fill:#dff1ec;stroke:#004b50;stroke-width:4}.expandable:focus{outline:none}.wire{stroke:#527d80;stroke-width:2;fill:none;marker-end:url(#arrow)}.control{stroke:#9276ac;stroke-width:1.7;stroke-dasharray:6 4;fill:none;marker-end:url(#control-arrow)}.wire-label{font-size:16px;fill:#536873}</style>
-  ${wires}${scene.boxes.map(box).join('')}</svg>`;
+  <style>text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}.pin-name{font-size:16px;font-weight:650;fill:#006e72}.pin-detail{font-size:14px;fill:#536873}.node-title{font-size:21px;font-weight:650}.node-detail{font-size:17px;fill:#536873}.node-body{fill:#fbfdfc;stroke:#98a7af;stroke-width:1.4}.expandable .node-body{fill:#f5fbf9;stroke:#006e72;stroke-width:3}.expandable:hover .node-body,.expandable:focus .node-body{fill:#dff1ec;stroke:#004b50;stroke-width:4}.expandable:focus{outline:none}.wire{stroke:#527d80;stroke-width:2;fill:none;marker-end:url(#arrow)}.control{stroke:#9276ac;stroke-width:1.7;stroke-dasharray:6 4;fill:none;marker-end:url(#control-arrow)}.wire-label{font-size:16px;fill:#536873}</style>
+  <g transform="translate(180 30)"><rect x="-10" y="10" width="1260" height="${scene.height+20}" rx="6" fill="none" stroke="#ccd8da"/>${wires}${pinMarkup}${scene.boxes.map(box).join('')}${clockPin}</g></svg>`;
   document.getElementById('drawing').innerHTML=svg;
 })();
