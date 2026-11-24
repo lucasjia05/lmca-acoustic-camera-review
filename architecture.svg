@@ -60,9 +60,9 @@
 <path d="M185 407H267" class="data"/>
 <text x="225" y="372" class="tiny" text-anchor="middle">PDM<tspan x="225" dy="18">1 bit/mic</tspan></text>
 
-<a class="drillable" href="schematic.html?block=core" aria-label="Open core internal structure"><rect x="655" y="290" width="1010" height="585" rx="9" class="file"/>
+<rect x="655" y="290" width="1010" height="585" rx="9" class="file"/>
 <text x="680" y="322" class="filename">lmca_compact_core.sv</text>
-<text x="1640" y="322" class="instance" text-anchor="end">u_core</text></a>
+<text x="1640" y="322" class="instance" text-anchor="end">u_core</text>
 <path d="M580 610H625V405H687" class="data"/>
 <text x="614" y="508" class="tiny" text-anchor="middle" transform="rotate(-90 614 508)">PCM samples · 16 bits</text>
 
@@ -125,9 +125,9 @@
 
 <rect x="900" y="965" width="800" height="235" rx="9" class="file"/>
 <text x="920" y="998" class="filename">lmca_uart_map_tx.sv</text>
-<a class="drillable" href="schematic.html?block=uart" aria-label="Open uart internal structure"><rect x="920" y="1015" width="760" height="165" rx="7" class="box"/>
+<rect x="920" y="1015" width="760" height="165" rx="7" class="box"/>
 <text x="940" y="1047" class="name">lmca_uart_map_tx</text>
-<text x="1200" y="1047" class="instance">u_uart</text></a>
+<text x="1200" y="1047" class="instance">u_uart</text>
 <a class="drillable" href="schematic.html?block=packetizer" aria-label="Open packetizer internal structure"><rect x="940" y="1065" width="350" height="90" rx="6" class="logic"/>
 <text x="958" y="1096" class="small">Map packetizer + one-word buffer</text>
 <text x="958" y="1127" class="tiny">Header → power words → status byte</text></a>

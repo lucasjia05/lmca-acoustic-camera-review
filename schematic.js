@@ -202,7 +202,8 @@
   });
 
   const escape = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const href = id => `schematic.html?block=${encodeURIComponent(id)}`;
+  const shownWrappers = new Set(['core','uart']);
+  const href = id => shownWrappers.has(id) ? 'index.html#architecture' : `schematic.html?block=${encodeURIComponent(id)}`;
   const requested = new URLSearchParams(location.search).get('block') || 'core';
   const id = Object.hasOwn(scenes,requested) ? requested : 'core';
   const scene = scenes[id];
@@ -215,7 +216,7 @@
   document.getElementById('up').href=scene.parent?href(scene.parent):'index.html#architecture';
   const ancestors=[];let parent=scene.parent;
   while(parent){ancestors.unshift(parent);parent=scenes[parent].parent;}
-  document.getElementById('breadcrumbs').innerHTML='<a href="index.html#architecture">Architecture / top</a>'+ancestors.map(key=>`<span class="separator" aria-hidden="true">/</span><a href="${href(key)}">${escape(scenes[key].crumb)}</a>`).join('')+`<span class="separator" aria-hidden="true">/</span><span aria-current="page">${escape(scene.crumb)}</span>`;
+  document.getElementById('breadcrumbs').innerHTML='<a href="index.html#architecture">Architecture / top</a>'+ancestors.map(key=>`<span class="separator" aria-hidden="true">/</span>`+(shownWrappers.has(key)?`<span>${escape(scenes[key].crumb)}</span>`:`<a href="${href(key)}">${escape(scenes[key].crumb)}</a>`)).join('')+`<span class="separator" aria-hidden="true">/</span><span aria-current="page">${escape(scene.crumb)}</span>`;
   const box = item => {
     const titles=Array.isArray(item.title)?item.title:[item.title];
     const titleY=item.y+33;
