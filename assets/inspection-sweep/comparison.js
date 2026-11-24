@@ -13,7 +13,7 @@
     allBoxes.forEach(box => { box.checked = selected.has(box.value); });
     if (updateUrl) {
       const url = new URL(location.href);
-      if (selected.size === boxes.length) url.searchParams.delete("compare");
+      if (boxes.every(box => box.checked === box.defaultChecked)) url.searchParams.delete("compare");
       else url.searchParams.set("compare", [...selected].join(","));
       history.replaceState(history.state, "", url);
     }
