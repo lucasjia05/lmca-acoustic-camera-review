@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2110" viewBox="0 0 1800 2110" role="img" aria-labelledby="rotation-title rotation-desc">
 <title id="rotation-title">Full-width before and after storage architecture</title>
-<desc id="rotation-desc">Two vertically stacked full-width diagrams show indexed storage before and continuous rotation after. In each, the outlined Window plus sample hold and Rotating Fourier banks groups expose their internal structure as horizontal paths feeding the shared complex arithmetic on the right. The after design replaces a single sample hold with a rotating sample vector and replaces indexed Fourier access with bin-head selection and tail update or recirculation. Arithmetic and measured gate figures are unchanged.</desc>
+<desc id="rotation-desc">Two vertically stacked full-width diagrams show indexed storage before and continuous rotation after. In each, the outlined Window plus sample hold and Fourier banks groups expose their internal structure as horizontal paths feeding the shared complex arithmetic on the right. The after design replaces a single sample hold with a rotating sample vector and replaces indexed Fourier access with bin-head selection and tail update or recirculation. Arithmetic and measured gate figures are unchanged.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#527d80"/></marker><marker id="write-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9276ac"/></marker></defs>
 <style>text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}.heading{font-size:25px;font-weight:650}.group-title{font-size:22px;font-weight:650;fill:#006e72}.node{font-size:19px;font-weight:650}.small{font-size:17px;fill:#536873}.tiny{font-size:15px;fill:#536873}.muted{font-size:20px;fill:#536873}.file{font-size:18px;fill:#006e72}.panel{fill:#fbfdfc;stroke:#d7e0e3;stroke-width:1.5}.group{fill:white;stroke:#7da3a4;stroke-width:2}.box{fill:#fbfdfc;stroke:#98a7af;stroke-width:1.4}.changed{fill:#edf7f4;stroke:#006e72;stroke-width:2}.selection{fill:#faf8fc;stroke:#b29bc5;stroke-width:1.5}.flow{fill:none;stroke:#527d80;stroke-width:2;marker-end:url(#arrow)}.write{fill:none;stroke:#9276ac;stroke-width:1.7;stroke-dasharray:5 4;marker-end:url(#write-arrow)}.gate{font-size:34px;font-weight:700}.accent{fill:#006e72}</style>
 
@@ -35,7 +35,7 @@
 <text x="1595.0" y="325" class="node" text-anchor="middle">Shared complex arithmetic</text>
 <text x="1595.0" y="352" class="small" text-anchor="middle">DFT / DAS</text>
 <rect x="45" y="485" width="1325" height="310" rx="7" class="group"/>
-<text x="65" y="520" class="group-title">Rotating Fourier banks</text>
+<text x="65" y="520" class="group-title">Indexed Fourier banks</text>
 <text x="1285" y="520" class="group-title" text-anchor="end">144.05k NAND2 eq</text>
 <text x="65" y="550" class="small">Before: indexed registers</text>
 <rect x="100" y="580" width="320" height="65" rx="7" class="selection"/>
