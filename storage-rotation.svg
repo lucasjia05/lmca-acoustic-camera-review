@@ -1,176 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2110" viewBox="0 0 1800 2110" role="img" aria-labelledby="rotation-title rotation-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1530" viewBox="0 0 1800 1530" role="img" aria-labelledby="rotation-title rotation-desc">
 <title id="rotation-title">Full-width before and after storage architecture</title>
-<desc id="rotation-desc">Two vertically stacked full-width diagrams show indexed storage before and continuous rotation after. In each, the outlined Window plus sample hold and Fourier banks groups expose their internal structure as horizontal paths feeding the shared complex arithmetic on the right. The after design replaces a single sample hold with a rotating sample vector and replaces indexed Fourier access with bin-head selection and tail update or recirculation. Arithmetic and measured gate figures are unchanged.</desc>
+<desc id="rotation-desc">Fourier storage before and after continuous rotation. Indexed registers use per-word write and hold logic and a microphone-plus-bin read selector. Rotating banks use fixed neighbor wiring, tail muxes and bin-head selection. Window and sample buffering are omitted from this close-up; the main architecture diagram shows the full pipeline.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#527d80"/></marker><marker id="write-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9276ac"/></marker></defs>
 <style>text{font-family:'Segoe UI',Arial,sans-serif;fill:#162b35}.heading{font-size:25px;font-weight:650}.group-title{font-size:22px;font-weight:650;fill:#006e72}.node{font-size:19px;font-weight:650}.small{font-size:17px;fill:#536873}.tiny{font-size:15px;fill:#536873}.muted{font-size:20px;fill:#536873}.file{font-size:18px;fill:#006e72}.panel{fill:#fbfdfc;stroke:#d7e0e3;stroke-width:1.5}.group{fill:white;stroke:#7da3a4;stroke-width:2}.box{fill:#fbfdfc;stroke:#98a7af;stroke-width:1.4}.changed{fill:#edf7f4;stroke:#006e72;stroke-width:2}.selection{fill:#faf8fc;stroke:#b29bc5;stroke-width:1.5}.flow{fill:none;stroke:#527d80;stroke-width:2;marker-end:url(#arrow)}.write{fill:none;stroke:#9276ac;stroke-width:1.7;stroke-dasharray:5 4;marker-end:url(#write-arrow)}.gate{font-size:34px;font-weight:700}.accent{fill:#006e72}</style>
 
-<rect width="1800" height="2110" fill="white"/>
+<rect width="1800" height="1530" fill="white"/>
 <g transform="translate(0 0)">
-<rect x="20" y="25" width="1760" height="845" rx="7" class="panel"/>
+<rect x="20" y="25" width="1760" height="555" rx="7" class="panel"/>
 <text x="45" y="67" class="heading">Before · indexed storage</text>
 <text x="45" y="101" class="file">lmca_compact_core.sv / u_core</text>
 <text x="1730" y="101" class="small" text-anchor="end">Gate estimates: 30 mics × 10 bins × (24-bit real + 24-bit imag)</text>
-<rect x="45" y="135" width="1325" height="280" rx="7" class="group"/>
-<text x="65" y="170" class="group-title">Window + sample hold</text>
-<text x="1335" y="170" class="group-title" text-anchor="end">4.01k NAND2 eq</text>
-<rect x="160" y="200" width="210" height="65" rx="7" class="box"/>
-<text x="265.0" y="230" class="node" text-anchor="middle">Window coefficients</text>
-<text x="265.0" y="257" class="small" text-anchor="middle">18-bit Q16</text>
-<rect x="160" y="295" width="210" height="80" rx="7" class="box"/>
-<text x="265.0" y="325" class="node" text-anchor="middle">Multiply</text>
-<text x="265.0" y="352" class="small" text-anchor="middle">PCM × window</text>
-<rect x="440" y="295" width="230" height="80" rx="7" class="box"/>
-<text x="555.0" y="325" class="node" text-anchor="middle">Round + saturate</text>
-<text x="555.0" y="352" class="small" text-anchor="middle">18-bit Q16 sample</text>
-<path d="M265 265V295" class="flow"/>
-<path d="M45 335H160" class="flow"/>
-<text x="72" y="320" class="tiny">PCM16</text>
-<path d="M370 335H440" class="flow"/>
-<rect x="1040" y="295" width="280" height="80" rx="7" class="box"/>
-<text x="1180.0" y="325" class="node" text-anchor="middle">Sample-hold register</text>
-<text x="1180.0" y="352" class="small" text-anchor="middle">1 × 18-bit windowed sample</text>
-<path d="M670 335H1040" class="flow"/>
-<path d="M1320 335H1450" class="flow"/>
-<text x="1390" y="319" class="tiny" text-anchor="middle">sample</text>
-<rect x="1450" y="295" width="290" height="110" rx="7" class="box"/>
-<text x="1595.0" y="325" class="node" text-anchor="middle">Shared complex arithmetic</text>
-<text x="1595.0" y="352" class="small" text-anchor="middle">DFT / DAS</text>
-<rect x="45" y="485" width="1325" height="310" rx="7" class="group"/>
-<text x="65" y="520" class="group-title">Indexed Fourier banks</text>
-<text x="1285" y="520" class="group-title" text-anchor="end">144.05k NAND2 eq</text>
-<text x="65" y="550" class="small">Before: indexed registers</text>
-<rect x="100" y="580" width="320" height="65" rx="7" class="selection"/>
-<text x="260.0" y="610" class="node" text-anchor="middle">Write / hold · 51.47k</text>
-<text x="260.0" y="637" class="small" text-anchor="middle">Update addressed word; hold rest</text>
-<rect x="540" y="675" width="260" height="80" rx="7" class="selection"/>
-<text x="670.0" y="705" class="node" text-anchor="middle">Indexed read selector</text>
-<text x="670.0" y="732" class="small" text-anchor="middle">Choose microphone + bin</text>
-<rect x="970" y="675" width="280" height="80" rx="7" class="box"/>
-<text x="1110.0" y="705" class="node" text-anchor="middle">DAS read scaling</text>
-<text x="1110.0" y="732" class="small" text-anchor="middle">Divide by N · round / saturate</text>
-<rect x="100" y="680" width="320" height="75" rx="7" class="box"/>
-<text x="100" y="671" class="node">Fourier registers</text>
-<rect x="110" y="695" width="50" height="45" rx="7" class="box"/>
-<text x="135" y="725" class="small" text-anchor="middle">m0</text>
-<rect x="190" y="695" width="50" height="45" rx="7" class="box"/>
-<text x="215" y="725" class="small" text-anchor="middle">m1</text>
-<rect x="270" y="695" width="50" height="45" rx="7" class="box"/>
-<text x="295" y="725" class="small" text-anchor="middle">…</text>
-<rect x="350" y="695" width="50" height="45" rx="7" class="box"/>
-<text x="375" y="725" class="small" text-anchor="middle">m29</text>
-<path d="M260 645V680" class="write"/>
-<path d="M420 715H540" class="flow"/>
-<text x="100" y="778" class="tiny">Registers: 61.20k NAND2 eq · 14,400 bits</text>
-<path d="M800 715H970" class="flow"/>
-<path d="M1250 715H1410V375H1450" class="flow"/>
-<path d="M670 675V620H1385V355H1450" class="flow"/>
-<text x="1030" y="590" class="tiny">DFT previous value</text>
-<path d="M1595 405V455H1320V610H420" class="write"/>
-<text x="1460" y="445" class="tiny">DFT write-back</text>
-<text x="1450" y="700" class="tiny">Read to DAS</text>
-<text x="45" y="837" class="small">Controller: microphones outside bins; one sample held while its selected bins are processed.</text>
+<rect x="1450" y="245" width="290" height="110" rx="7" class="box"/>
+<text x="1595.0" y="275" class="node" text-anchor="middle">Shared complex arithmetic</text>
+<text x="1595.0" y="302" class="small" text-anchor="middle">DFT / DAS</text>
+<rect x="45" y="135" width="1325" height="310" rx="7" class="group"/>
+<text x="65" y="170" class="group-title">Indexed Fourier banks</text>
+<text x="1285" y="170" class="group-title" text-anchor="end">144.05k NAND2 eq</text>
+<text x="65" y="200" class="small">Before: indexed registers</text>
+<rect x="100" y="230" width="320" height="65" rx="7" class="selection"/>
+<text x="260.0" y="260" class="node" text-anchor="middle">Write / hold · 51.47k</text>
+<text x="260.0" y="287" class="small" text-anchor="middle">Update addressed word; hold rest</text>
+<rect x="540" y="325" width="260" height="80" rx="7" class="selection"/>
+<text x="670.0" y="355" class="node" text-anchor="middle">Indexed read selector</text>
+<text x="670.0" y="382" class="small" text-anchor="middle">Choose microphone + bin</text>
+<rect x="970" y="325" width="280" height="80" rx="7" class="box"/>
+<text x="1110.0" y="355" class="node" text-anchor="middle">DAS read scaling</text>
+<text x="1110.0" y="382" class="small" text-anchor="middle">Divide by N · round / saturate</text>
+<rect x="100" y="330" width="320" height="75" rx="7" class="box"/>
+<text x="100" y="321" class="node">Fourier registers</text>
+<rect x="110" y="345" width="50" height="45" rx="7" class="box"/>
+<text x="135" y="375" class="small" text-anchor="middle">m0</text>
+<rect x="190" y="345" width="50" height="45" rx="7" class="box"/>
+<text x="215" y="375" class="small" text-anchor="middle">m1</text>
+<rect x="270" y="345" width="50" height="45" rx="7" class="box"/>
+<text x="295" y="375" class="small" text-anchor="middle">…</text>
+<rect x="350" y="345" width="50" height="45" rx="7" class="box"/>
+<text x="375" y="375" class="small" text-anchor="middle">m29</text>
+<path d="M260 295V330" class="write"/>
+<path d="M420 365H540" class="flow"/>
+<text x="100" y="428" class="tiny">Registers: 61.20k NAND2 eq · 14,400 bits</text>
+<path d="M800 365H970" class="flow"/>
+<text x="1030" y="240" class="tiny">DFT previous value</text>
 
-<text x="895" y="655" class="small" text-anchor="middle">Read selection + scaling: 31.38k NAND2 eq</text>
-<text x="1180" y="282" class="small" text-anchor="middle">Sample register: 76.5 NAND2 eq</text>
+<text x="895" y="305" class="small" text-anchor="middle">Read selection + scaling: 31.38k NAND2 eq</text>
+<path d="M1595 205V245" class="flow"/>
+<text x="1595" y="190" class="small" text-anchor="middle">Windowed sample input</text>
+<path d="M670 325V270H1385V275H1450" class="flow"/>
+<path d="M1250 365H1410V315H1450" class="flow"/>
+<text x="1450" y="395" class="tiny">Read to DAS</text>
+<path d="M1595 355V490H460V260H420" class="write"/>
+<text x="1460" y="480" class="tiny">DFT write-back</text>
+<text x="45" y="540" class="small">Address selects one microphone / bin; all other totals hold.</text>
+<path d="M100 365H75V260H100" class="write"/>
 </g>
-<g transform="translate(0 890)">
-<rect x="20" y="25" width="1760" height="845" rx="7" class="panel"/>
+<g transform="translate(0 600)">
+<rect x="20" y="25" width="1760" height="555" rx="7" class="panel"/>
 <text x="45" y="67" class="heading">After · continuous rotation</text>
 <text x="45" y="101" class="file">lmca_compact_core.sv / u_core</text>
 <text x="1730" y="101" class="small" text-anchor="end">Gate estimates: 30 mics × 10 bins × (24-bit real + 24-bit imag)</text>
-<rect x="45" y="135" width="1325" height="280" rx="7" class="group"/>
-<text x="65" y="170" class="group-title">Window + sample hold</text>
-<text x="1335" y="170" class="group-title" text-anchor="end">6.15k NAND2 eq</text>
-<rect x="160" y="200" width="210" height="65" rx="7" class="box"/>
-<text x="265.0" y="230" class="node" text-anchor="middle">Window coefficients</text>
-<text x="265.0" y="257" class="small" text-anchor="middle">18-bit Q16</text>
-<rect x="160" y="295" width="210" height="80" rx="7" class="box"/>
-<text x="265.0" y="325" class="node" text-anchor="middle">Multiply</text>
-<text x="265.0" y="352" class="small" text-anchor="middle">PCM × window</text>
-<rect x="440" y="295" width="230" height="80" rx="7" class="box"/>
-<text x="555.0" y="325" class="node" text-anchor="middle">Round + saturate</text>
-<text x="555.0" y="352" class="small" text-anchor="middle">18-bit Q16 sample</text>
-<path d="M265 265V295" class="flow"/>
-<path d="M45 335H160" class="flow"/>
-<text x="72" y="320" class="tiny">PCM16</text>
-<path d="M370 335H440" class="flow"/>
-<rect x="750" y="295" width="210" height="80" rx="7" class="selection"/>
-<text x="855.0" y="325" class="node" text-anchor="middle">Tail input mux</text>
-<text x="855.0" y="352" class="small" text-anchor="middle">New sample / head</text>
-<path d="M670 335H750" class="flow"/>
-<path d="M960 335H1040" class="flow"/>
-<text x="1040" y="280" class="node">Windowed sample registers</text>
-<rect x="1040" y="307" width="50" height="55" rx="7" class="box"/>
-<text x="1065" y="341" class="small" text-anchor="middle">29</text>
-<rect x="1110" y="307" width="50" height="55" rx="7" class="box"/>
-<text x="1135" y="341" class="small" text-anchor="middle">…</text>
-<rect x="1180" y="307" width="50" height="55" rx="7" class="box"/>
-<text x="1205" y="341" class="small" text-anchor="middle">1</text>
-<rect x="1250" y="307" width="50" height="55" rx="7" class="changed"/>
-<text x="1275" y="341" class="small" text-anchor="middle">head</text>
-<path d="M1090 335H1110" class="flow"/>
-<path d="M1160 335H1180" class="flow"/>
-<path d="M1230 335H1250" class="flow"/>
-<path d="M1275 362V397H855V375" class="flow"/>
-<path d="M1300 335H1450" class="flow"/>
-<text x="1040" y="193" class="small">30 × 18 bits · one sample per mic</text>
-<text x="1390" y="319" class="tiny" text-anchor="middle">sample</text>
-<rect x="1450" y="295" width="290" height="110" rx="7" class="box"/>
-<text x="1595.0" y="325" class="node" text-anchor="middle">Shared complex arithmetic</text>
-<text x="1595.0" y="352" class="small" text-anchor="middle">Same DFT / DAS</text>
-<rect x="45" y="485" width="1325" height="310" rx="7" class="group"/>
-<text x="65" y="520" class="group-title">Rotating Fourier banks</text>
-<text x="1285" y="520" class="group-title" text-anchor="end">75.73k NAND2 eq</text>
-<text x="65" y="550" class="small">After: circulating register banks</text>
-<rect x="100" y="580" width="320" height="65" rx="7" class="selection"/>
-<text x="260.0" y="610" class="node" text-anchor="middle">Tail mux · 1.81k</text>
-<text x="260.0" y="637" class="small" text-anchor="middle">DFT update / original head</text>
-<rect x="540" y="675" width="260" height="80" rx="7" class="selection"/>
-<text x="670.0" y="705" class="node" text-anchor="middle">Select bin head</text>
-<text x="670.0" y="732" class="small" text-anchor="middle">Choose bin</text>
-<rect x="970" y="675" width="280" height="80" rx="7" class="box"/>
-<text x="1110.0" y="705" class="node" text-anchor="middle">DAS read scaling</text>
-<text x="1110.0" y="732" class="small" text-anchor="middle">Divide by N · round / saturate</text>
-<rect x="110" y="690" width="50" height="55" rx="7" class="box"/>
-<text x="135" y="723" class="small" text-anchor="middle">29</text>
-<rect x="190" y="690" width="50" height="55" rx="7" class="box"/>
-<text x="215" y="723" class="small" text-anchor="middle">…</text>
-<rect x="270" y="690" width="50" height="55" rx="7" class="box"/>
-<text x="295" y="723" class="small" text-anchor="middle">1</text>
-<rect x="350" y="690" width="50" height="55" rx="7" class="changed"/>
-<text x="375" y="723" class="small" text-anchor="middle">head</text>
-<path d="M160 717H190" class="flow"/>
-<path d="M240 717H270" class="flow"/>
-<path d="M320 717H350" class="flow"/>
-<path d="M160 645V665H135V690" class="flow"/>
-<path d="M400 730H455V660H350V645" class="flow"/>
-<path d="M400 710H540" class="flow"/>
-<text x="100" y="778" class="tiny">Registers: 61.20k NAND2 eq · 14,400 bits</text>
-<path d="M800 715H970" class="flow"/>
-<path d="M1250 715H1410V375H1450" class="flow"/>
-<path d="M670 675V620H1385V355H1450" class="flow"/>
-<text x="1030" y="590" class="tiny">DFT previous value</text>
-<path d="M1595 405V455H1320V610H420" class="write"/>
-<text x="1460" y="445" class="tiny">DFT write-back</text>
-<text x="1450" y="700" class="tiny">Read to DAS</text>
-<text x="45" y="837" class="small">Controller: bins outside microphones; sample and Fourier values rotate in step.</text>
+<rect x="1450" y="245" width="290" height="110" rx="7" class="box"/>
+<text x="1595.0" y="275" class="node" text-anchor="middle">Shared complex arithmetic</text>
+<text x="1595.0" y="302" class="small" text-anchor="middle">Same DFT / DAS</text>
+<rect x="45" y="135" width="1325" height="310" rx="7" class="group"/>
+<text x="65" y="170" class="group-title">Rotating Fourier banks</text>
+<text x="1285" y="170" class="group-title" text-anchor="end">75.73k NAND2 eq</text>
+<text x="65" y="200" class="small">After: circulating register banks</text>
+<rect x="100" y="230" width="320" height="65" rx="7" class="selection"/>
+<text x="260.0" y="260" class="node" text-anchor="middle">Tail mux · 1.81k</text>
+<text x="260.0" y="287" class="small" text-anchor="middle">DFT update / original head</text>
+<rect x="540" y="325" width="260" height="80" rx="7" class="selection"/>
+<text x="670.0" y="355" class="node" text-anchor="middle">Select bin head</text>
+<text x="670.0" y="382" class="small" text-anchor="middle">Choose bin</text>
+<rect x="970" y="325" width="280" height="80" rx="7" class="box"/>
+<text x="1110.0" y="355" class="node" text-anchor="middle">DAS read scaling</text>
+<text x="1110.0" y="382" class="small" text-anchor="middle">Divide by N · round / saturate</text>
+<rect x="110" y="340" width="50" height="55" rx="7" class="box"/>
+<text x="135" y="373" class="small" text-anchor="middle">29</text>
+<rect x="190" y="340" width="50" height="55" rx="7" class="box"/>
+<text x="215" y="373" class="small" text-anchor="middle">…</text>
+<rect x="270" y="340" width="50" height="55" rx="7" class="box"/>
+<text x="295" y="373" class="small" text-anchor="middle">1</text>
+<rect x="350" y="340" width="50" height="55" rx="7" class="changed"/>
+<text x="375" y="373" class="small" text-anchor="middle">head</text>
+<path d="M160 367H190" class="flow"/>
+<path d="M240 367H270" class="flow"/>
+<path d="M320 367H350" class="flow"/>
+<path d="M160 295V315H135V340" class="flow"/>
+<path d="M400 380H455V310H350V295" class="flow"/>
+<path d="M400 360H540" class="flow"/>
+<text x="100" y="428" class="tiny">Registers: 61.20k NAND2 eq · 14,400 bits</text>
+<path d="M800 365H970" class="flow"/>
+<text x="1030" y="240" class="tiny">DFT previous value</text>
 
-<text x="895" y="655" class="small" text-anchor="middle">Read selection + scaling: 12.72k NAND2 eq</text>
-<text x="1040" y="223" class="small">Sample registers: 2.295k NAND2 eq</text>
+<text x="895" y="305" class="small" text-anchor="middle">Read selection + scaling: 12.72k NAND2 eq</text>
+<path d="M1595 205V245" class="flow"/>
+<text x="1595" y="190" class="small" text-anchor="middle">Windowed sample input</text>
+<path d="M670 325V270H1385V275H1450" class="flow"/>
+<path d="M1250 365H1410V315H1450" class="flow"/>
+<text x="1450" y="395" class="tiny">Read to DAS</text>
+<path d="M1595 355V490H460V260H420" class="write"/>
+<text x="1460" y="480" class="tiny">DFT write-back</text>
+<text x="45" y="540" class="small">10 rings × 30 complex values: fixed neighbor connections, selected bin head, tail update / recirculation.</text>
 </g>
-<text x="25" y="1815" class="heading">Whole-chip NAND2 equivalents · same calculation</text>
-<rect x="20" y="1840" width="1760" height="120" rx="7" class="panel"/>
-<text x="55" y="1877" class="muted">Indexed storage</text>
-<text x="55" y="1928" class="gate">265.7k</text>
-<text x="510" y="1877" class="muted">Enabled rings</text>
-<text x="510" y="1928" class="gate">238.3k</text>
-<text x="970" y="1877" class="muted">Continuous + sample buffer</text>
-<text x="970" y="1928" class="gate accent">199.5k</text>
-<path d="M350 1910H450" class="flow"/>
-<path d="M805 1910H905" class="flow"/>
-<text x="1730" y="1892" class="gate accent" text-anchor="end">−66.2k</text>
-<text x="1730" y="1930" class="heading accent" text-anchor="end">24.9% smaller</text>
-<text x="25" y="1997" class="muted">All 14,400 Fourier bits retained · identical tested maps · no SRAM</text>
-<text x="25" y="2035" class="small">Final step vs enabled rings: 1.48× processing cycles; UART output time nearly unchanged. Power unmeasured.</text>
-<text x="25" y="2074" class="small">Block labels are mapped-cell attribution; shared logic counted once. Outlined blocks save 66.175k; other core logic grows by 7 NAND2 eq.</text>
+<text x="25" y="1235" class="heading">Whole-chip NAND2 equivalents · same calculation</text>
+<rect x="20" y="1260" width="1760" height="120" rx="7" class="panel"/>
+<text x="55" y="1297" class="muted">Indexed storage</text>
+<text x="55" y="1348" class="gate">265.7k</text>
+<text x="510" y="1297" class="muted">Enabled rings</text>
+<text x="510" y="1348" class="gate">238.3k</text>
+<text x="970" y="1297" class="muted">Continuous + sample buffer</text>
+<text x="970" y="1348" class="gate accent">199.5k</text>
+<path d="M350 1330H450" class="flow"/>
+<path d="M805 1330H905" class="flow"/>
+<text x="1730" y="1312" class="gate accent" text-anchor="end">−66.2k</text>
+<text x="1730" y="1350" class="heading accent" text-anchor="end">24.9% smaller</text>
+<text x="25" y="1417" class="muted">All 14,400 Fourier bits retained · identical tested maps · no SRAM</text>
+<text x="25" y="1455" class="small">Final step vs enabled rings: 1.48× processing cycles; UART output time nearly unchanged. Power unmeasured.</text>
+<text x="25" y="1494" class="small">Block labels are mapped-cell attribution; shared logic counted once. Fourier banks save 68.32k; sample buffering and other logic offset about 2.15k.</text>
 </svg>
